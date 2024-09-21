@@ -1,0 +1,382 @@
+\documentclass[a4paper,12pt]{book}
+\usepackage{amsmath,  amsthm,enumerate}
+\usepackage{csquotes}
+\usepackage[provide=*,french]{babel}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{quiver, tikz}
+
+%symbole caligraphique
+\usepackage{mathrsfs}
+
+%hyperliens
+\usepackage{hyperref}
+
+%pseudo-code
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\makeatletter
+  \renewcommand{\ALG@name}{Algorithme}
+  \makeatother
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\addtolength{\headwidth}{\marginparsep}
+\addtolength{\headwidth}{\marginparwidth}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\fancyhead[LO]{\textit \leftmark}
+\fancyhead[RE]{\textit \rightmark}
+\renewcommand{\headrulewidth}{0pt} % and the line
+\fancypagestyle{plain}{%
+    \fancyhead{} % get rid of headers
+}
+
+%bibliographie
+\usepackage[
+backend=biber,
+style=alphabetic,
+sorting=ynt
+]{biblatex}
+
+\addbibresource{bib.bib}
+
+\usepackage{appendix}
+\renewcommand{\appendixpagename}{Annexe}
+
+\definecolor{wgrey}{RGB}{148, 38, 55}
+
+\setlength\parindent{24pt}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\rel}{\omathcal{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\Or}{\mathcal{O}}
+\newcommand{\F}{\mathbb F}
+\newcommand{\m}{\mathfrak m}
+\renewcommand{\a}{\mathfrak a}
+\newcommand{\I}{\mathfrak I}
+\newcommand{\Hom}{\textrm{Hom}}
+\newcommand{\disc}{\textrm{disc}}
+\newcommand{\Pic}{\textrm{Pic}}
+\newcommand{\End}{\textrm{End}}
+\newcommand{\Spec}{\textrm{Spec}}
+
+\newcommand{\cL}{\mathscr{L}}
+\newcommand{\G}{\mathscr{G}}
+\newcommand{\D}{\mathscr{D}}
+\newcommand{\E}{\mathscr{E}}
+
+\theoremstyle{plain}
+\newtheorem{thm}[subsection]{Théoreme}
+\newtheorem{lem}[subsection]{Lemme}
+\newtheorem{prop}[subsection]{Proposition}
+\newtheorem{cor}[subsection]{Corollaire}
+\newtheorem{heur}{Heuristique}
+\newtheorem{rem}{Remarque}
+\newtheorem{rembis}{Remarque}
+\newtheorem{note}{Note}
+
+\theoremstyle{definition}
+\newtheorem{conj}{Conjecture}
+\newtheorem{prob}{Problème}
+\newtheorem{quest}{Question}
+\newtheorem{prot}{Protocole}
+\newtheorem{algo}{Algorithme}
+\newtheorem{defn}[subsection]{Définition}
+\newtheorem{defnbis}{Définition}
+\newtheorem{exmp}[subsection]{Exemples}
+\newtheorem{exo}[subsection]{Exercices}
+
+\theoremstyle{remark}
+
+\definecolor{wgrey}{RGB}{148, 38, 55}
+\definecolor{wgreen}{RGB}{100, 200,0} 
+\hypersetup{
+    colorlinks=true,
+    linkcolor=wgreen,
+    urlcolor=wgrey,
+    filecolor=wgrey
+}
+
+\title{Corps locaux \\ \small{(Par Qing Liu)}}
+\date{}
+
+\begin{document}
+\maketitle
+\chapter*{Introduction}
+Le but c'est d'abord de décrire les extensions finies de corps locaux
+comment dans \cite{cassels}.
+\chapter{Corps complets}
+\section{Valuations et valeurs absolues}
+Le but là c'est de classifier les valuations, d'abord sur des corps
+premiers comme $\Q$. D'abord l'équivalence entre valuations et 
+valeurs absolues. 
+\begin{defn}[Valuation]
+    Une valuation $v$ (de rang $1$) est un morphisme de groupe 
+    (multiplicatif vers additif) \[K\to \R\cup\{\infty\}\]
+    tel que $v(x+y)\geq min\{v(x), v(y)\}$ quand $x+y\ne 0$ avec
+    $v(x+y)=\infty$.
+\end{defn}
+\begin{defn}[Valeur absolue]
+    Une valeur absolue $|.|$ est un morphisme de groupes multiplicatifs
+    $K\to \R$ étendu avec $0\mapsto 0$ et qui vérifie une inégalité 
+    triangulaire.
+\end{defn}
+Le passage aux valeurs absolues : étant donné un réel $0<t<1$ on peut
+déf une valeur absolue 
+\[x\mapsto t^{v(x)}\]
+
+Bon ensuite la caractérisation archimédienne :
+\begin{defn}[Valeur absolue archimédienne]
+    Un corps valué $(K,|.|)$ est archimédien si pour tout 
+    $(x,c)\in K\times \R$ il existe $n$ t.q \[c\leq |n.x|\]
+    et pas $n|x|$ attention.
+\end{defn}
+Ensuite la première partie de la caractérisation :
+\begin{prop}
+    Être archimédien c'est équivalent à 
+    \begin{itemize}
+        \item $(|n|)_{n\in \Z}$  est bornée.
+        \item $(|n|)_{n\in \Z}$  est $\leq 1$.
+        \item $|.|$ est ultramétrique!
+    \end{itemize}
+\end{prop}
+\begin{proof}[Preuve]
+    La première équivalence est directe. La deuxième aussi via 
+    $x\mapsto x^k$ et la troisième se ramène à la deuxieme en 
+    regardant $|1+x|\leq 1$ et la flèche $x\mapsto x^k$ à nouveau !
+    (Ca caractérise les élements inferieurs à $1$)
+\end{proof}
+\begin{prop}[Valuations et valeurs absolues]
+    Il y a une bijection entre valeurs absolues ultramétriques
+    et valuations. L'inverse de la flèche du dessus est juste 
+    \[|.|\mapsto \frac{1}{\log(1/2)}\log(|.|)\]
+\end{prop}
+
+On s'approche du théorème d'Ostrowski. Avant on déf les équivalences
+de valeurs absolues.
+\begin{prop}[La topologie induite]
+    On obtient une distance à partir d'une valeur absolue puis la 
+    topologie de la distance.
+\end{prop}
+Dans le cas ultramétrique c'est très bizarre.
+\begin{prop}
+    On a les propriétés suivantes.
+    \begin{itemize}
+        \item Si $|x|\ne |y|$ alors $|x+y|=max(|x|,|y|)$.
+        \item Avec l'inégalité ultramétrique, les boules ont un seul
+            centre.
+        \item Puis deux disques qui s'intersectent forment en fait une
+            chaine.
+    \end{itemize}
+\end{prop}
+\begin{prop}[Anneau de valuation]
+    On peut déf l'anneau de valuation de $(K,|.|)$ par 
+    $\Or:=\bar D(0,1)$ les éléments de valuations plus petites que $1$.
+    Et son idéal maximal la boule ouverte $D(0,1)$. Les inversibles
+    sont dans la frontière.
+\end{prop}
+\begin{defn}[Équivalence de valeurs absolues]
+    Deux valeurs absolues sont équivalentes si elles définissent la 
+    même topologie.
+\end{defn}
+\begin{lem}[Caractérisation]
+    Deux valeur sabsolues sont équivalentes ssi il existe 
+    $s\in \R^*_+$ t.q $|.|_1=|.|_2^s$.
+\end{lem}
+\begin{proof}[Preuve]
+    La bonne idée c'est la caractérisation de $D(0,1)$ par les trucs
+    qui tendent vers $0$ par $x\mapsto x^k$. Faut comprendre que 
+    prendre des limites dans $\R$ donne la même chose pour 
+    $|.|_1$ et $|.|_2$.
+\end{proof}
+
+Ça suffit à prouver le théorème d'Ostrowski :
+\begin{thm}[Ostrowski] 
+    Une valeur absolue non triviale sur $\Q$ est équivalente soit
+    à $|.|_{\infty}$ ou à une valeur absolue $p$-adique $|.|_p$.
+\end{thm}
+\begin{proof}[Preuve]
+    Pour la partie non archimédienne, on regarde $\mathfrak m\cap \Z$
+    pour obtenir un $p$. Ensuite, on montre via $|uk|=|1-vp|$ que
+    $|k|=1$ dés que $k\wedge p=1$, $|vp|<1$ parce que 
+    $vp\in \mathfrak m$. Ensuite y reste à comparer $|p|$ et $|p|_{p}$.
+    Vu que $|x|=|p|^r|k|=|p|^r$. 
+
+    Pour le cas archimédien l'idée c'est d'écrire $a$ en base $b$ pour
+    comparer $a^n$ et $b^l$ où $l\sim n$. En particulier montrer que
+    $|a|\geq 1$ implique $b\geq1$ dès que $a\geq 2$ ET 
+    $|a|=|b|^{\log(a)/\log(b)}$, via la comparaison et par symétrie.
+    Puis remplacer $b$ par $2$. On a montré que seul $|2|$ détermine
+    le lien entre $|.|$ et $|.|_{\infty}$.
+\end{proof}
+\begin{defn}[Places]
+    On définit une place comme une classe d'équivalence de valeurs
+    absolues. Une place est finie/infinie si elle est 
+    ultramétrique/archimédienne.
+\end{defn}
+
+\section{Complétions et corps complets}
+Dès qu'on a un corps valué $(K,|.|)$, on peut construire une distance
+\[d_{|.|}\colon(x,y)\mapsto |x-y|\]
+puis définir des suites de Cauchy. 
+\begin{defn}
+    Un corps valué $(K,|.|)$ est complet si les suites de Cauchy pour 
+    $d_{|.|}$ convergent dans $K$.
+\end{defn}
+\begin{defn}[Complétion]
+    Pour tout corps valué $(K,|.|)$ il existe un corps valué complet 
+    $(\hat K,|.|)$ tel que $|.|$ s'étend à $\hat K$.
+\end{defn}
+\begin{proof}[Preuve]
+    L'idée c'est de regarder l'ensemble des suites de Cauchy 
+    $\mathscr C(K)\subset K^{\N}$, de voir que c'est un anneau 
+    puis de quotienter par l'idéal maximal des suites qui convergent
+    vers $0$.
+\end{proof}
+
+\begin{defn}[Morphismes dans la catégorie des corps valués]
+    Un morphisme de corps valués est un morphisme d'anneau et une
+    isométrie.
+\end{defn}
+
+On peut étendre les morphismes vers des corps complets en morphismes
+de corps valués unique à unique isomorphisme près.
+
+\begin{rem}
+    Si $(K,|.|)$ est ultramétrique et non triviale, $\hat K$ peut-être
+    construit algébriquement. On fixe $t\in K$ t.q $0<|t|<1$. Dans
+    l'anneau de valuation, on regarde 
+    \[\widehat O_K=\varprojlim_n(O_K/t^nO_K)\]
+    C'est un anneau intègre muni d'une valuation t.q
+    \[\widehat v((x_n)_n)=v(y)\]
+    où $(x_n)=\pi(y)$ et 
+    $\pi\colon O_K \to \widehat O_K;~x\mapsto (x)_n$. C'est
+    une valuation par densité. On l'étend au corps de fraction de la 
+    manière évidente. On peut montrer que c'est complet \textbf{à faire}.
+    Pareil en général \textbf{$I\subset A$}.
+\end{rem}
+\begin{exo}
+    Rayon de convergence de $exp(z)=\sum_n \frac{z^n}{n!}$ dans 
+    $\Q_p$? Sachant que en métrique $p$-adique 
+    $1/n!\to_{n\to\infty}+\infty$. Faut calculer la valuation de 
+    $n!$.
+\end{exo}
+Plus généralement, si $A$ est intègre et $\m a=tA$ est maximal
+on peut définir la valuation $t$-adique associée et l'étendre au 
+corps de fractions et c'est une valuation discrète. Je crois que l'idée 
+c'est que 
+\[I=\cap t^n A=\{0\}\]
+parce que $tI=I$ puis Nakayama dans un anneau noethérien.
+
+Apparemment il fait une construction de $\R$ sans complétion parce que
+c'est tautologique? Ah bah oui les valuations c'est dans $\R$, mais
+en fait on peut d'abord juste les prendre dans $\Q$.
+
+
+Il regarde un corps $K$ avec un ordre total 
+compatible archimédien et la topologie de l'ordre.
+
+Alors on demande
+enfin que $\iota\colon \Q\to K$ soit dense, on a nécessairemment que
+$\iota$ est croissante. Par densité de $\Q$ dans $K$, on peut remplacer
+toute les suites de Cauchy dans $K$ par des suites de Cauchy dans $\Q$.
+
+
+En particulier, y'a équivalence entre les suites de Cauchy de $K$ et 
+$\Q$. On regarde maintenant $C(\Q)$ les suites de Cauchy dans $\Q$ et
+$I(\Q)$ les suites qui tendent vers $0$. Dans
+\[\pi\colon C(\Q)\to C(\Q)/I(\Q)\]
+on définit un ordre à droite via $\pi(x_n)_n\geq \pi(y_n)_n$ ssi
+on a égalité où il existe $r\in \Q^*_+$ t.q $x_n\geq y_n+r$. On obtient
+un corps totalement ordonné $C(\Q)/I(\Q)$ (totalement car 
+$\pm\pi(x_n)_n\geq 0$). Bon maintenant faut juste conclure en montrant
+que le quotient est complet. \textbf{à faire?}
+
+\begin{rem}
+    On a bel et bien utilisé que $\Q$.
+\end{rem}
+\begin{prop}
+    $\R$ est unique à unique isomorphisme près en tant que
+    corps totalement ordonné complet archimédien où $\Q$ est dense.
+\end{prop}
+
+\section{Espaces de Banach}
+Une norme $K$ sur un espace vectoriel $V$ est une flèche $x\mapsto ||x||$
+qui est nulle qu'en $0$, a une inégalité triangulaire et qui transforme
+l'action de $K$ en action de $\R$ via $|.|$.
+
+\begin{defn}
+    Un e.v.n est un Banach si il est complet pour sa norme.
+\end{defn}
+\begin{rem}
+    Un $k$-espace vectoriel de dimension finie sur un corps complet
+    est un Banach. L'inverse est faux!
+\end{rem}
+\begin{defn}
+    Deux normes sont équivalentes si elles définissent la même topologie.
+    Ou immédiatemment si il existe $c_1,c_2$ t.q 
+    \[c_1||x||_1\leq ||x||_2\leq c_2||x||_1\]
+\end{defn}
+L'intérêt c'est maintenant qu'étant donné une extension de corps $L/k$
+et une valeur absolue sur $k$, qu'est-ce qu'il se passe quand on l'étend
+à $L$? En fait c'est des normes sur $L$ en tant que $k$-ev, et elles
+sont équivalentes en tant que norme ssi elles le sont en tant que v.a 
+par définition!
+\begin{thm}
+    Si $k$ est complet, et $V$ est un $k$-ev de dimension finie, alors
+    toutes les normes sur $V$ sont équivalentes et $V$ est un Banach.
+\end{thm}
+\begin{proof}
+    La norme du max donne une structure de Banach grâce à la convergence
+    normale. Il reste à montrer que toutes les normes sont équivalentes
+    à la norme du max $||.||_{\infty}$. Un côté est simple, l'autre 
+    par induction \textbf{Faire? Ah la preuve est non triviale mdr}.
+\end{proof}
+
+Soit $(K,|.|)$ un corps complet ultramétrique. On note $k=\Or_K/\m$
+le corps résiduel. 
+\begin{lem}[Lemme de Hensel]
+    Soit $P(X)\in \Or_K[X]$, on suppose que $P\equiv f.g\mod \m$ tels que
+    $gcd(f,g)=1$. Alors il existe $F,G\in \Or_K[X]$ tels que 
+    \[P=F.G\]
+    et $F\equiv f\mod \m$, $G\equiv g\mod\m$, avec $\deg(F)=\deg(f)$.
+    La décomposition est unique à inversible près.
+\end{lem}
+\begin{proof}
+    On commence par prendre un lift $F_0$ de $f$ et $G_0$ de $g$ de 
+    degrés minimaux. On a $(f,g )=k[X]$ d'où $1\in (F_0,G_0)+\m[X]$,
+    il existe donc $t\in K$ t.q $0<|t|<1$ et
+    $
+    \begin{cases}
+        P-F_0G_0\in t\Or_K[X]\\
+        1\in (F_0,G_0)+t\Or_K[X]\\
+    \end{cases}
+    $. On a déjà augmenté la précision. Soit $F_1=F_0+tV_1$ et 
+    $G_1=G_0+tU_1$. On veut $P-F_1G_1\in t^2 \Or_K[X]$ t.q $\deg(F_1)=m$
+    et $\deg(G_1)\leq d-m$. On regarde 
+    \begin{align*}
+        P-(F_0+tV_1)(G_0+tU_1)&=P-(F_0G_0+t(F_0U_1+G_0V_1)+t^2U_1V_1)\\
+                              &=(P-F_0G_0)+t(F_0U_1+G_0V_1)+t^2*\\
+                              &=tE_0+t(\_)+t^2*\\
+                              &=t(E_0+F_0U_1+G_0V_1)+t^2*
+    \end{align*}
+    On prends $E_0=H_0F_0+R_0G_0+t*$.
+    \textbf{Revoir la preuve ailleurs.}
+\end{proof}
+
+
+
+
+\printbibliography
+
+\end{document}
+

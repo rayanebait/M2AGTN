@@ -1,0 +1,523 @@
+\documentclass[a4paper,12pt]{book}
+\usepackage{amsmath,  amsthm,enumerate}
+\usepackage{csquotes}
+\usepackage[provide=*,french]{babel}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{quiver, tikz}
+
+%symbole caligraphique
+\usepackage{mathrsfs}
+
+%hyperliens
+\usepackage{hyperref}
+
+%pseudo-code
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\addtolength{\headwidth}{\marginparsep}
+\addtolength{\headwidth}{\marginparwidth}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\fancyhead[LO]{\textit \leftmark}
+\fancyhead[RE]{\textit \rightmark}
+\renewcommand{\headrulewidth}{0pt} % and the line
+\fancypagestyle{plain}{%
+    \fancyhead{} % get rid of headers
+}
+
+%bibliographie
+\usepackage[
+backend=biber,
+style=alphabetic,
+sorting=ynt
+]{biblatex}
+
+\addbibresource{bib.bib}
+
+\usepackage{appendix}
+\renewcommand{\appendixpagename}{Annexe}
+
+\definecolor{wgrey}{RGB}{148, 38, 55}
+
+\setlength\parindent{24pt}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\rel}{\omathcal{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\Or}{\mathcal{O}}
+\newcommand{\F}{\mathscr F}
+\newcommand{\Hom}{\textrm{Hom}}
+\newcommand{\disc}{\textrm{disc}}
+\newcommand{\Pic}{\textrm{Pic}}
+\newcommand{\End}{\textrm{End}}
+\newcommand{\Spec}{\textrm{Spec}}
+\newcommand{\Supp}{\textrm{Supp}}
+\renewcommand{\Im}{\textrm{Im}}
+
+
+\newcommand{\cL}{\mathscr{L}}
+\newcommand{\G}{\mathscr{G}}
+\newcommand{\D}{\mathscr{D}}
+\newcommand{\E}{\mathscr{E}}
+\renewcommand{\P}{\mathscr{P}}
+\renewcommand{\H}{\mathscr{H}}
+
+\makeatletter
+\newcommand{\colim@}[2]{%
+  \vtop{\m@th\ialign{##\cr
+    \hfil$#1\operator@font colim$\hfil\cr
+    \noalign{\nointerlineskip\kern1.5\ex@}#2\cr
+    \noalign{\nointerlineskip\kern-\ex@}\cr}}%
+}
+\newcommand{\colim}{%
+  \mathop{\mathpalette\colim@{\rightarrowfill@\scriptscriptstyle}}\nmlimits@
+}
+\renewcommand{\varprojlim}{%
+  \mathop{\mathpalette\varlim@{\leftarrowfill@\scriptscriptstyle}}\nmlimits@
+}
+\renewcommand{\varinjlim}{%
+  \mathop{\mathpalette\varlim@{\rightarrowfill@\scriptscriptstyle}}\nmlimits@
+}
+\makeatother
+
+\theoremstyle{plain}
+\newtheorem{thm}[subsection]{Théoreme}
+\newtheorem{lem}[subsection]{Lemme}
+\newtheorem{prop}[subsection]{Proposition}
+\newtheorem{cor}[subsection]{Corollaire}
+\newtheorem{heur}{Heuristique}
+\newtheorem{rem}{Remarque}
+\newtheorem{note}{Note}
+
+\theoremstyle{definition}
+\newtheorem{conj}{Conjecture}
+\newtheorem{prob}{Problème}
+\newtheorem{quest}{Question}
+\newtheorem{prot}{Protocole}
+\newtheorem{algo}{Algorithme}
+\newtheorem{defn}[subsection]{Définition}
+\newtheorem{exmp}[subsection]{Exemples}
+\newtheorem{exo}[subsection]{Exercices}
+\newtheorem{ex}[subsection]{Exemple}
+\newtheorem{exs}[subsection]{Exemples}
+
+\theoremstyle{remark}
+
+\definecolor{wgrey}{RGB}{148, 38, 55}
+\definecolor{wgreen}{RGB}{100, 200,0} 
+\hypersetup{
+    colorlinks=true,
+    linkcolor=wgreen,
+    urlcolor=wgrey,
+    filecolor=wgrey
+}
+
+\title{(co)-Homologie (des faisceaux)}
+\date{2023-2024}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\chapter*{Introduction}
+Le but ca va être la cohomologie des faisceaux et les théorèmes de 
+changement de base propres (pas comme dans \cite{vamumford}).
+\chapter{Faisceaux}
+\section{Définitions}
+On parle d'espaces topologiques. Soit $X$ un e.t.
+\begin{defn}[Préfaisceau abélien]
+    Pour l'instant c'est un faisceau en groupe abélien. 
+\end{defn}
+\begin{rem}
+    Soit $\P$ un faisceau en groupes abéliens. Soit $U=\bigcup_i U_i$
+    un recouvrement ouvert on peut définir la séquence
+    \[0\to\P(U)\to\prod_i \P(U_i)\to\prod_{(i,j)}\P(U_i\cap U_j)\]
+    où la premier flèche est la restriction et la deuxième la
+    différence $(s_i)_i\mapsto (s_i|_{U_i\cap U_j}-s_j|_{U_i\cap U_j})_{i,j}$. C'est une suite exacte parce que si on appelle $d_0$ et 
+    $d_1$ les deux flèches :
+    \[(s|_{U_i}|_{U_i\cap U_j}-s|_{U_j}|_{U_i\cap U_j})\]
+    Ca mesure si une section est globale! En particulier ca axiomatise
+    les faisceaux :
+    \begin{itemize}
+        \item La condition $\ker(d^1)=\Im(d^0)$ équivaut au gluing
+            de sections locales.
+        \item La condition $\ker(d^0)=0$ équivaut à l'unicité des
+            sections.
+    \end{itemize}
+    On appelle $C(\bigcup_i U_i, \P)$ la suite exacte du dessus.
+\end{rem}
+\begin{defn}
+    On définit la fibre (stalk) en $x\in X$ pour un préfaisceau 
+    $\P$ par \[\P_x=\varinjlim_{x\in U} \P(U)\]
+    et on a \[\P_x=\sqcup_{x\in U} \P(U)/\sim\]
+    où la relation c'est la relation de coincider sur une restriction.
+    On a les germes de sections comme d'habitude qu'on note par $s_x$.
+\end{defn}
+
+\begin{thm}
+    Une flèche de faisceaux $\F\to\G$ est un isomorphisme ssi
+    la flèche induite sur les fibres sont des isomorphismes.
+\end{thm}
+\begin{proof}[Preuve]
+    \textbf{À faire!}
+\end{proof}
+\begin{defn}[Support d'une section d'un faisceau]
+    Soit $\F$ un faisceau sur $X$. On définit $\Supp_U(s):=\{s\in U| s_x\ne 0\}$
+\end{defn}
+\begin{exo}
+    Soit $\F$ un faisceau abélien, montrer que le support d'une section
+    $s$ est fermé. Faut juste montrer que $s_x$ vaut zéro même en 
+    élargissant à un petit ouvert autour de $x$, c'est évident en fait.
+\end{exo}
+\begin{rem}
+    Le foncteur d'oubli $Sh(X)\to PreSh(X)$ est pleinement fidèle. 
+    Au sens où les morphismes sont les mêmes par définition.
+\end{rem}
+
+\section{Faisceautisation}
+Il a l'air de l'avoir fait avec l'espace étalé. Bon je peux garder
+ma déf habituelle. 
+\begin{defn}[Faisceautisé]
+    Pour un préfaisceau $\F$ sur $X$ on définit
+    $\F^+(U):=\{f_{P}\in \prod_{P\in \F(U)} \F_{P}| \forall P \exists V_P,~t\in \F(V_p)~t_P=f_P\forall Q\in V_P~t_Q=f_Q\}$
+\end{defn}
+\begin{rem}
+    En ajoutant les restrictions induites le préfaisceau $\F^+$ est un 
+    faisceau.
+\end{rem}
+\begin{rem}
+    Il faut utiliser des sections non locales de $\F$ simplement parce 
+    que avoir les mêmes fibres à isomorphisme de permet pas 
+    nécessairement de relever de manière cohérente.
+\end{rem}
+On définit $\F\to \F^+$ par la diagonale.
+\begin{thm}[Propriété universelle]
+    Soit $\F\to \G$ un morphisme de préfaisceaux où $\G$ est un 
+    faisceau. Alors le morphisme se factorise en
+    % https://q.uiver.app/#q=WzAsMyxbMCwwLCJcXG1hdGhzY3IgRiJdLFsxLDAsIlxcbWF0aHNjciBGXisiXSxbMSwxLCJcXG1hdGhzY3IgRyJdLFswLDFdLFswLDJdLFsxLDIsIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==
+\[\begin{tikzcd}[ampersand replacement=\&,cramped]
+	{\mathscr F} \& {\mathscr F^+} \\
+	\& {\mathscr G}
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-2]
+	\arrow[dashed, from=1-2, to=2-2]
+\end{tikzcd}\]
+ et la flèche $\F^+\to \G$ est unique.
+\end{thm}
+\begin{proof}
+    L'idée c'est qu'on $\G\simeq \G^+$ et on a tjr une flèche 
+    $\F^+\to\G^+$.
+\end{proof}
+\begin{rem}
+    Le foncteur de faisceautisation est exact.
+\end{rem}
+
+\begin{rem}
+    Ce serait bien de refaire les preuves rien qu'une fois\textbf{1}.
+\end{rem}
+\begin{rem}[Traduction en terme d'espace étalé]
+    En gros l'espace étalé c'est les fonctions de $U$ dans $\bigsqcup_P
+    \F_P$.
+    Autrement dit $\prod_{P\in U} \F_P$. Et on demande de la continuité.
+    En gros y'a une fonction continue force des conditions de 
+    recollement.
+\end{rem}
+\section{Faisceau localement constant}
+Soit $X$ un espace topologique et $A$ un \textit{"objet abélien"}. On
+définit le préfaisceau constant par 
+\[A_X^{pre}(U)=A\]
+pour tout ouvert $U\subset X$. On définit ensuite le faisceau localement
+constant associé à $A$ par $A_X$.
+\begin{rem}
+    \textbf{(1)} L'exemple canonique du fait que $A_X^{pre}$ c'est pas
+    un faisceau c'est $A_X(\emptyset)=A$.\\
+    \textbf{(2)} On peut prendre $U_1\sqcup U_2$ et regarder la section
+    $(0, p_2)$. Elle lift pas vu que les restrictions sont par déf
+    l'identité.
+\end{rem}
+
+\begin{prop}
+    On a $A_X(U)=A^{\pi_0(U)}$! Où $\pi_0(U)$ compte les composantes
+    connexes. (Attention faut quand même qu'elles soient ouvertes?!)
+\end{prop}
+\begin{proof}
+    Soit $\P = A_X^{pre}$. On a 
+    $\P_P=\varinjlim_{P\in U} P(U)=\varinjlim_{P\in U} A= A$. 
+    Ensuite faut écrire $X=\bigsqcup X_i$. Puis montrer que 
+    $\P^+(X_i)=A$. Ensuite clairement par propriété universelle du 
+    produit on a fini.
+\end{proof}
+
+\section{Suites exactes de faisceaux}
+On considère $\alpha\colon \F\to \G$ un morphisme de faisceaux abéliens.
+\begin{prop}[Faisceau noyau]
+    Le préfaisceau donné par 
+    $\ker(\alpha)(U)=\ker(\alpha\colon \F U\to \G U)$
+    est un faisceau.
+\end{prop}
+\begin{defn}[Faisceau image]
+    On définit le préfaisceau image par 
+    $U\mapsto \Im^{pre}(\alpha\colon\F U\to \G U)$.
+\end{defn}
+\begin{rem}
+    En général c'est pas un faisceau donc on déf $\Im(\alpha)$ le 
+    faisceau associé.
+\end{rem}
+\begin{rem}
+    \textbf{À faire!} Injection canonique des faisceaux Im et ker.
+\end{rem}
+\begin{defn}[Faisceau quotient]
+    À nouveau on faisceautise le préfaisceau quotient.
+\end{defn}
+\begin{rem}
+    La faisceautisation commute avec les fibres. De sorte que le 
+    quotient des fibres est la fibre des quotients.
+\end{rem}
+
+\begin{defn}[Suite exacte de faisceaux abéliens]
+    Une suite 
+% https://q.uiver.app/#q=WzAsNSxbMCwwLCIwIl0sWzEsMCwiXFxtYXRoc2NyIEYnIl0sWzIsMCwiXFxtYXRoc2NyIEYiXSxbMywwLCJcXG1hdGhzY3IgRicnIl0sWzQsMCwiMCJdLFswLDFdLFsxLDIsIlxcYWxwaGEiXSxbMiwzLCJcXHJobyJdLFszLDRdXQ==
+\[\begin{tikzcd}[ampersand replacement=\&,cramped]
+	0 \& {\mathscr F'} \& {\mathscr F} \& {\mathscr F''} \& 0
+	\arrow[from=1-1, to=1-2]
+	\arrow["\alpha", from=1-2, to=1-3]
+	\arrow["\rho", from=1-3, to=1-4]
+	\arrow[from=1-4, to=1-5]
+\end{tikzcd}\]
+    est exacte si on a les conditions habituelles \textbf{d'égalités}
+    en tant que faisceaux.
+\end{defn}
+\begin{prop}
+    Suffit d'avoir des suites exactes sur les fibres avec les flèches
+    induites.
+\end{prop}
+
+Maintenant on arrive au croustillant. Si on a une suite exacte de 
+faisceaux
+% https://q.uiver.app/#q=WzAsNSxbMCwwLCIwIl0sWzEsMCwiXFxtYXRoc2NyIEYnIl0sWzIsMCwiXFxtYXRoc2NyIEYiXSxbMywwLCJcXG1hdGhzY3IgRicnIl0sWzQsMCwiMCJdLFswLDFdLFsxLDIsIlxcYWxwaGEiXSxbMiwzLCJcXHJobyJdLFszLDRdXQ==
+\[\begin{tikzcd}[ampersand replacement=\&,cramped]
+	0 \& {\mathscr F'} \& {\mathscr F} \& {\mathscr F''} \& 0
+	\arrow[from=1-1, to=1-2]
+	\arrow["\alpha", from=1-2, to=1-3]
+	\arrow["\rho", from=1-3, to=1-4]
+	\arrow[from=1-4, to=1-5]
+\end{tikzcd}\]
+on peut montrer que $0\to \F'(X)\to\F(X)\to \F''(X)$ est exacte. Mais 
+la dernière flèche est pas nécessairement surjective.
+\begin{ex}
+    Soit $X=\C^{\times}$ et $\Or_X$ le faisceau des fonctions 
+    holomorphes. Alors on a une suite exacte 
+% https://q.uiver.app/#q=WzAsNSxbMCwwLCIwIl0sWzEsMCwiKDJpXFxwaVxcWilfWCJdLFsyLDAsIlxcbWF0aGNhbCBPX1giXSxbMywwLCJcXG1hdGhjYWwgT19YXntcXHRpbWVzfSJdLFs0LDAsIjAiXSxbMSwyXSxbMCwxXSxbMiwzLCJleHAiXSxbMyw0XV0=
+\[\begin{tikzcd}[ampersand replacement=\&,cramped]
+	0 \& {(2i\pi\Z)_X} \& {\mathcal O_X} \& {\mathcal O_X^{\times}} \& 0
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow["exp", from=1-3, to=1-4]
+	\arrow[from=1-4, to=1-5]
+\end{tikzcd}\]
+    où la première flèche est celle donnant les fonctions constantes.
+    La deuxième est la post-composition avec l'exponentielle.
+\end{ex}
+
+\begin{rem}
+    Dans la suite exacte de faisceaux on a pas besoin de la surjectivité
+    de la dernière flèche.
+\end{rem}
+
+\section{Images directes et inverses de faisceaux}
+Soit $f\colon X\to Y$ une application continue. On a
+% https://q.uiver.app/#q=WzAsNixbMCwxLCJmXFxjb2xvbiBYIl0sWzIsMSwiWSJdLFswLDAsIlxcbWF0aHNjciBGIl0sWzIsMCwiXFxtYXRoc2NyIEciXSxbMCwyLCJmXipcXG1hdGhzY3IgRyJdLFsyLDIsImZfKlxcbWF0aHNjciBGIl0sWzAsMV0sWzQsMiwiIiwyLHsiY3VydmUiOi01fV0sWzMsNSwiIiwyLHsiY3VydmUiOi01fV1d
+\[\begin{tikzcd}[ampersand replacement=\&,cramped]
+	{\mathscr F} \&\& {\mathscr G} \\
+	{f\colon X} \&\& Y \\
+	{f^*\mathscr G} \&\& {f_*\mathscr F}
+	\arrow[curve={height=-30pt}, from=1-3, to=3-3]
+	\arrow[from=2-1, to=2-3]
+	\arrow[curve={height=-30pt}, from=3-1, to=1-1]
+\end{tikzcd}\]
+\begin{defn}[Image directe]
+    \[f_*\F\colon Ouv(Y)^{op}\to Ab\] t.q $f_*\F(V)=\F(f^{-1}V)$.
+\end{defn}
+\begin{rem}
+    C'est un faisceau si $\F$ est un faisceau, suffit de voir que 
+    $f^{-1}V=\cup f^{-1}V_i$ si $V=\cup V_i$.
+\end{rem}
+\begin{defn}[Image inverse]
+    \[f^p\F\colon Ouv(X)^{op}\to Ab\] t.q 
+    $f^p\G(U)=\varinjlim_{f(U)\subset V} \G(V)$. On déf ensuite 
+    $f^*=(f^p)^+$ le faisceau associé.
+\end{defn}
+
+\begin{ex}[Contre exemple pour $f^P$ est un faisceau]
+    Si on pullback un faisceau constant sur le singleton $\{*\}$
+    on obtient un préfaisceau constant!
+\end{ex}
+\begin{exo}
+    Revoir l'adjonction entre $(\_)^*$ et $(\_)_*$ et revoir le fait
+    que c'est des foncteurs.
+\end{exo}
+\begin{note}
+    Revoir comment obtenir les flèches de stalks.
+\end{note}
+\begin{prop}
+    Pour tout $x\in X$, 
+    \[(f^*\G)_x\simeq \G_{f(x)}\]
+\end{prop}
+\begin{proof}
+    Soit $x\in X$,
+    \begin{align*}
+	(f^*\G)_x&\simeq (f^P\G)_x\\
+		 &\simeq \varinjlim_{x\in U\subset X} (f^P\G)(U)\\
+		 &\simeq \varinjlim_{x\in U\subset X}\varinjlim_{f(U)\subset V\subset Y}\G(V)\\
+		 &\simeq \varinjlim_{f(x)\in V\subset Y} \G(V)\\
+		 &\simeq \G_{f(x)}
+    \end{align*}
+\end{proof}
+\begin{rem}
+    \textbf{Rappel :} On peut regarder explicitement les limites et 
+    colimites on est dans $Ab$. Via des quotients!
+\end{rem}
+\begin{rem}
+    On peut voir un faisceau $f^*\G$ sur $X$ comme un espace étalé sur 
+    $X$.
+    On considère $\tilde \G$ l'espace étalé 
+    \[\tilde \G\to Y\]
+    on peut regarder le produit fibré 
+% https://q.uiver.app/#q=WzAsNCxbMCwwLCJYXFx0aW1lc19ZXFx0aWxkZXtcXG1hdGhzY3IgIEd9Il0sWzIsMCwiXFx0aWxkZXtcXG1hdGhzY3IgR30iXSxbMCwyLCJYIl0sWzIsMiwiWSJdLFsyLDMsImYiLDJdLFsxLDMsIlxcdGV4dHJte0hvbcOpbyBsb2NhbH0iXSxbMCwyLCJcXHRleHRybXtIb23DqW8gbG9jYWx9IiwyXSxbMCwxXV0=
+\[\begin{tikzcd}[ampersand replacement=\&,cramped]
+	{X\times_Y\tilde{\mathscr  G}} \&\& {\tilde{\mathscr G}} \\
+	\\
+	X \&\& Y
+	\arrow[from=1-1, to=1-3]
+	\arrow["{\textrm{Homéo local}}"', from=1-1, to=3-1]
+	\arrow["{\textrm{Homéo local}}", from=1-3, to=3-3]
+	\arrow["f"', from=3-1, to=3-3]
+\end{tikzcd}\]
+    Alors $\tilde{f^*\G}\simeq X\times_Y\tilde{\G}$ au dessus de X.
+\end{rem}
+\begin{cor}
+    $f^*\colon Sh_{Ab}(Y)\to Sh_{Ab}(X)$ est exact.
+\end{cor}
+\begin{proof}
+    Étant donné $0\to \F'\to\F\to \F''\to 0$ une suite exacte. On peut
+    regarder directement sur les stalks et c'est clair.
+\end{proof}
+\begin{rem}
+    Étant donné $X=\{*\}$, un faisceau $\F$ sur $X$ est de la forme
+    $A_X$ un faisceau constant. On a alors une équivalence de catégorie
+    \[Sh_{Ab}(X)\simeq Ab\]
+    et même un isomorphisme. On a un pont pour envoyer des objets 
+    abéliens dans des faisceaux.
+\end{rem}
+\begin{cor}
+    Soit $X$ un e.t, $x\in X$ et $\F$ un faisceau abélien sur $X$.
+    On note $\iota_x\colon\{x\}\to X$, alors 
+    $\iota_x^*\F$ est le faisceau constant associé à $\F_x$ sur $\{x\}$.
+\end{cor}
+\begin{exo}[Faisceau gratte-ciel]
+    Sur un e.t $X$ et $x\in X$, $A\in Ab$. On définit
+    \[A_{\bar x}(U)=\begin{cases}A\textrm{ si }x\in U\\ 0\textrm{ sinon}
+    \end{cases}\]
+    Montrer que c'est un faisceau avec les restrictions évidentes. \\
+    Montrer que \[(A_{\bar x})_y=\begin{cases}A\textrm{ si } y\in\bar{\{x\}}\\ 0\textrm{ sinon}\end{cases}\]
+    Soit $A_{\bar{\{x\}}}$ le faisceau constant sur $\bar{\{x\}}$. 
+    Montrer que $\iota_* A_{\bar{\{x\}}}\simeq A_{\bar x}$. \\
+    D'après Fabrice le faisceau gratte ciel est une co-unité.
+\end{exo}
+\begin{defn}
+    On regarde $f_P\colon PSh_{Ab}(X)\to PSh_{Ab}(Y)$ qui à $\F$ associe
+    $(V\mapsto \F f^{-1}V)$.
+\end{defn}
+\begin{rem}
+    On a un carré commutatif de catégories (foncteurs diagonaux 
+    isomorphes)
+% https://q.uiver.app/#q=WzAsNCxbMCwwLCJTaF97QWJ9KFgpIl0sWzIsMCwiUFNoX3tBYn0oWCkiXSxbMiwyLCJQU2hfe0FifShZKSJdLFswLDIsIlNoX3tBYn0oWSkiXSxbMCwzLCJmXyoiLDJdLFswLDEsIlxcaW90YV9YIl0sWzEsMiwiZl9QIl0sWzMsMiwiXFxpb3RhX1kiLDJdXQ==
+\[\begin{tikzcd}[ampersand replacement=\&,cramped]
+	{Sh_{Ab}(X)} \&\& {PSh_{Ab}(X)} \\
+	\\
+	{Sh_{Ab}(Y)} \&\& {PSh_{Ab}(Y)}
+	\arrow["{\iota_X}", from=1-1, to=1-3]
+	\arrow["{f_*}"', from=1-1, to=3-1]
+	\arrow["{f_P}", from=1-3, to=3-3]
+	\arrow["{\iota_Y}"', from=3-1, to=3-3]
+\end{tikzcd}\]
+\end{rem}
+\begin{prop}
+    On a une adjonction 
+    $f^P\colon PSh(Y)\leftrightarrow PSh(X)\colon f_P$.
+\end{prop}
+\begin{proof}
+    On doit donner un isomorphisme (d'ensembles) 
+    \[\Hom_{PSh(X)}(f^P\G;\F)\simeq \Hom_{PSh(Y)}(\G;f_P\F)\]
+    fonctoriel en $\F\in PSh(X)$ et $\G\in PSh(Y)$ (l'adjoint à gauche
+    est à gauche). Étant donné $\alpha\colon \G\to f_P\F$, on a pour tout
+    $V$ \[\alpha(V)\colon \G(V)\to \F f^{-1}V\] 
+    et pour tout $U$ tel que $f(U)\subset V$ on a une flèche
+    \[\G(V)\to \F(f^{-1}V)\to \F(U)\]
+    et on cherche $f^P\G U\to \F U$. Suffit de prendre la limite du
+    diagramme du haut pour l'obtenir, on peut car $U\subset f^{-1}V$.
+
+    À l'inverse si on a $\beta\colon f^P\G\to \F$ et qu'on veut
+    des $\G V\to \F f^{-1} V$, on pose $U=f^{-1}V$, on a
+    \[\varinjlim_{f(f^{-1}V)\subset W}\G W\to\F f^{-1}V\]
+    puis comme $f(f^{-1}V)\subset V$ on a 
+    \[\G V\to \varinjlim_{f(f^{-1}V)\subset W}\G W\]
+    d'où $\G V\to \F^{-1}V$.
+\end{proof}
+Par la remarque plus haut et celle juste en dessou on obtient la même
+adjonction sur les faisceaux.
+\begin{rem}
+    La faisceautisation est adjointe à l'inclusion! (c'est la propriété
+    universelle directement)
+\end{rem}
+\begin{prop}
+    On a une adjonction 
+    $f^*\colon Sh(Y)\leftrightarrow Sh(X)\colon f_*$.
+\end{prop}
+\begin{proof}
+    \begin{align*}
+	\Hom_{Sh(X)}(f^*\G,\F)&=\Hom_{Sh(X)}((f^p\G)^+,\F)\\
+			      &=\Hom_{PSh(X)}(f^p\G, \iota_X \F(=\F))\\
+			      &=\Hom_{PSh(Y)}(\G,f_P\F)\\
+			      &=\Hom_{Sh(Y)}(\G,f_*\F)
+    \end{align*}
+\end{proof}
+
+\begin{prop}
+    Soit $f\colon X\to Y$ et $g\colon Y\to Z$. Alors on a des
+    isomorphismes canoniques $(g\circ f)_*\simeq g_*\circ f_*$ et 
+    $(g\circ f)^*\simeq f^*\circ g^*$. % https://q.uiver.app/#q=WzAsMyxbMCwwLCJTaF97QWJ9KFgpIl0sWzIsMCwiU2hfe0FifShZKSJdLFsyLDIsIlNoX3tBYn0oWikiXSxbMCwxLCJmXyoiLDIseyJjdXJ2ZSI6Mn1dLFsxLDIsImdfKiIsMix7ImN1cnZlIjoyfV0sWzEsMiwiZ14qIiwwLHsiY3VydmUiOi0yfV0sWzEsMCwiZl4qICIsMix7ImN1cnZlIjoyfV0sWzAsMiwiKGdcXGNpcmMgZilfKiIsMl0sWzIsMCwiKGdcXGNpcmMgZileKiIsMCx7ImN1cnZlIjotNX1dXQ==
+\[\begin{tikzcd}[ampersand replacement=\&,cramped]
+	{Sh_{Ab}(X)} \&\& {Sh_{Ab}(Y)} \\
+	\\
+	\&\& {Sh_{Ab}(Z)}
+	\arrow["{f_*}"', curve={height=12pt}, from=1-1, to=1-3]
+	\arrow["{(g\circ f)_*}"', from=1-1, to=3-3]
+	\arrow["{f^* }"', curve={height=12pt}, from=1-3, to=1-1]
+	\arrow["{g_*}"', curve={height=12pt}, from=1-3, to=3-3]
+	\arrow["{g^*}", curve={height=-12pt}, from=1-3, to=3-3]
+	\arrow["{(g\circ f)^*}", curve={height=-30pt}, from=3-3, to=1-1]
+\end{tikzcd}\]
+\end{prop}
+\begin{proof}
+    Pour $(\_)_*$ c'est clair via $(g\circ f)^{-1}=f^{-1}g^{-1}$. Ensuite
+    on peut faire $(\_)^*$ via l'adjonction mdr. L'adjoint à gauche
+    de $g_*\circ f_*$ est $f^*\circ g^*$ puis unicité.
+\end{proof}
+
+
+\printbibliography
+
+\end{document}
+

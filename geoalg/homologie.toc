@@ -1,0 +1,4 @@
+\babel@toc {french}{}\relax 
+\contentsline {chapter}{\numberline {1}Variétés algébriques}{7}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Nullstellensatz}{7}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Espace projectif}{9}{section.1.2}%

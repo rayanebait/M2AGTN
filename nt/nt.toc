@@ -1,0 +1,2 @@
+\babel@toc {french}{}\relax 
+\contentsline {chapter}{\numberline {1}Valuations et valeurs absolues}{7}{chapter.1}%
