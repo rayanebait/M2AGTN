@@ -1,0 +1,2 @@
+\babel@toc {french}{}\relax 
+\contentsline {chapter}{\numberline {1}TD1}{5}{chapter.1}%

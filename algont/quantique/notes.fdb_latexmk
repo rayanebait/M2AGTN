@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber notes"] 1726473120.73594 "notes.bcf" "notes.bbl" "notes" 1726473424.88258 0
-  "bib.bib" 1725862063.19308 25649 a0adb7cfe735fdde5534feeeef23bc23 ""
-  "notes.bcf" 1726473424.71148 107667 dcf5087f994082d9b62a936da0781f13 "pdflatex"
+["biber notes"] 1726473120.73594 "notes.bcf" "notes.bbl" "notes" 1727017934.40194 0
+  "bib.bib" 1726833913.6832 25649 a0adb7cfe735fdde5534feeeef23bc23 ""
+  "notes.bcf" 1727017934.21188 107667 dcf5087f994082d9b62a936da0781f13 "pdflatex"
   (generated)
   "notes.bbl"
   "notes.blg"
   (rewritten before read)
-["pdflatex"] 1726473421.51333 "notes.tex" "notes.pdf" "notes" 1726473424.88299 0
+["pdflatex"] 1727017930.62701 "notes.tex" "notes.pdf" "notes" 1727017934.4024 0
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1716849630 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1716849630 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1716849630 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -238,14 +238,14 @@
   "/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty" 1716849630 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "/usr/share/texmf-dist/tex/latex/xkeyval/xkeyval.sty" 1716849630 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1716849630 41588 b43d3e860a4f94167ee1e725ff526a72 ""
-  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1724048785.26527 5312047 b07fcd2a9090df96fc745b92a3db793b ""
-  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1724048764 7112998 88c66d79bb86ec587c62c15eb065312d ""
-  "notes.aux" 1726473424.70481 1455 7132ba4a9998f481d43698049b49979b "pdflatex"
-  "notes.bbl" 1726473121.78568 2143 407ad049f1b5406c691e1199f5705950 "biber notes"
-  "notes.out" 1726473424.70815 998 a4c977bedfc656a40bb554443db4ea3e "pdflatex"
-  "notes.run.xml" 1726473424.71481 2310 ed8d9bacef1a4d9bb064f86f7637fea4 "pdflatex"
-  "notes.tex" 1726473420.73139 15488 33160c0fc9b2063c799e3d90edca9ae8 ""
-  "notes.toc" 1726473424.71481 567 23032236a2e530c4f114d869de4d97bf "pdflatex"
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1726780162.11613 5312047 b07fcd2a9090df96fc745b92a3db793b ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1726780138 7112988 8bb309de3eca74dcb45c6894684add06 ""
+  "notes.aux" 1727017934.20521 1455 7132ba4a9998f481d43698049b49979b "pdflatex"
+  "notes.bbl" 1726833913.6832 2143 407ad049f1b5406c691e1199f5705950 "biber notes"
+  "notes.out" 1727017934.20855 998 a4c977bedfc656a40bb554443db4ea3e "pdflatex"
+  "notes.run.xml" 1727017934.21521 2310 ed8d9bacef1a4d9bb064f86f7637fea4 "pdflatex"
+  "notes.tex" 1726833913.68653 15488 33160c0fc9b2063c799e3d90edca9ae8 ""
+  "notes.toc" 1727017934.21521 567 23032236a2e530c4f114d869de4d97bf "pdflatex"
   (generated)
   "notes.aux"
   "notes.bcf"

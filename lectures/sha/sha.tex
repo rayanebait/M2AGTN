@@ -1,0 +1,189 @@
+\documentclass[a4paper,12pt]{book}
+\usepackage{amsmath,  amsthm,enumerate}
+\usepackage{csquotes}
+\usepackage[provide=*,french]{babel}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{quiver, tikz}
+
+%symbole caligraphique
+\usepackage{mathrsfs}
+
+%hyperliens
+\usepackage{hyperref}
+
+%pseudo-code
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\addtolength{\headwidth}{\marginparsep}
+\addtolength{\headwidth}{\marginparwidth}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\fancyhead[LO]{\textit \leftmark}
+\fancyhead[RE]{\textit \rightmark}
+\renewcommand{\headrulewidth}{0pt} % and the line
+\fancypagestyle{plain}{%
+    \fancyhead{} % get rid of headers
+}
+
+%bibliographie
+\usepackage[
+backend=biber,
+style=alphabetic,
+sorting=ynt
+]{biblatex}
+
+\addbibresource{bib.bib}
+
+\usepackage{appendix}
+\renewcommand{\appendixpagename}{Annexe}
+
+\definecolor{wgrey}{RGB}{148, 38, 55}
+
+\setlength\parindent{24pt}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\rel}{\omathcal{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\Or}{\mathcal{O}}
+\newcommand{\F}{\mathscr F}
+\newcommand{\Hom}{\textrm{Hom}}
+\newcommand{\disc}{\textrm{disc}}
+\newcommand{\Pic}{\textrm{Pic}}
+\newcommand{\End}{\textrm{End}}
+\newcommand{\Spec}{\textrm{Spec}}
+\newcommand{\Supp}{\textrm{Supp}}
+\renewcommand{\Im}{\textrm{Im}}
+\newcommand{\m}{\mathfrak{m}}
+
+
+\newcommand{\cL}{\mathscr{L}}
+\newcommand{\G}{\mathscr{G}}
+\newcommand{\D}{\mathscr{D}}
+\newcommand{\E}{\mathscr{E}}
+\renewcommand{\Pr}{\mathbb{P}}
+\renewcommand{\P}{\mathscr{P}}
+\renewcommand{\H}{\mathscr{H}}
+
+\makeatletter
+\newcommand{\colim@}[2]{%
+  \vtop{\m@th\ialign{##\cr
+    \hfil$#1\operator@font colim$\hfil\cr
+    \noalign{\nointerlineskip\kern1.5\ex@}#2\cr
+    \noalign{\nointerlineskip\kern-\ex@}\cr}}%
+}
+\newcommand{\colim}{%
+  \mathop{\mathpalette\colim@{\rightarrowfill@\scriptscriptstyle}}\nmlimits@
+}
+\renewcommand{\varprojlim}{%
+  \mathop{\mathpalette\varlim@{\leftarrowfill@\scriptscriptstyle}}\nmlimits@
+}
+\renewcommand{\varinjlim}{%
+  \mathop{\mathpalette\varlim@{\rightarrowfill@\scriptscriptstyle}}\nmlimits@
+}
+\makeatother
+
+\theoremstyle{plain}
+\newtheorem{thm}[subsection]{Théoreme}
+\newtheorem{lem}[subsection]{Lemme}
+\newtheorem{prop}[subsection]{Proposition}
+\newtheorem{cor}[subsection]{Corollaire}
+\newtheorem{heur}{Heuristique}
+\newtheorem{rem}{Remarque}
+\newtheorem{note}{Note}
+
+\theoremstyle{definition}
+\newtheorem{conj}{Conjecture}
+\newtheorem{prob}{Problème}
+\newtheorem{quest}{Question}
+\newtheorem{prot}{Protocole}
+\newtheorem{algo}{Algorithme}
+\newtheorem{defn}[subsection]{Définition}
+\newtheorem{exmp}[subsection]{Exemples}
+\newtheorem{exo}[subsection]{Exercices}
+\newtheorem{ex}[subsection]{Exemple}
+\newtheorem{exs}[subsection]{Exemples}
+
+\theoremstyle{remark}
+
+\definecolor{wgrey}{RGB}{148, 38, 55}
+\definecolor{wgreen}{RGB}{100, 200,0} 
+\hypersetup{
+    colorlinks=true,
+    linkcolor=wgreen,
+    urlcolor=wgrey,
+    filecolor=wgrey
+}
+
+\title{Notes perso : Géométrie algébrique}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\chapter*{Introduction}
+En suivant le I. R. Shafarevich.
+
+\chapter{Premières propriétés}
+\section{Variété produit}
+Ce qui est assez clair c'est le produit de variétés affines. L'idée
+en général c'est de construire 
+\[X\times Y\to \Pr^n(k)\]
+un isomorphisme sur son image qu'on peut reconstruire localement de 
+sorte à ce qu'il soit unique. 
+\begin{note}
+    Page 54.
+\end{note}
+Concrètement dans le cas affine, les fermés de $\A^{n+m}$
+qui sont fermés de $\A^n\times \A^m$ c'est les fermés du type
+$V(F(X_1,\ldots, X_n)), G(X_{n+1},\ldots, X_m))$. Pour le projectif
+c'est assez similaire. Le truc c'est que brutalement définir
+\[\Pr^n\times \Pr^m\to \Pr^{n+1+m+1-1}\]
+ca marche pas. Un tuple du produit $(u_0,\ldots, u_n, v_0,\ldots, v_m)$
+est doublement homogène donc définit pas un point de $\Pr^{n+m+1}$. 
+Ducoup faut déf plutôt
+\begin{align*}
+    \phi\colon\Pr^n\times \Pr^m&\to \Pr^{(n+1)(m+1)-1}\\
+([u_0,\ldots, u_n],[v_0,\ldots, v_m])&\mapsto (u_iv_j)_{i,j}
+\end{align*}
+Et là on a clairement 
+\[\phi(\Pr^n\times \Pr^m)=\bigcap_{i,j}V\left(\begin{vmatrix}
+X_{ij}& X_{il}\\ X_{kj}&X_{kl}\end{vmatrix}\right)\]
+En fait ce qui est cool c'est la remarque suivante.
+\begin{rem}
+    Si on regarde les mineures $2x2$ de $(X_{ij})$ et le lieu de leur
+    zéros communs. On peut prouver que $\phi$ se surjecte dedans. En
+    particulier la matrice $(w_{ij})=(u_iv_j)$ est de rang $1$ et en plus
+    c'est un produit de matrices $1\times (n+1)$ par $(m+1)\times 1$.
+\end{rem}
+En fait c'est non trivial le produit projectif mdr. Déjà à faire :
+\begin{exo}
+    Les fermés de $\Pr^n\times \Pr^m$ sont les zéros de polynômes 
+    bihomogènes. Réponse : L'idée c'est que si on prend un polynôme 
+    homogènes en $(X_{ij})$ et qu'on regarde \[X_{ij}\mapsto X_iY_j\]. 
+    On obtient un polynôme bihomogène en les $X_i$ et les $Y_j$ de 
+    mêmes degrés. En fait inversement si on a un polynôme bihomogène
+    $G$ de degré $r$ en $X_i$ et $s$ en $Y_j$ avec $r>s$, on peut 
+    remarquer que $V(G)$ dans $\A^{n+1}\times \A^{m+1}$ est égal à 
+    à \[\bigcup V(Y_j^{r-s} G)\]
+    (à vérifier, ça a l'air de marcher justement parce qu'on regarde
+    dans $\A^{n+1}\times \A^{m+1}$ et pas $\A^{n+1+m+1}$.)
+\end{exo}
+
+
+
+\printbibliography
+\end{document}
+

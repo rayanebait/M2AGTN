@@ -282,6 +282,84 @@ On considère $k[T_0,\ldots, T_n]=\bigoplus_{d\geq 0} S_d$.
     $Z(J)\subset \{0\}=(T_0,\ldots, T_n)$. Sinon $I_+(Z_+(J))=I(\pi^{-1}
     (Z_+(J)))=I(\pi^{-1}(Z_+(J))\cup\{0\})=\sqrt J$.
 \end{proof}
+\section{foncions régulières}
+Revoir que la topologie de Zariski c'est la plus petite topologie que
+rend continue les polynômes. 
+\begin{defn}[Fonction régulière]
+    On décrit pour $Z\subset \A^n(k)$ l'anneau $\Or_Z(U)$. On prend
+    les fonctions qui sont localement des fractions rationnelles.
+\end{defn}
+\begin{note}
+    Trouver exactement où on peut écrire des polynômes, les ouverts sont
+    quasi-compacts(!).
+\end{note}
+\begin{lem}
+    $\Or_Z$ est un faisceau pour les restrictions naturelles.
+\end{lem}
+\begin{proof} C'est évident avec la déf mdr. \end{proof}
+
+\begin{prop}
+    Soit $Z\subset \A^n(k)$. 
+    \begin{itemize}
+	\item Les fonctions régulières sont continues.
+	\item Pour tout $f\in \A(Z)$, la flèche $\A(Z)\to \Or_Z(D(f))$
+	    passe au quotient en un isom $\A(Z)_f \simeq \Or_Z(D(f))$.
+	\item $\A(Z)\simeq \Or_Z(Z)$.
+    \end{itemize}
+\end{prop}
+\begin{proof}
+    Pour le premier point l'idée c'est que localement on peut se
+    mettre sur un ouvert tel que $f|_U(U)=\{pt\}$. Le deuxième point
+    c'est la surjectivité qu'y faut voir. Le troisième point c'est
+    le plus cool, c'est l'idée que on commence par décomposer 
+    $Z$ en une union finie $\bigcup_i D(f_i)$ où on est une fraction
+    rationnelle. Ensuite, on obtient $(gf_i-h_i)|_{D(f_i)}=0$, faut 
+    relever puis dérouler avec le fait que $1\in(f_i,i)$ quelque part.
+\end{proof}
+\begin{rem}
+    Si on prend $\A^2\backslash (0,0)$, il a les mêmes sections globales
+    que $\A^2$. Ça prouve que cet ouvert est pas affine.
+\end{rem}
+\section{Morphismes d'ensembles algébriques}
+Dans les ensembles algébriques on peut directement prendre des 
+fonctions polynomiales ! C'est la preuve d'avant. 
+
+\begin{thm}
+    On a une équivalence de catégories entre les $k$-algèbres
+    de type finies réduites et la $k$-variétés.
+\end{thm}
+\begin{note}
+    Revoir vite fait la construction.
+\end{note}
+\section{Espaces annelés}
+\begin{defn}
+    Un espace annelé est un espace topologique $X$ muni d'un faisceau
+    de $k$-algèbre pour nous.
+\end{defn}
+
+\begin{defn}
+    Un morphisme d'espaces annelés 
+    \[(|X|,\Or_X)\to (|Y|, \Or_Y)\] 
+    est un couple $(|f|, f^{\#})$. Où 
+    $|f|$ est un morphisme d'espaces topologiques et
+    $f^{\#}\colon O_Y\to |f|_*\Or_X$
+    un morphisme tels que les flèches induites sur 
+    les fibres sont des morphismes d'anneaux 
+    locaux.
+\end{defn}
+\begin{note}
+    Le faisceau $|f|_*\Or_X$ est le pullback classique. Si
+    $y=|f|(x)$, comme d'habitude on a 
+    \[f^\#\colon O_{Y,y}\to (|f|_*\Or_X)_y\to \Or_{X,x}\]
+    Enfin en fait comme c'est localement annelé apparemment on 
+    peut montrer que $f^\#$ c'est automatiquement le pullback.
+\end{note}
+\begin{thm}
+    Le couple $(Z,\Or_Z)$ est un espace annelé.
+\end{thm}
+\begin{proof}
+    Les fibres $\Or_{Z,z}$ sont les $\A(Z)_{\m_z}$.
+\end{proof}
 
 \printbibliography
 \end{document}
