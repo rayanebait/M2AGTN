@@ -263,6 +263,47 @@ $1$. On obtient une flèche rationnelle dominante injective
 \[Z(f_d+f_{d-1})\to Z(\ker(\varphi))\]
 où $\ker(\varphi)$ définit un hyperplan de $\A^n$ d'où le résultat.
 
+\textbf{Bien meilleure manière!} En fait, déjà pour rappel une petite
+sous section.
+\subsection{L'équivalence de catégorie de base}
+Quand on a $\varphi\colon k[Y]\to k[X];~(\overline{Y_i})_i\mapsto 
+(g_i(\overline{X_j},j)_i$. Les $Y_i$ vérifient les équations de $Y$
+donc par définition les $g_i(\overline{X}_j,j)$ aussi! D'où, la flèche 
+$\varphi^a\colon X\to Y$ telle que 
+\[(x_j)_{j=1,\ldots,n}\mapsto (g_i(x_j,j))_{j=1,\ldots, m}\]
+est bien définie et régulière! Maintenant, si on regarde $\ker(\varphi)$,
+c'est un idéal qui contient $I(Y)$ et dont les $g_i$ vérifient les 
+équations ! D'où l'image de $\varphi^a$ est contenue dans 
+\[Z(\ker(\varphi))\subset Y\]
+en particulier, $\varphi^a$ \textbf{est dominante} si et seulement si 
+$\varphi$ \textbf{est injective} !
+
+À l'inverse, si $\varphi$ \textbf{est surjective} on obtient un
+isomorphisme et donc une injection 
+\[k[Y]/\ker(\varphi)\simeq k[X]\]
+mais $k[Y]\to k[Y]/\ker(\varphi)$ est par définition l'injection 
+$Z(\ker(\varphi))\subset Y$. En particulier, $X$ \textbf{s'injecte dans}
+$Y$.
+
+\subsection{Une nouvelle preuve}
+On peut regarder $\A^n\to \A^n$ la flèche 
+\[(t_1,\ldots,t_n)\mapsto (t_1, t_1t_2,\ldots, t_1t_n)\]
+on obtient un isomorphisme 
+\[k[T_1,\ldots, T_n]_{T_1}\simeq k[T_1,\ldots, T_n]\]
+d'inverse $T_1\mapsto T_1;~T_i\mapsto T_i/T_1$. Maintenant on peut 
+regarder \[f_d(T_1, T_2/T_1, \ldots, T_n/T_1)+f_{d-1}(\ldots)=0\] qu'on
+obtient via l'isomorphisme induit 
+\[k[Z(f_d(T_i,i)+f_{d-1}(T_i,i)]_{T_1}\simeq k[Z(f_d(T_1,T_1T_2,\ldots,T_1T_n)+f_{d-1}(T_1,T_1lT_2,\ldots, T_1T_n))]_{T_1}\]
+Mais le membre de droite est égal à $k[Z(T_1f_d+f_{d-1})_{T_1}]$ en
+particulier $Z(f_d+f_{d-1})$ est birationnel à $Z(T_1f_d+f_{d-1})$.
+Maintenant si $f_{d-1}\ne 0$ on peut définir
+\[k[T_1,\ldots, T_n]\to k[Z(T_1f_d+f_{d-1})]_{f_{d-1}}\]
+via $T_1\mapsto T_1f_d/f_{d-1}$ et $T_i\mapsto T_i$. Le noyau a l'air 
+d'être clairement $T_1+1$ d'où on a fini.
+
+
+
+
 \printbibliography
 \end{document}
 

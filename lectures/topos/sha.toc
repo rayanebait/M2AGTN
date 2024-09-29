@@ -1,0 +1,5 @@
+\babel@toc {french}{}\relax 
+\contentsline {chapter}{\numberline {1}Faisceaux d'ensembles}{7}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Cribles}{7}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Bundles}{7}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Faisceautisation}{7}{section.1.3}%

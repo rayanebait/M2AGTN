@@ -4,3 +4,5 @@
 \contentsline {section}{\numberline {1.2}Graphes}{8}{section.1.2}%
 \contentsline {section}{\numberline {1.3}Les variétés projectives sont complètes}{9}{section.1.3}%
 \contentsline {section}{\numberline {1.4}Un peu de birationnalité (exo 5 (1.3)}{9}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}L'équivalence de catégorie de base}{10}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Une nouvelle preuve}{11}{subsection.1.4.2}%
