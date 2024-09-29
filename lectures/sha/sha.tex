@@ -177,18 +177,91 @@ En fait c'est non trivial le produit projectif mdr. Déjà à faire :
     mêmes degrés. En fait inversement si on a un polynôme bihomogène
     $G$ de degré $r$ en $X_i$ et $s$ en $Y_j$ avec $r>s$, on peut 
     remarquer que $V(G)$ dans $\A^{n+1}\times \A^{m+1}$ est égal à 
-    à \[\bigcup V(Y_j^{r-s} G)\]
+    à \[\bigcap V(Y_j^{r-s} G)\]
     (à vérifier, ça a l'air de marcher justement parce qu'on regarde
     dans $\A^{n+1}\times \A^{m+1}$ et pas $\A^{n+1+m+1}$.)
     \textbf{Meilleure réponse} : Si on regarde $Z(G)\subset \varphi(
     \Pr^n\times\Pr^m)$ on peut montrer que $G$ est bihomogène de mêmes
     degré. À l'inverse pour def des fermés de $\Pr^n$ on doit utiliser
-    des générateurs homogènes et donc $\bigcup_i V(Y_j^{r-s}G)$ c'est des
+    des générateurs homogènes et donc $\bigcap_i V(Y_j^{r-s}G)$ c'est des
     générateurs homogènes.
 \end{exo}
+Pour $\Pr^n\times \A^n$ on peut prendre les homogènes pour les premières.
 
-\section{Images de variétés projectives}
 
+\section{Graphes}
+En gros étant donné la structure d'une variété projective $X$ on peut
+se demander si la diagonale dans $X\times X$ est fermée. C'est assez
+clair si on remarque que dire que deux points projectifs 
+$u=[u_0:\ldots:_n]$ et $v=[v_0:\ldots:v_n]$ sont égaux ssi ils sont
+proportionnels. Autrement dit si \[u_i/u_j=v_i/v_j\]
+ou \[u_iv_j=u_jv_i.\] Ensuite étant donné une fonction 
+\[f\colon Y\to X\]
+on peut regarder \[id\times f\colon X\times Y\to X\times X\]
+d'où le graphe est fermé.
+
+\section{Les variétés projectives sont complètes}
+Y'a la preuve de Shafarevich et la preuve de Dat qui a l'air plus 
+parlante et qui dit qu'on peut "compléter" les courbes ponctionnées d'un
+point sur une variété complète.
+
+Pour la preuve de Shafarevich, on peut
+regarder $Z(G)\subset X\times Y\to Y$ et donner des conditions pour que
+$y\in p_2(Z(G))$ pour $G$ un polynôme bihomogène. Déjà on peut se ramener
+à $X=\Pr^n$ car $X$ est projective et $Y=\A^n$. En fait, 
+$y\in p_2(Z(G))$ ça veut juste dire que $G(\bar U, y)$ a un zéro 
+projectif. Autrement dit, $I_s\nsubseteq (G(\bar U,y))$. Par cette 
+condition, en notant $(M_{a})_a$ les monômes de degrés $s$ on obtient
+\[M_a(\bar U)=F_a(\bar U)G(\bar U, y)\]
+avec $\deg(F_a)=s-\deg(G)$. Enfin si on écrit $F_a$ en somme monomes
+de degré $s-\deg(G)$ disons en $N_b$. Alors les $M_a$ sont combinaisons
+linéaires des $N_bG$. Et on obtient une matrices entre la base canonique
+des monômes de degré $s$ et les $N_bG$ à coefficients des polynomes en
+$y$ à coefficient dans $k$! La condition $y\in p_2(Z(G))$ équivaut alors
+au fait que le rang de la matrice soit $<$ au nombre de monôme de 
+degré $s$ en $n$ variables. On prend $y$ qui annule les mineures de 
+taille cette dimension!
+
+\begin{cor}
+    L'image d'une variété projective est fermée.
+\end{cor}
+
+Suffit de factoriser $X\to Y$ en $X\to X\times Y\to Y$, la première 
+flèche est $x\mapsto (x, f(x))$ et envoie $X$ sur son graphe.
+
+
+\section{Un peu de birationnalité (exo 5 (1.3)}
+Si on prend $f_d,f_{d-1}\in k[X_1,\ldots, X_n]$ de degrés $d$ et $d-1$
+tels que $f_d+f_{d-1}$ est irréductible, alors $Z(f_d+f_{d-1})$ est 
+birationnelle à $\A^{n-1}$. 
+
+Mon idée c'est que $f_d/f_{d-1}$ est de degré $1$, d'où 
+$f_d/f_{d-1} + 1$ définit un hyperplan. Ducoup faut trouver un 
+isomorphisme de $k(\bar X_1, \ldots, \bar X_n)$ vers 
+$k(X_1, \ldots, X_{n-1})$. Pour ça deux manières de faire, si $f_d$ 
+a un monôme qui étend $f_{d-1}$ on peut juste le factoriser en haut
+et en haut de la fraction. On obtient une expression de la forme 
+\[F_0.(X_k+F_1)\]
+où $F_0$ est de degré $0$ et $F_1$ de degré $1$ qui a seulement pour 
+dénominateur le monôme. On peut faire le changement de variable
+$X_k\mapsto X_k/F_0 $, on obtient $X_k$ + $F_1(F_0, X_1,\ldots, X_n)$.
+
+\textbf{Meilleure manière :} En fait on peut écrire $f_d/f_{d-1}$ comme
+$1/F_0(f_d/M)$ où $F_0$ est une fraction rationnelle de degré $0$ et
+$M$ un monôme. En gros on a factorisé en bas et en haut par $M$. Ensuite,
+en notant $M(i)=\{M\in S_{d_1}| X_i\mid M\}$ et \[f_{d,i}= f_{d,i-1}-
+X_{i-1}\sum_{M\in M(f_{d,i-1},i-1)} a_{M, i-1}M\] et $M(f_{d,i},i)=\{M\in M(i)| M\in Monome(f_{d,i})\}$
+on peut écrire
+\[f_d/M=\left(\sum_i X_i\sum_{N\in M(f_{d,i}, i)} a_{N, i} N\right)/M\]
+en particulier les $N/M$ ont degré $0$. Enfin si on note $I$ le support 
+de la somme de gauche, on peut déf 
+\[\varphi\colon K[T_1,\ldots,T_n]\to K[Z(f_d+f_{d-1})]_{f_{d-1}, M}\]
+par $T_i\mapsto X_i\sum_{N\in M(f_{d,i}, i)} a_{N, i} N/M$ si $i\in I$
+et $T_i\mapsto X_i$ sinon. On peut remarquer que la flèche préserve la 
+graduation, i.e. $\ker(\varphi)$ est engendré par des polynômes de degré
+$1$. On obtient une flèche rationnelle dominante injective
+\[Z(f_d+f_{d-1})\to Z(\ker(\varphi))\]
+où $\ker(\varphi)$ définit un hyperplan de $\A^n$ d'où le résultat.
 
 \printbibliography
 \end{document}

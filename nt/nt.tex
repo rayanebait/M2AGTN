@@ -92,7 +92,7 @@ sorting=ynt
 \newtheorem{algo}{Algorithme}
 \newtheorem{defn}[subsection]{Définition}
 \newtheorem{defnbis}{Définition}
-\newtheorem{exmp}[subsection]{Exemples}
+\newtheorem{ex}{Exemple}
 \newtheorem{exo}[subsection]{Exercices}
 
 \theoremstyle{remark}
@@ -114,7 +114,7 @@ sorting=ynt
 \chapter*{Introduction}
 Le but c'est d'abord de décrire les extensions finies de corps locaux
 comment dans \cite{cassels}.
-\chapter{Corps complets}
+\chapter{Corps ultramétriques complets}
 \section{Valuations et valeurs absolues}
 Le but là c'est de classifier les valuations, d'abord sur des corps
 premiers comme $\Q$. D'abord l'équivalence entre valuations et 
@@ -342,6 +342,7 @@ par définition!
     par induction \textbf{Faire? Ah la preuve est non triviale mdr}.
 \end{proof}
 
+\section{Lemme de Hensel}
 Soit $(K,|.|)$ un corps complet ultramétrique. On note $k=\Or_K/\m$
 le corps résiduel. 
 \begin{lem}[Lemme de Hensel]
@@ -373,10 +374,269 @@ le corps résiduel.
     \textbf{Revoir la preuve ailleurs.}
 \end{proof}
 
+\begin{cor}
+    On garde les hypothèses sur $K$. Étant donné un polynôme irréductible
+    $P\in K[X]$, on a 
+    \[max_i|a_i|=max\{|a_0|, |a_d|\}.\]
+    En particulier si $a_d=1$ et $a_0\in \Or_K$ alors $P\in \Or_K[X]$.
+\end{cor}
+\begin{proof}
+    Supp $|a_{i_0}|>|a_0|,|a_d|$. Alors $P'=P/a_{i_0}\in \Or_K[X]$.
+    On a 
+    \[P'=X^rg(X)\mod \m_K\]
+    avec $r>0$ et $g(0)\ne0$. On a $r\leq \deg(P'\mod \m_K)< d$ et par le
+    lemme de Hensel $P(X)=FG$ avec $0<\deg(F)=r<d$ par déf, c'est
+    contradictoire.
+\end{proof}
+\begin{cor}[Lemme de Hensel]
+    Si $P\in \Or_K[X]$ a une racine simple modulo $\m_K$. Alors
+    $P$ a une unique racine congrue à elle modulo $\m_K$.
+\end{cor}
+\begin{proof}
+    Clair par l'unicité du relèvement.
+\end{proof}
+\begin{cor}[Lemme de Newton]
+    Pour $P\in \Or_K[X]$, on suppose qu'il existe $\alpha\in \Or_K$
+    tel que \[|P(\alpha)|<|P'(\alpha)|^2\]
+    alors il existe un unique $\tilde\alpha\in\Or_K$ tel que
+    \[\begin{cases} P(\tilde\alpha)=0,\\ |\tilde\alpha-\alpha|<|P'(\alpha)\end{cases}\]
+\end{cor}
+\begin{proof}
+    Soit $\lambda= P'(\alpha)$, l'expansion de taylor de $P$ en $\alpha$
+    est
+    \[P(X+\alpha)=P(\alpha)+P'(\alpha)X+X^2R(X)\]
+    avec $R(X)\in \Or_K[X]$. Soit $H(X)=\lambda^{-2}P(\lambda X+\alpha)$,
+    on a 
+    \[P(\lambda X+\alpha)/\lambda^2=P(\alpha)/\lambda^2+X+X^2R_1(X)\]
+    et $|P(\alpha)/\lambda^2|<1$ par hypothèse. Donc on a 
+    $H(X)\in\Or_K[X]$ et $\bar H(X)=X(1+XG(X))$ pour un $G$. Et 
+    $0$ est une racine simple de $\bar H$. Par le corollaire précédent
+    on a une unique racine $t$ de $H$ telle que $|t|<1$. D'où
+    $\lambda t+\alpha$ est une racine de $P$ et c'est la seule dans
+    $D(\alpha, |\lambda|)$.
+\end{proof}
+\begin{ex}
+    Dans $\Q_p$, si $\alpha\in\Q_p$ et $|\alpha|_p<1$ alors $1+\alpha$
+    a une racine $n$-ème dans $\Z_p$ si $n$ est premier
+    à $p$. On peut considérer $X^n-(1+\alpha)\in \Z_p[X]$, dans 
+    $\F_p\colon X^n-(1+\alpha)=X^n-1$ a une racine simple $X=1$ puis
+    lemme de Hensel.
+\end{ex}
+\begin{ex}
+    Si $n=p-1$, $P=X^{p-1}-1$ est décomposé dans $\F_p$ d'où on 
+    a les racines $p-1$-èmes de l'unité dans $\Z_p$.
+\end{ex}
+\begin{ex}
+    Si $n=p$, $(1+p\alpha)^p=1+p^2\alpha*$ et 
+    $(1+X)^p=1+pX+p(p-1)/2X^2\_+pX^{p-1}+X^p$
+    et $p\mid \begin{pmatrix} p\\k\end{pmatrix}$ pour $1\leq k\leq p-1$.
+    Enfin \[(1+p\alpha)^p=1+p^2\alpha *\]
+    et $(1+p)\neq (1+\alpha)^p,\alpha\in \Z_p$. 
+\end{ex}
+\begin{ex}
+    Enfin par exemple $X^2-p$ peut pas avoir de racines dans $\Z_p$
+    parce que $\equiv X^2\mod p$ et 
+    $v_p(\alpha^2)=2v_p(\alpha)\ne 1=v_p(p)$.
+\end{ex}
+\begin{thm}[Lemme de Hensel multivarié]
+    Soit $F(X,Y)\in \Or_K[X,Y]$. On suppose que $\bar F$ a un zéro
+    $(a,b)$. On suppose que $\bar F_X'(a,b)\ne 0$. Alors 
+    \[\{(x,y)\in \Or_K^2\mid F(x,y)=0,\bar x=a,\bar y=b\}\]
+    est en bijection avec 
+    \[\{t\in\Or_K\mid |t|<1\}.\]
+\end{thm}
+\begin{proof}
+    Soit $t\in \m_K$. On considère $P=F(X,\tilde b+t)\in \Or_K[X]$
+    où $\tilde b \equiv b$ et $\bar P(X)=\bar F(X,b)$, $\bar P'(X)=
+    \bar F_X'(X,b)$. Par le lemme de Hensel, $P$ a une unique racine
+    $\alpha(t)\in \Or_K$, telle que $\bar\alpha(t)\equiv a$. Alors
+    \[\{|t|<1\}\to\{(x,y)\in \Or_K^2| F(x,y)=0,\bar x=a, \bar y=b\}\]
+    est injective car $t\mapsto b+t$ est injective. 
 
+    Inversement, si $(x,y)$ est dans l'ensemble de droite. On pose
+    $t=y-b$ d'où $P_t(x)=0$, $\bar x= a$ implique $x=\alpha(t)$. En fait,
+    \[\{|t|<1\}\to \{F^{-1}(0)\ldots\}\] est continue et même analytique.
+\end{proof}
+\begin{ex}
+    Soit $E\colon y^2=x^3+1$ sur $\Q_p$, $p>3$. On regarde 
+    $F=Y^2-(X+1)^3$.
+    On a $F_X=3X^2$ et $F_Y=2Y$. Pour tout $(a,b)\in\F_p^2$ tel que 
+    $b^2=a^3+1$, au moins l'un des $\bar F_X(a,b)$ et $\bar F_Y(a,b)$
+    est non nul. Alors $E(\Z_p)$ est une union disjointe de disques
+    ouvert de $\Z_p$ indexés par $E(\F_p)$.
+\end{ex}
+
+\section{Extension de valeurs absolues}
+On considère $L/K$ une extension finie de corps quelconques. Pour rappel
+la norme \[N_{L/K}(\alpha)\colon L\to K\]
+est définie comme le déterminant de $x\mapsto \alpha x$ dans $L$.
+
+\begin{prop}
+    Pour $\alpha\in L$,
+    \begin{itemize}
+        \item $N(\alpha)=\alpha^[L:K]$ si $\alpha\in K$.
+        \item La norme est multiplicative.
+        \item Étant donné $L/E/K$, on a 
+            $N_{L/K}(\alpha)=N_{E/K}(N_{L/E}(\alpha))$. (dur)
+        \item Si $P(X)=X^d+\ldots+a_0$est le polynôme minimal de 
+            $\alpha$ sur $K$, alors, 
+            $N_{K[\alpha]/K}(\alpha)=(-1)^d a_0$.
+    \end{itemize}
+\end{prop}
+ En particulier, le cas $E=K[\alpha]$ est intéressant. 
+\begin{thm}
+    Si $K$ est complet ultramétrique. Soit $L/K$ une extension
+    finie. Alors $|.|$ s'étend uniquement en une valeur absolue sur $L$
+    via \[|\alpha|=|N_{L/K}(\alpha)|^{1/[L:K]}.\]
+\end{thm}
+\begin{proof}
+    L'existence consiste à vérifier que c'est bien une valeur absolue.
+    On supp $|\alpha|_L\leq 1$. On doit vérifier que 
+    \[|1+\alpha|_L\leq 1\]
+    mais $|\alpha|_L\leq 1$ dit que $|N_{L/K}(\alpha)|\leq 1$. Si
+    $P$ est le polynôme minimal de $\alpha$ alors $|a_0|\leq 1$ d'où
+    par le corollaire de Hensel $P\in \Or_K[X]$. En plus,
+    $P(X-1)$ est le pol minimal de $1+\alpha$. D'où 
+    $|N_{K[\alpha]/K}(1+\alpha)|=|1+\alpha|_L\leq 1$. Enfin l'unicité
+    est dûe à l'unicité des normes sur $L$ en tant que $K$-ev. (\textbf{
+    regarder})
+
+    Si $|.|$ est triviale les extensions définissent des topologies
+    discrètes donc sont triviales.
+\end{proof}
+Ça c'est pour les extensions finies.
+
+\begin{cor}
+    Une valeur absolue sur un corps ultramétrique complet $K$ s'étend
+    uniquement en une valeur absolue sur $\bar K$!
+\end{cor}
+\begin{proof}
+    L'idée c'est de définir 
+    \[|\alpha|:=|N_{K[\alpha]/K}(\alpha)^{1/[K[\alpha]:K]}\]
+    et tout se vérifie localement. En fait dès que $\alpha\in L$,
+    on a $|N_{K[\alpha]/K}(\alpha)|^{1/[K[\alpha]:K]}=|\alpha|_L$.
+\end{proof}
+
+\begin{prop}
+    Soit $(K,|.|)$ un corps ultramétrique et $L/K$ une extension finie.
+    Alors il existe au plus $[L:K]$ extensions de $|.|$ à $L$.
+\end{prop}
+Sans les valeurs absolues, on a tjr un diagramme
+% https://q.uiver.app/#q=WzAsNyxbMCwwLCJMIl0sWzAsMSwiSyJdLFsxLDEsIlxcd2lkZWhhdCBLIl0sWzIsMSwiXFx3aWRlaGF0IEteYyJdLFswLDIsInwufCJdLFsxLDIsInwufCJdLFsyLDIsInwufF9jIl0sWzAsMSwiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxLDIsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMiwzLCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzAsMywiIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV1d
+\[\begin{tikzcd}
+	L \\
+	K & {\widehat K} & {\widehat K^c} \\
+	{|.|} & {|.|} & {|.|_c}
+	\arrow[no head, from=1-1, to=2-1]
+	\arrow[dashed, from=1-1, to=2-3]
+	\arrow[no head, from=2-1, to=2-2]
+	\arrow[no head, from=2-2, to=2-3]
+\end{tikzcd}\]
+\begin{proof}
+    On commence par remarquer qu'on en a une manière d'en avoir 
+    $[L:K]$ via $x\mapsto |\sigma(x)|_c$ et qu'on a $|Aut(L/K)|\leq 
+    [L:K]$. On montre que toute extension est donnée par 
+    un plongement $\sigma\colon L\to \widehat K^c$. Étant donné 
+    le diagramme 
+% https://q.uiver.app/#q=WzAsNSxbMCwwLCIoTCx8LnxfTCkiXSxbMCwxLCIoSyx8LnwpIl0sWzEsMSwiSyciXSxbMSwwLCJcXHdpZGVoYXQgTCJdLFsyLDEsIlxcd2lkZWhhdCBLIl0sWzEsMiwiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFswLDEsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCwzLCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzIsMywiXFxiaWdjdXAiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMiw0LCJcXHNpbSJdXQ==
+\[\begin{tikzcd}
+	{(L,|.|_L)} & {\widehat L} \\
+	{(K,|.|)} & {K'} & {\widehat K}
+	\arrow[no head, from=1-1, to=1-2]
+	\arrow[no head, from=1-1, to=2-1]
+	\arrow[no head, from=2-1, to=2-2]
+	\arrow["\bigcup"{description}, draw=none, from=2-2, to=1-2]
+	\arrow["\sim", from=2-2, to=2-3]
+\end{tikzcd}\]
+    où $K'$ est la cloture topologique de $K$ dans $\widehat L$, on
+    obtient un isomorphisme $K'\to \widehat K$. On veut maintenant
+    montrer que $\widehat L$ est finie sur $K'$. Si c'est le cas alors
+    on a un $\tau$ tel que $|\tau(x)|':=|x|_{\widehat L}$ pour tout
+    $x\in \widehat L$. C'est une valeur absolue sur 
+    $\tau(\widehat L)\subset \widehat K^c$ qui étend celle de 
+    $\widehat K$! L'unicité sur $\widehat K^c$ implique que 
+    $|.|'=|.|_c$ d'où $|.|_{\widehat L}=|.|_c\circ\tau$.
+
+
+    On prouve maintenant que $\widehat L$ est finie sur $K'$.
+% https://q.uiver.app/#q=WzAsNSxbMCwwLCJMIl0sWzAsMiwiSyJdLFsyLDIsIksnIl0sWzIsMCwiXFx3aWRlaGF0IEwiXSxbMSwxLCJMLksnIl0sWzEsMiwiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFswLDEsImZpbmllIiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFswLDMsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMiwzLCJcXGJpZ2N1cCIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs0LDIsImZpbmllIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs0LDAsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNCwxLCIiLDEseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzQsMywiIiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
+\[\begin{tikzcd}
+	L && {\widehat L} \\
+	& {L.K'} \\
+	K && {K'}
+	\arrow[no head, from=1-1, to=1-3]
+	\arrow["finie"', no head, from=1-1, to=3-1]
+	\arrow[no head, from=2-2, to=1-1]
+	\arrow[no head, from=2-2, to=1-3]
+	\arrow[no head, from=2-2, to=3-1]
+	\arrow["finie", no head, from=2-2, to=3-3]
+	\arrow[no head, from=3-1, to=3-3]
+	\arrow["\bigcup"{description}, draw=none, from=3-3, to=1-3]
+\end{tikzcd}\]
+    On remarque que $L.K'$ est complet donc fermé dans $\widehat L$. 
+    On conclut en remarquant que c'est dense parce que $L$ est dense
+    dans $\widehat L$.
+\end{proof}
+
+
+\section{Extension de $|.|$ à une extension quelconque}
+Il suffit de savoir étendre à une extension purement transcendante.
+On regarde dans
+\[K(x_i)_{i\in I}=\bigcup_{J\subset I;\#J<\infty} K(x_j)_{j\in J}\]
+si on a une manière de définir des normes de manières canoniques sur les
+extensions finiment générées. On a sur $K[X_1,\ldots,X_n]$ la norme
+de Gauss 
+\[||\sum \lambda_{k_1\ldots k_n} X_1^{k_1}\ldots X_n^{k_n}||=max|\lambda_{k_1\ldots k_n}|\in \R\]
+est multiplicative! Et s'étend donc en une valeur absolue de 
+$K(X_1,\ldots,X_n)$.
+\begin{rem}
+    En analyse $p$-adique on a besoin de corps algébriquement clos.
+    Mais $\Q_p^c$ n'est pas complet mdr, donc on complète à nouveau 
+    en $\widehat \Q_p^c$, et cette fois c'est complet et clos.
+\end{rem}
+\begin{thm}
+    Soit $(K,|.|)$ un corps ultramétrique. Alors 
+    \[\widehat{\widehat K^c}\]
+    est complet et algébriquement clos.
+\end{thm}
+ On prouve d'abord une proposition, 
+comme dans le cas réel ou complexe, soit $(K,|.|)$ un corps
+valué. On ajoute la norme $1$ (au cas où c'est archimédien) sur
+$K[X]$. On étend $|.|$ à $K^c$ ($\mathbb C$ si archimédien).
+\begin{prop}[Continuité des racines]
+    
+    Soit $P\in K[X]$ un polynôme unitaire de degré $n$, alors 
+    pour tout $\epsilon >0$, $\exists \delta>0$ dépendant uniquement
+    de $P$ est $\epsilon$ tel que pour tout $Q\in K[X]$ unitaire
+    de degré $n$ avec $||P-Q||_1<\delta$ on a, pour toute racine
+    $\alpha\in K^c$ de $P$ il existe $|\alpha-\beta|<\epsilon$
+    et $Q(\beta)=0$.
+\end{prop}
+\begin{proof}[Démonstration du théorème]
+    On peut supposer $K$ complet. Soit $P\in \widehat{K^c}[X]$ et
+    $\alpha$ une racine dans une extension finie. Pour tout $m\geq 1$
+    et $\epsilon = 1/m$, on a $Q_m\in K^c[X]$ tel que 
+    \[||P-Q_m||<\delta_m\]
+    implique qu'il existe une racine $\beta_m$ de $Q_m(X)$ telle que
+    $|\alpha-\beta_m|<1/m$. Clairement, $(\beta_m)_m$  est de 
+    Cauchy et $\beta_m\in K^c$ d'où 
+    $\alpha=\lim_m \beta_m\in \widehat{K^c}$ et on a fini. 
+\end{proof}
+\begin{proof}[Démonstration de la proposition]
+    On peut noter que $||P||\geq 1$ implique $|\alpha|\leq ||P||$ si
+    $|\alpha|\leq 1$. On suppose donc $||\alpha||\geq 1$. On a 
+    \[|\alpha^n|=|-a_{n-1}\alpha^{n-1}-\ldots-a_0|\leq\left( \sum_{0\leq i\leq n-1}|a_i|\right)|\alpha|^{n-1}\]
+    puis \[\leq ||P||.|\alpha|^{n-1}\implies |\alpha|\leq ||P||.\]
+    Maintenant $|Q(\alpha)|\leq ||Q-P||max\{1,|\alpha|^n\}$ et 
+    $Q(X)=\prod(X-\beta_i)\implies \prod |\alpha-\beta_i|\leq ||Q-P||max\{1,|\alpha|^n\}$
+    c'est équivalent à ce qu'il existe $\beta-\beta_{i_0}$ t.q
+    \[|\alpha-\beta|^n\leq ||Q-P||.||P||^n\implies |\alpha-\beta|\leq
+    ||Q-P||^{1/n}.||P||.\]
+\end{proof}
 
 
 \printbibliography
+
 
 \end{document}
 
