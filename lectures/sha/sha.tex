@@ -263,9 +263,27 @@ $1$. On obtient une flèche rationnelle dominante injective
 \[Z(f_d+f_{d-1})\to Z(\ker(\varphi))\]
 où $\ker(\varphi)$ définit un hyperplan de $\A^n$ d'où le résultat.
 
-\textbf{Bien meilleure manière!} En fait, déjà pour rappel une petite
-sous section.
-\subsection{L'équivalence de catégorie de base}
+\textbf{Bien meilleure manière!} En fait, déjà pour rappel la petite 
+section \ref{trad}. Puis on obtient la preuve suivante.
+
+\subsection{Une nouvelle preuve}
+On peut regarder $\A^n\to \A^n$ la flèche 
+\[(t_1,\ldots,t_n)\mapsto (t_1, t_1t_2,\ldots, t_1t_n)\]
+on obtient un isomorphisme 
+\[k[T_1,\ldots, T_n]_{T_1}\simeq k[T_1,\ldots, T_n]\]
+d'inverse $T_1\mapsto T_1;~T_i\mapsto T_i/T_1$. Maintenant on peut 
+regarder \[f_d(T_1, T_2/T_1, \ldots, T_n/T_1)+f_{d-1}(\ldots)=0\] qu'on
+obtient via l'isomorphisme induit 
+\[k[Z(f_d(T_i,i)+f_{d-1}(T_i,i)]_{T_1}\simeq k[Z(f_d(T_1,T_1T_2,\ldots,T_1T_n)+f_{d-1}(T_1,T_1lT_2,\ldots, T_1T_n))]_{T_1}\]
+Mais le membre de droite est égal à $k[Z(T_1f_d+f_{d-1})_{T_1}]$ en
+particulier $Z(f_d+f_{d-1})$ est birationnel à $Z(T_1f_d+f_{d-1})$.
+Maintenant si $f_{d-1}\ne 0$ on peut définir
+\[k[T_1,\ldots, T_n]\to k[Z(T_1f_d+f_{d-1})]_{f_{d-1}}\]
+via $T_1\mapsto T_1f_d/f_{d-1}$ et $T_i\mapsto T_i$. Le noyau a l'air 
+d'être clairement $T_1+1$ d'où on a fini.
+
+\chapter{Traductions variétés vers k-algèbres}
+\section{L'équivalence de catégorie de base}
 Quand on a $\varphi\colon k[Y]\to k[X];~(\overline{Y_i})_i\mapsto 
 (g_i(\overline{X_j},j)_i$. Les $Y_i$ vérifient les équations de $Y$
 donc par définition les $g_i(\overline{X}_j,j)$ aussi! D'où, la flèche 
@@ -284,24 +302,47 @@ isomorphisme et donc une injection
 mais $k[Y]\to k[Y]/\ker(\varphi)$ est par définition l'injection 
 $Z(\ker(\varphi))\subset Y$. En particulier, $X$ \textbf{s'injecte dans}
 $Y$.
+\section{Parler des fibres}
+En fait la fibre $f^{-1}(y)$ vérifie des équations $f^*\m_y$ et 
+$f(x)=y$ veut dire que $f^*\m_y\subset \m_x$. On peut obtenir 
+des conditions de surjectivité.
 
-\subsection{Une nouvelle preuve}
-On peut regarder $\A^n\to \A^n$ la flèche 
-\[(t_1,\ldots,t_n)\mapsto (t_1, t_1t_2,\ldots, t_1t_n)\]
-on obtient un isomorphisme 
-\[k[T_1,\ldots, T_n]_{T_1}\simeq k[T_1,\ldots, T_n]\]
-d'inverse $T_1\mapsto T_1;~T_i\mapsto T_i/T_1$. Maintenant on peut 
-regarder \[f_d(T_1, T_2/T_1, \ldots, T_n/T_1)+f_{d-1}(\ldots)=0\] qu'on
-obtient via l'isomorphisme induit 
-\[k[Z(f_d(T_i,i)+f_{d-1}(T_i,i)]_{T_1}\simeq k[Z(f_d(T_1,T_1T_2,\ldots,T_1T_n)+f_{d-1}(T_1,T_1lT_2,\ldots, T_1T_n))]_{T_1}\]
-Mais le membre de droite est égal à $k[Z(T_1f_d+f_{d-1})_{T_1}]$ en
-particulier $Z(f_d+f_{d-1})$ est birationnel à $Z(T_1f_d+f_{d-1})$.
-Maintenant si $f_{d-1}\ne 0$ on peut définir
-\[k[T_1,\ldots, T_n]\to k[Z(T_1f_d+f_{d-1})]_{f_{d-1}}\]
-via $T_1\mapsto T_1f_d/f_{d-1}$ et $T_i\mapsto T_i$. Le noyau a l'air 
-d'être clairement $T_1+1$ d'où on a fini.
+\section{Nakayama}
+Bon encore et toujours, le Nakayama, j'ai vu une preuve un peu en détail.
+En gros, si $M$ est un $A$-module de type fini. Et si $IM=M$, on peut 
+dire que plusieurs choses : soit $(m_0,\ldots, m_n)$ une base de $M$,
+on a 
 
+\[m_j = \sum_{i=1}^n \alpha_{ij}m_i\]
+avec $\alpha_{ij}\in I$. D'où la matrice $A=(\alpha_{ij})$ vérifie,
+$\ker(A-I_n)=M$ en tant qu'endomorphisme du $A$-module $M$. Ensuite, 
+par la formule de Cramer, on a $\det(A-I_n).M=d.M=0$. Avec $d\in 1+I$, 
+ça ca se vérifie en développant la diagonale. 
 
+On a des objets maintenant il reste juste à trouver des critères sur
+$1+I$ et $d$.
+
+Si $A\subset B=M$ est un sur-anneau de $A$, on a $1_A\in M=B$,
+d'où $aB=0$ seulement si $a=0$. On peut en déduire via 
+$0\in1+I$ ssi $I=(1)$ que 
+\[I\subset A\implies IB\subset B\]
+où les inclusions sont strictes.
+
+Maintenant pareil, si $1+I$ ne contient que des inversibles, on obtient
+le critère avec $I=\bigcap_{\m\in Specm(A)} \m$ que $I.M=M$ implique
+$M=0$, ici car $d$ est inversible. Plus généralement ducoup si $1+I$
+ne contient que des inversible, si $M'+IM=M$ pour un $M'$ quelconque 
+alors $M=M'$, y suffit d'appliquer la méthode à $M/M'$.
+
+\textbf{À faire, le dernier critère : espace vectoriel sur le quotient
+implique générateur d'idéal.}
+
+\section{Surjectivité des morphismes finis}
+Ducoup si on regarde la condition $x\in f^{-1}(y)$, ça se traduit par
+$f_*\m_y\subset \m_x$. Inversement, si $f^{-1}(y)$ est vide alors
+$f_*\m_yk[X]=k[X]$ et on applique le lemme de Nakayama car 
+$\m_y\ne k[Y]$. \textbf{Faudrait essayer de voir plus concrètement
+comment trouver une racine.}
 
 
 \printbibliography

@@ -198,10 +198,49 @@ une base de $\ker(A)$.
     (\Z/a_i\Z)\] et la décomposition est unique.
 \end{thm}
 
+\section{Miller-Rabin}
+Un nombre $n\geq 2$ est pseudo-premier si 
+$a^{n-1}\equiv 1\mod n$ pour tout $a\in (\Z/n\Z)^{\times}$.
+On peut détecter si $n$ est composé par contre.
 
+\begin{thm}
+    Si $n$ est impair premier, alors $n-1=2^k.m$
+    et pour tout $a\in(\Z/n\Z)^{\times}$ alors 
+    $a^{m}=1$ ou $a^{m2^c}=-1$ pour un $c\leq k$.
+\end{thm}
 
+\begin{thm}
+    Si $n\geq 15$ est composé et impair alors
+    MR(n,a) est faux pour plus de $\varphi(n)/4$
+    éléments de $(\Z/n\Z)^{\times}$.
+\end{thm}
 
+\section{Distributions}
+Si $X\colon\Omega\to G$ une variable aléatoire de loi uniforme.
+Et $Y$ une loi quelconque, alors $Z=X.Y$ suis une loi uniforme!
 
+\section{Densité de premiers}
+Soit $A\subset \R$ alors 
+\[\pi(A)=\#\{n|1\leq n\leq A,~n\textrm{ est premier}\}\]
+a un équivalent 
+\[\pi(A)=\frac{A}{ln(A)}(1+o(1))\]
+C'est Hadamard, de la vallée Poussin (1900).
+
+\section{Racines carrées dans $\F_p^{\times}$}
+On note $p-1=2*q$ si $(a,p)=1$ et $a^q=1$. On regarde le cas où 
+$p\equiv 3\mod 4$. Si on note $l\equiv 2^{-1} \mod q$ alors on écrit
+$q=2l-1$. Soit $S$ les carrés de $\F_p^{\times}$, $S$ est cyclique 
+de taille $q$ impaire. Alors $[2]\colon S\to S$ est une bijection
+d'inverse $[l]\colon S\to S$ (là $[n]$ c'est $[n].g=g^n$). Alors, 
+on a $r\equiv a^l\mod p$ avec $l=\frac{q+1}{2}$ et $r^2=a\mod p$.
+\section{Carrés dans $(\Z/n\Z)^{\times}$}
+On note $n=\prod_i p_i^{e_i}$. Par le théorème chinois, $x\mod n$ est
+un carré ssi $\forall i$ $x\mod p_i^{e_i}$ est un carré. 
+
+Les cas particuliers $n=pq$ et $n=p^2q$ sont les cas RSA, et trouver
+une racine carrées implique de factoriser $n$ avec notre méthode. En
+fait à l'inverse si on peut calculer des racines carrées, on peut 
+factoriser.
 
 \printbibliography
 
