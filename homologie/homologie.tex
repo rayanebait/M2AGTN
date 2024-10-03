@@ -52,6 +52,7 @@ sorting=ynt
 \newcommand{\rel}{\omathcal{R}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\C}{\mathbb{C}}
+\newcommand{\Cat}{\mathcal{C}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\K}{\mathbb{K}}
 \newcommand{\A}{\mathbb{A}}
@@ -515,6 +516,187 @@ adjonction sur les faisceaux.
     on peut faire $(\_)^*$ via l'adjonction mdr. L'adjoint à gauche
     de $g_*\circ f_*$ est $f^*\circ g^*$ puis unicité.
 \end{proof}
+
+\chapter{Catégories abéliennes}
+\begin{defn}[Catégorie préadditive]
+    Une catégorie préadditive est une catégorie $\Cat$ telle que
+    les $\Hom$ soient dans $Ab$ et
+    \[\Hom_{\Cat}(A,B)\times\Hom_{\Cat}(B,C)\to \Hom_{\Cat}(A,C)\]
+    est $\Z$-bilinéaire. 
+\end{defn}
+\begin{rem}
+    La catégorie opposée est aussi une catégorie préadditive.
+\end{rem}
+\begin{defn}
+    Un objet $T$ est terminal si y'a un unique morphisme de tout
+    objet vers lui. (Oui ça marche)
+\end{defn}
+
+\begin{defn}[(co)-Produit]
+    Le (co)-produit est la (co)-limite du diagramme % https://q.uiver.app/#q=WzAsMixbMCwwLCJBIl0sWzEsMCwiQiJdXQ==
+\[\begin{tikzcd}
+	A & B
+\end{tikzcd}\]
+\end{defn}
+
+\begin{rem}
+    Le produit vide est \textbf{terminal}! Parce que la propriété 
+    universelle
+    est vide, donc y'a tjr une flèche vers lui si il existe... À 
+    l'inverse, le coproduit vide est \textbf{initial}...
+    En plus l'idée que y'a vraiment que \textbf{le} singleton dans Set
+    ca donne encore plus envie des faires des topos. Dans Set, les
+    objets semblent vraiments canoniques en tant qu'ensemble..
+\end{rem}
+
+\begin{lem}
+    Dans une catégorie préadditive, on a les coproduits finis ssi
+    on a les produits finis, en fait ils sont isomorphes à unique
+    isomorphisme (implique canoniquement égaux ?).
+\end{lem}
+\begin{proof}
+    Il suffit de le montrer dans un sens, ensuite ce sera vrai dans la
+    catégorie opposée! Suffit de construire les coproduits à deux objets
+    étant donnés les produits. On a un objet terminal via le produit
+    vide (c'est de la triche mdr). On a $\Hom_{\Cat}(T,A)\in Ab$. 
+    On regarde $O_{T,A}\colon T\to A$ l'élément neutre, on remarque que
+    si $f\colon T\to A$ est une flèche, alors 
+    $f\circ Id_T=f\circ O_{T,T}=O_{T,A}$. De sorte que $T$ est initial
+    aussi. On remarque que 
+% https://q.uiver.app/#q=WzAsOCxbMSwwLCJBIl0sWzAsMSwiQSJdLFsxLDEsIkFcXHRpbWVzIEIiXSxbMiwxLCJCIl0sWzQsMCwiQiJdLFszLDEsIkEiXSxbNSwxLCJCIl0sWzQsMSwiQVxcdGltZXMgQiJdLFswLDEsIklkIiwxXSxbMCwyLCJpX0EiLDFdLFswLDMsIk9fe0EsQn0iLDFdLFsyLDFdLFsyLDNdLFs0LDUsIk9fe0IsQX0iLDFdLFs0LDYsIklkIiwxXSxbNCw3LCJpX0IiLDFdLFs3LDZdLFs3LDVdXQ==
+\[\begin{tikzcd}
+	& A &&& B \\
+	A & {A\times B} & B & A & {A\times B} & B
+	\arrow["Id"{description}, from=1-2, to=2-1]
+	\arrow["{i_A}"{description}, from=1-2, to=2-2]
+	\arrow["{O_{A,B}}"{description}, from=1-2, to=2-3]
+	\arrow["{O_{B,A}}"{description}, from=1-5, to=2-4]
+	\arrow["{i_B}"{description}, from=1-5, to=2-5]
+	\arrow["Id"{description}, from=1-5, to=2-6]
+	\arrow[from=2-2, to=2-1]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-5, to=2-4]
+	\arrow[from=2-5, to=2-6]
+\end{tikzcd}\]
+    où $i_A=id\times O$ pareil pour $i_B$. Si on a % https://q.uiver.app/#q=WzAsMyxbMSwwLCJYIl0sWzAsMSwiQSJdLFsyLDEsIkIiXSxbMiwwLCJnIiwxXSxbMSwwLCJmIiwxXV0=
+\[\begin{tikzcd}
+	& X \\
+	A && B
+	\arrow["f"{description}, from=2-1, to=1-2]
+	\arrow["g"{description}, from=2-3, to=1-2]
+\end{tikzcd}\]
+    on peut regarder $h:=(f\circ p_A)+(g\circ p_B)$ de $A\times B\to X$.
+    Ensuite faut vérifier que % https://q.uiver.app/#q=WzAsNCxbMSwxLCJBXFx0aW1lcyBCIl0sWzAsMSwiQSJdLFsyLDEsIkIiXSxbMSwwLCJYIl0sWzEsMCwiaV9BIiwxXSxbMiwwLCJpX0IiLDFdLFswLDMsImgiLDFdLFsxLDMsImYiLDFdLFsyLDMsImciLDFdXQ==
+\[\begin{tikzcd}
+	& X \\
+	A & {A\times B} & B
+	\arrow["f"{description}, from=2-1, to=1-2]
+	\arrow["{i_A}"{description}, from=2-1, to=2-2]
+	\arrow["h"{description}, from=2-2, to=1-2]
+	\arrow["g"{description}, from=2-3, to=1-2]
+	\arrow["{i_B}"{description}, from=2-3, to=2-2]
+\end{tikzcd}\]
+commute, c'est clair. Pour l'unicité, on remarque que $id_{A\times B}
+=i_A\circ p_A+i_B\circ p_B$. En particulier, les projecteurs permettent
+de se ramener à l'égalité terme à terme. Si on a une autre flèche
+$h'\colon A\times B\to X$, on peut remarquer que $h'\circ id= (h'\circ i_a)\circ p_A+ (h'\circ i_B)\circ p_B=f\circ p_A+ g\circ p_B$.
+\end{proof}
+
+\begin{rem}[Codiagonale]
+    Dans une catégorie quelconque, on a des flèches 
+    \[B\sqcup B\to B\]
+    et \[B\to B\times B\]
+    les diagonales et codiagonales. Dans une catégorie préadditive,
+    les deux sont isomorphes, on obtient $\delta_B\colon B\times B\to B$
+    la \textbf{codiagonale} via 
+% https://q.uiver.app/#q=WzAsNSxbMSwxLCJCXFxzcWN1cCBCIl0sWzIsMSwiQiJdLFswLDEsIkJcXHRpbWVzIEIiXSxbMSwwLCJCIl0sWzEsMiwiQiJdLFswLDEsIlxcZGVsdGFfQiIsMl0sWzAsMiwiXFxzaW0iXSxbMywxLCJpZCJdLFs0LDEsImlkIiwyXSxbNCwwLCJpXzIiXSxbMywwLCJpXzEiXSxbMiwxLCJcXGRlbHRhX0IiLDAseyJsYWJlbF9wb3NpdGlvbiI6MjAsImN1cnZlIjotMX1dXQ==
+\[\begin{tikzcd}
+	& B \\
+	{B\times B} & {B\sqcup B} & B \\
+	& B
+	\arrow["{i_1}", from=1-2, to=2-2]
+	\arrow["id", from=1-2, to=2-3]
+	\arrow["{\delta_B}"{pos=0.2}, curve={height=-6pt}, from=2-1, to=2-3]
+	\arrow["\sim", from=2-2, to=2-1]
+	\arrow["{\delta_B}"', from=2-2, to=2-3]
+	\arrow["{i_2}", from=3-2, to=2-2]
+	\arrow["id"', from=3-2, to=2-3]
+\end{tikzcd}\]
+\end{rem}
+\section{Catégories additives}
+\begin{defn}
+    Une catégorie additive est une catégorie préadditive qui a tout les
+    produits finis.
+\end{defn}
+\begin{lem}
+    Dans une catégorie additive, soit
+% https://q.uiver.app/#q=WzAsMixbMCwwLCJBIl0sWzEsMCwiQiJdLFswLDEsImYiLDAseyJvZmZzZXQiOi0xfV0sWzAsMSwiZyIsMix7Im9mZnNldCI6MX1dXQ==
+\[\begin{tikzcd}
+	A & B
+	\arrow["f", shift left, from=1-1, to=1-2]
+	\arrow["g"', shift right, from=1-1, to=1-2]
+\end{tikzcd}\]
+    alors $f+g=\delta_B\circ(f,g)$ où $(f,g)\colon A\to B\times B$.
+\end{lem}
+\begin{proof}
+On considère
+\[\begin{tikzcd}
+	B\times B & B
+	\arrow["p_1", shift left, from=1-1, to=1-2]
+	\arrow["p_2"', shift right, from=1-1, to=1-2]
+\end{tikzcd}\]
+et 
+% https://q.uiver.app/#q=WzAsNCxbMiwwLCJCXFx0aW1lcyBCIl0sWzMsMCwiQiJdLFsxLDAsIkJcXHNxY3VwIEIiXSxbMCwwLCJCIl0sWzAsMSwicF8xIiwwLHsib2Zmc2V0IjotMX1dLFswLDEsInBfMiIsMix7Im9mZnNldCI6MX1dLFsyLDAsIlxcc2ltIl0sWzMsMiwiaV8xIiwwLHsib2Zmc2V0IjotMn1dLFszLDIsImlfMiIsMix7Im9mZnNldCI6Mn1dXQ==
+\[\begin{tikzcd}
+	B & {B\sqcup B} & {B\times B} & B
+	\arrow["{i_1}", shift left=2, from=1-1, to=1-2]
+	\arrow["{i_2}"', shift right=2, from=1-1, to=1-2]
+	\arrow["\sim", from=1-2, to=1-3]
+	\arrow["{p_1}", shift left, from=1-3, to=1-4]
+	\arrow["{p_2}"', shift right, from=1-3, to=1-4]
+\end{tikzcd}\]
+on peut se rappeler que $id_{B\times B}=i_1\circ p_1+i_2\circ p_2$.
+Faut juste réécrire tout maintenant.
+\end{proof}
+
+\begin{rem}
+    Une meilleure définition maintenant, $\Cat$ est additive si
+    elle a un objet zéro $O_{\Cat}$(:=final et terminal), les produits et
+    coproduits finis et tels que 
+% https://q.uiver.app/#q=WzAsNCxbMCwxLCJBXFxzcWN1cCBCIl0sWzIsMSwiQVxcdGltZXMgQiJdLFswLDAsIkEiXSxbMCwyLCJCIl0sWzAsMSwiXFxleGlzdHMgISIsMl0sWzIsMF0sWzMsMF0sWzIsMSwiKE9fe0EsQn0saWRfQSkiXSxbMywxLCIoT197QixBfSxpZF9CKSIsMl1d
+\[\begin{tikzcd}
+	A \\
+	{A\sqcup B} && {A\times B} \\
+	B
+	\arrow[from=1-1, to=2-1]
+	\arrow["{(O_{A,B},id_A)}", from=1-1, to=2-3]
+	\arrow["{\exists !}"', from=2-1, to=2-3]
+	\arrow[from=3-1, to=2-1]
+	\arrow["{(O_{B,A},id_B)}"', from=3-1, to=2-3]
+\end{tikzcd}\]
+    est un isomorphisme, où cette fois $O_{A,B}=A\to O_{\Cat}\to B$.
+    Alors $\Hom_{\Cat}(A,B)$ est un monoide commutatif et l'addition
+    est définie par $f+g:=\delta_B(f,g)$!
+\end{rem}
+\begin{defn}[Catégorie additive (bis)]
+    Une catégorie additive est une catégorie $\Cat$ qui a 
+    \begin{itemize}
+	\item Un objet zéro $O_{\Cat}$.
+	\item Produits et coproduits finis.
+	\item $\alpha_{A,B}\colon A\sqcup B\simeq A\times B$.
+	\item Le monoide commutatif $\Hom_{\Cat}(A,B)$ est
+	    un groupe abélien.
+    \end{itemize}
+\end{defn}
+\begin{rem}
+    Il dit que les deux défs correspondent mais dans la deuxième on
+    demande seulement à $\Cat$de vérifier des propriétés et on lui
+    ajoute pas en fait de structure supplémentaire. En particullier,
+    la structure de groupe de $\Hom_{\Cat}(A,B)$ est déterminée
+    par la structure de la catégorie sous jacente.
+\end{rem}
+
+
 
 
 \printbibliography

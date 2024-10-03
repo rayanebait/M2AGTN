@@ -242,6 +242,91 @@ une racine carrées implique de factoriser $n$ avec notre méthode. En
 fait à l'inverse si on peut calculer des racines carrées, on peut 
 factoriser.
 
+Pour le cas RSA on remarque que $S_n=S_p\times S_q$ et $\#\ker([2])=4$
+de sorte que $\#S_n=\varphi(n)/4$.
+
+\begin{rem}
+    Si on a un oracle de racines carrées mod $n$, on peut prendre
+    des éléments $y=x^2$ pour un $x$ aléatoire et demander une autre
+    racine de $y$ mod $n$ a l'oracle. Comme $\mod n$ y'a plus que $2$
+    racines carrées on obtient un $x'\ne \pm x$ avec bonne probabilité,
+    en fait probabilité $1/2$ si $p\approx q$ via le fait que $x\equiv x'
+    \mod p$ mais pas $\mod q$ ou inversement. Ensuite faut calculer
+    $(x-x')\wedge n$.
+\end{rem}
+
+\section{Symbole de Jacobi}
+\begin{thm}
+    Soit $m,n\geq 3$ \textbf{impairs}. On a
+    \[\left(\frac{m}{n}\right)\times \left(\frac{n}{m}\right)=(-1)^{(m-1)(n-1)/4}\]
+    et $\left(\frac{-1}{m}\right)=(-1)^{(m-1)/2}$, $\left(\frac{2}{m}\right)=(-1)^{(m^2-1)/8}$.
+\end{thm}
+Dans le cas RSA $\left(\frac{x}{n}\right)$ vaut $1$ veut seulement
+dire que $x$ est un carré ou $x$ n'est ni un carré mod $q$ ni mod $p$.
+On déf les presques carrés $\{x|\left(\frac{x}{n}\right)=1\}$. Les
+carrés sont d'indices $2$ dedans. Maintenant on peut faire du bit
+commitment car chance de $1/2$ d'être un carré.
+
+\section{Un protocole d'identification à divulgation nulle}
+\textbf{Protocole d'identification :}
+\begin{itemize}
+    \item Alice construit son secret $n_A=p_A+q_A$ et choisit
+        $r_A\in (\Z/n_A\Z)^{times}$, elle calcule ensuite 
+        $r_A^2=s_A\mod n_A$ un carré aléatoire.
+    \item Elle publie $(Alice,n_A,s_A)$.
+    \item Bob contacte Alice et Alice prouve son identité. Alice
+        choisit un élément aléatoire $u\in(\Z/n\Z)^{\times}$ et
+        calcule son carré $u^2=v\mod n$ puis $t=v\times s_A$. (
+        $s_A, v$ sont publiques tandis que $r_A,u$ sont secrets.
+    \item Alice envoie $v$ et $t$ (Elle connaît la racine carrée
+        de $v$ et $t=s_A v$.
+    \item Bob génère un bit $\epsilon$ pour demander une racine
+        carrée de $v$ ou $t$. (C'est le twist, on peut pas avoir une
+        racine des deux sinon on peut obtenir $r_A$.)
+    \item Alice répond et Bob vérifie.
+    \item On peut répeter suffisamment de fois.
+\end{itemize}
+
+\chapter{Logarithmes discrets}
+\section{Réseaux de relations}
+Étant donné $G$ un groupe abélien, soit $g_1,g_2,\ldots, g_I\in G$.
+Et soit $0\to R\to \Z^I\to G$ la suite associée, on appelle 
+$R$ le réseau de relations des $g_i$. Comme $G$ est fini, $R$ est
+automatiquement de rang plein!
+\section{Algorithmes génériques}
+\begin{thm}[Victor Shoup]
+    Dans le cas générique, pas d'algorithmes meilleurs que 
+    $\sqrt{\#G}$.
+\end{thm}
+
+Si $G=(\Z/n\Z)^{\times}$ pour $n$ premier, alors c'est plutôt
+$exp(\sqrt{\log(n)\log\log(n)}\times k)$. Dans le cas des courbes
+elliptiques sur les corps finis on sait pas.
+\section{Automorphismes de groupe}
+Si on regarde $G=(\Z/p\Z)^d$ alors $Aut(G)=GL_d(\F_p)$ de cardinal
+$p^{d(d-1)/2}\times\prod_{i=1}^d(p^k-1)$. Pour $(\Z/n\Z, +)$, 
+les automorphismes c'est juste $(\Z/n\Z)^{\times}$ via l'exponentiation.
+Alors on peut reformuler le log discret en disant : étant donné
+deux générateurs $g,h$  de $G$ cyclique trouver un automorphisme de $G$
+qui envoie $g$ sur $h$.
+
+\section{Un nouveau protocole d'identification à divulgation nulle}
+\textbf{Protocole :}
+\begin{itemize}
+    \item Alice génère son secret : Elle choisit un groupe cyclique
+        large, par exemple un s.g de $(\Z/p\Z)^{\times})$ ou 
+        $E(\F_p)$.
+    \item Elle construit un générateur $g_A$ de $G$ et choisit un 
+        $a$ aléatoire de sorte à construire $g_A^a=h_A$.
+    \item Elle publie ensuite $(G,\#G=e, g_A, h_A)$.
+    \item Bob demande à Alice de s'authentifier, Alice choisit
+        alors $a_r\in (\Z/e\Z)^{\ŧimes}$ et calcule $h_r=h_A^{r}$
+        puis envoie $h_r$.
+    \item Bob demande alors soit un exposant qui envoie $h_A$ vers $h_r$
+        ou un exposant de $g_A$ vers $h_r$.
+\end{itemize}
+
+
 \printbibliography
 
 \end{document}

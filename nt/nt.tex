@@ -634,6 +634,131 @@ $K[X]$. On étend $|.|$ à $K^c$ ($\mathbb C$ si archimédien).
     ||Q-P||^{1/n}.||P||.\]
 \end{proof}
 
+\section{À l'aide d'anneaux artiniens}
+On peut commencer à discuter les propriétés du point de vue topologique.
+Si on considère $\widehat K$ on peut regarder la $\widehat K$-algèbre
+$B_L=L\otimes_K \widehat K$. En tant qu'ev, c'est de dimension $[L:K]$.
+Elle a qu'un nombre fini d'idéaux maximaux, $\leq [L:K]$ car 
+si on prends une suite décroissante $\m_1,\m_1\cap\m_2,\ldots,\cap_{j=1}
+^i\m_i$ alors c'est une suite décroissante d'espaces vectoriels! D'où
+la finitude. 
+
+On voudrait maintenant construire une bijection entre
+\[\{\textrm{Idéaux maximaux de }B_L\}\leftrightarrow\{\textrm{extensions
+de $|.|_K$ à $L$}\}\]
+\begin{proof}
+    On commence avec $\m_0\subset B_L$, alors $B_L/\m_0$ est une 
+    extension finie de $\widehat K$. Il existe une unique extension
+    $|.|_{\m_0}$ de $|.|_K$ à $B_L/\m_0$. Via le morphisme canonique
+    \[L\to L\otimes_K \widehat K\to B_L/\m_0\]
+    le pullback de $|.|_{\m_0}$ à $L$ est une extension de $|.|_K$
+    à $L$. On montre maintenant que si $\m_1$ en est un autre on obtient
+    une extension différente. L'espace $L\otimes_K\widehat K$ est un
+    Banach dans lequel $L$ est dense c'est assez clair. Si
+    $\hat x\in \m_0\backslash\m_1$ et $L\ni a\sim \hat x$ alors 
+    $|a|_{\m_0}\sim 0$ dans le quotient car $\hat x \mapsto 0$ mais
+    $|a|_{\m_1}\ne 0$ parce que $\hat x\mapsto \ne 0$ dans $B_L/\m_1$.
+    On a montré que $\m\mapsto |.|_{\m}$ est injective. À l'inverse si
+    on regarde $\widehat L = \widehat (L,|.|_L)$ où $|.|_L$ étend 
+    $|.|_K$. On regarde
+% https://q.uiver.app/#q=WzAsNSxbMCwyLCJLIl0sWzIsMiwiXFx3aWRlaGF0IEsiXSxbMCwwLCJMIl0sWzIsMCwiXFx3aWRlaGF0IEwiXSxbMSwxLCJMXFxvdGltZXNfSyBcXHdpZGVoYXQgSyJdLFswLDJdLFswLDFdLFsxLDNdLFsyLDNdLFsxLDRdLFsyLDRdLFs0LDMsIiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFswLDRdXQ==
+\[\begin{tikzcd}
+	L && {\widehat L} \\
+	& {L\otimes_K \widehat K} \\
+	K && {\widehat K}
+	\arrow[from=1-1, to=1-3]
+	\arrow[from=1-1, to=2-2]
+	\arrow[dashed, from=2-2, to=1-3]
+	\arrow[from=3-1, to=1-1]
+	\arrow[from=3-1, to=2-2]
+	\arrow[from=3-1, to=3-3]
+	\arrow[from=3-3, to=1-3]
+	\arrow[from=3-3, to=2-2]
+\end{tikzcd}\]
+    Où $B_L\to L$ est le produit. Faut montrer que c'est bien défini,
+    on sait que l'image est dense car $L$ est dense, et l'image est
+    fermée, simplement par example parce que e.v. de dim finie sur 
+    $\widehat K$ donc Banach donc complet donc fermé. On déf ensuite
+    $\m=\ker(L\otimes_K\widehat K\to \widehat L)$ alors $\widehat L =
+    B_L/\m$. ($\m$ dépend de la clôture choisie donc c'est bon)
+\end{proof}
+
+\begin{ex}
+    Si on pose $L=\Q[\sqrt 2]$ et qu'on regarde $|.|_p$, on a 
+    \[L\otimes_K \widehat K=\Q_p[X]/(X^2-2)\]
+    dans $\Q_2$, $X^2-2$ est irréductible (regarder la valuation), 
+    de sorte que $|.|_2$ s'étend de manière unique à $\Q[\sqrt 2]$!
+    Dans $\Q_7$ ça split et on à deux extensions de $|.|_7$ a 
+    $\Q[\sqrt 2]$.
+\end{ex}
+
+\section{Cas archimédien}
+On appelle $r_1, 2r_2$ le nombre de plongement rééls, complexes de
+$L/\Q$ dans $\C$. Si $L=\Q[\theta]$ et $P$ est le polynome minimal de
+$\theta$ alors $r_1$ est le nombre de racines réelles et $2r_2$ le 
+nombre de racines complexes de $P$.
+\begin{prop}
+    Il y'a exactement $r_1+r_2$ extensions de $|.|_{\infty}$ à $L$.
+\end{prop}
+\begin{ex}
+    Si $L=\Q[i]$ alors $r_2=1$ et $r_1=0$. Faut montrer que la
+    conjugaison complexe change pas la valeur absolue dans ce cas,
+    on dirait qu'il faut étendre à $\C$ puis remarquer que la  
+    restriction à $\R$ n'est est invariante. 
+    Faut aussi utiliser que $z\mapsto \bar z$ est linéaire donc
+    continue (\textbf{à faire}).
+\end{ex}
+
+\section{Corps local}
+Si $(K,|.|)$ est complet ultramétrique. On veut montrer que si le corps
+résiduel est fini alors $K$ est localement compact, i.e. $\Or_K$ est
+compact. On suppose $|.|$ non triviale. 
+
+\begin{proof}
+    Soit $0<|t|<1$, on considère $\Or_K$ comme d'hab et $\Sigma\subset
+    \Or_K$ un système de représentants de $\Or_K/t\Or_K$. On considère
+    l'ensemble $\mathcal E\subset \Sigma^{\Z}$ des suites éventuellement
+    nulle à gauche. On met la topologie discrète sur $\Sigma$ et 
+    produit sur $\Sigma^{\Z}$. 
+    \begin{prop}
+        On a un homéomorphisme 
+        \[f\colon \mathcal E\to K;(x_n)_n\mapsto \sum x_nt^n\]
+    \end{prop}
+    \begin{proof}[Preuve de la proposition]
+        Faut montrer que c'est bien déf, suffit de voir que
+        $|x_n||t|^n\leq |t|^n\to 0$. Ensuite la "norme" de $f$, 
+        si $x\ne y \in \mathcal E$ on déf 
+        $|f(x)-f(y)|$ comme le plus petit entier t.q 
+        $x_{n_0}\ne y_{n_0}$. On montre que 
+        $|f(x)-f(y)|=|x_{n_0}-y_{n_0}||t|^{n_0}$, on peut pas supposer
+        $y=0$ parce que $x_{n_i}-y_{n_i}$ est pas nécessairement
+        un représentant. 
+        Il suffit de remarquer que comme $x_{n_0}-y_{n_0}\ne 0$ dans le
+        quotient, alors $|x_{n_0}-y_{n_0}|>|t|$. Ensuite on factorise,
+        $(x_{n_0}-y_{n_0})t^{n_0}$ et on conclut. 
+
+        Soit maintenant $\alpha\in K^*$, on a un $n_0$ t.q. $|t|^{n_0+1}
+        <|\alpha|\leq |t|^{n_0}$. On a $|t|<|\alpha/t^{n_0}\leq 1$ d'où
+        dans $\Or_K$, il existe $x_{n_0}\in \Sigma$ t.q 
+        \[|\alpha/t^{n_0}-x_{n_0}|\leq |t|\]
+        d'où 
+        \[|\alpha-x_{n_0}t^{n_0}|\leq |t|^{n_0+1}\]
+        on peut alors construire de manière inductive $\alpha$. On
+        a montré la bijection. Enfin, l'histoire des normes montre que
+        c'est continu et même un homéo par la topologie produit (faire).
+    \end{proof}
+    \begin{cor}
+        Si $\Or_K/t\Or_K$ est fini, alors $\Or_K$ est compact et 
+        $K$ est localement compact.
+    \end{cor}
+    \begin{proof}
+        On a $\mathcal E_0=\Sigma^\N\subset \mathcal E$. On doit étudier
+        les suites de $\mathcal E_0=f^{-1}\Or_K$. On a
+        $|f(x)|=|x_{n_0}||t|^{n_0}>|t|^{n_0+1}$ si $x_{n_0}\ne 0$ car
+        $|x_{n_0}|>|t|$. 
+    \end{proof}
+\end{proof}
+
 
 \printbibliography
 

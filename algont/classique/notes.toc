@@ -9,3 +9,10 @@
 \contentsline {section}{\numberline {2.3}Densité de premiers}{10}{section.2.3}%
 \contentsline {section}{\numberline {2.4}Racines carrées dans $\mathbb F_p^{\times }$}{10}{section.2.4}%
 \contentsline {section}{\numberline {2.5}Carrés dans $(\mathbb {Z}/n\mathbb {Z})^{\times }$}{10}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Symbole de Jacobi}{11}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Un protocole d'identification à divulgation nulle}{11}{section.2.7}%
+\contentsline {chapter}{\numberline {3}Logarithmes discrets}{13}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Réseaux de relations}{13}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Algorithmes génériques}{13}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Automorphismes de groupe}{13}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Un nouveau protocole d'identification à divulgation nulle}{13}{section.3.4}%
