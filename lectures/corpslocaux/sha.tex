@@ -160,7 +160,22 @@ L'idée c'est que les $x_i$ conjugués à $x_1$ au dessus de $K(y)$
 vérifient $|y-x_1|_E=|y-x_i|_E$ en appliquant un automorphisme 
 et vu que $K(y)$ est complet. Si c'est pas le cas 
 $\sigma(y)\ne y$ et donc on peut juste comparer 
-$|y-x_1|=|\sigma(y)-\sigma(x_1)$.
+$|y-x_1|=|\sigma(y)-\sigma(x_1)$. En fait, si $K(y)\nsubseteq K(x_i,i)$
+par Galois il y a toujours un automorphisme non trivial qui fixe 
+$K(y)$. Donc si pour tous on a $|y-x_1|<|y-\sigma(x_1)$ c'est que
+$x_1\in K(y)$.
+
+\textbf{Application :}
+Si $f$ est séparable irréductible de degré $n$ et $x_i$ sont 
+ses racines. Et si $|f-h|$ est petite, alors $h$ est irréductible
+et l'extension qu'il engendre est la même que celle de $f$.
+On peut poser $E=K(y,x_1,\ldots,x_n)$ pour $y$ une racine 
+de $h$. On peut maintenant remarquer que 
+\[min_i|y-x_i|^n\leq |f(y)|\leq O(n|f-h|)\] 
+comme $f$ est séparable, ses racines sont distinctes donc
+celles de $h$ doivent s'écarter. En particulier si $|f-h|$ 
+est petit $|y-x_{i_0}|<|y-x_i|$ pour tout $i$. D'où 
+$x_{i_0}\in K(y)$ et on réitère.
 
 
 
