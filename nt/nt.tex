@@ -609,8 +609,7 @@ $K[X]$. On étend $|.|$ à $K^c$ ($\mathbb C$ si archimédien).
     pour tout $\epsilon >0$, $\exists \delta>0$ dépendant uniquement
     de $P$ est $\epsilon$ tel que pour tout $Q\in K[X]$ unitaire
     de degré $n$ avec $||P-Q||_1<\delta$ on a, pour toute racine
-    $\alpha\in K^c$ de $P$ il existe $|\alpha-\beta|<\epsilon$
-    et $Q(\beta)=0$.
+    $\alpha\in K^c$ de $P$ il existe $|\alpha-\beta|<\epsilon$.
 \end{prop}
 \begin{proof}[Démonstration du théorème]
     On peut supposer $K$ complet. Soit $P\in \widehat{K^c}[X]$ et
@@ -755,10 +754,71 @@ compact. On suppose $|.|$ non triviale.
         On a $\mathcal E_0=\Sigma^\N\subset \mathcal E$. On doit étudier
         les suites de $\mathcal E_0=f^{-1}\Or_K$. On a
         $|f(x)|=|x_{n_0}||t|^{n_0}>|t|^{n_0+1}$ si $x_{n_0}\ne 0$ car
-        $|x_{n_0}|>|t|$. 
+        $|x_{n_0}|>|t|$ d'où $1\geq |f(x)|>|t|^{n_0+1}\implies n_0\geq 0$. 
+        Maintenant,  $\Sigma$ est compact puis $\Sigma^{\N}$ est compact.
+        Enfin $K=\cup (\lambda +\Or_K)$.
     \end{proof}
 \end{proof}
+\chapter{Théorie algébrique}
+On utilise des anneaux de valuations discrètes plutôt que des 
+valeurs absolues.
 
+\section{Anneaux de Dedekind}
+Si on prends deux anneaux intègres $A\subset B$, $B$ 
+intégralement clos alors la clôture intégrale de $A$
+dans $B$ est intégralement close. Si on note $\tilde A$
+la clôture intégral de $A$ dans $B$ et 
+$\lambda\in Frac(\tilde A)$, entier sur $\tilde A\subset B$
+alors entier sur $A$. Maintenant, $\lambda\in Frac(B)$ entier
+sur $B$ implique $\lambda \in B\cap \tilde A=\tilde A$.
+\begin{prop}
+    Si $b\in B$ algébrique sur $Frac(A)=K$ et $P$ son
+    polynôme minimal est unitaire. Alors $b$ est entier
+    sur $A$ si $P[X]\in A[X]$. L'inverse est vrai si $A$ 
+    est intégralement clos.
+\end{prop}
+\begin{proof}
+    On prouve l'inverse, si $b$ est entier sur $A$ alors
+    toute les racines sont entières sur $A$ par galois
+    sur l'équation. D'où les coefficients sont entiers
+    sur $A$ et dans $Frac(A)$ on conclut avec l'hyptothèse
+    en plus sur $A$.
+\end{proof}
+\begin{cor}
+    Si $b\in B$ est entier sur $A$ intégralement clos,
+    $N_{L/K}(b), Tr_{L/K}(b)\in A$ où $L$ est juste une
+    extension finie tq $b\in L$ et $K=Frac(A)$.
+\end{cor}
+\begin{proof}
+    On regarde $N_{K[b]/K}(b)^{[L:K[b]]}, Tr(...)$.
+\end{proof}
+\begin{thm}
+    Soit $A$ un anneau noethérien intègralement
+    clos. Et soit une extension séparable finie 
+    $L$ de $Frac(A)=K$. Alors la clôture intégrale
+    de $A$ dans $L$, $B$, est un $A$-module de 
+    type fini, en particulier noethérien.
+\end{thm}
+\begin{proof}
+    On regarde les traces $Tr_{L/K}\colon L\times L\to K$
+    qui sont bilinéaires sur $K$. Maintenant si $L/K$
+    est séparable alors $Tr_{L/K}$ est non dégénérée
+    (voir dans le Samuel). Soit $e_1,\ldots, e_n$ une
+    base de $L$ sur $K$. On peut prendre $e_i\in B$
+    via le coefficient dominant de leur polynôme minimal.
+    On prend les bases duales \textbf{pour L}
+    $e_i^*\in L$ et on regarde
+    \[Tr_{L/K}(e_ie_j^*)=\begin{cases}1,i=j\\0\end{cases}\]
+    Maintenant soit $b\in B$, on a $b=\sum \lambda_i e_i$
+    avec $\lambda_i\in K$. En plus, $\lambda_i=Tr_{L/K}(be_i^*)$
+    et $e_i^*$ étant algébrique il existe $t\in A\backslash 0$
+    t.q $te_i^*\in B$ pour chaque $i$. Maintenant, 
+    \[\lambda_i=(1/t)Tr_{L/K}(b(te_i^*))\in (1/t) A\]
+    d'où $b\in \sum_{i=1}^n (1/t)Ae_i$ qui est un $A$-module
+    de type fini, or $A$ est noethérien donc ce truc est 
+    noethérien donc $B$ est de type fini sur $A$ car inclut
+    dedans.
+\end{proof}
 
 \printbibliography
 
