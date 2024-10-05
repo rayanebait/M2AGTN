@@ -352,7 +352,8 @@ fonctions polynomiales ! C'est la preuve d'avant.
     $y=|f|(x)$, comme d'habitude on a 
     \[f^\#\colon O_{Y,y}\to (|f|_*\Or_X)_y\to \Or_{X,x}\]
     Enfin en fait comme c'est localement annelé apparemment on 
-    peut montrer que $f^\#$ c'est automatiquement le pullback.
+    peut montrer que $f^\#$ c'est automatiquement le pullback de 
+    fonctions.
 \end{note}
 \begin{thm}
     Le couple $(Z,\Or_Z)$ est un espace annelé.
@@ -361,6 +362,53 @@ fonctions polynomiales ! C'est la preuve d'avant.
     Les fibres $\Or_{Z,z}$ sont les $\A(Z)_{\m_z}$.
 \end{proof}
 
+<<<<<<< HEAD
+de notre équivalence de base 
+\[\{\textrm{ensembles algébriques affines}\}\to \{k\textrm{-algèbre réduite de type fini}\}\]
+
+on plonge les ensembles algébriques dans les espaces localements
+annelés. En fait c'est pleinement fidèle, on a pas un nouvel objet.
+\begin{prop}
+    On a une bijection 
+    \[\Hom_{algSets}(X,Y)\to \Hom_{LocRingedSpace}((X,\Or_X),(Y,\Or_Y))\]
+\end{prop}
+\begin{proof}
+    Étant donné $f\colon X\to Y$, on définit 
+    $f^{\#}(U)\colon \Or_Y(U)\to \Or_X(f^{-1}U)$ par $s\mapsto s\circ f$.
+    Et à $f$ on associe $(f,f^{\#}$. Maintenant si on a un $(f,f^{\#})$
+    un morphisme d'espaces localement annelés quelconque, faut montrer
+    que $f$ est un morphisme d'ensemble 
+    algébriques et que $f^{\#}$ est bien le pullback habituel. Faut
+    se rappeler que $f^{\#}(\m_y)\subset \m_x$ tel que $f(x)=y$. En 
+    particulier, le grand carré de 
+    % https://q.uiver.app/#q=WzAsOCxbMCwxLCJmXntcXCN9XFxjb2xvblxcbWF0aGNhbCBPX1koVSkiXSxbMiwxLCJcXG1hdGhjYWwgT19YKGZeey0xfVUpIl0sWzAsMiwiT197WSxmKHgpfSJdLFsyLDIsIlxcbWF0aGNhbCBPX3tYLHh9Il0sWzAsMywiaz1PX3tZLGYoeCl9L1xcbWF0aGZyYWsgbV97Zih4KX0iXSxbMiwzLCJPX3tYLHh9L1xcbWF0aGZyYWsgbV97eH09ayJdLFswLDAsInMiXSxbMiwwLCJmXntcXCN9cyJdLFswLDFdLFswLDJdLFsyLDNdLFsxLDNdLFsyLDRdLFs0LDVdLFszLDVdLFs2LDcsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1hcHMgdG8ifX19XV0=
+\[\begin{tikzcd}[ampersand replacement=\&,cramped]
+	s \&\& {f^{\#}s} \\
+	{f^{\#}\colon\mathcal O_Y(U)} \&\& {\mathcal O_X(f^{-1}U)} \\
+	{O_{Y,f(x)}} \&\& {\mathcal O_{X,x}} \\
+	{k=O_{Y,f(x)}/\mathfrak m_{f(x)}} \&\& {O_{X,x}/\mathfrak m_{x}=k}
+	\arrow[maps to, from=1-1, to=1-3]
+	\arrow[from=2-1, to=2-3]
+	\arrow[from=2-1, to=3-1]
+	\arrow[from=2-3, to=3-3]
+	\arrow[from=3-1, to=3-3]
+	\arrow[from=3-1, to=4-1]
+	\arrow[from=3-3, to=4-3]
+	\arrow[from=4-1, to=4-3]
+\end{tikzcd}\]
+    commute, et la flèche $\Or_Y(U)\to k$ est l'évaluation, la flèche
+    $k\to k$ est l'identité ($1\mapsto 1$), i.e. $f^{\#}(s)(x)=s(f(x))$.
+    On a montré que $f^{\#}$ est le pullback habituel. Pour montrer
+    que c'est un morphisme, on peut regarder 
+    $\tilde f\colon X\to Y\to \A^n_k$. On obtient 
+    \[\tilde f(\A^n(k))\colon k[T_1,\colon, T_n]\to \Or_X(X)\]
+    qui à $T_1$ associe $f_1$. En particulier, c'est $T_1\circ f$ par
+    le point d'avant. De sorte que $\tilde f$ est défini par
+    des polynômes et donc un morphisme.
+
+\end{proof}
+=======
+>>>>>>> 52509f54cbf630fff626afb21be01c71f32aaf10
 
 \printbibliography
 \end{document}
