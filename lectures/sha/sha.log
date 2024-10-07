@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.9.28)  5 OCT 2024 12:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.9.28)  6 OCT 2024 21:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -960,13 +960,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[12
+[12]
+\bbl@ensure@french {Chapitre} 2.
+[13
 
 ]
-\bbl@ensure@french {Chapitre} 2.
-[13]
 
-LaTeX Warning: Empty bibliography on input line 351.
+LaTeX Warning: Empty bibliography on input line 408.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -985,24 +985,24 @@ L3 programming layer <2024-02-20>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `sha.out' has not changed.
-(rerunfilecheck)             Checksum: 248D6CBD59C570122749947ACEEDA547;2246.
+(rerunfilecheck)             Checksum: 8C3DA6671AD7528F17FEE53CDFC2A43C;2356.
 Package logreq Info: Writing requests to 'sha.run.xml'.
 \openout1 = `sha.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31508 strings out of 476076
- 605946 string characters out of 5793775
+ 31514 strings out of 476076
+ 606009 string characters out of 5793775
  1938187 words of memory out of 5000000
- 53106 multiletter control sequences out of 15000+600000
+ 53111 multiletter control sequences out of 15000+600000
  571367 words of font info for 90 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 131i,14n,135p,676b,1776s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 131i,13n,135p,676b,1776s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on sha.pdf (14 pages, 192071 bytes).
+Output written on sha.pdf (14 pages, 200509 bytes).
 PDF statistics:
- 220 PDF objects out of 1000 (max. 8388607)
- 172 compressed objects within 2 object streams
- 33 named destinations out of 1000 (max. 500000)
- 109 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 225 PDF objects out of 1000 (max. 8388607)
+ 177 compressed objects within 2 object streams
+ 34 named destinations out of 1000 (max. 500000)
+ 117 words of extra memory for PDF output out of 10000 (max. 10000000)
 

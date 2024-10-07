@@ -7,6 +7,7 @@
 \contentsline {subsection}{\numberline {1.4.1}Une nouvelle preuve}{10}{subsection.1.4.1}%
 \contentsline {section}{\numberline {1.5}Surjectivité des morphismes finis}{11}{section.1.5}%
 \contentsline {section}{\numberline {1.6}Trouver un ouvert dans $f(X)$}{11}{section.1.6}%
+\contentsline {section}{\numberline {1.7}Projections}{11}{section.1.7}%
 \contentsline {chapter}{\numberline {2}Traductions variétés vers k-algèbres}{13}{chapter.2}%
 \contentsline {section}{\numberline {2.1}L'équivalence de catégorie de base}{13}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Parler des fibres}{13}{section.2.2}%

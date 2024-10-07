@@ -289,6 +289,63 @@ $f_*\m_yk[X]=k[X]$ et on applique le lemme de Nakayama car
 $\m_y\ne k[Y]$. \textbf{Faudrait essayer de voir plus concrètement
 comment trouver une racine.}
 \section{Trouver un ouvert dans $f(X)$}
+L'idée c'est de décomposer $f$ : $f\colon X\to Y\times \A^r\to Y$ 
+défini par $k[Y]\subset k[Y][u_1,\ldots, u_r]\subset k[X]$ où 
+$k(X)=k(Y)(u_1,\ldots, u_r, z)$. La première flèche faut juste 
+choisir $u_i\in k[X]$, rendre l'extension entière avec la 
+technique habituelle puis tout dérouler en utilisant le fait 
+que les morphismes finis sont surjectifs. La deuxième c'est
+juste que la première projection on peut trouver un ouvert dans
+l'image d'un ouvert facilement.
+
+\section{Projections}
+Ça c'était cool, et plus deep que prévu. Ducoup, 
+on considère des "e.v" de $\Pr^n$ (juste les regarder
+dans $\Pr^{n+1}$). Donnés par $E=Z(L_1,\ldots,L_{n-d})$,
+et on déf 
+\[\pi\colon \Pr^n-E\to \Pr^{n-d-1};(\bar x)\mapsto (L_i(\bar x))_i\]
+L'idée géometrique c'est que si on prend 
+$\Pr^{n-d-1}\simeq H\subset \Pr^n-E$, alors $H\cap E=0$ et $H\oplus E=
+\A^{n+1}$ ce qui définit un projecteur. En particulier, si
+$x\in \Pr^{n}-E$ alors 
+\[E\oplus <x>\cap H\textrm{ est de dimension }1.\]
+Donc on a un point d'intersection dans $\Pr^{n}$, et il est donné par 
+$\pi$. C'est pas entièrement clair, mais c'est clair que c'est une 
+projection au sens où $H\oplus E=\A^{n+1}$ a des projecteurs associés.
+
+Maintenant pour prouver que c'est une flèche finie, c'est plutôt cool,
+déjà on regarde $\pi\colon D(L_j)\cap X\to \A^{n-d-1}\cap \pi(X)$ et 
+on veut montrer que $\pi^*\colon k[\A^{n-d-1}]\to k[D(L_j)\cap X]$
+est finie, et $g\in \Or_X(D(L_j))$ est de la forme $g=G/L_i^m$
+($\Pr^n-E=\cup D(L_i)$). Maintenant $\pi^*(T_i)=L_i/L_j$ donc on doit 
+trouver une relation algébrique unitaire entre $g$ est les $\pi^*(T_i)$.
+C'est là que c'est fort. On remarque que l'image de
+\[\pi_m\colon X\to \Pr^{n-d};(\bar x)\mapsto (L_1^m,\ldots,
+L_{n-d}^m,G)\]
+est fermée. On obtient $F_1,\ldots, F_s$ des polynômes qui annulent 
+l'image ! Mais ça suffit pas encore, j'ai l'impression qu'on peut
+montrer au plus qu'on a seulement une relation du type 
+$X\circ(L_i)^{\alpha}G^k -\ldots$ pas unitaire et qu'on devra localiser 
+à trop de $L_i$. Le deuxième point important c'est que
+\[[0:\ldots:0:1]\notin \pi_m(X)\]
+parce que les $L_i$ s'annulent pas simultanément, en particulier, 
+\[V(F_1,\ldots,F_s, z_0,\ldots, z_{n-d-1})=\emptyset\]
+D'où ... il existe $k$ t.q. 
+$z_{n-d}^k\in (F_1(\bar z),\ldots, F_s(\bar z))+(z_i, i) \subset 
+k[z_0,\ldots, z_{n-d}]$. Tu vois le truc venir ? En particulier, 
+si on regarde dans $\pi_m(X)$ on obtient 
+\[\psi(z_1,\ldots,z_{n-d})=z_{n-d}-\sum z_j H_j = 0\mod I(\pi_m(X))\]
+En regardant dans $z_i\ne 0$ on obtient 
+\[k[\A^{n-d}\cap D(z_i)]=k[z_0,\ldots, z_{n-d}]_{z_i}\to 
+\Or_X(D(z_i\circ \pi_m)\cap X)\]
+la flèche $z_j\mapsto L_j^m/L_i^m$ et $z_{n-d}\mapsto G/L_i^m$. De sorte
+que dans $\Or_X(D(z_i\circ \pi_m)\cap X)$ on ait 
+\[\psi(G_i/L_i^m)=0;
+    ~\psi\in k[\pi(X)\cap D(T_{i})][T]\textrm{ unitaire.}
+\]
+
+
+
 
 \chapter{Traductions variétés vers k-algèbres}
 \section{L'équivalence de catégorie de base}
