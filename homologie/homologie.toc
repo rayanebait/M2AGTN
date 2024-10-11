@@ -7,3 +7,4 @@
 \contentsline {section}{\numberline {1.5}Images directes et inverses de faisceaux}{10}{section.1.5}%
 \contentsline {chapter}{\numberline {2}Catégories abéliennes}{15}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Catégories additives}{17}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Catégories abéliennes}{18}{section.2.2}%

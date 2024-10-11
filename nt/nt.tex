@@ -61,6 +61,7 @@ sorting=ynt
 \newcommand{\Or}{\mathcal{O}}
 \newcommand{\F}{\mathbb F}
 \newcommand{\m}{\mathfrak m}
+\newcommand{\p}{\mathfrak p}
 \renewcommand{\a}{\mathfrak a}
 \newcommand{\I}{\mathfrak I}
 \newcommand{\Hom}{\textrm{Hom}}
@@ -819,6 +820,94 @@ sur $B$ implique $\lambda \in B\cap \tilde A=\tilde A$.
     noethérien donc $B$ est de type fini sur $A$ car inclut
     dedans.
 \end{proof}
+
+\section{Anneaux de Dedekind}
+\begin{defn}
+    Un anneau de dedekind $A$ est un anneau t.q
+    \begin{itemize}
+        \item $A$ est noethérien.
+        \item $A$ est intégralement clos.
+        \item $A$ est de dimension $1$.
+    \end{itemize}
+\end{defn}
+\begin{thm}[Décomposition en idéaux premiers]
+    Il existe une décomposition unique de $(0)\ne I\subset A$ en idéaux 
+    premiers \[I=\prod_{i=1}^r \m_i^{r_i}\]
+    où les $r_i\geq 1$.
+\end{thm}
+Comment on obtient des anneaux de Dedekind maintenant ? On peut localiser
+un anneau de Dedekind. Ca reste un anneau de Dedekind.
+\begin{rem}
+    Si on regarde topologiquement, $\Spec(S^{-1}A)\subset \Spec(A)$ 
+    d'où la dimension est $\leq$.
+\end{rem}
+
+\begin{cor}
+    Si $A$ est de dedekind, la localisation en $\p$ est un 
+    anneau de valuation discrète.
+\end{cor}
+
+\begin{defn}
+    Un anneau de valuation discrète est un anneau de Dedekind local
+    qui n'est pas un corps.
+\end{defn}
+\begin{prop}
+    Un anneau de valuation discrète est un anneau local principal
+    qui n'est pas un corps.
+\end{prop}
+\begin{proof}
+    Comme on admet le théorème de décomposition : si $\m\ne 0$ alors 
+    $\m\ne \m^2$ par Nakayama. Ensuite si $t\in \m -\m^2$ alors 
+    $tA=\m^k$ par le théorème de décomposition mdr, $t\notin \m^2$ 
+    implique $k\leq 1$.
+\end{proof}
+
+on peut construire une valuation sur $(A,\m)$ puis sur $Frac(A)^*$. 
+On réobtient $A=\{v(K^*)\geq 0\}$.
+
+\begin{thm}
+    Soit $A$ un anneau de Dedekind et $L/K=Frac(A)$ finie séparable.
+    Alors la cloture de $A$ dans $L$, $B$, est un anneau de Dedekind 
+    fini sur $A$.
+\end{thm}
+\begin{proof}
+    Via l'exo du td $B$ est entier sur $A$ implique tout.
+\end{proof}
+\begin{ex}
+    Si on prends $L/k(T)$, la clôture intégrale dans $L$ de $k[T]$
+    fournit un morphisme fini $C\to \P^1$. Pareil, si on prends 
+    $k((t))$ c'est transcendant sur $k(t)$. Si $k=\F_q$ alors $k(t)$
+    est dénombrable contrairement à $k((t))$. On prends $s$ transcendant
+    et la valuation $t$-adique. On regarde 
+    \[k(t)\subset K=k(t,s^p)\subset L=k(t,s)\subset k((t))\]
+
+    On a $[L:K]=p$, $\m_K=t\Or_K$ et $\m_L=t\Or_L$ de corps résiduels 
+    $k$ avec les valuations restreintes. Alors, 
+    \[\Or_L\textrm{ est un a.v.d, pas fini sur} \Or_K\]
+    On verra la preuve plus tard. Le point c'est que c'est inséparable
+    donc la dimension est pas finie.
+\end{ex}
+\begin{thm}[Krull-Akizuki]
+    Si $A$ est de Dedekind et $L/K=Frac(A)$ finie. Alors la clôture
+    de $A$ dans $L$ est de Dedekind. 
+\end{thm}
+\begin{thm}
+    Si $A$ est un a.v.d avec les hyp du dessus. ALors la clôture est
+    d'Artin.
+\end{thm}
+\begin{lem}
+    Si $L/K$ est purement insép finie. Alors on obtient un anneau de
+    valuation discrète.
+\end{lem}
+\begin{proof}
+    Soit $p=char(K)>0$. Il existe $e>0$, $L^{p^e}\subset K$. On note
+    $A=\Or_K$ et $\Or_L$ la clôture dans $L$. On construit une valuation
+    sur $L^*$ via $v(x^{p^e})/p^e$. C'est une valuation. Et maintenant
+    $v_L(x)\geq 0$ est équivalent à $x^{p^e}\in \Or_K$ est entier sur
+    $\Or_K$. À l'inverse si $x\in \Or_L$ t.q. $x^{p^e}\in K$ est entier
+    sur $\Or_K$ comme $\Or_K$ est de dedekind on a fini.
+\end{proof}
+
 
 \printbibliography
 

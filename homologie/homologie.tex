@@ -689,14 +689,242 @@ Faut juste réécrire tout maintenant.
     \end{itemize}
 \end{defn}
 \begin{rem}
-    Il dit que les deux défs correspondent mais dans la deuxième on
-    demande seulement à $\Cat$de vérifier des propriétés et on lui
-    ajoute pas en fait de structure supplémentaire. En particullier,
-    la structure de groupe de $\Hom_{\Cat}(A,B)$ est déterminée
-    par la structure de la catégorie sous jacente.
+    Il dit dans le premier cas que on fait comme si la catégorie
+    avait de la structure en plus alors qu'en fait c'est plutôt 
+    que la structure de groupe est déterminée par la catégorie.
 \end{rem}
 
+\section{Catégories abéliennes}
+\begin{defn}[Égalisateur/Equalizer]
+    C'est un monomorphisme qui est la limite de 
+% https://q.uiver.app/#q=WzAsMyxbMSwwLCJBIl0sWzIsMCwiQiJdLFswLDAsIkUiXSxbMCwxLCJnIiwyLHsib2Zmc2V0IjoxfV0sWzAsMSwiZiIsMCx7Im9mZnNldCI6LTF9XSxbMiwwXV0=
+\[\begin{tikzcd}
+	E & A & B
+	\arrow[from=1-1, to=1-2]
+	\arrow["g"', shift right, from=1-2, to=1-3]
+	\arrow["f", shift left, from=1-2, to=1-3]
+\end{tikzcd}\]
+\end{defn}
+Dans le cas du noyau on peut écrire que pour tout $X$
+% https://q.uiver.app/#q=WzAsNCxbMSwxLCJBIl0sWzIsMSwiQiJdLFswLDEsIkUiXSxbMCwwLCJYIl0sWzMsMSwiMCIsMCx7ImN1cnZlIjotMn1dLFswLDEsImYiXSxbMiwwXSxbMywyLCJcXGV4aXN0cyF+aiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFszLDAsImkiLDFdXQ==
+\[\begin{tikzcd}
+	X \\
+	{\ker f} & A & B
+	\arrow["{\exists!~j}"', dashed, from=1-1, to=2-1]
+	\arrow["i"{description}, from=1-1, to=2-2]
+	\arrow["0", curve={height=-12pt}, from=1-1, to=2-3]
+	\arrow[from=2-1, to=2-2]
+	\arrow["f", from=2-2, to=2-3]
+\end{tikzcd}\]
+il existe $j$ qui fait tout commuter. C'est la propriété universelle
+du noyau. 
+\begin{note}
+    Le fait que $\ker f\to A$ soit un monomorphisme est une conséquence.
+    C'est assez clair.
+\end{note}
+\begin{rem}
+    On peut réecrire le noyau comme $A\times_B O_{\Cat}$ (pullback) et
+    le conoyau $B\sqcup_A O_{\Cat}$ (pushout). Y s'agit just de dire
+    que la limite de 
+% https://q.uiver.app/#q=WzAsMixbMCwwLCJBIl0sWzEsMCwiQiJdLFswLDEsIjAiLDIseyJvZmZzZXQiOjF9XSxbMCwxLCJmIiwwLHsib2Zmc2V0IjotMX1dXQ==
+\[\begin{tikzcd}
+	A & B
+	\arrow["0"', shift right, from=1-1, to=1-2]
+	\arrow["f", shift left, from=1-1, to=1-2]
+\end{tikzcd}\]
+    C'est la limite de 
+% https://q.uiver.app/#q=WzAsMyxbMCwxLCJBIl0sWzEsMSwiQiJdLFsxLDAsIk9fe1xcQ2F0fSJdLFswLDEsImYiLDIseyJvZmZzZXQiOjF9XSxbMiwxXV0=
+\[\begin{tikzcd}
+	& {O_{\Cat}} \\
+	A & B.
+	\arrow[from=1-2, to=2-2]
+	\arrow["f"', shift right, from=2-1, to=2-2]
+\end{tikzcd}\]
+\end{rem}
+\begin{defn}[(co)Image]
+    On déf l'image de $f\colon A\to B$ comme $\ker(B\to Coker(f))$.
+    La coimage par $Coim(f)=Coker(\ker(f)\to A)$.
+\end{defn}
+On a des flèches canoniques, $im(f)\to B$ et $A\to coim(f)$.
 
+Ducoup il rappelle c'est quoi un mono/epi. Brièvement, ça dit que
+si on a $f\colon X\to Y$ un monomorphisme, alors pour tout $Z$, 
+\[\Hom(Z,X)\to \Hom(Z,Y)\]
+est injective. Concrètement si on a $f\circ h=f\circ g$ alors $h=f$
+dans
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJaIl0sWzEsMCwiWCJdLFsyLDAsIlkiXSxbMCwxLCJnIiwwLHsib2Zmc2V0IjotMX1dLFswLDEsImgiLDIseyJvZmZzZXQiOjF9XSxbMSwyLCJmIl1d
+\[\begin{tikzcd}
+	Z & X & Y
+	\arrow["g", shift left, from=1-1, to=1-2]
+	\arrow["h"', shift right, from=1-1, to=1-2]
+	\arrow["f", from=1-2, to=1-3]
+\end{tikzcd}\]
+
+À l'inverse dans le diagramme du dessous si $g\circ f=h\circ f$
+alors $h=g$ ($f$ atteint toute l'image).
+\[\begin{tikzcd}
+	X & Y & Z
+	\arrow["g", shift left, from=1-2, to=1-3]
+	\arrow["h"', shift right, from=1-2, to=1-3]
+	\arrow["f", from=1-1, to=1-2]
+\end{tikzcd}\]
+et ça se réecrit $\Hom(Y,Z)\to \Hom(X,Z)$ est surjective.
+
+\begin{rem}
+    Le (co)noyau est un (epi)monomorphisme. Pour le noyau, la flèche
+    $X\to \ker(f)$ est unique, mais on en a deux via 
+    $\iota\circ g=\iota\circ h$ pour $\iota\colon \ker(f)\to A$
+    d'où $h=g$.
+\end{rem}
+
+\begin{rem}
+    Dans $Ab$ on a $coim(f)=A/\ker(f)\simeq im(f)$ le théorème 
+    d'isomorphisme!
+\end{rem}
+\begin{exo}
+    Est-ce qu'on a un théorème d'isomorphisme dans une catégorie
+    avec un objet zéro, les noyaux et conoyaux? 
+    \begin{center} \textbf{(1)}    \end{center}	
+    Prouver que y'a une flèche canonique 
+    $\bar f\colon coim(f)\to im(f)$ tel que 
+% https://q.uiver.app/#q=WzAsNixbMCwwLCJcXGtlcihmKSJdLFsxLDAsIkEiXSxbMiwwLCJCIl0sWzMsMCwiQ29rZXIoZikiXSxbMiwxLCJpbShmKSJdLFsxLDEsImNvaW0oZikiXSxbMCwxLCJpIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMSwyLCJmIl0sWzIsMywicCIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsxLDVdLFs1LDQsIlxcYmFyIGYiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbNCwyXV0=
+\[\begin{tikzcd}
+	{\ker(f)} & A & B & {Coker(f)} \\
+	& {coim(f)} & {im(f)}
+	\arrow["i", hook, from=1-1, to=1-2]
+	\arrow["f", from=1-2, to=1-3]
+	\arrow[from=1-2, to=2-2]
+	\arrow["p", two heads, from=1-3, to=1-4]
+	\arrow["{\bar f}", dashed, from=2-2, to=2-3]
+	\arrow[from=2-3, to=1-3]
+\end{tikzcd}\]
+    commute.
+    \begin{center}\textbf{2)}\end{center}
+    Montrer que $f=O$ est équivalent à ce que $i=id_A$ et $p=id_B$.
+    \begin{center}\textbf{3)}\end{center}
+    Si $g\in \Hom_{\Cat}(A,A)$ alors $g=Id_A$ implique que 
+    $(\ker(g)\to A)=(O\to A)$ et $A\to Coker(g)=A\to 0$.
+\end{exo}
+\begin{lem}
+    Soit $\Cat$ une catégorie avec un objet zéro, les noyaux et
+    conoyaux. Alors pour tout $f\colon A\to B$, 
+    $\ker(f)=(\ker(A\to coim(f))$ et $coker(f)=coker(im(f)\to B)$.
+\end{lem}
+\begin{proof}
+    Par dualité entre $\Cat$ et $\Cat^{op}$ il suffit de prouver la 
+    première assertion. On rappelle que $coim(f)=coker(\ker(f)\to A)$
+    en particulier
+    \[\ker(f)\to A\to coim(f)\]
+    est la flèche nulle. On doit juste montrer que cette $\ker$ est
+    universelle pour cette propriété. Soit 
+    $(\alpha\colon X\to A)\to coim(f)$ qui vaut $0$. On utilise 
+    maintenant $X\to A\to coim(f)\to im(f)\to B$ qui vaut $0$.
+\end{proof}
+
+\begin{defn}
+    Une catégorie abélienne est une catégorie additive 
+    \begin{itemize}
+	\item qui a tout les noyaux et conoyaux. 
+	\item telle que tout $f\colon A\to B$ vérifie 
+	    \[\bar f\colon coim(f)\to im(f)\]
+	    est un isomorphisme.
+    \end{itemize}
+\end{defn}
+\begin{rem}
+    Une catégorie abélienne se comporte grosso modo comme Ab. Dans
+    Rotman y'avais un méta théorème qui disait qu'on peut toujours
+    se plonger dans une sous-catégorie pleine de modules.
+\end{rem}
+
+\begin{ex}
+    Un contre exemple pour le deuxième axiome dans une catégorie
+    additive avec les noyaux. On peut regarder $Ab(Top^H)$ les
+    groupes abéliens topologiques. Dans ce cas, si on a $f\colon A\to B$
+    alors $coker(f)=B/\overline{im}(f)$, on doit prendre la clôture.
+    Si on regarde $\Q\subset \R$, on a $\ker(\subset)=0$ et 
+    $coker(\subset)=\R/\bar{\Q}=0$. Si, $Ab(Top^H)$ était abélienne,
+    on aurait que $\subset$ est un isomorphisme.
+\end{ex}
+\begin{prop}
+    Soit $(f\colon A\to)(g\colon B\to) C$ dans une catégorie abélienne
+    tels que $g\circ f=O$. Alors il existe une flèche canonique,
+    \[im(f)\to \ker(g)\]
+\end{prop}
+\begin{proof}
+    Faire. (dans le carnet je l'ai fais dcp)
+\end{proof}
+
+\begin{defn}[Suite/Complexe]
+    Une suite dans $\Cat$ est une suite de morphismes
+% https://q.uiver.app/#q=WzAsOCxbMSwwLCJBXnstMX0iXSxbMiwwLCJBXjAiXSxbMywwLCJBXjEiXSxbNCwwLCJcXGxkb3RzIl0sWzAsMCwiXFxsZG90cyJdLFs1LDAsIkFebiJdLFs2LDAsIkFee24rMX0iXSxbNywwLCJcXGxkb3RzIl0sWzAsMSwiZF57LTF9Il0sWzEsMiwiZF4wIl0sWzIsMywiZF4xIl0sWzQsMF0sWzUsNiwiZF5uIl0sWzYsN10sWzMsNV1d
+\[\begin{tikzcd}
+	\ldots & {A^{-1}} & {A^0} & {A^1} & \ldots & {A^n} & {A^{n+1}} & \ldots
+	\arrow[from=1-1, to=1-2]
+	\arrow["{d^{-1}}", from=1-2, to=1-3]
+	\arrow["{d^0}", from=1-3, to=1-4]
+	\arrow["{d^1}", from=1-4, to=1-5]
+	\arrow[from=1-5, to=1-6]
+	\arrow["{d^n}", from=1-6, to=1-7]
+	\arrow[from=1-7, to=1-8]
+\end{tikzcd}\]
+    C'est un complexe si $d^{n+1}\circ d^n=0$ pour tout $n$.
+
+    Un complexe est acyclique (exact) si $im(d^n)\to \ker(d^{n+1})$
+    est un isomorphisme pour tout $n$.
+\end{defn}
+\begin{exo}
+    Soit $\Cat$ une catégorie abélienne et $f\colon A\to B$
+    dans $\Cat$. TFAE : 
+    \begin{itemize}
+	\item $f$ est un mono.
+	\item $\ker(f)=(O_{\Cat}\to A)$.
+	\item $O_{\Cat}\to A\to B$ est acyclique.
+    \end{itemize}
+\end{exo}
+\begin{exo}
+    Soit $\Cat$ une catégorie abélienne et $f\colon A\to B$
+    dans $\Cat$. TFAE : Pareil mais pour épi.
+\end{exo}
+\begin{exo}
+    Soit $\Cat$ une catégorie abélienne et $f\colon A\to B$
+    dans $\Cat$. Prouver que $f$ est un monomorphisme ssi
+    $f$ est la flèche $coim(f)\to B$ naturellement. Pareil pour 
+    épi équivaut à $A\to im(f)$. Puis isom équivaut à mono plus épi.
+\end{exo}
+
+\begin{note}
+    S'entrainer à vite écrire des preuves.
+\end{note}
+ 
+\begin{lem}
+    Soit
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJBIl0sWzEsMCwiQiJdLFsyLDAsIkMiXSxbMCwxLCJmIl0sWzEsMiwiZyJdXQ==
+\[\begin{tikzcd}
+	A & B & C
+	\arrow["f", from=1-1, to=1-2]
+	\arrow["g", from=1-2, to=1-3]
+\end{tikzcd}\]
+une suite dans $\Cat$ une catégorie abélienne. TFAE
+\begin{itemize}
+    \item La suite est exacte dans $\Cat$.
+    \item La suite opposée est exacte dans $\Cat^{op}$.
+    \item $Coker(f)=Coim(g)$.
+\end{itemize}
+\end{lem}
+\begin{rem}
+    On a $\ker(f)=\ker(A\to coim(f))$ et $coker(f)=coker(im(f)\to B)$.
+\end{rem}
+\begin{proof}
+    Pour $1)\implies 3)$, sachant $im(f)=\ker(g)$ on prends les 
+    cokernels $coker(im(f))\simeq coker(\ker(g))$. Par la remarque
+    $coker(f)\simeq coim(g)$. En plus en regardant $(3)$ dans la 
+    catégorie opposée on a immédiatemment $(2)$. Reste à montrer
+    $3)\implies 1)$. On a $coker(im(f))=coker(f)=coim(g)=coker(\ker(g))$
+    canoniquement. Maintenant on prends les noyaux, on obtient 
+    $im(im(f))=\ker(coker(im(f)))=\ker(coker(\ker(g)))=im(\ker(g))$. 
+    Mais $im$ et $ker$ sont des monos, de sorte que $im(ker)=ker$ et
+    $im(im)=im$.
+\end{proof}
 
 
 \printbibliography

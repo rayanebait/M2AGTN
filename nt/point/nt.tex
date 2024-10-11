@@ -112,8 +112,11 @@ sorting=ynt
 \begin{document}
 \maketitle
 
-\section*{Point sur les cours, 04/10/2024}
-\subsection*{Extensions sur corps non complets}
+\section{2e point sur les cours, 09/10/2024}
+
+
+\section{1er point sur les cours, 04/10/2024}
+\subsection{Extensions sur corps non complets}
 Si $(K, |.|_K)$ est ultramétrique et $E/K$ finie. On peut regarder
 $Aut(L/K)$ pour construire
 \[|.|_L\mapsto |\sigma(.)|_L\]
@@ -147,7 +150,30 @@ et on peut faire redescendre sur $\tau|_L\colon L\to K^c$.
     décomposition sur $\Q_p$. Et y définissent tous la même valeur
     absolue sur $\widehat L$.
 \end{rem}
-\subsection*{Extensions de valuations et corps complets}
+\subsection{Avec les anneaux artiniens}
+Là y'a un truc cool qui montre clairement la décomposition des premiers
+dans des extensions! On a une correspondance entre 
+
+
+\[\{\textrm{Idéaux maximaux de }L\otimes_K\widehat K\}\leftrightarrow\{\textrm{extensions de $|.|_K$ à $L$}\}\]
+Pour la surjectivité on utilise % https://q.uiver.app/#q=WzAsNSxbMCwyLCJLIl0sWzIsMiwiXFx3aWRlaGF0IEsiXSxbMCwwLCJMIl0sWzIsMCwiXFx3aWRlaGF0IEwiXSxbMSwxLCJMXFxvdGltZXNfSyBcXHdpZGVoYXQgSyJdLFswLDJdLFswLDFdLFsxLDNdLFsyLDNdLFsxLDRdLFsyLDRdLFs0LDMsIiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFswLDRdXQ==
+\[\begin{tikzcd}
+	L && {\widehat L} \\
+	& {L\otimes_K \widehat K} \\
+	K && {\widehat K}
+	\arrow[from=1-1, to=1-3]
+	\arrow[from=1-1, to=2-2]
+	\arrow[dashed, from=2-2, to=1-3]
+	\arrow[from=3-1, to=1-1]
+	\arrow[from=3-1, to=2-2]
+	\arrow[from=3-1, to=3-3]
+	\arrow[from=3-3, to=1-3]
+	\arrow[from=3-3, to=2-2]
+\end{tikzcd}\]
+et on pose $\m_{|.|_L}=\ker(L\otimes_K \widehat K)\to \widehat L$. Pour
+l'injectivité c'est assez direct.
+
+\subsection{Extensions de valuations et corps complets}
 Le cas archimédien est assez particulier puisque y'a que $\R$ et $\C$.
 C'est l'exercice $8$ de la feuille où on peut montrer que tout corps
 archimédien complet qui contient $i$ est isomorphe à $\C$. Je
@@ -201,7 +227,7 @@ On peut maintenant l'étendre a une clôture algébrique $K^c$ via
 \[x\mapsto |N_{K(x)/K}(x)^{1/[K(x):K]}|\]
 et il y'a unicité.
 
-\subsection*{Classification sur $\Q$}
+\subsection{Classification sur $\Q$}
 En théorie des nombres, on a regardé grosso modo Ostrowski et les 
 équivalences de valeurs absolues ($|.|^s$) pour définir la même 
 topologie.
@@ -209,8 +235,9 @@ topologie.
 \[\begin{tikzcd}
 	&&& {\mathbb R} \\
 	&&& {(\mathbb Q,|.|)} \\
-	\ldots & {\mathbb Q_{p_1}} & {\mathbb Q_{p_2}} & {\mathbb Q_{p_3}} & {\mathbb Q_{p_4}} & {\mathbb Q_{p_5}} & \ldots
+    {\mathbb Q_{2}} & {\mathbb Q_{3}} & {\mathbb Q_{5}} & {\mathbb Q_{7}} & {\mathbb Q_{11}} & {\mathbb Q_{13}} & \ldots
 	\arrow[from=2-4, to=1-4]
+	\arrow[from=2-4, to=3-1]
 	\arrow[from=2-4, to=3-2]
 	\arrow[from=2-4, to=3-3]
 	\arrow[from=2-4, to=3-4]
@@ -221,7 +248,17 @@ Les grosses idées a retenir pour moi : étant donné une $|.|$, si
 elle est non archimédienne $\to$ on regarde la valuation associée $v$. 
 Ensuite $\m\cap \Z=p\Z$, et ensuite sur $\Z$ si $x\wedge p=1$
 $|ux|=|1-yp|=1$ d'où suffit de regarder $|p|$. Le cas archimédien est 
-un peu plus compliqué.
+un peu plus compliqué mais assez étonnant. En fait si on regarde un corps
+archimédien complet dont la v.a. étend celle de $\Q$ contenant $i$.
+Alors on peut plonger $\C$, disons $i\colon \C\to K$. L'idée c'est de
+regarder pour $a\in K$ l'inf de,
+\[f_a\colon z\mapsto |z-a|_K\]
+si c'est $r>0$ on peut faire bouger $r$ comme on veut. Ensuite faut 
+regarder pour $|\gamma_0 - a|=r$ et $|\gamma - \gamma_0|<r$ on peut 
+calculer 
+\[(\gamma_0-\gamma)^n - (\gamma_0 - a)^n\]
+le spécificité de $\C$ analytiquement c'est alors d'avoir toutes
+les racines de l'unités. Ce qui permet de factoriser le truc du dessus.
 
 
 \end{document}

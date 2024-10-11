@@ -1,0 +1,5 @@
+\babel@toc {french}{}\relax 
+\contentsline {chapter}{\numberline {1}Point sur le cours 09/10/2024, catégories abéliennes}{5}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Catégories abéliennes}{5}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Catégories additives}{5}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Catégories préadditives}{5}{section.1.3}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.9.28)  4 OCT 2024 20:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.9.28)  10 OCT 2024 15:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -783,7 +783,7 @@ Package: appendix 2020/02/08 v1.2c extra appendix facilities
 \c@algo=\count464
 \c@defnbis=\count465
 \c@ex=\count466
-Package hyperref Info: Option `colorlinks' set `true' on input line 107.
+Package hyperref Info: Option `colorlinks' set `true' on input line 108.
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
@@ -791,24 +791,24 @@ Package csquotes Info: Redefining alias 'default' -> 'french'.
  (./nt.aux)
 \openout1 = `nt.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count467
@@ -828,7 +828,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring ON on input line 112.
+Package hyperref Info: Link coloring ON on input line 113.
  (./nt.out) (./nt.out)
 \@outlinefile=\write5
 \openout5 = `nt.out'.
@@ -846,17 +846,17 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'nt.bbl' found.
  (./nt.bbl)
-Package biblatex Info: Reference section=0 on input line 112.
-Package biblatex Info: Reference segment=0 on input line 112.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 114.
+Package biblatex Info: Reference section=0 on input line 113.
+Package biblatex Info: Reference segment=0 on input line 113.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 115.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 114.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 115.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 114.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 115.
  (/usr/share/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
@@ -878,7 +878,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 
-LaTeX Warning: Citation 'cassels' on page 3 undefined on input line 116.
+LaTeX Warning: Citation 'cassels' on page 3 undefined on input line 117.
 
 [3]
 
@@ -893,7 +893,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 ]
 \bbl@ensure@french {Chapitre} 1.
 [5]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 208.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 209.
  (/usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
@@ -905,12 +905,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [6{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-Overfull \hbox (19.99963pt too wide) in paragraph at lines 222--225
+Overfull \hbox (19.99963pt too wide) in paragraph at lines 223--226
 [][]\OT1/cmr/bx/n/12 D^^Sefinition 1.1.12 \OT1/cmr/m/n/12 (Places)\OT1/cmr/bx/n/12 . []\OT1/cmr/m/n/12 On d^^Sefinit une place comme une classe d'^^Sequivalence
  []
 
 
-Overfull \hbox (41.21635pt too wide) in paragraph at lines 222--225
+Overfull \hbox (41.21635pt too wide) in paragraph at lines 223--226
 \OT1/cmr/m/n/12 de valeurs ab-solues. Une place est finie/infinie si elle est ul-tram^^Setrique/archim^^Sedienne. 
  []
 
@@ -922,7 +922,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [7]
-Overfull \hbox (3.4677pt too wide) in paragraph at lines 268--272
+Overfull \hbox (3.4677pt too wide) in paragraph at lines 269--273
 [][]\OT1/cmr/bx/n/12 Exercices 1.2.4. []\OT1/cmr/m/n/12 Rayon de con-ver-gence de $\OML/cmm/m/it/12 exp\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 z\OT1/cmr/m/n/12 ) = [][] []$ dans $\U/msb/m/n/12 Q[]$\OT1/cmr/m/n/12 ? Sachant
  []
 
@@ -966,7 +966,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [12]
-Overfull \hbox (6.90172pt too wide) in paragraph at lines 515--518
+Overfull \hbox (6.90172pt too wide) in paragraph at lines 516--519
 \OT1/cmr/m/n/12 et tout se v^^Serifie lo-cale-ment. En fait d^^Res que $\OML/cmm/m/it/12  \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 L$\OT1/cmr/m/n/12 , on a $\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 N[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 \OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 j[] \OT1/cmr/m/n/12 =
  []
 
@@ -978,17 +978,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [13]
-Overfull \hbox (12.29572pt too wide) in paragraph at lines 582--582
+Overfull \hbox (12.29572pt too wide) in paragraph at lines 583--583
 []\OT1/cmr/bx/n/17.28 Extension de $\OMS/cmsy/m/n/17.28 j\OML/cmm/m/it/17.28 :\OMS/cmsy/m/n/17.28 j$ \OT1/cmr/bx/n/17.28 ^^Ra une ex-ten-sion quel-conque 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 582.
+(hyperref)                removing `math shift' on input line 583.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 582.
+(hyperref)                removing `math shift' on input line 583.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1034,18 +1034,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 ]
 \bbl@ensure@french {Chapitre} 2.
 
-Overfull \hbox (1.53255pt too wide) in paragraph at lines 775--779
+Overfull \hbox (1.53255pt too wide) in paragraph at lines 776--780
 [][]\OT1/cmr/bx/n/12 Proposition 2.1.1. []\OT1/cmr/m/it/12 Si $\OML/cmm/m/it/12 b \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 B$ \OT1/cmr/m/it/12 alg^^Sebrique sur $\OML/cmm/m/it/12 Frac\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 K$ \OT1/cmr/m/it/12 et $\OML/cmm/m/it/12 P$ \OT1/cmr/m/it/12 son polyn^ome
  []
 
 
-Overfull \hbox (35.52145pt too wide) in paragraph at lines 788--791
+Overfull \hbox (35.52145pt too wide) in paragraph at lines 789--792
 [][]\OT1/cmr/bx/n/12 Corollaire 2.1.2. []\OT1/cmr/m/it/12 Si $\OML/cmm/m/it/12 b \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 B$ \OT1/cmr/m/it/12 est en-tier sur $\OML/cmm/m/it/12 A$ \OT1/cmr/m/it/12 int^^Segralement clos, $\OML/cmm/m/it/12 N[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 b\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; Tr[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 b\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 2
  []
 
 [19]
+Overfull \hbox (27.4938pt too wide) in paragraph at lines 834--835
+[][]\OT1/cmr/bx/n/12 Th^^Seoreme 2.2.2 \OT1/cmr/m/n/12 (D^^Secomposition en id^^Seaux pre-miers)\OT1/cmr/bx/n/12 . []\OT1/cmr/m/it/12 Il ex-iste une d^^Secomposition
+ []
 
-LaTeX Warning: Empty bibliography on input line 823.
+
+Overfull \hbox (4.95802pt too wide) in paragraph at lines 851--853
+[][]\OT1/cmr/bx/n/12 D^^Sefinition 2.2.4. []\OT1/cmr/m/n/12 Un an-neau de val-u-a-tion discr^^Rete est un an-neau de Dedekind
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1054,7 +1060,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[20] (./nt.aux)
+[20]
+
+LaTeX Warning: Empty bibliography on input line 912.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[21] (./nt.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1064,7 +1081,7 @@ L3 programming layer <2024-02-20>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `nt.out' has not changed.
-(rerunfilecheck)             Checksum: 89FE157BBF42A94E0032D14FAEA3B4AB;2152.
+(rerunfilecheck)             Checksum: 795C52B89A7A1E24D3120293E032D301;2308.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                nt
@@ -1075,18 +1092,18 @@ Package logreq Info: Writing requests to 'nt.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32104 strings out of 476076
- 618785 string characters out of 5793775
+ 32122 strings out of 476076
+ 619007 string characters out of 5793775
  1950187 words of memory out of 5000000
- 53648 multiletter control sequences out of 15000+600000
- 573101 words of font info for 97 fonts, out of 8000000 for 9000
+ 53651 multiletter control sequences out of 15000+600000
+ 573802 words of font info for 99 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  131i,16n,135p,675b,1709s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on nt.pdf (20 pages, 263945 bytes).
+Output written on nt.pdf (21 pages, 270938 bytes).
 PDF statistics:
- 309 PDF objects out of 1000 (max. 8388607)
- 246 compressed objects within 3 object streams
- 82 named destinations out of 1000 (max. 500000)
- 109 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 330 PDF objects out of 1000 (max. 8388607)
+ 266 compressed objects within 3 object streams
+ 95 named destinations out of 1000 (max. 500000)
+ 117 words of extra memory for PDF output out of 10000 (max. 10000000)
 

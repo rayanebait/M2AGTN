@@ -1,9 +1,9 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'homologie.blg'
-[98] biber:340> INFO - === Tue Sep 17, 2024, 14:08:51
-[116] Biber.pm:419> INFO - Reading 'homologie.bcf'
-[191] Biber.pm:979> INFO - Found 0 citekeys in bib section 0
-[212] bbl.pm:660> INFO - Writing 'homologie.bbl' with encoding 'UTF-8'
-[212] bbl.pm:763> INFO - Output to homologie.bbl
-[213] Biber.pm:131> WARN - The file 'homologie.bcf' does not contain any citations!
-[213] Biber.pm:133> INFO - WARNINGS: 1
+[110] biber:340> INFO - === ven. oct. 11, 2024, 20:10:51
+[137] Biber.pm:419> INFO - Reading 'homologie.bcf'
+[223] Biber.pm:979> INFO - Found 0 citekeys in bib section 0
+[246] bbl.pm:660> INFO - Writing 'homologie.bbl' with encoding 'UTF-8'
+[246] bbl.pm:763> INFO - Output to homologie.bbl
+[246] Biber.pm:131> WARN - The file 'homologie.bcf' does not contain any citations!
+[246] Biber.pm:133> INFO - WARNINGS: 1

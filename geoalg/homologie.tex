@@ -66,13 +66,14 @@ sorting=ynt
 \newcommand{\Supp}{\textrm{Supp}}
 \renewcommand{\Im}{\textrm{Im}}
 \newcommand{\m}{\mathfrak{m}}
+\renewcommand{\P}{\mathbb{P}}
 
 
 \newcommand{\cL}{\mathscr{L}}
 \newcommand{\G}{\mathscr{G}}
 \newcommand{\D}{\mathscr{D}}
 \newcommand{\E}{\mathscr{E}}
-\renewcommand{\P}{\mathscr{P}}
+\newcommand{\Po}{\mathscr{P}}
 \renewcommand{\H}{\mathscr{H}}
 
 \makeatletter
@@ -362,7 +363,6 @@ fonctions polynomiales ! C'est la preuve d'avant.
     Les fibres $\Or_{Z,z}$ sont les $\A(Z)_{\m_z}$.
 \end{proof}
 
-<<<<<<< HEAD
 de notre équivalence de base 
 \[\{\textrm{ensembles algébriques affines}\}\to \{k\textrm{-algèbre réduite de type fini}\}\]
 
@@ -405,10 +405,59 @@ annelés. En fait c'est pleinement fidèle, on a pas un nouvel objet.
     qui à $T_1$ associe $f_1$. En particulier, c'est $T_1\circ f$ par
     le point d'avant. De sorte que $\tilde f$ est défini par
     des polynômes et donc un morphisme.
-
 \end{proof}
-=======
->>>>>>> 52509f54cbf630fff626afb21be01c71f32aaf10
+
+\section{Recollements}
+\section{Sous-variétés}
+On appelle variété des unions finies de variétés affines avec le 
+faisceau structurant.
+
+\begin{defn}[Sous-variété]
+    Pour un fermé dans $Z\subset X$ une variété algébrique. On définit,
+    \[\Or_Z(V)=\{f\colon V\to k|\forall z\in V \exists g\in \Or_X(U),
+    U\cap Z\subset V,g|_{U\cap Z}=f|_{U\cap Z}\}\]
+    autrement dit c'est juste $i^{-1}\Or_X$ pour $i\colon Z\subset X$.
+\end{defn}
+
+\begin{lem}
+    Soit $X$ une variété algébrique et $Z\subset X$ fermé. Alors
+    $Z$ est une variété algébrique. Si $X$ est affine alors $Z$ aussi.
+\end{lem}
+\begin{proof}
+    On doit montrer que $Z$ est un recouvers d'affine. Suffit de 
+    montrer que $Z\cap U$ est affine si $U$ est affine. Suffit de
+    le montrer dans $X=\A^n$ et là $\Or_Z$ c'est littéralement
+    le faisceau de fonction régulière donc on a fini. (Il définit une
+    variété affine comme un fermé topologique de $\A^n$ plus faisceau)
+\end{proof}
+
+
+\section{Variétés projectives}
+Dans $\P^n(k)$ on définit sur $X=Z_+(I)$, \[\Or_X(U)=\{f\colon U\to k,
+\textrm{Localement une fraction homogène}\}\]
+Si on définit la localisation homogène en $P$ homogène, avec $B=k[T_1,
+\ldots,T_n]/I$, via $B_{(P)}$ les fractions de degrés $0$. Plus
+rigoureusement, via $k[T_1,\ldots, T_n]_{(P)}/I_{(P)}$ avec $I_{(P)}=
+\{Q/P^n|Q\in I\}$.
+\begin{prop}
+    Si $X=Z_+(I)\subset \P^n(k)$ et $U=X\cap D_+(p)$ ($\bar P=p$). On a
+    $B_{(p)}\simeq \Or_X(U)$.
+\end{prop}
+
+\begin{prop}
+    Si $P$ est non constant homogène alors $D_+(P)$ est une variété 
+    affine. Si $P\in \Or_Z(Z)=B$ de degré $\geq 1$ pareil.
+\end{prop}
+
+\begin{defn}
+    Les variétés quasi-projectives sont les localement fermées dans
+    $\P^n(k)$.
+\end{defn}
+\chapter{Dimension}
+\begin{defn}
+    On prend la dimension de Krull avec le sup des chaines de fermés
+    irréductibles.
+\end{defn}
 
 \printbibliography
 \end{document}
