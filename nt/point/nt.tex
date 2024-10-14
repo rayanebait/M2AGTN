@@ -61,7 +61,9 @@ sorting=ynt
 \newcommand{\Or}{\mathcal{O}}
 \newcommand{\F}{\mathbb F}
 \newcommand{\m}{\mathfrak m}
+\renewcommand{\b}{\mathfrak b}
 \renewcommand{\a}{\mathfrak a}
+\newcommand{\p}{\mathfrak p}
 \newcommand{\I}{\mathfrak I}
 \newcommand{\Hom}{\textrm{Hom}}
 \newcommand{\disc}{\textrm{disc}}
@@ -86,6 +88,7 @@ sorting=ynt
 
 \theoremstyle{definition}
 \newtheorem{conj}{Conjecture}
+\newtheorem*{eq}{Équivalences}
 \newtheorem{prob}{Problème}
 \newtheorem{quest}{Question}
 \newtheorem{prot}{Protocole}
@@ -111,12 +114,100 @@ sorting=ynt
 
 \begin{document}
 \maketitle
+\chapter{Des choses à faire}
+Construire des extensions explicites! Y'a l'air d'avoir beaucoup de 
+critères là dans le chapitre
 
-\section{2e point sur les cours, 09/10/2024}
+\chapter{2e point sur les cours, 11/10/2024}
+
+\section{Conséquences}
+Ducoup comme la fermeture intégrale commute avec la localisation on
+a directement 
+\begin{description}
+    \item[Les idéaux sont tous inversibles :] ça c'est direct, en 
+	particulier les idéaux fractionnaires forment un groupe.
+    \item[La decomposition en idéaux premiers :] avec une petite 
+	application de la noethérianité.
+\end{description}
+ensuite, si $L/K=Frac(A)$ est séparable finie, on prouve que 
+\begin{enumerate}
+    \item La trace $Tr(x\_)$ est non dégénérée (via le discriminant),
+	et c'est ptet là l'hypothèse séparable.
+    \item La fermeture de $A$ dans $L$ est de Dedekind et de type fini 
+	sur $A$.
+\end{enumerate}
+On obtient directement les décompositions, 
+\[\p B=\prod_{\mathfrak P\mid \p} \mathfrak P^{e_{\mathfrak P}}\]
+et la formule 
+\[[L:K]=\sum e_{\mathfrak P}f_{\mathfrak P}\]
+avec le lemme chinois.
 
 
-\section{1er point sur les cours, 04/10/2024}
-\subsection{Extensions sur corps non complets}
+\section{Sur les anneaux de Dedekind}
+Le truc cool que j'avais jamais vu c'est que si $A$ est intègre 
+noethérien
+\begin{eq}
+    On a :
+    \begin{center}
+	$A$ est de dimension $1$ et intégralement clos.
+    \end{center}
+    équivaut à
+    \begin{center}
+	Tout les localisés $A_{\p}$ sont de valuations discrètes.
+    \end{center}
+\end{eq}
+L'équivalence est assez directe. On obtient la déf d'anneau de Dedekind.
+\begin{rem}
+    En fait ça prouve que localiser et passer à la fermeture intégrale
+    commutent. I.e. $(\a.\b)_{\p}=\a_{\p}.\b_{\p}$ et 
+    $(\a+\b)_{\p}=\a_{\p}+\b_{\p}$.
+    \begin{center}
+	\textbf{Ça prouve directement que 
+	les idéaux sont tous inversibles dans un anneau de Dedekind}.
+    \end{center}
+    Faut juste se rappeler de la correspondance entre idéaux de 
+    $A$ et $S^{-1}A$.
+\end{rem}
+\section{Sur les anneaux de valuations discrètes}
+J'aimerais donner seulement des idées de preuves et équivalences.
+J'regarde toujours des anneaux commutatifs.
+
+\begin{eq}
+    Dans un anneau noethérien, 
+    \begin{center}
+	DVR $\equiv$ local, noethérien, $\m=(\pi)$ non nilpotent.
+    \end{center}
+\end{eq}
+\begin{proof}[Idées]
+    On veut écrire $x=\pi^n u$ de manière unique. Il faut montrer que
+    $\cap \m^n = 0$! Pour ça on utilise $\mathfrak u = \{x|\exists n, \pi^n x=0\}$. Ensuite c'est fini.
+\end{proof}
+
+\begin{eq}
+    Dans un anneau noethérien intègre, 
+    \begin{center}
+	DVR $\equiv$ un seul idéal premier $\ne 0$, intégralement clos.
+    \end{center}
+\end{eq}
+\begin{proof}
+    Le point c'est de montrer que $\m$ est inversible, alors $\m$ est
+    principal. On note $\m'=\{x\in K|x\m\subset A\}$. On a 
+    \begin{center}
+	$\m\m'\subset A$ et $A\subset \m'$ implique $\m\subset \m\m'$.
+    \end{center}
+    d'où $\m\m'=\m$ ou $A$.
+    Maintenant en fait
+    \begin{center}
+	si $\m\m'=A$ alors $\sum x_iy_i=1$ d'où 
+	$u=x_{i_0}y_{i_0}\in A-\m=A^{\times}$ 
+    \end{center}
+    en particulier tout 
+    $z\in\m$ se réécrit $z=x_{i_0}(u^{-1}yz)$.
+    Le reste est page $20$ du Corps locaux.
+\end{proof}
+
+\chapter{1er point sur les cours, 04/10/2024}
+\section{Extensions sur corps non complets}
 Si $(K, |.|_K)$ est ultramétrique et $E/K$ finie. On peut regarder
 $Aut(L/K)$ pour construire
 \[|.|_L\mapsto |\sigma(.)|_L\]
@@ -150,7 +241,7 @@ et on peut faire redescendre sur $\tau|_L\colon L\to K^c$.
     décomposition sur $\Q_p$. Et y définissent tous la même valeur
     absolue sur $\widehat L$.
 \end{rem}
-\subsection{Avec les anneaux artiniens}
+\section{Avec les anneaux artiniens}
 Là y'a un truc cool qui montre clairement la décomposition des premiers
 dans des extensions! On a une correspondance entre 
 
@@ -173,7 +264,7 @@ Pour la surjectivité on utilise % https://q.uiver.app/#q=WzAsNSxbMCwyLCJLIl0sWz
 et on pose $\m_{|.|_L}=\ker(L\otimes_K \widehat K)\to \widehat L$. Pour
 l'injectivité c'est assez direct.
 
-\subsection{Extensions de valuations et corps complets}
+\section{Extensions de valuations et corps complets}
 Le cas archimédien est assez particulier puisque y'a que $\R$ et $\C$.
 C'est l'exercice $8$ de la feuille où on peut montrer que tout corps
 archimédien complet qui contient $i$ est isomorphe à $\C$. Je
@@ -227,7 +318,7 @@ On peut maintenant l'étendre a une clôture algébrique $K^c$ via
 \[x\mapsto |N_{K(x)/K}(x)^{1/[K(x):K]}|\]
 et il y'a unicité.
 
-\subsection{Classification sur $\Q$}
+\section{Classification sur $\Q$}
 En théorie des nombres, on a regardé grosso modo Ostrowski et les 
 équivalences de valeurs absolues ($|.|^s$) pour définir la même 
 topologie.

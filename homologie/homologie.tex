@@ -926,6 +926,154 @@ une suite dans $\Cat$ une catégorie abélienne. TFAE
     $im(im)=im$.
 \end{proof}
 
+\begin{lem}
+    Soit $\Cat$ une catégorie abélienne, 
+    \begin{enumerate}
+	\item La suite $0\to A\to B\to C$ est exacte ssi 
+	    $f\colon (A\to B)\simeq \ker(g\colon B\to C)$.
+	\item La suite $ A\to B\to C\to 0$ est exacte ssi $(B\to C)\simeq
+	    coker(A\to B)$.
+    \end{enumerate}
+\end{lem}
+\begin{proof}
+    Pour $1.$ on sait que $f$ est un monomorphisme d'où
+    $f\simeq im(f)$, à l'inverse si $f\simeq im(f)$ alors $f$ est un mono
+    (c'est un kernel). On obtient que $f\simeq \ker(g)$.
+\end{proof}
+\begin{lem}
+    Soit $\Cat$ une catégorie abélienne.
+    \begin{enumerate}
+	\item Une suite \[(*)\colon 0\to A\to B\to C\] est exacte
+	    dans $\Cat$ ssi la suite 
+	\[(**)\colon 0\to\Hom(M,A)\to\Hom(M,B)\to\Hom(M,C)\]
+	est exacte dans Ab avec les pullbacks.
+	\item Une suite \[ A\to B\to C\to0\] est exacte
+	    dans $\Cat$ ssi la suite 
+	\[0\to\Hom(C,M)\to\Hom(B,M)\to\Hom(A,M)\]
+    \end{enumerate}
+    Dans le $2.$ on a inversé $C,M\ldots$
+\end{lem}
+\begin{proof}
+    On a directement $1.\Leftrightarrow 2.$ (Les $\Hom$ restent dans 
+    Ab même en passant à $\Cat^{op}$). On prouve $1.$, on a 
+    $(i\colon A\to B)\simeq \ker(f)$ qui se traduit par 
+    \[
+    \begin{cases}
+	f\circ i=O\\ \forall \alpha\colon M\to B  \textrm{ tq }f\circ\alpha=0, \textrm{ il existe un unique } \tilde\alpha\colon M\to A,~i\circ\tilde\alpha=\alpha
+    \end{cases}
+\]
+    en gros on traduit la propriété universelle dans Ab. On suppose que
+    $(*)$ est exacte, alors dans
+% https://q.uiver.app/#q=WzAsNSxbMCwwLCJcXEhvbV97XFxDYXR9KE0sQSkiXSxbMSwwLCJcXEhvbV97XFxDYXR9KE0sQikiXSxbMiwwLCJcXEhvbV97XFxDYXR9KE0sQykiXSxbMCwyLCIocFxcY29sb24gTVxcdG8gQSkiXSxbMiwyLCJmXFxjaXJjIGlcXGNpcmMgcCJdLFswLDEsImlfKiJdLFsxLDIsImZfKiJdLFswLDIsIihmXFxjaXJjIGkpXyoiLDIseyJjdXJ2ZSI6NH1dLFszLDQsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1hcHMgdG8ifX19XV0=
+\[\begin{tikzcd}
+	{\Hom_{\Cat}(M,A)} & {\Hom_{\Cat}(M,B)} & {\Hom_{\Cat}(M,C)} \\
+	\\
+	{(p\colon M\to A)} && {f\circ i\circ p}
+	\arrow["{i_*}", from=1-1, to=1-2]
+	\arrow["{(f\circ i)_*}"', curve={height=24pt}, from=1-1, to=1-3]
+	\arrow["{f_*}", from=1-2, to=1-3]
+	\arrow[maps to, from=3-1, to=3-3]
+\end{tikzcd}\]
+    on a $f\circ i=0$, d'où $(f\circ i)_*(p)=O$ pour tout 
+    $p\colon M\to A$. Puis $im(i_*)\subset\ker(f_*)$. À l'inverse si
+    $\alpha\in \ker(f_*)$, on regarde la propriété universelle et on 
+    obtient $i_*(\tilde \alpha)=\alpha$ d'où l'exactitude au milieu.
+    L'exactitude à gauche c'est juste que $i$ est un mono. 
+
+    Pour l'autre implication on prends $M=A$ on obtient $i_*(id_A)=i$
+    et $f\circ i= f_*(i)$. D'où $f\circ i= O$. En plus toute flèche
+    $\alpha\colon M\to B$ t.q $f_*(\alpha)=O$ vérifie $\alpha=i_*(\tilde
+    \alpha)$ via l'exactitude au milieu, l'unicité est claire. Par la
+    propriété universelle du noyau $(*)$ est exacte.
+\end{proof}
+
+\begin{cor}[Lemme des cinqs]
+    Dans une catégorie abélienne $\Cat$ si on a un diagramme commutatif
+% https://q.uiver.app/#q=WzAsMTAsWzAsMCwiMCJdLFsxLDAsIkEiXSxbMiwwLCJCIl0sWzMsMCwiQyJdLFs0LDAsIjAiXSxbMSwxLCJBJyJdLFsyLDEsIkInIl0sWzMsMSwiQyciXSxbMCwxLCIwIl0sWzQsMSwiXFxidWxsZXQiXSxbMCwxXSxbMSwyLCJpIl0sWzIsMywicCJdLFszLDRdLFsxLDUsImZfQSIsMl0sWzIsNiwiZl9CIiwyXSxbMyw3LCJmX0MiXSxbOCw1XSxbNSw2LCJpJyJdLFs2LDcsInAnIl0sWzcsOSwiMCJdXQ==
+\[\begin{tikzcd}
+	0 & A & B & C & 0 \\
+	0 & {A'} & {B'} & {C'} & 0
+	\arrow[from=1-1, to=1-2]
+	\arrow["i", from=1-2, to=1-3]
+	\arrow["{f_A}"', from=1-2, to=2-2]
+	\arrow["p", from=1-3, to=1-4]
+	\arrow["{f_B}"', from=1-3, to=2-3]
+	\arrow[from=1-4, to=1-5]
+	\arrow["{f_C}", from=1-4, to=2-4]
+	\arrow[from=2-1, to=2-2]
+	\arrow["{i'}", from=2-2, to=2-3]
+	\arrow["{p'}", from=2-3, to=2-4]
+	\arrow["0", from=2-4, to=2-5]
+\end{tikzcd}\]
+    tel que $f_A$ et $f_C$ sont des isomorphismes, alors $f_B$ est un
+    isomorphisme.
+\end{cor}
+
+\begin{proof}
+    Pour l'injectivité de $(f_B)_*$ on utilise $1.$ et c'est du 
+    diagramme chasing dans
+% https://q.uiver.app/#q=WzAsOCxbMSwwLCJcXEhvbV97XFxDYXR9KE0sQSkiXSxbMiwwLCJcXEhvbV97XFxDYXR9KE0sQikiXSxbMywwLCJcXEhvbV97XFxDYXR9KE0sQykiXSxbMCwwLCIwIl0sWzEsMSwiXFxIb21fe1xcQ2F0fShNLEEpIl0sWzIsMSwiXFxIb21fe1xcQ2F0fShNLEInKSJdLFszLDEsIlxcSG9tX3tcXENhdH0oTSxDJykiXSxbMCwxLCIwIl0sWzAsMSwiaV8qIl0sWzEsMiwiZl8qIl0sWzMsMF0sWzAsNF0sWzEsNV0sWzIsNl0sWzUsNl0sWzQsNV0sWzcsNF1d
+\[\begin{tikzcd}
+	0 & {\Hom_{\Cat}(M,A)} & {\Hom_{\Cat}(M,B)} & {\Hom_{\Cat}(M,C)} \\
+	0 & {\Hom_{\Cat}(M,A)} & {\Hom_{\Cat}(M,B')} & {\Hom_{\Cat}(M,C')}
+	\arrow[from=1-1, to=1-2]
+	\arrow["{i_*}", from=1-2, to=1-3]
+	\arrow[from=1-2, to=2-2]
+	\arrow["{f_*}", from=1-3, to=1-4]
+	\arrow[from=1-3, to=2-3]
+	\arrow[from=1-4, to=2-4]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-3, to=2-4]
+\end{tikzcd}\]
+    et ça montre que $f_B$ est un mono. Pour la surjectivité on 
+    regarde la preuve dans la catégorie opposée ?(ça inverse les
+    $(f_B)_*$? Oui ça a l'air faut oublier les $0$).
+\end{proof}
+\begin{defn}
+    Soit $0\to A\to B\to C\to0$, une suite exacte courte, on dit
+    qu'elle split si il existe une section $C\to B$ qui fait commuter.
+\end{defn}
+\begin{prop}
+    Le splitting par $s$ équivaut à $f\colon A\oplus C\simeq B$ fait
+    commuter le diagramme du dessus avec les flèches canoniques, i.e.
+    $s=f\circ i_C$ et les deux équivalent à il existe un rétract
+    $r\colon B\to A$.
+\end{prop}
+\begin{proof}
+    Si on a un splitting, on regarde le carré 
+% https://q.uiver.app/#q=WzAsMTAsWzEsMCwiQSJdLFsyLDAsIkIiXSxbMywwLCJDIl0sWzQsMCwiMCJdLFswLDAsIjAiXSxbMSwxLCJBIl0sWzIsMSwiQVxcb3BsdXMgQyJdLFszLDEsIkMiXSxbMCwxLCIwIl0sWzQsMSwiMCJdLFswLDEsImkiLDFdLFsxLDIsInAiLDFdLFsyLDNdLFs0LDBdLFs1LDZdLFs3LDYsImlfQyIsMSx7ImN1cnZlIjotMn1dLFs2LDcsInBfQyIsMV0sWzgsNV0sWzIsNywiIiwxLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCw1LCIiLDEseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs2LDEsImYiLDFdLFs3LDldLFsyLDEsInMiLDEseyJjdXJ2ZSI6MX1dXQ==
+\[\begin{tikzcd}
+	0 & A & B & C & 0 \\
+	0 & A & {A\oplus C} & C & 0
+	\arrow[from=1-1, to=1-2]
+	\arrow["i"{description}, from=1-2, to=1-3]
+	\arrow[Rightarrow, no head, from=1-2, to=2-2]
+	\arrow["p"{description}, from=1-3, to=1-4]
+	\arrow["s"{description}, curve={height=6pt}, from=1-4, to=1-3]
+	\arrow[from=1-4, to=1-5]
+	\arrow[Rightarrow, no head, from=1-4, to=2-4]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow["f"{description}, from=2-3, to=1-3]
+	\arrow["{p_C}"{description}, from=2-3, to=2-4]
+	\arrow["{i_C}"{description}, curve={height=-12pt}, from=2-4, to=2-3]
+	\arrow[from=2-4, to=2-5]
+\end{tikzcd}\]
+où $f$ est la flèche de la propriété universelle. On veut montrer
+que $f$ est un isomorphisme. On montre que le carré commute puis on 
+applique le lemme du dessus. On a $f\circ i_A =i$ et $f\circ i_C = s$.
+En particulier le carré à gauche commute. Reste à prouver que 
+$p\circ f=p_C$. Clair. Le $2.$ implique $1.$ est quasi immédiat.
+\end{proof}
+\begin{exo}
+    Faire $2.$ équivalent à $3.$. En gros on peut le regarder dans 
+    $\Cat^{op}$.
+\end{exo}
+
+
+
+
 
 \printbibliography
 
