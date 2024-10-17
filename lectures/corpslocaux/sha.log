@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.9.28)  4 OCT 2024 23:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.9.28)  17 OCT 2024 09:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -888,24 +888,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [4
 
 ]
-Overfull \hbox (28.31987pt too wide) in paragraph at lines 137--137
-[][]\OT1/cmr/bx/n/17.28 Caract^^Seristion des an-neaux de val-u-a-tions discr^^Retes 
- []
-
+\bbl@ensure@french {Chapitre} 1.
 LaTeX Font Info:    Trying to load font information for U+euf on input line 140.
 (/usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) [5]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.71667pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.71667pt}.
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [6
 
 ]
+\bbl@ensure@french {Chapitre} 2.
 
 LaTeX Warning: Empty bibliography on input line 182.
 
@@ -915,24 +913,24 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `sha.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: 7E1636FA1E545C8191C279B279D915D3;725.
 Package logreq Info: Writing requests to 'sha.run.xml'.
 \openout1 = `sha.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31449 strings out of 476076
- 605136 string characters out of 5793775
+ 31457 strings out of 476076
+ 605210 string characters out of 5793775
  1934187 words of memory out of 5000000
- 53064 multiletter control sequences out of 15000+600000
+ 53072 multiletter control sequences out of 15000+600000
  569176 words of font info for 81 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 131i,12n,135p,676b,1711s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 131i,12n,135p,676b,1776s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on sha.pdf (7 pages, 122295 bytes).
+Output written on sha.pdf (7 pages, 124794 bytes).
 PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
- 77 compressed objects within 1 object stream
+ 128 PDF objects out of 1000 (max. 8388607)
+ 94 compressed objects within 1 object stream
  14 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 45 words of extra memory for PDF output out of 10000 (max. 10000000)
 

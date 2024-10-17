@@ -1071,11 +1071,219 @@ $p\circ f=p_C$. Clair. Le $2.$ implique $1.$ est quasi immédiat.
     $\Cat^{op}$.
 \end{exo}
 
+\section{Lemme du Serpent}
+Dans $Mod_R$ avec $R$ un anneau quelconque. C'est une catégorie
+abélienne, si on a un diagramme commutatif :
+% https://q.uiver.app/#q=WzAsOCxbMSwwLCJBIl0sWzIsMCwiQiJdLFszLDAsIkMiXSxbNCwwLCIwIl0sWzMsMSwiQyciXSxbMiwxLCJCJyJdLFsxLDEsIkEnIl0sWzAsMSwiMCJdLFswLDEsIlxcYWxwaGEiXSxbMSwyLCJcXGJldGEiXSxbMiwzXSxbNSw0LCJcXGJldGEnIl0sWzYsNSwiXFxhbHBoYSciXSxbNyw2XSxbMCw2LCJ1Il0sWzEsNSwidiJdLFsyLDQsInciXV0=
+\[\begin{tikzcd}
+	& A & B & C & 0 \\
+	0 & {A'} & {B'} & {C'}
+	\arrow["\alpha", from=1-2, to=1-3]
+	\arrow["u", from=1-2, to=2-2]
+	\arrow["\beta", from=1-3, to=1-4]
+	\arrow["v", from=1-3, to=2-3]
+	\arrow[from=1-4, to=1-5]
+	\arrow["w", from=1-4, to=2-4]
+	\arrow[from=2-1, to=2-2]
+	\arrow["{\alpha'}", from=2-2, to=2-3]
+	\arrow["{\beta'}", from=2-3, to=2-4]
+\end{tikzcd}\]
+
+et en plus exact sur les lignes, alors  
+% https://q.uiver.app/#q=WzAsMTQsWzEsMSwiQSJdLFsyLDEsIkIiXSxbMywxLCJDIl0sWzQsMSwiMCJdLFszLDIsIkMnIl0sWzIsMiwiQiciXSxbMSwyLCJBJyJdLFswLDIsIjAiXSxbMSwwLCJcXGtlciB1Il0sWzIsMCwiXFxrZXIgdiJdLFszLDAsIlxca2VyIHciXSxbMSwzLCJjb2tlcih1KSJdLFsyLDMsImNva2VyKHYpIl0sWzMsMywiY29rZXIodykiXSxbMCwxLCJcXGFscGhhIl0sWzEsMiwiXFxiZXRhIl0sWzIsM10sWzUsNCwiXFxiZXRhJyJdLFs2LDUsIlxcYWxwaGEnIl0sWzcsNl0sWzAsNiwidSJdLFsxLDUsInYiXSxbMiw0LCJ3Il0sWzgsOV0sWzksMTBdLFsxMCwxMSwiIiwwLHsiY3VydmUiOi0yfV0sWzExLDEyXSxbMTIsMTNdXQ==
+\[\begin{tikzcd}
+	& {\ker u} & {\ker v} & {\ker w} \\
+	& A & B & C & 0 \\
+	0 & {A'} & {B'} & {C'} \\
+	& {coker(u)} & {coker(v)} & {coker(w)}
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-3, to=1-4]
+	\arrow[curve={height=-12pt}, from=1-4, to=4-2]
+	\arrow["\alpha", from=2-2, to=2-3]
+	\arrow["u", from=2-2, to=3-2]
+	\arrow["\beta", from=2-3, to=2-4]
+	\arrow["v", from=2-3, to=3-3]
+	\arrow[from=2-4, to=2-5]
+	\arrow["w", from=2-4, to=3-4]
+	\arrow[from=3-1, to=3-2]
+	\arrow["{\alpha'}", from=3-2, to=3-3]
+	\arrow["{\beta'}", from=3-3, to=3-4]
+	\arrow[from=4-2, to=4-3]
+	\arrow[from=4-3, to=4-4]
+\end{tikzcd}\]
+est exacte pour les flèches induites, on regarde le diagramme
+% https://q.uiver.app/#q=WzAsMTQsWzEsMSwiQSJdLFsyLDEsIkIiXSxbMywxLCJDIl0sWzQsMSwiMCJdLFszLDIsIkMnIl0sWzIsMiwiQiciXSxbMSwyLCJBJyJdLFswLDIsIjAiXSxbMSwwLCJcXGtlciB1Il0sWzIsMCwiXFxrZXIgdiJdLFszLDAsIlxca2VyIHciXSxbMSwzLCJjb2tlcih1KSJdLFsyLDMsImNva2VyKHYpIl0sWzMsMywiY29rZXIodykiXSxbMCwxLCJcXGFscGhhIl0sWzEsMiwiXFxiZXRhIl0sWzIsM10sWzUsNCwiXFxiZXRhJyJdLFs2LDUsIlxcYWxwaGEnIl0sWzcsNl0sWzAsNiwidSJdLFsxLDUsInYiXSxbMiw0LCJ3Il0sWzgsOV0sWzksMTBdLFsxMSwxMl0sWzEyLDEzXSxbOCwwXSxbOSwxXSxbMTAsMl0sWzYsMTFdLFs1LDEyXSxbNCwxM11d
+\[\begin{tikzcd}
+	& {\ker u} & {\ker v} & {\ker w} \\
+	& A & B & C & 0 \\
+	0 & {A'} & {B'} & {C'} \\
+	& {coker(u)} & {coker(v)} & {coker(w)}
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=1-3, to=1-4]
+	\arrow[from=1-3, to=2-3]
+	\arrow[from=1-4, to=2-4]
+	\arrow["\alpha", from=2-2, to=2-3]
+	\arrow["u", from=2-2, to=3-2]
+	\arrow["\beta", from=2-3, to=2-4]
+	\arrow["v", from=2-3, to=3-3]
+	\arrow[from=2-4, to=2-5]
+	\arrow["w", from=2-4, to=3-4]
+	\arrow[from=3-1, to=3-2]
+	\arrow["{\alpha'}", from=3-2, to=3-3]
+	\arrow[from=3-2, to=4-2]
+	\arrow["{\beta'}", from=3-3, to=3-4]
+	\arrow[from=3-3, to=4-3]
+	\arrow[from=3-4, to=4-4]
+	\arrow[from=4-2, to=4-3]
+	\arrow[from=4-3, to=4-4]
+\end{tikzcd}\]
+qui est commutatif, et on peut construire 
+$\delta\colon \ker w\to coker(u)$ via \[\ker w \to C\to B\to B'\to A'\to
+coker(u).\]
+Déjà 
+\begin{enumerate}
+    \item $\alpha\colon \ker u\to \ker v$ est bien défini car le 
+	carré 
+% https://q.uiver.app/#q=WzAsNCxbMCwwLCJBIl0sWzEsMCwiQiJdLFswLDEsIkEnIl0sWzEsMSwiQiciXSxbMCwxLCJcXGFscGhhIl0sWzIsMywiXFxhbHBoYSciXSxbMCwyLCJ1IiwyXSxbMSwzLCJ2Il1d
+\[\begin{tikzcd}
+	A & B \\
+	{A'} & {B'}
+	\arrow["\alpha", from=1-1, to=1-2]
+	\arrow["u"', from=1-1, to=2-1]
+	\arrow["v", from=1-2, to=2-2]
+	\arrow["{\alpha'}", from=2-1, to=2-2]
+\end{tikzcd}\]
+    commute.
+
+    \item Pareil pour $\beta\colon \ker v\to \ker w$.
+    \item On déf $coker(u)\to coker(v)$ via 
+	$\bar x\mapsto \overline{\alpha'(x)}$ : Si $x\in im(u)$ faut 
+	montrer que $\alpha(x)\in im(v)$. C'est clair car le carré
+\[\begin{tikzcd}
+	A & B \\
+	{A'} & {B'}
+	\arrow["\alpha", from=1-1, to=1-2]
+	\arrow["u"', from=1-1, to=2-1]
+	\arrow["v", from=1-2, to=2-2]
+	\arrow["{\alpha'}", from=2-1, to=2-2]
+\end{tikzcd}\]
+    commute.
+    \item Pareil pour $\beta\colon coker(v)\to coker(w)$.
+\end{enumerate}
+Maintenant le $\delta$ :
+\begin{enumerate}
+    \item On prend $z\in \ker(w)\subset C$.
+    \item Comme $B\to C$ est surjective on prend $\beta(b)=z$.
+    \item On pousse dans $B'$ en $v(b)$. Comme $z\in \ker(w)$ et 
+% https://q.uiver.app/#q=WzAsNCxbMCwwLCJCIl0sWzEsMCwiQyJdLFswLDEsIkInIl0sWzEsMSwiQyciXSxbMCwxLCJcXGJldGEiXSxbMiwzLCJcXGJldGEnIl0sWzAsMiwidiIsMl0sWzEsMywidyJdXQ==
+\[\begin{tikzcd}
+	B & C \\
+	{B'} & {C'}
+	\arrow["\beta", from=1-1, to=1-2]
+	\arrow["v"', from=1-1, to=2-1]
+	\arrow["w", from=1-2, to=2-2]
+	\arrow["{\beta'}", from=2-1, to=2-2]
+\end{tikzcd}\]
+    commute, on a $v(b)\in \ker(\beta')=im(\alpha')$.
+    \item On prend $\alpha'(a')=v(b)$. 
+    \item On pousse $a'$ dans le $coker(u)$.
+\end{enumerate}
+Bon à noter, $a'$ est unique par injectivité, le choix est au moment
+du $b$. Soit $b,b'$ t.q $\beta(b)=\beta(b')$. On a 
+\[\beta(b)=\beta(b'))\]
+en particulier, $b'-b\in \ker(\beta)$, on obtient $\alpha(a_1-a_2)=
+b-b'$ d'où si $\alpha'(a'-a'')=v(b)-v(b')$ alors par injectivité de
+$\alpha'$ et la commutativité de 
+\[\begin{tikzcd}
+	A & B \\
+	{A'} & {B'}
+	\arrow["\alpha", from=1-1, to=1-2]
+	\arrow["u"', from=1-1, to=2-1]
+	\arrow["v", from=1-2, to=2-2]
+	\arrow["{\alpha'}", from=2-1, to=2-2]
+\end{tikzcd}\]
+$u(a_1-a_2)=a'-a''\in im(u)$. Et donc $\bar{a'}=\bar{a''}$. On peut
+définir $\delta(z)=\bar{a'}$.
+
+L'exactitude maintenant
+\begin{enumerate}
+    \item En $\ker(v)$ on peut directement utiliser l'exactitude
+	en $B$ et la commutativité des carrés à gauche.
+    \item Pareil pour $coker(v)$.
+    \item Pour $\ker(\delta)$, on peut remarquer que si $\bar{a'}=0$
+	alors $a'$ est dans l'image de $u$. De sorte que dans le 
+	diagramme on a $b\in im(\alpha)=\ker(\beta)$ et on peut remonter
+	dans $\ker(v)$. On a montré que $\ker(\delta)\subset im(\beta)$.
+    \item Pour $y\in im(\beta)$, on peut l'amener dans $B$ puis dans 
+	$B'$ ou il vaut $0$ par hypothèse. D'où dans $im(\alpha')$
+	d'où dans $\ker(\delta)$.
+    \item En $coker(u)$ on prend $z\in ker(w)$. Alors faut vérifier
+	que les relèvements de $\delta(z)$ sont dans $im(\alpha')$.
+	Pour ça, c'est parce que on devient $0$ en $C\to C'$ d'où
+	un antécédent dans $B$, $b$, vaut $0$ via $\beta'\circ v$. Puis
+	le résultat vu que tout commute.
+    \item À l'inverse pour $\bar x\in \ker(\alpha')$, bon flemme.
+\end{enumerate}
+
+\begin{rem}
+    On peut obtenir 
+% https://q.uiver.app/#q=WzAsOCxbNCwxLCIwIl0sWzAsMCwiMCJdLFsxLDAsIlxca2VyIHUiXSxbMiwwLCJcXGtlciB2Il0sWzMsMCwiXFxrZXIgdyJdLFsxLDEsImNva2VyKHUpIl0sWzIsMSwiY29rZXIodikiXSxbMywxLCJjb2tlcih3KSJdLFsyLDNdLFszLDRdLFs1LDZdLFs2LDddLFsxLDJdLFs3LDBdLFs0LDVdXQ==
+\[\begin{tikzcd}
+	0 & {\ker u} & {\ker v} & {\ker w} \\
+	& {coker(u)} & {coker(v)} & {coker(w)} & 0
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-3, to=1-4]
+	\arrow[from=1-4, to=2-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-3, to=2-4]
+	\arrow[from=2-4, to=2-5]
+\end{tikzcd}\]
+    En rajoutant que $A\to B$ est un mono et $B'\to C'$ est un epi.
+\end{rem}
+
+\begin{thm}
+    Soit $\mathcal A$ une (petite) catégorie abélienne. Alors il existe
+    un foncteur exact pleinement fidèle $i\colon\mathcal A\to Mod_R$ 
+    pour $R$ un anneau.
+\end{thm}
+\begin{cor}
+    Le lemme du serpent est vrai dans n'importe quelle catégorie.
+\end{cor}
+\begin{proof}
+    On récupère à gauche via le fait que c'est pleinement fidèle.
+    On envoie à droite via l'exactitude et la fonctorialité. 
+\end{proof}
+
+\begin{exo}
+    Écouter \textit{"The Snake"} par Al Wilson.
+\end{exo}
+
+\section{Foncteurs entre catégories additives/abéliennes}
+\begin{defn}
+    Un foncteur $F\colon \Cat\to \mathcal D$ entre catégories additives
+    est additif si les morphismes de $\Hom$ sont des morphismes
+    de groupes abéliens.
+\end{defn}
+
+\begin{rem}
+    On avait une autre manière les catégories additives via :
+    \begin{enumerate}
+	\item Avoir un objet zéro.
+	\item Avoir les produits et cofinis qui sont alors isomorphes.
+	\item Les $\Hom$ sont alors des monoides et on veut que ce
+	    soit des groupes abéliens.
+    \end{enumerate}
+    On peut redéfinir les foncteurs additifs comme des foncteurs
+    préservant les produits finis. Car alors il préserve la codiagonale.
+\end{rem}
 
 
 
 
 \printbibliography
+
 
 \end{document}
 

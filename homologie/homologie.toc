@@ -8,3 +8,5 @@
 \contentsline {chapter}{\numberline {2}Catégories abéliennes}{15}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Catégories additives}{17}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Catégories abéliennes}{18}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Lemme du Serpent}{24}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Foncteurs entre catégories additives/abéliennes}{26}{section.2.4}%

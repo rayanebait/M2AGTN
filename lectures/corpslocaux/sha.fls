@@ -313,10 +313,10 @@ INPUT ./sha.out
 INPUT ./sha.out
 INPUT sha.out
 INPUT sha.out
+OUTPUT sha.pdf
 INPUT ./sha.out
 INPUT ./sha.out
 OUTPUT sha.out
-OUTPUT sha.pdf
 INPUT /usr/share/texmf-dist/tex/latex/biblatex/lbx/french.lbx
 INPUT /usr/share/texmf-dist/tex/latex/biblatex/lbx/french.lbx
 INPUT /usr/share/texmf-dist/tex/latex/biblatex/lbx/french.lbx
@@ -357,8 +357,6 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT ./sha.toc
 INPUT ./sha.toc
 INPUT sha.toc
-OUTPUT sha.toc
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
@@ -380,13 +378,15 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
+OUTPUT sha.toc
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
 INPUT /usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
 INPUT /usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm7.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT sha.aux
 INPUT ./sha.out
 INPUT ./sha.out

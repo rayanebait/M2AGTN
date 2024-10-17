@@ -908,9 +908,147 @@ On réobtient $A=\{v(K^*)\geq 0\}$.
     sur $\Or_K$ comme $\Or_K$ est de dedekind on a fini.
 \end{proof}
 
+\chapter{Ramification}
+On étudie les extensions d'anneaux de valuations discrètes. On prends
+$\Or_K$ un d.v.r, $k$ son corps résiduel, $K$ son corps de fractions. Et
+$\pi_K$ une uniformisante.
 
+\section{Définitions}
+\begin{defn}
+    Une extension de d.v.r est un morphisme d'anneaux locaux.
+\end{defn}
+
+\begin{defn}[Indice de ramification]
+    C'est l'exposant $e_{L/K}$ tel que $\m_K\Or_L=\m_L^{e_{L/K}}$.
+    On peut le voir sur les uniformisantes.
+\end{defn}
+
+On définit, pour $|.|_K$ associée à $\Or_K$ et étendue à $L$. La
+valuation normalisée $v_K\colon K^*\to \Z$ via $v_K(\pi_K)=1$. Alors
+\[v_L(\pi_K)=e\].
+\begin{defn}[Degré résiduel]
+    On déf $f_{L/K}:=[\Or_L/\m_L : \Or_K/\m_K]$ la dimension de
+    l'extension résiduelle.
+\end{defn}
+\begin{ex}
+    Si on pose $K=\C(z)$ et $L=K[t]$ avec $t^d=z$. Alors $\C[t]$ est
+    entier sur $\C[z]$ et un PID donc la clôture intégrale de $\C[z]$
+    dans $L$. Les idéaux au dessus, $(z-c)\C[z]$, y'a deux cas :
+    \begin{itemize}
+        \item $c\ne 0$ et la le polynôme se scinde à racines simples
+            et indice de ramification $1$.
+        \item $c=0$, les racines de l'unité sont inversibles. Donc
+            seulement $(t)$ contient $(z)$ et indice de ramification
+            $d$.
+    \end{itemize}
+    Si $c$ est proche de $0$, les branches se "ramifient".
+\end{ex}
+\begin{ex}
+    Si on regarde $K=\Q[\sqrt d]$ avec $d$ sans facteurs carrés. On
+    peut voir avec la trace que $\Z[\sqrt d]$ est d'indice au plus
+    $2$ dans $\Or_K$.
+\end{ex}
+
+\begin{prop}
+    L'indice de ramification et le degré résiduel sont multiplicatifs
+    pour les sous-extensions.
+\end{prop}
+\begin{prop}
+    L'indice de ramification et le degré résiduel sont invariants
+    par complétions.
+\end{prop}
+\begin{thm}
+    Pour une extension finie $L/K$. Avec $\tilde \Or_K$ la clôture de 
+    $\Or_K$ dans $L$. En notant $\m_1,\ldots,\m_n$ les idéaux maximaux
+    de $\tilde \Or_K$, $\Or_K\to (\tilde\Or_K)_{\m_i}$ est une
+    extension de d.v.r. Alors 
+    \[\sum_i e_if_i\leq [L:K]\]
+    et les propriétés suivantes sont équivalentes 
+    \begin{enumerate}
+        \item l'inégalité est une égalité.
+        \item $\tilde \Or_K$ est fini sur $\Or_K$.
+        \item $L\otimes_K \widehat K$ est réduite.
+    \end{enumerate}
+    En particulier, on a une égalité si $L/K$ est séparable ou
+    si $K$ est complet.
+\end{thm}
+\begin{lem}
+    Si $\Or_K\to \Or_L$ est une extension de d.v.r alors
+    \[dim_k \Or_L/\m_K\Or_L =e.f \in \N\cup\{\infty\}\]
+\end{lem}
+\begin{proof}
+    Voir cours. En gros on considère la famille 
+    $\{\pi_L^i b_j | 0\leq i\leq e-1,1\leq j\leq r\}$
+    pour $b_1,\ldots, b_r\in \Or_L$ une famille libre dans le quotient. 
+    On montre que la famille est libre puis que $r=f$ quand les quantités
+    sont finies. Pour ça on lift une base de $k_L$, $b_1,\ldots, b_f$,
+    et on a $\Or_L\subset \sum_j b_j\Or_K +\pi_L\Or_L$. On a plus 
+qu'à itérer $e$ fois. On obtient \[\Or_L\subset\left( \sum_{0\leq i\leq e-1;1\leq j\leq f} b_j\pi_L^i\Or_K\right)+\pi_K\Or_L\]. Si on appelle
+$M$ le gros truc à gauche. En quotientant par $\pi_K\Or_L$ on obtient
+une famille génératrice du quotient de taille $ef$.
+\end{proof}
+
+\begin{rem}
+    Si $\Or_L$ est fini sur $\Or_K$ alors $\Or_L=M$ par Nakayama!
+\end{rem}
+\begin{lem}
+    \[dim_k \tilde \Or_K/\m_K\tilde \Or_K\leq [L:K]\]
+\end{lem}
+\begin{note}
+    Dans le premier lemme, on regarde qu'un idéal, là on les regarde
+    tous.
+\end{note}
+\begin{proof}
+    Voir cours. Je crois que c'est juste qu'une famille libre dans le
+    quotient doit être libre au dessus. D'où le résultat.
+\end{proof}
+
+\begin{lem}
+    Si $K$ est complet :
+    \[dim_k \tilde \Or_K/\m_K\tilde \Or_K= [L:K]\]
+\end{lem}
+\begin{proof}
+    Faut faire attention, $\Or_L$ est pas nécessairement fini sur
+    $\Or_K$. Mais on a $\Or_L\subset M+\pi_K\Or_L$ et en itérant, 
+    $\Or_L\subset M+\pi_K^N\Or_L$ pour tout $N$. Donc $M$ est dense 
+    dans $\Or_L$. Donc $M\otimes_{\Or_K}K$ est dense dans $L$
+    de dimension finie sur $K$ complet donc fermé + complet dans $L$.
+    D'où on a l'égalité.
+\end{proof}
+
+\begin{lem}
+    La flèche induite $A/\m^r \to A_{\m}/\m^rA_{\m}$ est un isomorphisme
+    dès que $\m$ est maximal.
+\end{lem}
+\begin{thm}
+    On se place dans $L/K$ finie, $\Or_K$ un d.v.r et $\tilde\Or_K$
+    la clôture de $\Or_K$ dans $L$. On considère $\m_1,\ldots, \m_n$
+    les idéaux maximaux de $\tilde\Or_K$. Puis via les
+    $(\tilde\Or_K)_{\m_i}/\Or_K$ on à les $e_i,f_i$ et alors 
+    \[\sum_i e_if_i\leq [L:K]\]
+    En plus on a égalité ssi $\tilde\Or_K$ est fini sur $\Or_K$ ssi
+    $L\otimes_K \widehat K$ est réduite.
+\end{thm}
+\begin{proof}[Preuve de l'inégalité]
+    Comme on est dans un anneau de Dedekind on a 
+    \[\m_K\tilde\Or_K=\prod_i \m_i^{r_i}\]
+    et par localisation on voit que $r_i=e_i$. Enfin par CRT
+    et le dernier lemme on a 
+    $\tilde\Or_K/\m_K \simeq \prod (\tilde\Or_K)_{\m_i}/\m_i^{e_i}(\tilde\Or_K)_{\m_i}$.
+    avec $\m_i^{e_i}(\tilde\Or_K)_{\m_i}=\m_K(\tilde\Or_K)_{\m_i}$.
+    D'où par le premier lemme et le deuxième lemme on obtient 
+    l'inégalité.
+\end{proof}
+
+\begin{proof}[Preuve des équivalences]
+    Si maintenant on a l'égalité on veut montrer que $\tilde\Or_K$ 
+    est fini sur $\Or_K$. Il montre qu'une base relevée de
+    $\tilde\Or_K/\m_K$ est libre sur $\Or_K$ et $K$, donc
+    une base de $L$. En plus par unicité de la décomposition et via
+    l'écriture dans le quotient c'est une base de $\tilde\Or_K$ sur
+    $\Or_K$. Si $\tilde\Or_K$ est fini à l'inverse, alors il est libre
+    car d.v.r sont principaux et son rang est le même après $\otimes K$.
+\end{proof}
 \printbibliography
-
-
 \end{document}
 
