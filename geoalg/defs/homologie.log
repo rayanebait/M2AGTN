@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.9.28)  16 OCT 2024 20:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.9.28)  18 OCT 2024 21:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -919,11 +919,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 \bbl@ensure@french {Chapitre} 3.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 182.
+(hyperref)                removing `math shift' on input line 198.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 182.
+(hyperref)                removing `math shift' on input line 198.
 
 [9]
 
@@ -962,7 +962,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 ]
 \bbl@ensure@french {Chapitre} 6.
 
-LaTeX Warning: Empty bibliography on input line 213.
+LaTeX Warning: Empty bibliography on input line 229.
 
 [15{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] (./homologie.aux)
  ***********
@@ -970,24 +970,24 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `homologie.out' has not changed.
-(rerunfilecheck)             Checksum: 75C26E21C0CD744C500D499C479BA556;1527.
+(rerunfilecheck)             Checksum: 6DCCDF02BB2DB6DCF3C0C584847325C0;1571.
 Package logreq Info: Writing requests to 'homologie.run.xml'.
 \openout1 = `homologie.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31616 strings out of 476076
- 608685 string characters out of 5793775
+ 31623 strings out of 476076
+ 608794 string characters out of 5793775
  1934187 words of memory out of 5000000
- 53207 multiletter control sequences out of 15000+600000
+ 53211 multiletter control sequences out of 15000+600000
  571756 words of font info for 91 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  131i,28n,135p,682b,1776s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on homologie.pdf (15 pages, 165015 bytes).
+Output written on homologie.pdf (15 pages, 169852 bytes).
 PDF statistics:
- 223 PDF objects out of 1000 (max. 8388607)
- 174 compressed objects within 2 object streams
- 37 named destinations out of 1000 (max. 500000)
+ 226 PDF objects out of 1000 (max. 8388607)
+ 177 compressed objects within 2 object streams
+ 40 named destinations out of 1000 (max. 500000)
  93 words of extra memory for PDF output out of 10000 (max. 10000000)
 

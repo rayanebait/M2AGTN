@@ -118,6 +118,47 @@ sorting=ynt
 Construire des extensions explicites! Y'a l'air d'avoir beaucoup de 
 critères là dans le chapitre
 
+\chapter{3e point sur les cours, 21/10/2024}
+Dernier point avant l'exam ! Faut faire un peu plus attention en
+dessous.
+\section{Extensions d'anneaux de Dedekind}
+Y'a des propositions clés pour tout c'est que si $A\to B$ est une
+extensions entière d'anneaux intègres alors :
+\begin{enumerate}
+    \item $A$ est un corps ssi $B$ est un corps.
+    \item $\p$ un premier de $B$ est maximal dans $B$ ssi $\p\cap A$ 
+	est premier.
+    \item $A$ est de dimension $1$ implique $B$ est de dimension $1$
+	(on est dans un cas intègre).
+\end{enumerate}
+Ducoup ça dit directement que \textbf{si} :
+\begin{itemize}
+    \item $B$ est la clôture intégrale de $A$
+un anneau de Dedekind dans $L/Frac(A)$
+    \item $B/A$ est finie.
+\end{itemize}
+Alors $B$ est de dimension $1$ par le truc d'avant, entier
+sur $A$ et intégralement clos par construction. La question c'est 
+\[\textrm{B est noethérien?}\]
+C'est vrai si $B/A$ est finie et $L/K$ séparable.
+\begin{center}
+    Et si $B/A$ est pas finie?
+\end{center}
+Y'a un théorème de \textbf{Krull-Akizuki} qui prouve que c'est toujours
+vrai si $L/K$ est juste finie.
+
+On peut le faire dans le cas semi-local fini. I.e. y suffit de 
+séparer en une extension séparable et une extension inséparable :
+\begin{enumerate}
+    \item Cas purement inséparable : Si $A$ est un d.v.r sa clôture est
+	un d.v.r simplement parce qu'on peut déf $v(x) = v(x^{p^e})/p^e$.
+    \item Si $B_{\m}$ est noethérien pour tout $\m\subset A$ alors
+	$B$ est noethérien. ($A$ semi-local noetherien) (L'argument
+	est intéressant et montre que $\cap B_{\m}$ ca marche pas très
+	bien.)
+\end{enumerate}
+
+
 \chapter{2e point sur les cours, 11/10/2024}
 
 \section{Conséquences}
@@ -205,6 +246,21 @@ J'regarde toujours des anneaux commutatifs.
     $z\in\m$ se réécrit $z=x_{i_0}(u^{-1}yz)$.
     Le reste est page $20$ du Corps locaux.
 \end{proof}
+Je veux mentionner la deuxième partie de la preuve, où $\m\m^{-1}=\m$
+implique $\m^{-1}=A$. On prend $x\in \m^{-1}$, si $x\notin A$ alors on
+a pas nécessairemment $x^n\in \m^{-1}$. Faut le montrer avant de regarder
+les $A$-module $[1,x,\ldots,x^n]$ dans $\m^{-1}$ de type fini.
+
+Je veux aussi mentionner la troisème, la preuve est assez instructive
+sur les méthodes au final. L'idée c'est de montrer que y'a une fraction
+dans $\m^{-1}$ si $A$ a un seul idéal premier non nul (dans le 1.).
+Pour ça
+\begin{enumerate}
+    \item On montre que $K=A_x$ pour un $x\in \m$. ($1/z=y/x^n$)
+    \item Alors si $z\in A-0$, $\m\subset\sqrt{zA}$. On peut prendre
+	$z\in \m$.
+    \item Prendre $y\in\m^{n-1}-\m^n$ avec $\m^n\subset zA$ minimal.
+\end{enumerate}
 
 \chapter{1er point sur les cours, 04/10/2024}
 \section{Extensions sur corps non complets}

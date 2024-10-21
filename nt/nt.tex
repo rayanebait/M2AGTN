@@ -1049,6 +1049,84 @@ une famille génératrice du quotient de taille $ef$.
     $\Or_K$. Si $\tilde\Or_K$ est fini à l'inverse, alors il est libre
     car d.v.r sont principaux et son rang est le même après $\otimes K$.
 \end{proof}
+
+\section{Trouver les indices de ramification/degrés résiduels}
+\begin{prop}
+    On suppose que $\tilde\Or_K=\Or_K[\alpha]$ pour un $\alpha$. Soit
+    $P\in K[X]$ le polynôme minimal unitaire de $\alpha$. Alors 
+    $P\in \Or_K[X]$ et soit 
+    $\bar P(X)=\prod_i p_i(X)^{r_i}\mod \tilde\m_K$ la décomposition
+    irréductible dans $k[X]$. Soit $P_i = p_i \mod \tilde \m_K$ des
+    lifts alors
+    \begin{enumerate}
+        \item Les idéaux maximaux de $\tilde \Or_K$ sont exactement
+            les $\m_i$ où $\m_i=(\m_K, P_i(\alpha))$.
+        \item $(\tilde\Or_K)_{\m_i}/(\m_i)\simeq k[X]/(P_i(X))$.
+        \item $e_i=e_{(\tilde\Or_K)_{\m_i}/\Or_K}=r_i$.
+    \end{enumerate}
+\end{prop}
+\begin{proof}
+    Les idéaux maximaux de $(\tilde\Or_K)$ contiennent tous $\m_K$
+    d'où on a une bijection avec les idéaux du quotient $\tilde k$. 
+    On conclut en prenant les images inverses qui sont maximales parce
+    que le quotient par elles est un corps. Ça prouve $1.$ et $2.$, pour
+    $3.$ on a $P(X)=\prod P_i(X)^{r_i} +\epsilon(X)$ avec $\epsilon(X)
+    \in \m_K[X]$. Alors 
+    $0=P(\alpha)=\prod P_i(X)^{r_i}+\epsilon(\alpha)$. D'où
+    $\prod_i P_i(\alpha)^{r_i}=-\epsilon(X)\in \m_K\tilde\Or_K$. 
+    Ensuite 
+    \[\prod \m_i^{r_i} \subset \m_k\tilde\Or_K+ P_i(\alpha)^{r_i}\tilde\Or_K\]
+    d'où $\prod \m_i^{r_i}\subset \m_K\tilde \tilde\Or_K$. Comme 
+    on est dans un anneau de Dedekind $e_i\leq r_i$. Ensuite
+    comme $\sum r_i f_i \geq \sum e_i f_i =[L:K]$, et qu'à gauche
+    on a le degré de $\bar P$ qui est monique donc pareil que le degré
+    de $P=[K[\alpha]:K]$.
+\end{proof}
+\begin{note}
+    Voir pq y contiennent tous $\m_K$ c'était dans le dernier cours.
+\end{note}
+On suppose tjr maintenant que $\tilde\Or_K$ est finie sur $\Or_K$.
+\begin{defn}
+    $\Or_K\to \Or_L$ une extension de d.v.r est non ramifiée si 
+    $\begin{cases} e=1 \\ k_L/k\textrm{ est finie séparable}\end{cases}$
+    Dans le cas général, $L/K$ est non ramifiée si $\Or_K\to(\tilde\Or_K)_{\m_i}$ est non ramifiée pour tout $\m\subset\tilde\Or_K$.
+\end{defn}
+Topologiquement, ca ressemble à un revêtement.
+\begin{cor}
+    On suppose que $L=K[\alpha]$ et $P$ le polynôme minimal de $\alpha$
+    est dans $\Or_K[X]$ ainsi que $\bar P$ est séparable. Alors
+    $\tilde \Or_K =\Or_K[\alpha]$ et $L/K$ est non ramifiée (si $k$
+    est parfait).
+\end{cor}
+\begin{proof}
+    On pose $B=\Or_K[X]/(P(X))\simeq \Or_K[\alpha]\subset\tilde\Or_K$.
+    Alors $B\otimes_{\Or_K} K=K[\alpha]=L$ est intégralement clos,
+    le quotient $B/\m_K B=k[X]/(\bar P(X))$ est réduit car $\bar P(X)$
+    est séparable. Par l'exercice $1$ du td4, $B=\Or_K[\alpha]$ est
+    intégralement clos d'où l'égalité. Enfin par la prop précédente
+    la séparabilité de $\bar P$ force $e_i=1$.
+\end{proof}
+\begin{ex}
+    On considère pour $p>2$ : $\Q_p\to L=\Q_p[\zeta_p]$ avec 
+    $\zeta_p\in \C_p$. On note $\tilde \Q_p$ la clôture de $\Z_p$
+    dans $L$, c'est un d.v.r $\Or_L$. On a 
+    $\lambda_p=\zeta_p -1\in \m_L$ puis 
+    \[(\lambda_p+1)^p=1\]
+    et \[\m_L^{p-1}\ni\lambda_p^{p-1}=p(-1-\lambda_p c)\in\m_L^{e}\]
+    avec $c\in \Or_L$. Comme $\lambda_p\in\m_L$, le terme à droite
+    est inversible, on obtient
+    $e_{\Or_L/\Z_p}\geq p-1$. Comme $ef\leq [L:\Q_p]\leq p-1$, $f=1$
+    et on a pas de racines $p$-èmes de l'unité dans $\Q_p$.
+\end{ex}
+\begin{ex}
+    Si $p$ est premier et $n$ est premier à $p$. En notant 
+    $\phi_n(X)$ le $n$-ème polynôme cyclotomique et $F_n$ le polynôme
+    minimal de $\zeta_n$ sur $\Q_p$ on a $F_n\mid \phi_n$ d'où
+    $F_n$ est dans $\Z_p[X]$ monique car $\phi_n\in \Z[X]$ est monique. 
+    En plus, $\bar F_n$ est séparable car $\phi_n$ l'est. En particulier
+    $\Or_L=\Z_p[\zeta_n]$ et est non ramifiée sur $\Z_p$ par le
+    corollaire précédent.
+\end{ex}
 \printbibliography
 \end{document}
 
