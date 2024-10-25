@@ -1,0 +1,11 @@
+\babel@toc {french}{}\relax 
+\contentsline {chapter}{\numberline {1}Espaces annelés et localement annelés}{5}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Variétés abstraites}{7}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Se remémorer les schémas}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Topologie}{9}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Cas $k$-schéma de type fini}{9}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Recoller}{11}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Schémas}{13}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Le spectre maximal et le nullstellensatz}{15}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Nullstellensatz 1}{15}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Nullstellensatz 2}{15}{section.6.2}%
