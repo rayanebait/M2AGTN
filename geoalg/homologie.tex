@@ -458,10 +458,208 @@ rigoureusement, via $k[T_1,\ldots, T_n]_{(P)}/I_{(P)}$ avec $I_{(P)}=
     On prend la dimension de Krull avec le sup des chaines de fermés
     irréductibles.
 \end{defn}
+\chapter{Produits fibrés}
+Y'a des choses à rattraper, comme l'immersion fermée.
+\section{Séparation}
+\begin{defn}
+    Une variété algébrique sur $k$ est séparée si l'image de 
+    \[\delta=(id,id)\colon X\to X\times_k X\]
+    est fermée.
+\end{defn}
+\begin{ex}
+    Les variétés algébriques affine sont séparée, parce que 
+    $A(X)\otimes A(X)$ est surjective, en effet $im(\delta)=Z(ker \delta_*)$.
+\end{ex}
+
+Comme la séparation imite le fait d'être Hausdorff, en ajoutant la
+quasi-compacité on obtient la "compacité"? 
+
+\begin{defn}
+    Une variété algébrique $X$ sur $k$ est propre/complète si elle est
+    séparée et pour toute variété $Z$ :
+    \[X\times Z\to Z\]
+    est fermée (on dit qu'elle est universellement fermée).
+\end{defn}
+\begin{ex}
+    $\A^1_k$ n'est pas propre mais pourtant est séparée et 
+    quasi-compacte. On regarde $\A^2\simeq \A^1\times \A^1\to \A^1$,
+    et dans $\A^2$ on regarde $Z(XY-1)$, d'image $\A^1-0$! Le problème
+    vient du point à l'infini qu'il manque.
+\end{ex}
+\begin{rem}
+    Les fermées de variétés séparée (resp. propres) sont séparées (resp. 
+    propres). Et les ouverts de variétés séparées sont séparées.
+\end{rem}
+\begin{prop}
+    Les variétés projectives sont propres.
+\end{prop}
+\begin{proof}
+    Il suffit de le prouver pour $\P^n_k$. On montre que c'est séparé,
+    on peut restreindre $\P^n_k\to \P^n_k\times \P^n_k$ à 
+    $D(T_i)\cap D(T_j)\to D(T_i)\times D(T_j)$ qui a une diagonale
+    fermée car affine (le fait d'être une immersion fermée est
+    local, check). Soit $Y$ une variété algébrique, on doit prouver
+    que $\P^n_k\times Y\to Y$ est fermée, on peut le montrer localement
+    puis supposer $Y$ affine et même $=\A^n$. En fait c'est la preuve
+    de Shafarevich. Y'a un twist, il dit pour $y\in \A^n-p_2(Z)$
+    on a 
+    \[(T_0,\ldots,T_n)^N\subset I + \m_{y}k[T_0,\ldots,T_n,S_1,\ldots,
+    S_m]\]
+    puis $B_N\subset I_N+\m_y B_N$ avec 
+    $B_N=k[T_0,\ldots,T_n]_N$ le module des polynomes de degré $N$.
+    D'où par Nakayama, il existe $P\notin \m_y$ homogène dans $I$ t.q.
+    $PB_N\subset I_N$ et $y\in D^+(P)$ (on veut les monomes dans $I$
+    et $P$ est en $Y$ d'où dans $D^+(P)$, $P(y)\ne 0$ et les monomes
+    sont dans $I_y$, (penser au quotient pas $\m_y$).
+\end{proof}
+\begin{defn}
+    On définit le graphe comme l'image inverse de la diagonale $\delta_Y$
+    par $(f,id_Y)\colon X\times Y\to Y\times Y$.
+\end{defn}
 
 \begin{rem}
-
+    Si $Y$ est séparée, $\Gamma_f$ est fermé dans $X\times Y$.
+    En effet, $(id_X, f)\colon X\to X\times Y$ est  un isomorphisme
+    vers $\Gamma_f$.
 \end{rem}
+
+\begin{lem}
+    Soit $f\colon X\to Y$ un morphisme de variétés algébriques avec
+    $X$ propre et $Y$ séparée. Alors $f$ est fermée.
+\end{lem}
+\begin{proof}
+    On regarde $X\to X\times Y\to Y$.
+\end{proof}
+
+\begin{prop}
+    Soit $X$ une variété algébrique connexe et propre. Alors
+    $\Or_X(X)=k$. 
+\end{prop}
+\begin{proof}
+    Étant donné $f\colon X\to \A^1$, l'image est connexe et fermée
+    dans $\P^1$ et incluse dans $\A^1$ donc est un point.
+\end{proof}
+\begin{cor}
+    Une variété affine connexe est propre ssi $X=\A^0_k$.
+\end{cor}
+
+\chapter{Espace tangent}
+La première définition à partir d'équations/d'un plongement affine.
+\begin{defn}
+    Soit $X=Z(I)$ une variété algébrique et $P=(a_1,\ldots, a_n)\in X$.
+    On définit \[T_{X,P}:=\{(x_1,\ldots, x_n)\in \A^n_k| \sum_i T_i
+    \partial_i F(P) =0,~\forall F\in I\}\]
+    c'est un espace vectoriel.
+\end{defn}
+\begin{rem}
+    Penser $T_i=X_i-a_i$, pour que ce soit un espace vectoriel.
+\end{rem}
+\begin{ex}
+    Pour $Z(T_1-T_2^2)=Z$ et $P=(1,1)$ on a $T_PZ=\{(t_1,t_2)|
+    t_1-2t_2=0\}$.
+\end{ex}
+Soit maintenant $E= k^n$ et $P\in \A^n(k)$. On regarde
+\[D_p\colon k[T_1,\ldots, T_n]\to E^\wedge\]
+donné par $F\mapsto D_p(F)=\sum T_i\delta_i F(P)$. On remarque que
+$D_p(\m_P^2)=0$ car si $f,g\in \m_P$ alors $\partial_i(fg)(P)=f(P)
+\partial_i g(P)+g(P)\partial_i f(P)=0$. D'où ça passe au quotient
+en \[\m_P/\m_P^2\to E^\wedge\]
+maintenant c'est des $k$-espaces vectoriels de dimensions $n$ d'où 
+il suffit de montrer la surjectivité ce qui est clair.
+
+\begin{prop}
+    Soit $X$ une variété affine et $P\in X$. Alors 
+    \[(\m_P)^\wedge\simeq T_{X,P}\]
+\end{prop}
+\begin{proof}
+    Par définition $T_{X,P}$ est l'orthogonal de $D_P(I)$ ou l'ensemble
+    des $v\in E$ tels que pour tout $\phi\in D_P(I)$, $\phi(v)=0$.
+    On note $\m$ l'idéal de $k[T_1,\ldots, T_n]$ tel que $\m_P=\m/I$.
+    Alors $\m_P/\m_P^2$ rentre dans un diagramme 
+
+% https://q.uiver.app/#q=WzAsMTAsWzEsMCwiSS9JXFxjYXBcXG1eMiJdLFsyLDAsIlxcbS9cXG1eMiJdLFszLDAsIlxcbV9QL1xcbV9QXjIiXSxbNCwwLCIwIl0sWzAsMCwiMCJdLFsxLDEsIkRfUEkiXSxbMywxLCJcXG1fUC9cXG1fUF4yIl0sWzQsMSwiMCJdLFswLDEsIjAiXSxbMiwxLCJFXlxcd2VkZ2UiXSxbMCwxXSxbMSwyXSxbMiwzXSxbNCwwXSxbMCw1LCIiLDEseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFsyLDYsIj0iLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNiw3XSxbOCw1XSxbNSw5XSxbOSw2XSxbMSw5LCJEX1AiLDEseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dXQ==
+\[\begin{tikzcd}
+	0 & {I/I\cap\m^2} & {\m/\m^2} & {\m_P/\m_P^2} & 0 \\
+	0 & {D_PI} & {E^\wedge} & {\m_P/\m_P^2} & 0
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[hook, from=1-2, to=2-2]
+	\arrow[from=1-3, to=1-4]
+	\arrow["{D_P}"{description}, hook, from=1-3, to=2-3]
+	\arrow[from=1-4, to=1-5]
+	\arrow["{=}"{description}, draw=none, from=1-4, to=2-4]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-3, to=2-4]
+	\arrow[from=2-4, to=2-5]
+\end{tikzcd}\]
+    la flèche du bas montre bien le résultat en passant aux duaux
+    (ça inverse les flèches).
+\end{proof}
+
+\begin{lem}
+    Soit $A$ un anneau et $\m\leq A$ maximal. Y'a un isomorphisme
+    $\m/\m^2\simeq \m A_\m/\m^2A_\m$.
+\end{lem}
+\begin{proof}
+    Soit $x\in \m$ t.q $x\in \m^2 A_\m$. Alors il existe 
+    $s\in A-\m$ tel que $s.x\in \m^2A$. En plus il existe $t\in A$
+    t.q $st-1\in \m$ car $A/\m$ est un corps. Ensuite
+    \[(st-1)x\in \m^2\]
+    mais $stx\in \m^2$ car $sx\in \m^2$ d'où $x\in \m^2$ et la flèche
+    est injective.
+
+    Si on prends $x\in \m A_\m$ il existe $s\in A-\m$ tq $sx\in \m$.
+    On prends $t$ comme avant. Alors $tsx=x \mod \m^2A_\m$. D'où
+    $tsx\mapsto x$.
+\end{proof}
+\begin{rem}
+    D'où l'espace tangent provient du stalk du faisceau.
+\end{rem}
+\begin{defn}
+    Soit $X$ une variété algébrique. L'espace tangent de Zariski en 
+    $P$ est le $k$-espace vectoriel 
+    \[(\m\Or_{X,P}/\m^2\Or_{X,P})\]
+\end{defn}
+\section{Variétés lisses}
+\begin{defn}
+    On note $dim_P X=min\{dim U| P\in U\}$ pour les ouverts de $X$.
+    (Oui la déf marche)
+\end{defn}
+
+\begin{rem}
+    C'est aussi le maximum des dimensions des composantes irréductibles
+    qui passent par $P$.
+\end{rem}
+\begin{prop}
+    Soit $X$ une variété algébrique, alors pour tout $P\in X$ on a 
+    \[dim_P X\leq dim T_{X,P}\]
+\end{prop}
+\begin{defn}
+    On dit que $X$ est lisse/non singulière en $P$ si 
+    $dim_P X=dim T_{X,P}$.
+\end{defn}
+\begin{proof}
+    Par récurrence sur $dim T_{X,P}$. Si $dim T_{X,P}=0$, en passant
+    au cas affine, $\m_P/\m_P^2=0$ d'où 
+    \[\m_P=\m_P^2.\]
+    Par le lemme
+    de Nakayama il existe $f\in A-\m_P$ tel que $f\m_P=0$ avec $f\in
+    D(f)$. En se plaçant sur $D(f)$ on remplace $\Or_X(X)$ par 
+    $A_f$ d'où $f$ inversible et $\m_P=0$ puis $A_f=k$. En particulier,
+    $dim_P X= 0$.
+
+    Maintenant si $dim T_{X,P}\geq 1$. Soit $Z$ une
+    composante irréductible de $X$ passant par $P$ et de dimension
+    $dim_P X$. On a $\Or(Z)=\Or(X)/I$ puis $\m_{P,Z}=\m_{P,X}/I$
+    puis $\m_{P,X}/\m_{P,X}^2$ se surjecte dans $\m_{P,Z}/\m_{P,Z}^2$.
+    D'où $dim T_{P,X}\geq dim T_{P,Z}$. On peut supposer $X$ 
+    irréductible. Supp $dim_P X\ne 0$. Alors il existe $f\in \m -\m^2$
+et $Y=Z(f)\subset X$. En plus \[dim T_{X,P}\geq dim T_{Y,P}+1\]
+car $T_{Y,P}\simeq (\m/f)/(\m/f)^2$. Avec $dim Y=dim X-1$, par 
+récurrence $dim T_{P,Y}\geq dim_P Y$ et on conclut.
+\end{proof}
+
 \printbibliography
 \end{document}
 

@@ -1,4 +1,4 @@
-PWD /home/docus/files/primaire/M2AGTN/homologie
+PWD /home/docus/files/primaire/AGTN/homologie
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
 INPUT homologie.tex

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.9.28)  4 NOV 2024 12:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.9.28)  7 NOV 2024 12:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -780,7 +780,8 @@ Package: appendix 2020/02/08 v1.2c extra appendix facilities
 \c@quest=\count461
 \c@prot=\count462
 \c@algo=\count463
-Package hyperref Info: Option `colorlinks' set `true' on input line 126.
+\c@slog=\count464
+Package hyperref Info: Option `colorlinks' set `true' on input line 128.
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
@@ -788,36 +789,36 @@ Package csquotes Info: Redefining alias 'default' -> 'french'.
  (./homologie.aux)
 \openout1 = `homologie.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count464
+\scratchcounter=\count465
 \scratchdimen=\dimen274
 \scratchbox=\box68
-\nofMPsegments=\count465
-\nofMParguments=\count466
+\nofMPsegments=\count466
+\nofMParguments=\count467
 \everyMPshowfont=\toks46
-\MPscratchCnt=\count467
+\MPscratchCnt=\count468
 \MPscratchDim=\dimen275
-\MPnumerator=\count468
-\makeMPintoPDFobject=\count469
+\MPnumerator=\count469
+\makeMPintoPDFobject=\count470
 \everyMPtoPDFconversion=\toks47
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -825,7 +826,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring ON on input line 131.
+Package hyperref Info: Link coloring ON on input line 133.
  (./homologie.out) (./homologie.out)
 \@outlinefile=\write5
 \openout5 = `homologie.out'.
@@ -843,17 +844,17 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'homologie.bbl' found.
  (./homologie.bbl)
-Package biblatex Info: Reference section=0 on input line 131.
-Package biblatex Info: Reference segment=0 on input line 131.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 133.
+Package biblatex Info: Reference section=0 on input line 133.
+Package biblatex Info: Reference segment=0 on input line 133.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 135.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 133.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 135.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 133.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 135.
  (/usr/share/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
@@ -908,12 +909,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [8]
-Overfull \hbox (0.36618pt too wide) in paragraph at lines 238--240
+Overfull \hbox (0.36618pt too wide) in paragraph at lines 240--242
 \OT1/cmr/m/n/12 Soit $\OML/cmm/m/it/12 X$ \OT1/cmr/m/n/12 un es-pace topologique et $\OML/cmm/m/it/12 A$ \OT1/cmr/m/n/12 un \OT1/cmr/m/it/12 "ob-jet ab^^Selien"\OT1/cmr/m/n/12 . On d^^Sefinit le pr^^Sefaisceau
  []
 
 
-Overfull \hbox (7.10812pt too wide) in paragraph at lines 282--283
+Overfull \hbox (7.10812pt too wide) in paragraph at lines 284--285
 [][]\OT1/cmr/bx/n/12 D^^Sefinition 1.4.3 \OT1/cmr/m/n/12 (Fais-ceau quo-tient)\OT1/cmr/bx/n/12 . [][]\OT1/cmr/m/n/12 A nou-veau on fais-ceautise le pr^^Sefaisceau
  []
 
@@ -1001,7 +1002,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [19]
-Overfull \hbox (18.5174pt too wide) detected at line 869
+Overfull \hbox (18.5174pt too wide) detected at line 871
 []
  []
 
@@ -1013,7 +1014,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [20]
-Overfull \hbox (17.64787pt too wide) in paragraph at lines 915--916
+Overfull \hbox (17.64787pt too wide) in paragraph at lines 917--918
 [][]\OT1/cmr/bx/n/12 Remarque 28. []\OT1/cmr/m/it/12 On a $[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 ) = [](\OML/cmm/m/it/12 A \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 coim\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 ))$ \OT1/cmr/m/it/12 et $\OML/cmm/m/it/12 coker\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 coker\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 im\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 !
  []
 
@@ -1057,12 +1058,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [25]
-Overfull \hbox (10.51395pt too wide) in paragraph at lines 1252--1253
+Overfull \hbox (10.51395pt too wide) in paragraph at lines 1254--1255
 [][]\OT1/cmr/bx/n/12 Corollaire 2.3.2. []\OT1/cmr/m/it/12 Le lemme du ser-pent est vrai dans n'im-porte quelle cat^^Segorie. 
  []
 
 
-Overfull \hbox (49.49176pt too wide) in paragraph at lines 1263--1263
+Overfull \hbox (49.49176pt too wide) in paragraph at lines 1265--1265
 []\OT1/cmr/bx/n/17.28 Foncteurs en-tre cat^^Segories ad-di-tives/ab^^Seliennes 
  []
 
@@ -1074,7 +1075,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [26]
-Overfull \hbox (5.62236pt too wide) in paragraph at lines 1286--1288
+Overfull \hbox (5.62236pt too wide) in paragraph at lines 1288--1290
 [][]\OT1/cmr/bx/n/12 Lemme 2.4.2. []\OT1/cmr/m/it/12 Un fonc-teur ex-act ^^Ra gauche $\OML/cmm/m/it/12 C \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 D$ \OT1/cmr/m/it/12 en-tre cat^^Segories ab^^Seliennes
  []
 
@@ -1106,7 +1107,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [30]
-Overfull \hbox (3.96234pt too wide) detected at line 1440
+Overfull \hbox (3.96234pt too wide) detected at line 1442
 []
  []
 
@@ -1141,32 +1142,121 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[34] [35
+[34]
+Underfull \hbox (badness 10000) in paragraph at lines 1763--1768
 
-] (./homologie.aux)
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[35]
+Underfull \hbox (badness 10000) in paragraph at lines 1822--1837
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1838--1846
+
+ []
+
+
+Overfull \hbox (56.0282pt too wide) in paragraph at lines 1850--1853
+\OT1/cmr/m/n/12 Pareil de l'autre c^ot^^Se et on ob-tient des iso-mor-phismes canon-iques $\OML/cmm/m/it/12 H[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 f[]\OT1/cmr/m/n/12 ))\OML/cmm/m/it/12 ; H[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 g[]\OT1/cmr/m/n/12 ))$.
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[36]
+Underfull \hbox (badness 10000) in paragraph at lines 1916--1929
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1916--1929
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[37]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[38]
+Overfull \hbox (4.54185pt too wide) in paragraph at lines 2023--2026
+\OT1/cmr/m/n/12 Cette ^^Setape donne ex-acte-ment l'in-duc-tion. (\OT1/cmr/bx/n/12 CHECK QUE []A MARCHE\OT1/cmr/m/n/12 )
+ []
+
+
+Overfull \hbox (6.6039pt too wide) in paragraph at lines 2032--2035
+[][]\OT1/cmr/bx/n/12 D^^Sefinition 3.4.4. []\OT1/cmr/m/n/12 Soit $\OMS/cmsy/m/n/12 C\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 D$ \OT1/cmr/m/n/12 comme avant. Un fonc-teur co-ho-mologique $\OML/cmm/m/it/12 T [] [] \OMS/cmsy/m/n/12 C !
+ []
+
+
+Overfull \hbox (2.14442pt too wide) in paragraph at lines 2058--2062
+[][]\OT1/cmr/bx/n/12 Th^^Seoreme 3.4.6. []\OT1/cmr/m/it/12 Soit $\OML/cmm/m/it/12 F [] [] \OMS/cmsy/m/n/12 C ! D$ \OT1/cmr/m/it/12 un fonc-teur ex-act ^^Ra gauche en-tre cat^^Segories
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[39]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[40
+
+] [41] (./homologie.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `homologie.out' has not changed.
-(rerunfilecheck)             Checksum: 0361606D92E8CC94F06DABB8AD8094B4;2344.
+(rerunfilecheck)             Checksum: C7E4A9A6160C0DDF76F4F167F6B384DF;2493.
 Package logreq Info: Writing requests to 'homologie.run.xml'.
 \openout1 = `homologie.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35203 strings out of 476076
- 697072 string characters out of 5793775
- 1975187 words of memory out of 5000000
- 56642 multiletter control sequences out of 15000+600000
+ 36229 strings out of 476076
+ 723017 string characters out of 5793775
+ 1974187 words of memory out of 5000000
+ 57638 multiletter control sequences out of 15000+600000
  570166 words of font info for 83 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 131i,21n,135p,682b,1776s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 131i,21n,135p,705b,1776s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on homologie.pdf (35 pages, 330699 bytes).
+Output written on homologie.pdf (41 pages, 357419 bytes).
 PDF statistics:
- 511 PDF objects out of 1000 (max. 8388607)
- 431 compressed objects within 5 object streams
- 189 named destinations out of 1000 (max. 500000)
- 133 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 574 PDF objects out of 1000 (max. 8388607)
+ 488 compressed objects within 5 object streams
+ 219 named destinations out of 1000 (max. 500000)
+ 141 words of extra memory for PDF output out of 10000 (max. 10000000)
 

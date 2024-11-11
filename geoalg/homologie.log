@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.9.28)  15 OCT 2024 10:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.9.28)  7 NOV 2024 17:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -961,35 +961,94 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [12]
 \bbl@ensure@french {Chapitre} 2.
-
-LaTeX Warning: Empty bibliography on input line 462.
-
 [13
 
-] (./homologie.aux)
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[14
+
+]
+\bbl@ensure@french {Chapitre} 3.
+
+Overfull \hbox (6.05737pt too wide) in paragraph at lines 470--472
+[][]\OT1/cmr/bx/n/12 Exemple 3.1.2. []\OT1/cmr/m/n/12 Les vari^^Set^^Ses alg^^Sebriques affine sont s^^Separ^^See, parce que $\OML/cmm/m/it/12 A\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 
+
+ []
+
+[15]
+Overfull \hbox (22.22566pt too wide) in paragraph at lines 521--524
+[][]\OT1/cmr/bx/n/12 Remarque 7. []\OT1/cmr/m/it/12 Si $\OML/cmm/m/it/12 Y$ \OT1/cmr/m/it/12 est s^^Separ^^See, $\OT1/cmr/m/n/12 ^^@[]$ \OT1/cmr/m/it/12 est ferm^^Se dans $\OML/cmm/m/it/12 X \OMS/cmsy/m/n/12 ^^B \OML/cmm/m/it/12 Y$\OT1/cmr/m/it/12 . En ef-fet, $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 id[]; f\OT1/cmr/m/n/12 ) [] [] \OML/cmm/m/it/12 X \OMS/cmsy/m/n/12 !
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[16]
+\bbl@ensure@french {Chapitre} 4.
+
+Overfull \hbox (3.01155pt too wide) in paragraph at lines 549--550
+[][]\OT1/cmr/bx/n/12 D^^Sefinition 4.0.1. []\OT1/cmr/m/n/12 Soit $\OML/cmm/m/it/12 X \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 Z\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 I\OT1/cmr/m/n/12 )$ une vari^^Set^^Se alg^^Sebrique et $\OML/cmm/m/it/12 P \OT1/cmr/m/n/12 = (\OML/cmm/m/it/12 a[]; [] ; a[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 2
+ []
+
+[17
+
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[18]
+Overfull \hbox (0.9179pt too wide) in paragraph at lines 658--661
+\OT1/cmr/m/n/12 car $\OML/cmm/m/it/12 T[] \OMS/cmsy/m/n/12 ' \OT1/cmr/m/n/12 (\U/euf/m/n/12 m\OML/cmm/m/it/12 =f\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 =\OT1/cmr/m/n/12 (\U/euf/m/n/12 m\OML/cmm/m/it/12 =f\OT1/cmr/m/n/12 )[]$. Avec $\OML/cmm/m/it/12 dimY \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 dimX \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 1$, par r^^Securrence $\OML/cmm/m/it/12 dimT[] \OMS/cmsy/m/n/12 ^^U
+ []
+
+
+LaTeX Warning: Empty bibliography on input line 663.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[19] (./homologie.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `homologie.out' has not changed.
-(rerunfilecheck)             Checksum: 07EA52869F1F87E96308B44A21811FA4;1438.
+(rerunfilecheck)             Checksum: 2D7FCE1BE7C006907DC3EE76450CDA2D;1927.
 Package logreq Info: Writing requests to 'homologie.run.xml'.
 \openout1 = `homologie.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31717 strings out of 476076
- 610891 string characters out of 5793775
- 1945187 words of memory out of 5000000
- 53279 multiletter control sequences out of 15000+600000
+ 31884 strings out of 476076
+ 614675 string characters out of 5793775
+ 1947187 words of memory out of 5000000
+ 53414 multiletter control sequences out of 15000+600000
  570214 words of font info for 84 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  131i,15n,135p,682b,1776s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on homologie.pdf (13 pages, 186299 bytes).
+Output written on homologie.pdf (19 pages, 207252 bytes).
 PDF statistics:
- 242 PDF objects out of 1000 (max. 8388607)
- 197 compressed objects within 2 object streams
- 63 named destinations out of 1000 (max. 500000)
- 93 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 316 PDF objects out of 1000 (max. 8388607)
+ 264 compressed objects within 3 object streams
+ 95 named destinations out of 1000 (max. 500000)
+ 125 words of extra memory for PDF output out of 10000 (max. 10000000)
 

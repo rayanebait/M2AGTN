@@ -117,6 +117,7 @@ sorting=ynt
 \newtheorem{exs}[subsection]{Exemples}
 \newtheorem{res}{Résumé}
 \newtheorem{rep}{Réponse}
+\newtheorem{cons}{Conséquence}
 
 \theoremstyle{remark}
 
@@ -138,17 +139,196 @@ sorting=ynt
 
 
 
+\chapter{Remarques générales}
+Dans tous les autres chapitres. Dans le cas algébriquement clos, 
+comme une variété algébrique abstraite est seulement isomorphe à une
+variété algébrique abstraite. Ça fait sens de parler de schémas !
+Enfin 
+\[(\A^n(k),\Or_{\A^n(k)})\simeq (Spm(k[T_1,\ldots, T_n]),\Or_{Spm(...)})
+\]
+avec la topologie de Zariski. En particulier, 
+\[(\A^0(k), \Or_{\A^0(k)})\simeq (Spm(k), \Or_{Spm(k)})\]
+
+
+
 \chapter{Quatrième point : produits fibrés, cas des variétés abstraites}
+\section{Espace topologique sous jacent}
+On cherche un pullback de
+% https://q.uiver.app/#q=WzAsMyxbMCwxLCJYIl0sWzEsMCwiWSJdLFsxLDEsIlNwbShrKSJdLFswLDJdLFsxLDJdXQ==
+\[\begin{tikzcd}
+	& Y \\
+	X & {Spm(k)}
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=2-1, to=2-2]
+\end{tikzcd}\]
+en tant qu'espace topologiques on peut remarquer qu'un tel produit
+\[X\times_k Y\]
+vérifie $|X\times Y|=|X|\times |Y|$ par le foncteur de points. On a 
+par propriété universelle
+\[\Hom(W, X\times_k Y)\to \Hom(W,X)\times_k\Hom(W,Y)\]
+est une bijection, en particulier si $W=Spm(k)$ on sait que 
+$|X|\approx \Hom(Spm(k),X)$.
+
+\begin{cons}
+    L'espace topologique sous jaçent est bien le produit des espaces
+    topologiques. À voir en fonction de la base, ici $S=Spm(k)$.
+\end{cons}
+\section{Cas affine}
+Dans le cas affine si $X=Z(I)\subset \A^n(k)$ et $Y=Z(J)\subset \A^m(k)$
+on peut par le point de vue foncteur de point regarder 
+\[Z(I,J)\subset \A^{n+m}\]
+Étant donné un couple \[(f,g)\in \Hom(k[T_1,\ldots, T_n]/I, \Or_W(W))
+\times\Hom(k[T_{n+1},\ldots,T_{n+m}]/J, \Or_W(W))\]
+on définit \[(f,g)\in \Hom(k[T_1,\ldots, T_n, T_{n+1},\ldots,T_{n+m}]
+/(I,J), \Or_W(W))\]
+par le morphisme évident $T_i\mapsto f(T_i)$ si $i\leq n$ et $g(T_i)$
+sinon. Essentiellement par la flèche induite sur le produit tensoriel 
+(adjonction).
+
+\section{Cas général : points techniques}
+Étend donné l'existence de $X\times_k Y$ c'est intéressant de 
+montrer que si $W\subset X$ alors 
+$W\times_k Y\hookrightarrow X\times_kY$. Et surtout on a les identités
+\[p_X^{-1}(U)\cap p_Y^{-1}(V)=U\times_k V\]
+et 
+\[X_1\times Y\cap X_2\times Y=p_X^{-1}(X_1)\cap p_X^{-1}(X_2)=
+(X_1\cap X_2)\times_k Y\]
+On peut le dire parce que 
+% https://q.uiver.app/#q=WzAsNixbMCwwLCJwX1heey0xfShYX2kpIl0sWzAsMSwiWF9pIl0sWzAsMiwiWCJdLFsyLDAsIlkiXSxbMSwxLCJYX2lcXHRpbWVzX2sgWSJdLFsyLDIsIlhcXHRpbWVzX2tZIl0sWzAsMV0sWzEsMiwiIiwxLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMCwzXSxbMCw0LCJoXzEiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbNCwxXSxbNCwzXSxbNSwyXSxbNSwzXSxbNCw1LCJoIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV1d
+\[\begin{tikzcd}
+	{p_X^{-1}(X_i)} && Y \\
+	{X_i} & {X_i\times_k Y} \\
+	X && {X\times_kY}
+	\arrow[from=1-1, to=1-3]
+	\arrow[from=1-1, to=2-1]
+	\arrow["{h_1}"{description}, dashed, from=1-1, to=2-2]
+	\arrow[hook, from=2-1, to=3-1]
+	\arrow[from=2-2, to=1-3]
+	\arrow[from=2-2, to=2-1]
+	\arrow["h"{description}, dashed, from=2-2, to=3-3]
+	\arrow[from=3-3, to=1-3]
+	\arrow[from=3-3, to=3-1]
+\end{tikzcd}\]
+$h\circ h_1$ et l'inclusion sont deux flèches
+$p_X^{-1}(X_i)\to X\times_kY$ qui font commuter le diagramme donc sont
+égales. Pareil $h_1\circ h\circ h_1$  et $h_1$ c'est deux flèches 
+\[p_X^{-1}(X_i) \to X_i\times_kY\].
+donc sont égales par unicité, mais c'est pas clair que $h_1$ est un mono.
+
+\begin{rem}
+    J'ai pas montré l'existence de tout les autres produits fibrés là.
+    Juste qu'ils coincident avec ce que j'ai dit.
+\end{rem}
+Pour montrer leur existence faut juste utiliser la commutativité des
+flèches. Si on a 
+% https://q.uiver.app/#q=WzAsNixbMCwwLCJXIl0sWzAsMSwiVSJdLFswLDIsIlgiXSxbMiwwLCJZIl0sWzEsMCwiViJdLFsyLDIsIlhcXHRpbWVzX2sgWSJdLFsxLDIsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzAsNCwiZiIsMV0sWzAsMSwiZyIsMV0sWzQsMywiIiwxLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbNSwzXSxbNSwyXSxbMCw1LCJoIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV1d
+\[\begin{tikzcd}
+	W & V & Y \\
+	U \\
+	X && {X\times_k Y}
+	\arrow["f"{description}, from=1-1, to=1-2]
+	\arrow["g"{description}, from=1-1, to=2-1]
+	\arrow["h"{description}, dashed, from=1-1, to=3-3]
+	\arrow[hook, from=1-2, to=1-3]
+	\arrow[hook, from=2-1, to=3-1]
+	\arrow[from=3-3, to=1-3]
+	\arrow[from=3-3, to=3-1]
+\end{tikzcd}\]
+suffit de voir que $h(W)\subseteq p_X^{-1}(U)\cap p_X^{-1}(V)$ via
+$p_X\circ h=g$ et $p_Y\circ h=f$.
+
+C'est aussi intéressant de voir que si $U\hookrightarrow X$ est une
+immersion ouverte alors
+\[U\times_k Y\to X\times_k Y\]
+aussi (directement via les points d'avant).
+\section{Construction générale}
+Étant donné le fait que $X_i\times Y\cap X_j\cap Y=(X_i\cap X_j)\times Y$
+on peut recoller ! Et c'est ça la construction mdr.
 
 
 \chapter{Troisième point : dimension}
-On commence à defs des invariants comme la dimension. À faire !
 
 \section{Les définitions}
-Dans le cas irréductible ducoup c'est la définition habituelle avec 
-le sup des longueurs de chaines d'irréductibles fermés. Dans le cas 
-général on prends le sup des dimensions des composantes,. 
+\subsection{Définition topologique}
+Concrètement pour $X=\cup_{i=1}^n X_i$ une variété algébrique décomposée
+en composantes irréductibles :
+\[\dim(X)=\max(\dim(X_i))=\sup_{U\subset X~ouvert} \dim(U)\]
+et pour une variété irréductible c'est le sup des longueurs de chaines
+\[Y_0\subsetneq Y_1\subsetneq \ldots \subsetneq Y_d=X\]
 
+\subsection{Définition par les corps de fonctions}
+Ducoup dans le cas intègre, les restrictions du faisceau sont 
+injectives et le faisceau est approximable par les ouverts principaux
+affines ! En particulier 
+\[k(X)\simeq k(U)\]
+et \[k(X)\simeq Frac(\Or_X(U_0))\]
+pour un affine ouvert $U_0\subset X$ quelconque. On peut montrer que
+\[dim(X)= degtr_k k(X)\]
+et c'est bien défini :
+\begin{enumerate}
+    \item Si on prends deux familles algébriquement 
+indépendantes et $K$ algébriques sur les deux, on peut montrer qu'elles
+ont la même cardinalité. 
+    \item On peut se réduire au cas affine.
+    \item On conclut par l'injection de Noether dans $A(X)$ qui fixe la
+	dimension en passant au corps de fractions!
+\end{enumerate}
+
+\section{Hypersurfaces}
+\subsection{Cas affine}
+Essentiellement, y'a cette suite d'arguments :
+\begin{enumerate}
+    \item La dimension est invariante par extension d'anneaux entiers.
+	(Y'a pas mal d'algèbre là dedans, j'en parlerai ailleurs)
+    \item Par Noether si $F\in k[T_1,\ldots, T_n]-k$ alors 
+	\[\dim k[T_1,\ldots, T_n]/(F)=\dim k[T_1,\ldots, T_{n-1}]\]
+    \item Ensuite $\dim k[T_1,\ldots,T_n]=n$ par récurrence et 
+	l'argument d'avant (faut faire un tout petit peu attention).
+    \item Automatiquement, si $F\in k[T_1,\ldots, T_n]$ alors
+	$\dim(Z(F))=n-1$.
+\end{enumerate}
+\subsection{Cas intègre}
+Ça c'était le cas affine, maintenant le cas intègre : Étant donné
+$f\in \Or_X(X)$ on a
+\[\dim(Z(f))=\dim(X)-1\]
+La preuve consiste à dire 
+\begin{enumerate}
+    \item $\dim(U)=\dim(X)$ en utilisant $k(U)\simeq k(X)$ d'où
+	on se ramène au cas affine.
+    \item On à une injection entière finie 
+	\[k[T_1,\ldots, T_n]/fA\cap k[T_1,\ldots, T_n]\hookrightarrow
+	A(X)/fA(X)\]
+	où $fA\cap k[T_1,\ldots, T_n]$ c'est juste en identifiant avec
+	l'image.
+    \item Puis on a 
+	\[fA\cap k[T_1,\ldots, T_n]\subset \sqrt{N_{k(X)/k(\A^n)}(f)}
+	\subset \sqrt{fA\cap k[T_1,\ldots, T_n]}\]
+    et on conclut par Noether.
+\end{enumerate}
+\begin{rem}
+    Les anneaux de polynômes sont factoriels donc intégralement clos.
+    D'où la norme fonctionne bien là.
+\end{rem}
+\begin{rem}
+    Je sais vraiment pas si on est obligés d'utiliser $k(U)\simeq k(X)$
+    mdr. À méditer. Si $F_1\cap U \subsetneq F_2\cap U$ et $U$ dense
+    dans $X$, alors $\bar F_1 = \bar F_2$ implique $F_1$ dense dans 
+    $F_2$ d'où y sont égaux dans $U$ car fermés ? 
+\end{rem}
+\subsection{Nombre d'équations d'un fermé}
+Tout irréductible affine $Z$ de dimension $s$ dans $\A^n$ est une 
+composante d'un
+\[Z\subseteq Z(f_1,\ldots, f_{n-s})\]
+dont toutes les composantes ont dimension $s$. 
+
+À l'inverse
+\[Z(f_1,\ldots, f_{s})\subset \A^n(k)\]
+est de dimension $\geq n-s$.
+\subsection{Dimension des fibres}
+On en déduit que si $f\colon X\to Y$ est dominant alors
+\[\dim(f^{-1}(y))\geq \dim(X)-\dim(Y)\]
+parce que $f^{-1}(y)\subseteq Z(f_*\m_y)$ et $\m_y$ est défini
+par $\dim(Y)$ équations !
 \chapter{Deuxième point sur les cours : Variétés abstraites à la Weil}
 \section{Premières définitions}
 Ducoup essentiellement maintenant on travaille avec des 

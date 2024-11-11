@@ -53,6 +53,7 @@ sorting=ynt
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\Cat}{\mathcal{C}}
+\newcommand{\Dat}{\mathcal{D}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\K}{\mathbb{K}}
 \newcommand{\A}{\mathbb{A}}
@@ -113,6 +114,7 @@ sorting=ynt
 \newtheorem{exo}[subsection]{Exercices}
 \newtheorem{ex}[subsection]{Exemple}
 \newtheorem{exs}[subsection]{Exemples}
+\newtheorem{slog}{Slogan}
 
 \theoremstyle{remark}
 
@@ -1680,6 +1682,391 @@ Soit $\Cat$ une catégorie abélienne et soit $A\in \Cat$.
 puis $k^{n+2}\colon I^{n+2}\to J^{n+1}$ par injectivité, la formule
 de l'homotopie est direct par commutativité.
 \end{proof}
+
+\begin{prop}
+    Soit $\Cat$ une catégorie abélienne et $A,B\in \Cat$. Soit
+    $A\to I^\bullet$ une résolution et $B\to J^\bullet$ une résolution
+    injective. Alors tout $f\colon A\to B$ admet une extension
+    $f^\bullet\colon I^\bullet\to J^\bullet$ qui est unique à homotopie
+    près.
+\end{prop}
+\begin{proof}
+    \textbf{Unicité :} Étant donnés $f^\bullet,g^\bullet\colon 
+    I^\bullet\to J^\bullet$ qui étend $f$. On a que $f^\bullet-g^\bullet
+    $ étend $f-f=O_{A,B}$. D'où est contractile puis 
+    $f^\bullet$ et $g^\bullet$ sont homotopes. 
+    \textbf{Faire l'équivalence ?}
+    \textbf{Existence :} On a % https://q.uiver.app/#q=WzAsNCxbMCwwLCJBIl0sWzEsMCwiSV4wIl0sWzAsMSwiQiJdLFsxLDEsIkpeMCJdLFswLDEsImlfQSJdLFsyLDMsImlfQiJdLFswLDIsImYiLDFdLFsxLDMsIlxcZXhpc3RzIGZeMCIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFswLDMsImlfYlxcY2lyYyBmIiwxXV0=
+\[\begin{tikzcd}
+	A & {I^0} \\
+	B & {J^0}
+	\arrow["{i_A}", from=1-1, to=1-2]
+	\arrow["f"{description}, from=1-1, to=2-1]
+	\arrow["{i_b\circ f}"{description}, from=1-1, to=2-2]
+	\arrow["{\exists f^0}", dashed, from=1-2, to=2-2]
+	\arrow["{i_B}", from=2-1, to=2-2]
+\end{tikzcd}\]
+    puis % https://q.uiver.app/#q=WzAsNixbMCwwLCJJXjAiXSxbMCwxLCJKXjAiXSxbMSwwLCJJXjAvQSJdLFsyLDAsIkleMSJdLFsyLDEsIkpeMSJdLFsxLDEsIkpeMC9CIl0sWzAsMSwiZl4wIiwyXSxbMCwyXSxbMiwzLCIiLDEseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFszLDQsIlxcZXhpc3RzIGZeMSIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs1LDQsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzIsNSwiXFxiYXIgZl4wIiwyXSxbMSw1XSxbMiw0XV0=
+\[\begin{tikzcd}
+	{I^0} & {I^0/A} & {I^1} \\
+	{J^0} & {J^0/B} & {J^1}
+	\arrow[from=1-1, to=1-2]
+	\arrow["{f^0}"', from=1-1, to=2-1]
+	\arrow[hook, from=1-2, to=1-3]
+	\arrow["{\bar f^0}"', from=1-2, to=2-2]
+	\arrow[from=1-2, to=2-3]
+	\arrow["{\exists f^1}", dashed, from=1-3, to=2-3]
+	\arrow[from=2-1, to=2-2]
+	\arrow[hook, from=2-2, to=2-3]
+\end{tikzcd}\]
+    et 
+% https://q.uiver.app/#q=WzAsOCxbMCwwLCJJXjAiXSxbMCwxLCJKXjAiXSxbMiwwLCJJXjEiXSxbMiwxLCJKXjEiXSxbMywwLCJjb2tlcihkX0leMCkiXSxbMywxLCJjb2tlcihkX0peMCkiXSxbNCwwLCJJXjIiXSxbNCwxLCJKXjIiXSxbMCwxLCJmXjAiLDJdLFsyLDMsImZeMSIsMl0sWzAsMiwiZF9JXjAiXSxbMSwzLCJkXjBfSiIsMl0sWzIsNCwiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzMsNSwiIiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzQsNV0sWzQsNiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbNSw3LCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs2LDcsIlxcZXhpc3RzIGZeMiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs0LDddXQ==
+\[\begin{tikzcd}
+	{I^0} && {I^1} & {coker(d_I^0)} & {I^2} \\
+	{J^0} && {J^1} & {coker(d_J^0)} & {J^2}
+	\arrow["{d_I^0}", from=1-1, to=1-3]
+	\arrow["{f^0}"', from=1-1, to=2-1]
+	\arrow[two heads, from=1-3, to=1-4]
+	\arrow["{f^1}"', from=1-3, to=2-3]
+	\arrow[hook, from=1-4, to=1-5]
+	\arrow[from=1-4, to=2-4]
+	\arrow[from=1-4, to=2-5]
+	\arrow["{\exists f^2}", dashed, from=1-5, to=2-5]
+	\arrow["{d^0_J}"', from=2-1, to=2-3]
+	\arrow[two heads, from=2-3, to=2-4]
+	\arrow[hook, from=2-4, to=2-5]
+\end{tikzcd}\]
+
+    Supposons maintenant $f^i$ défini pour tout $i\leq n$, alors 
+% https://q.uiver.app/#q=WzAsOCxbMCwwLCJJXntuLTF9Il0sWzAsMSwiSl57bi0xfSJdLFsyLDAsIklebiJdLFsyLDEsIkpebiJdLFszLDAsImNva2VyKGRfSV57bi0xfSkiXSxbMywxLCJjb2tlcihkX0pee24tMX0pIl0sWzQsMCwiSV57bisxfSJdLFs0LDEsIkpee24rMX0iXSxbMCwxLCJmXntuLTF9IiwyXSxbMiwzLCJmXm4iLDJdLFswLDIsImRee24tMX1fSSJdLFsxLDMsImRee24tMX1fSiIsMl0sWzIsNCwiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzMsNSwiIiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzQsNV0sWzQsNiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbNSw3LCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs2LDcsIlxcZXhpc3RzIGZee24rMX0iLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbNCw3XV0=
+\[\begin{tikzcd}
+	{I^{n-1}} && {I^n} & {coker(d_I^{n-1})} & {I^{n+1}} \\
+	{J^{n-1}} && {J^n} & {coker(d_J^{n-1})} & {J^{n+1}}
+	\arrow["{d^{n-1}_I}", from=1-1, to=1-3]
+	\arrow["{f^{n-1}}"', from=1-1, to=2-1]
+	\arrow[two heads, from=1-3, to=1-4]
+	\arrow["{f^n}"', from=1-3, to=2-3]
+	\arrow[hook, from=1-4, to=1-5]
+	\arrow[from=1-4, to=2-4]
+	\arrow[from=1-4, to=2-5]
+	\arrow["{\exists f^{n+1}}", dashed, from=1-5, to=2-5]
+	\arrow["{d^{n-1}_J}"', from=2-1, to=2-3]
+	\arrow[two heads, from=2-3, to=2-4]
+	\arrow[hook, from=2-4, to=2-5]
+\end{tikzcd}\]
+
+\end{proof}
+\section{Foncteurs dérivés}
+On considère $\Cat, \Dat$ deux catégories abéliennes t.q. 
+$\Cat$ a assez d'injectifs. Soit $F\colon \Cat\to \Dat$ un foncteur
+exact à gauche. On veut définir une famille de foncteurs
+\[R^n F\colon \Cat\to \Dat,~\forall n\geq 0\]
+avec $R^0F\simeq F$ et satisfaisant une propriété universelle. 
+\newline
+\newline
+Soit $A\in\Cat$ et $A\to I^\bullet$ une résolution injective. On
+applique $F$ à $I^\bullet$ et on obtient \[F(I^\bullet)\in Ch(\Dat).\]
+On pose $R^nF(A)=H^n(F(I^\bullet))\in Dat$. 
+
+\begin{center}
+    C'est bien défini en tant que foncteur! (à montrer)
+\end{center}
+
+\begin{rem}
+    La résolution est tronquée comme d'hab y'a pas le $A$ dedans.
+    D'où la prochaine remarque.
+\end{rem}
+\begin{rem}
+    On a $R^0F(A)\simeq F(A)$. En effet $0\to A\to I^0\to I^1$
+    est exacte et $F$ est exacte à gauche. D'où 
+    $\ker(F(I^0)\to F(I^1))\simeq F(A)$.
+\end{rem}
+\begin{rem}
+    Si $F$ est exact, alors $R^n F= 0$ pour tout $n>0$. 
+\end{rem}
+\begin{slog}
+    Les foncteurs dérivés à droite $(R^n F)_{n\geq 0}$ mesurent
+    à quel point $F$ est loin d'être exact à droite.
+\end{slog}
+\begin{prop}
+    Soit $F\colon \Cat\to \Dat$ exact à gauche. Alors
+    \begin{enumerate}
+	\item Étant donné $A\to I^\bullet$, $A\to J^\bullet$ injectives
+	    on a un isomorphisme canonique
+	\[H^n(F(I^\bullet))\simeq H^n(F(J^\bullet))~\forall n\geq 0\]
+	\item De $f\colon A\to B$ et $A\to I^\bullet$, $B\to J^\bullet$
+	    injectives, alors on a un morphisme canonique 
+    \[H^n(F(f^\bullet))\colon H^n(F(I^\bullet))\to H^n(F(J^\bullet)),
+    ~\forall n\geq 0\]
+	\item Si 
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJBIl0sWzEsMCwiQiJdLFsyLDAsIkMiXSxbMCwxLCJmIl0sWzEsMiwiZyJdXQ==
+\[\begin{tikzcd}
+	A & B & C
+	\arrow["f", from=1-1, to=1-2]
+	\arrow["g", from=1-2, to=1-3]
+\end{tikzcd}\]
+    sont des morphismes dans $\Cat$ et $A\to I^\bullet$,$B\to J^\bullet$
+    ,$C\to K^\bullet$ injectives, alors 
+	% https://q.uiver.app/#q=WzAsMyxbMCwwLCJIXm4oRihJXlxcYnVsbGV0KSkiXSxbMiwwLCJIXm4oRihLXlxcYnVsbGV0KSkiXSxbMSwxLCJIXm4oRihKXlxcYnVsbGV0KSkiXSxbMCwxLCJIXm4oRihnXlxcYnVsbGV0XFxjaXJjIGZeXFxidWxsZXQpKSJdLFswLDJdLFsyLDFdXQ==
+\[\begin{tikzcd}
+	{H^n(F(I^\bullet))} && {H^n(F(K^\bullet))} \\
+	& {H^n(F(J^\bullet))}
+	\arrow["{H^n(F(g^\bullet\circ f^\bullet))}", from=1-1, to=1-3]
+	\arrow[from=1-1, to=2-2]
+	\arrow[from=2-2, to=1-3]
+\end{tikzcd}\]	
+    commute pour tout $n\geq 0$.
+    \end{enumerate}
+\end{prop}
+\begin{proof}
+    \textbf{(2) :} Il existe une extension $f^\bullet\colon I^\bullet
+    \to J^\bullet$ unique à homotopie près. Comme $F$ et les $H^n(\_)$
+    sont des foncteurs on obtient des morphismes $F(I^\bullet)\to
+    F(J^\bullet)$ dans $Ch(\Dat)$ et 
+    $H^n(F(I^\bullet))\to H^n(F(J^\bullet))$ dans $\Dat$ pour tout 
+    $n\geq 0$. Soit $g^\bullet\colon I^\bullet\to J^\bullet$ une autre
+    extension de $f\colon A\to B$. Alors $f^\bullet -g^\bullet$
+    est contractile d'où 
+    $f^n-g^n=d_J^{n-1}\circ h^n+h^{n+1}\circ d_I^n$. Comme $F$ est 
+    additif, $F(f^n-g^n)$ est contractile. D'où $H^n(F(f^\bullet))=
+    H^n(F(g^\bullet))$.
+    \newline
+    \newline
+    \textbf{(3) :} Si $f^\bullet,g^\bullet$ étendent $f,g$ alors
+    $g^\bullet\circ f^\bullet$ étend $g\circ f$ on obtient
+    \[H^n(F(g^\bullet\circ f^\bullet))=H^n(F(g^\bullet))\circ 
+    H^n(F(f^\bullet))\]
+    qui est ce qu'on voulait.
+    \newline
+    \newline
+    \textbf{(3) :} Il existe $f^\bullet\colon I^\bullet\to J^\bullet$
+    qui étend $id_A$ et $g^\bullet\colon J^\bullet\to I^\bullet$ qui
+    étend aussi $id_A$. À nouveau, $g^\bullet\circ f^\bullet$ étend
+    $id_A$ et pareil pour $id_{I^\bullet}$. En particulier
+    \[g^\bullet\circ f^\bullet\textrm{ et }id_{I^\bullet}
+    \textrm{ sont homotopes}\]
+    puis pareil pour $F(g^\bullet)\circ F(f^\bullet)$ et 
+    $F(id_{I^\bullet})=id_{F(I^\bullet)}$. D'où \[H^n(F(g^\bullet))\circ
+    H^n(F(f^\bullet))=Id_{H^n(F(I^\bullet))}\]
+    Pareil de l'autre côté et on obtient des isomorphismes canoniques
+    $H^n(F(f^\bullet)),H^n(F(g^\bullet))$.
+\end{proof}
+\begin{rem}
+    L'isomorphisme est canonique!
+\end{rem}
+\begin{rem}
+    On obtient que $R^n F(A)$ est bien défini pour tout $n\geq 0$ et 
+    pour tout $A\in \Cat$ d'où $R^n F$ est un foncteur pour tout 
+    $n\geq0$.
+\end{rem}
+
+\begin{defn}
+    On définit le $n$-ème foncteur dérivé à droite de $F$ par 
+    $R^n F\colon A\mapsto H^n(F(I^\bullet))$.
+\end{defn}
+\begin{prop}
+    On a les props suivantes :
+    \begin{enumerate}
+	\item $R^n F$ est un foncteur additif pour tout $n\geq0$.
+	\item Pour tout $I\in \Cat$ injectif, $R^n F(I)=0$ pour tout
+	    $n>0$.
+	\item Soit $0\to A\to B\to C\to 0$ $(*)$ une suite exacte
+	    courte (sec) dans $\Cat$. Alors pour tout $n\geq 0$
+	    il existe une flèche canonique $\delta^{n+1}\colon R^n F(C)
+	    \to R^{n+1} F(A)$ telle que .
+% https://q.uiver.app/#q=WzAsMTMsWzAsMCwiMCJdLFsxLDAsIlJeMEYoQSkiXSxbMiwwLCJSXjBGKEIpIl0sWzMsMCwiUl4wRihDKSJdLFsxLDEsIlJeMUYoQSkiXSxbMiwxLCJSXjFGKEIpIl0sWzMsMSwiUl4xRihCKSJdLFsxLDIsIlJeMkYoQSkiXSxbMiwyLCJSXjJGKEIpIl0sWzMsMiwiUl4yRihDKSJdLFsxLDMsIlJebkYoQSkiXSxbMiwzLCJcXGxkb3RzIl0sWzMsMywiKCoqKSJdLFswLDFdLFsxLDJdLFsyLDNdLFszLDRdLFs0LDVdLFs1LDZdLFs2LDddLFs3LDhdLFs4LDldLFs5LDEwLCJcXGxkb3RzIiwxXSxbMTAsMTFdXQ==
+\[\begin{tikzcd}
+	0 & {R^0F(A)} & {R^0F(B)} & {R^0F(C)} \\
+	& {R^1F(A)} & {R^1F(B)} & {R^1F(B)} \\
+	& {R^2F(A)} & {R^2F(B)} & {R^2F(C)} \\
+	& {R^nF(A)} & \ldots & {(**)}
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-3, to=1-4]
+	\arrow[from=1-4, to=2-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-3, to=2-4]
+	\arrow[from=2-4, to=3-2]
+	\arrow[from=3-2, to=3-3]
+	\arrow[from=3-3, to=3-4]
+	\arrow["\ldots"{description}, from=3-4, to=4-2]
+	\arrow[from=4-2, to=4-3]
+\end{tikzcd}\]
+    est exacte. En plus, l'application $(*)\mapsto(**)$ de 
+    $Sec(\Cat)\to Ch(\Dat)$ est un foncteur. Plus simplement, tout 
+    les 
+% https://q.uiver.app/#q=WzAsNCxbMCwwLCJSXm4gRihDKSJdLFsyLDAsIlJee24rMX0gRihBKSJdLFsyLDEsIlJee24rMX0gRihBJykiXSxbMCwxLCJSXm4gRihDKSciXSxbMCwxLCJcXGRlbHRhXm4iXSxbMywyLCJcXGRlbHRhXm4iXSxbMCwzXSxbMSwyXV0=
+\[\begin{tikzcd}
+	{R^n F(C)} && {R^{n+1} F(A)} \\
+	{R^n F(C)'} && {R^{n+1} F(A')}
+	\arrow["{\delta^n}", from=1-1, to=1-3]
+	\arrow[from=1-1, to=2-1]
+	\arrow[from=1-3, to=2-3]
+	\arrow["{\delta^n}", from=2-1, to=2-3]
+\end{tikzcd}\]
+    commutent.
+    \end{enumerate}
+\end{prop}
+\begin{proof}
+    \textbf{(1) :} On prouve que $R^n F$ préserve les sommes directes.
+    Soit $A\to I^\bullet$, $B\to J^\bullet$ injectives. Alors
+    $A\oplus B\to I^\bullet\oplus J^\bullet$ est injective 
+    (\textbf{check}). Maintenant $F$ est exact à gauche donc additif,
+    d'où 
+\[F(I^\bullet\oplus J^\bullet)\simeq F(I^\bullet)\oplus F(J^\bullet)\]
+    Maintenant $H^n(\_)$ est additif aussi (\textbf{check}). D'où
+    $R^n F(A\oplus B)=R^n F(A)\oplus R^n F(B)$.
+    \newline
+    \newline
+    \textbf{(2) :} Soit $I\in \Cat$ injectif et 
+    $0\to I\to I\to 0\to 0\to \ldots$ une résolution injective. D'où
+    le résultat.
+    \newline
+    \newline
+    \textbf{(3) :} On claim que on peut choisir $A\to I^\bullet$,
+    $B\to J^\bullet$ ,$C\to K^\bullet$ injectives et des extensions
+% https://q.uiver.app/#q=WzAsMTAsWzAsMCwiMCJdLFsxLDAsIkEiXSxbMiwwLCJCIl0sWzMsMCwiQyJdLFs0LDAsIjAiXSxbMSwxLCJJXlxcYnVsbGV0Il0sWzIsMSwiSl5cXGJ1bGxldCJdLFszLDEsIkteXFxidWxsZXQiXSxbMCwxLCIwIl0sWzQsMSwiMCJdLFswLDFdLFsxLDJdLFsyLDNdLFszLDRdLFsxLDVdLFsyLDZdLFszLDddLFs2LDddLFs1LDZdLFs4LDVdLFs3LDldXQ==
+\[\begin{tikzcd}
+	0 & A & B & C & 0 \\
+	0 & {I^\bullet} & {J^\bullet} & {K^\bullet} & 0
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=1-3, to=1-4]
+	\arrow[from=1-3, to=2-3]
+	\arrow[from=1-4, to=1-5]
+	\arrow[from=1-4, to=2-4]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-3, to=2-4]
+	\arrow[from=2-4, to=2-5]
+\end{tikzcd}\]
+    telles que $J^n\simeq I^n\oplus K^n$ pour tout $n\geq 0$ ET
+    $I^n\to J^n\to K^n$ est donnée par $J^n=I^n\oplus K^n$. Comme $F$
+    est additif $F(J^n)=F(I^n)\oplus F(K^n)$ d'où 
+    \[0\to F(I^\bullet)\to F(J^\bullet)\to F(K^\bullet)\to 0\]
+    est exacte dans $Ch(\Dat)$. On obtient la suite exacte longue
+    qui donne le résultat voulu.
+\end{proof}
+\begin{proof}[Démonstration du claim]
+    Bon la flèche de gauche est par l'injectivité et à droite par
+    composition puis au milieu par produit.
+% https://q.uiver.app/#q=WzAsMTAsWzAsMCwiMCJdLFsxLDAsIkEiXSxbMiwwLCJCIl0sWzMsMCwiQyJdLFs0LDAsIjAiXSxbMSwxLCJJXjAiXSxbMywxLCJLXjAiXSxbMiwxLCJJXjBcXG9wbHVzIEteMCJdLFs0LDEsIjAiXSxbMCwxLCIwIl0sWzAsMV0sWzEsMl0sWzIsM10sWzMsNF0sWzEsNSwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMyw2LCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs1LDddLFs3LDZdLFs2LDhdLFs5LDVdLFsyLDUsIlxcZXhpc3RzIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzIsNiwiIiwxLHsiY3VydmUiOi0xfV0sWzIsNywiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV1d
+\[\begin{tikzcd}
+	0 & A & B & C & 0 \\
+	0 & {I^0} & {I^0\oplus K^0} & {K^0} & 0
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[hook, from=1-2, to=2-2]
+	\arrow[from=1-3, to=1-4]
+	\arrow["\exists"{description}, dashed, from=1-3, to=2-2]
+	\arrow[dashed, from=1-3, to=2-3]
+	\arrow[curve={height=-6pt}, from=1-3, to=2-4]
+	\arrow[from=1-4, to=1-5]
+	\arrow[hook, from=1-4, to=2-4]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-3, to=2-4]
+	\arrow[from=2-4, to=2-5]
+\end{tikzcd}\]
+    On applique le lemme du serpent pour obtenir 
+% https://q.uiver.app/#q=WzAsOCxbMSwwLCIwIl0sWzIsMCwia2VyKEJcXHRvIEpeMCkiXSxbMywwLCIwIl0sWzEsMSwiSV4wL0EiXSxbMiwxLCJKXjAvQiJdLFszLDEsIkteMC9DIl0sWzQsMSwiMCJdLFswLDAsIjAiXSxbMCwxXSxbMSwyXSxbMiwzXSxbMyw0XSxbNCw1XSxbNSw2XSxbNywwXV0=
+\[\begin{tikzcd}
+	0 & 0 & {ker(B\to J^0)} & 0 \\
+	& {I^0/A} & {J^0/B} & {K^0/C} & 0
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-3, to=1-4]
+	\arrow[from=1-4, to=2-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-3, to=2-4]
+	\arrow[from=2-4, to=2-5]
+\end{tikzcd}\]
+    d'où la suite exacte de coker et l'injectivité au milieu puis
+% https://q.uiver.app/#q=WzAsMTAsWzEsMCwiSV4wL0EiXSxbMiwwLCJKXjAvQiJdLFszLDAsIkteMC9DIl0sWzQsMCwiMCJdLFswLDAsIjAiXSxbMSwxLCJJXjEiXSxbMywxLCJLXjEiXSxbNCwxLCIwIl0sWzAsMSwiMCJdLFsyLDEsIkleMVxcb3BsdXMgS14xIl0sWzAsMV0sWzEsMl0sWzIsM10sWzQsMF0sWzAsNSwiIiwxLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMiw2LCIiLDEseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs2LDddLFs4LDVdLFs1LDldLFs5LDZdLFsxLDUsIlxcZXhpc3RzIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzEsNiwiIiwxLHsiY3VydmUiOi0xfV0sWzEsOSwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV1d
+\[\begin{tikzcd}
+	0 & {I^0/A} & {J^0/B} & {K^0/C} & 0 \\
+	0 & {I^1} & {I^1\oplus K^1} & {K^1} & 0
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[hook, from=1-2, to=2-2]
+	\arrow[from=1-3, to=1-4]
+	\arrow["\exists"{description}, dashed, from=1-3, to=2-2]
+	\arrow[dashed, from=1-3, to=2-3]
+	\arrow[curve={height=-6pt}, from=1-3, to=2-4]
+	\arrow[from=1-4, to=1-5]
+	\arrow[hook, from=1-4, to=2-4]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-3, to=2-4]
+	\arrow[from=2-4, to=2-5]
+\end{tikzcd}\]
+    on définit alors $d_J^0\colon J^0\to J^0/B\to I^1\oplus K^1=J^1$.
+    À nouveau le lemme du serpent donne 
+% https://q.uiver.app/#q=WzAsMTAsWzEsMCwiY29rZXIoZF9JXjApIl0sWzIsMCwiY29rZXIoZF9KXjApIl0sWzMsMCwiY29rZXIoZF9LXjApIl0sWzQsMCwiMCJdLFswLDAsIjAiXSxbMSwxLCJJXjIiXSxbMywxLCJLXjIiXSxbNCwxLCIwIl0sWzAsMSwiMCJdLFsyLDEsIkleMlxcb3BsdXMgS14yIl0sWzAsMV0sWzEsMl0sWzIsM10sWzQsMF0sWzAsNSwiIiwxLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMiw2LCIiLDEseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs2LDddLFs4LDVdLFs1LDldLFs5LDZdLFsxLDUsIlxcZXhpc3RzIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzEsNiwiIiwxLHsiY3VydmUiOi0xfV0sWzEsOSwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV1d
+\[\begin{tikzcd}
+	0 & {coker(d_I^0)} & {coker(d_J^0)} & {coker(d_K^0)} & 0 \\
+	0 & {I^2} & {I^2\oplus K^2} & {K^2} & 0
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[hook, from=1-2, to=2-2]
+	\arrow[from=1-3, to=1-4]
+	\arrow["\exists"{description}, dashed, from=1-3, to=2-2]
+	\arrow[dashed, from=1-3, to=2-3]
+	\arrow[curve={height=-6pt}, from=1-3, to=2-4]
+	\arrow[from=1-4, to=1-5]
+	\arrow[hook, from=1-4, to=2-4]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-3, to=2-4]
+	\arrow[from=2-4, to=2-5]
+\end{tikzcd}\]
+    Cette étape donne exactement l'induction. (\textbf{CHECK QUE ÇA
+    MARCHE})
+\end{proof}
+
+\begin{center}
+    \textbf{Propriété universelle}
+\end{center}
+\begin{defn}
+    Soit $\Cat, \Dat$ comme avant. Un foncteur cohomologique
+    $T\colon \Cat\to \Dat$ est la donnée de
+    \begin{enumerate}
+	\item Une famille de foncteurs 
+	    $(T^n\colon \Cat\to \Dat)_{n\geq 0}$.
+	\item Pour tout $n\geq 0$ des cobords
+	    \[\delta^n\colon T^n(C)\to T^{n+1}(A)\]
+	    tels que on obtient une suite exacte longue et à nouveau
+	    que SEC$\mapsto$ SEL via les cobords est un foncteur.
+	    Revoir les petits diagrammes à faire commuter.
+    \end{enumerate}
+    Un morphisme de foncteurs cohomologiques est un foncteur qui
+    induit une transformation naturelle des foncteurs SEC$\mapsto$
+    SEL.
+\end{defn}
+\begin{rem}
+    On demande pas forcément que $\Cat$ ait assez d'injectifs ici.
+\end{rem}
+\begin{defn}
+    Un foncteur cohomologique $T=(T^n, \delta^n)_n$ est universel
+    si pour tout foncteur cohomologique
+    $T'=(T'^n,\delta'^n)_n$ et pour toute transformation naturelle
+    $g\colon T^0\to T'^0$ il existe un unique morphisme de foncteurs
+    cohomologiques $f\colon T\to T'$ tel que $f^0=g$.
+\end{defn}
+\begin{thm}
+    Soit $F\colon \Cat\to \Dat$ un foncteur exact à gauche entre
+    catégories abéliennes où $\Cat$ a assez d'injectifs. Le foncteur
+    cohomologique donné par les foncteurs dérivés est un foncteur
+    cohomologique universel. de $\Cat\to \Dat$.
+\end{thm}
+\begin{cor}
+    $(R^n F, \delta^n)_n$ muni de $F\simeq R^0 F$ est initial dans la 
+    catégorie des foncteurs cohomologiques $T$ de $\Cat$ dans $\Dat$
+    avec un morphisme $F\to T^0$.
+\end{cor}
+
+
 
 
 
