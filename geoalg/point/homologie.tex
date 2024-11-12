@@ -149,6 +149,48 @@ Enfin
 avec la topologie de Zariski. En particulier, 
 \[(\A^0(k), \Or_{\A^0(k)})\simeq (Spm(k), \Or_{Spm(k)})\]
 
+\section{Variétés vers schémas}
+\subsection{Fonctions vs sections}
+La construction de la correspondance schémas
+affines et anneaux, avec des fonctions sur un corps algébriquement clos
+c'est clair, avec des sections c'est moins clair.
+
+Essentiellement, ça fait plus sens de dire, je prends la flèche
+topologique $|f|$ et le morphisme de faisceaux s'écrit :
+\[s\mapsto s\circ |f|\]
+On peut juste dire, $f^\sharp(X)^{-1}(\p)=|f|(\p)$ modulo ce que ça veut
+dire. En conséquence de la flèche locale 
+\[\Or_{Y,|f|(x)}\to \Or_{X,x}\]
+
+\subsection{Ambiguité du support}
+Y'a un soucis avec le support de $f\in \Or_X(X)$ c'est pas analogue
+vraiment à $f^{-1}(D(0))$. Quand on est nul dans une fibre en un premier
+$\p_x$ ça a l'air plus fort parce que on est nul sur un ouvert autour
+de $x$. Ç'est quoi ducoup $f^{-1}(0)$? Déjà 
+\begin{enumerate}
+    \item On a un truc qui semble similaire 
+	\[\Or_X(U)=\Hom(U,\A^1_\Z)\]
+	mais qui l'est pas du tout, $(0)$ est générique mais ni ouvert
+	ni fermé!
+    \item Sur un $k$-schéma $X$ par contre, 
+	\[\Or_X(U)=\Hom_k(U,\A^1_k)\]
+	d'où si $k=\bar k$, $f^{-1}((0))$ est fermé.
+\end{enumerate}
+
+
+
+\chapter{Cinquième point : Séparation}
+\begin{defn}
+    Une variété algébrique $X$ est séparée si 
+    \[\Delta_X\colon X\to X\times_k X\]
+    est une immersion fermée.
+\end{defn}
+\section{Petit lemme}
+Quand la target est séparée, on a le critère usuel :
+\[f,g\colon Z\to X\textrm{ tels que }f|_U=g|_U\textrm{ pour un ouvert
+dense $U\subset Z$ alors $f=g$}\]
+Essentiellement, on a deux égalités à prouver $|f|=|g|$ qui est clair
+parce que $X$ est séparée. Et $f^\sharp=g^\sharp$.
 
 
 \chapter{Quatrième point : produits fibrés, cas des variétés abstraites}
@@ -243,7 +285,14 @@ immersion ouverte alors
 aussi (directement via les points d'avant).
 \section{Construction générale}
 Étant donné le fait que $X_i\times Y\cap X_j\cap Y=(X_i\cap X_j)\times Y$
-on peut recoller ! Et c'est ça la construction mdr.
+on peut recoller ! Et c'est ça la construction mdr. 
+
+\begin{prop}
+    La dimension de $X\times_k Y$ c'est $\dim(X)+\dim(Y)$.
+\end{prop}
+\begin{proof}
+    On se ramène facilement au cas affine puis par Noether c'est clair.
+\end{proof}
 
 
 \chapter{Troisième point : dimension}

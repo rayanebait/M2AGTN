@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.9.28)  11 NOV 2024 21:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.9.28)  12 NOV 2024 12:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -891,7 +891,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [4]
 \bbl@ensure@french {Chapitre} 1.
-[5
+LaTeX Font Info:    Trying to load font information for U+euf on input line 161.
+(/usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+) [5
 
 ]
 
@@ -901,30 +904,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[6
+[6]
+\bbl@ensure@french {Chapitre} 2.
+[7
 
 ]
-\bbl@ensure@french {Chapitre} 2.
 
-Overfull \hbox (31.5931pt too wide) in paragraph at lines 168--171
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[8
+
+]
+\bbl@ensure@french {Chapitre} 3.
+
+Overfull \hbox (31.5931pt too wide) in paragraph at lines 210--213
 \OT1/cmr/m/n/12 est une bi-jec-tion, en par-ti-c-ulier si $\OML/cmm/m/it/12 W \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 Spm\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 k\OT1/cmr/m/n/12 )$ on sait que $\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 X\OMS/cmsy/m/n/12 j ^^Y []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Spm\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 k\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; X\OT1/cmr/m/n/12 )$. 
  []
-
-[7]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[8]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [9]
 
@@ -934,14 +933,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[10
+[10]
 
-]
-\bbl@ensure@french {Chapitre} 3.
-
-Overfull \hbox (11.8028pt too wide) in paragraph at lines 269--272
-[]\OT1/cmr/m/n/12 Si on prends deux familles alg^^Sebriquement ind^^Sependantes et $\OML/cmm/m/it/12 K$ \OT1/cmr/m/n/12 alg^^Sebriques
- []
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [11]
 
@@ -951,17 +949,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[12]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 330.
- (/usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)
+[12
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+]
+\bbl@ensure@french {Chapitre} 4.
+
+Overfull \hbox (11.8028pt too wide) in paragraph at lines 318--321
+[]\OT1/cmr/m/n/12 Si on prends deux familles alg^^Sebriquement ind^^Sependantes et $\OML/cmm/m/it/12 K$ \OT1/cmr/m/n/12 alg^^Sebriques
+ []
 
 [13]
 
@@ -971,36 +966,36 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[14
+[14]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[15]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[16
 
 ]
-\bbl@ensure@french {Chapitre} 4.
+\bbl@ensure@french {Chapitre} 5.
 
-Overfull \hbox (6.20024pt too wide) in paragraph at lines 335--338
+Overfull \hbox (6.20024pt too wide) in paragraph at lines 384--387
 \OT1/cmr/m/n/12 ou $\OML/cmm/m/it/12 X$ \OT1/cmr/m/n/12 est un en-sem-ble alg^^Sebrique affine et $\OMS/cmsy/m/n/12 O[]$ \OT1/cmr/m/n/12 le fais-ceau de fonc-tions r^^Seguli^^Reres.
  []
 
-[15]
-Overfull \hbox (35.68901pt too wide) in paragraph at lines 369--373
+[17]
+Overfull \hbox (35.68901pt too wide) in paragraph at lines 418--422
 \OT1/cmr/m/n/12 a pour in-verse la pro-jec-tion $\OML/cmm/m/it/12 p [] [] \U/msb/m/n/12 A[] \OMS/cmsy/m/n/12 ! \U/msb/m/n/12 A[]$ \OT1/cmr/m/n/12 et il mon-tre que c'est un hom^^Seomorphisme
  []
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[16]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[17]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1024,22 +1019,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[20
+[20]
 
-]
-\bbl@ensure@french {Chapitre} 5.
-
-Overfull \hbox (5.3267pt too wide) in paragraph at lines 500--503
-[]\OT1/cmr/m/n/12 Quand y s'agit de mon-trer des iso-mor-phismes. La par-tie hom^^Seomorphisme
- []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 510.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 510.
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [21]
 
@@ -1049,13 +1035,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[22{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+[22
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+]
+\bbl@ensure@french {Chapitre} 6.
+
+Overfull \hbox (5.3267pt too wide) in paragraph at lines 549--552
+[]\OT1/cmr/m/n/12 Quand y s'agit de mon-trer des iso-mor-phismes. La par-tie hom^^Seomorphisme
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 559.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 559.
 
 [23]
 
@@ -1065,7 +1060,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[24]
+[24{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1081,13 +1076,29 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[26
+[26]
 
-]
-\bbl@ensure@french {Chapitre} 6.
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
 [27]
 
-LaTeX Warning: Empty bibliography on input line 736.
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[28
+
+]
+\bbl@ensure@french {Chapitre} 7.
+[29]
+
+LaTeX Warning: Empty bibliography on input line 785.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1096,30 +1107,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[28] (./homologie.aux)
+[30] (./homologie.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `homologie.out' has not changed.
-(rerunfilecheck)             Checksum: CD69BA1B6B49AE07ADE9562D3BB84E4B;7634.
+(rerunfilecheck)             Checksum: 993BCEA6E8AA999CDC0E1CE7A2F91084;8465.
 Package logreq Info: Writing requests to 'homologie.run.xml'.
 \openout1 = `homologie.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32077 strings out of 476076
- 617396 string characters out of 5793775
- 1945187 words of memory out of 5000000
- 53551 multiletter control sequences out of 15000+600000
+ 32099 strings out of 476076
+ 617750 string characters out of 5793775
+ 1946187 words of memory out of 5000000
+ 53562 multiletter control sequences out of 15000+600000
  572749 words of font info for 96 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 131i,15n,135p,682b,2209s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 131i,15n,135p,682b,2234s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on homologie.pdf (28 pages, 224091 bytes).
+Output written on homologie.pdf (30 pages, 230039 bytes).
 PDF statistics:
- 525 PDF objects out of 1000 (max. 8388607)
- 460 compressed objects within 5 object streams
- 152 named destinations out of 1000 (max. 500000)
- 333 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 564 PDF objects out of 1000 (max. 8388607)
+ 497 compressed objects within 5 object streams
+ 163 named destinations out of 1000 (max. 500000)
+ 373 words of extra memory for PDF output out of 10000 (max. 10000000)
 

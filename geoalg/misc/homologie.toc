@@ -7,7 +7,7 @@
 \contentsline {section}{\numberline {2.3}L'équivalence de catégorie avec schémas affines}{8}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}L'équivalence}{8}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Le morphisme sur les fibres}{9}{subsection.2.3.2}%
-\contentsline {chapter}{\numberline {3}Premières propriétés}{11}{chapter.3}%
+\contentsline {chapter}{\numberline {3}Notes de lecture du Shafarevich}{11}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Variété produit}{11}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Graphes}{12}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Les variétés projectives sont complètes}{13}{section.3.3}%

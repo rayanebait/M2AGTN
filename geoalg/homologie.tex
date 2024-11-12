@@ -460,7 +460,7 @@ rigoureusement, via $k[T_1,\ldots, T_n]_{(P)}/I_{(P)}$ avec $I_{(P)}=
 \end{defn}
 \chapter{Produits fibrés}
 Y'a des choses à rattraper, comme l'immersion fermée.
-\section{Séparation}
+\section{Séparation et propreté}
 \begin{defn}
     Une variété algébrique sur $k$ est séparée si l'image de 
     \[\delta=(id,id)\colon X\to X\times_k X\]
@@ -659,6 +659,209 @@ et $Y=Z(f)\subset X$. En plus \[dim T_{X,P}\geq dim T_{Y,P}+1\]
 car $T_{Y,P}\simeq (\m/f)/(\m/f)^2$. Avec $dim Y=dim X-1$, par 
 récurrence $dim T_{P,Y}\geq dim_P Y$ et on conclut.
 \end{proof}
+
+Étant donnés des générateurs de $I$, $(f_1,\ldots, f_r)$, on déf
+la jacobienne en $P$ par 
+\[J(P)=(\partial_j f_i(P))_{i,j}\]
+alors on a 
+\[\ker(J(P))= T_pX\]
+on a alors le critère jacobien :
+\begin{prop}
+    On a : 
+    \[\textrm{$X$ est lisse en $P$}\]
+    ssi
+    \[\textrm{$J(P)$ est de rang $n-\dim_P(X)$}\]
+    avec $f_i\in k[T_1,\ldots, T_n]$.
+\end{prop}
+\begin{proof}
+Directement on a $\dim T_PX=\dim_k \ker(J(X)_P)=n-rk(J(X)_P)$.
+\end{proof}
+\begin{cor}
+    Si $X=Z(F)\subset \A^n(k)$ alors $P$ est lisse si 
+    au moins un des $\partial_i F(P)$ est non nulle.
+\end{cor}
+\begin{proof}
+    On a $\dim_P(X)=n-1$ et la jacobienne est une ligne. Donc de 
+    rang $1$ ssi y'en a un qu'est non nul.
+\end{proof}
+\begin{exo}
+    L'ensemble des points lisse est ouvert.
+\end{exo}
+
+\begin{prop}
+    Soit $k(X)$ un corps de fonctions. Alors $k(X)$ est finie séparable
+    d'un $k(T_1,\ldots, T_n)$.
+\end{prop}
+\begin{proof}
+    Par la normalisation de Noether on trouve 
+    \[K=k(T_1,\ldots,T_n)\subset k(X)\]
+    supposons que l'extension n'est pas séparable. On note $L$
+    la clôture séparable de $K$ dans $k(X)$. On a $car(k)=p>0$. On prends
+    $\theta\in k(X)-L$ t.q. $\theta^p\in L$. On montre que $L(\theta)$
+    est séparable finie sur un $k(S_1,\ldots, S_n)$. 
+
+    Soit $H(S)=S^r+f_{r-1}S^{r-1}+\ldots+f_0\in K[S]$ le pol min de
+    $\theta^p$ sur $K$. Supposons que $f_i\in k(T_1^p,\ldots, T_n^p)$
+    alors $H(S^p)=G(S)^p$ et $G$ est un polynôme minimal séparable de 
+    $\theta$. D'où l'un des $f_i\notin k(T_1^p,\ldots, T_n^p)$. 
+    \begin{rem}
+	On peut pas dire directement que $H$ est séparable donc $H(S^p)$
+	est une puissance $p$-ème. Parce que $S^p-S$ par exemple.
+    \end{rem}
+    Si une puissance d'un $T_i$ non divisible par $p$ apparaît dans
+    un $f_i$, alors $T_i$ est algébrique sur 
+    $K_1=k(\theta,T_2,\ldots, T_n)$. (en prenant $T_i=T_1$)
+
+    Et en plus $L(\theta)$ est séparable sur $K_1(T_1)$ qui est séparable
+    sur $K_1$. Mais $K_1$ a le degré de transcendance de $L(\theta)$ 
+    qui est $n$. D'où $\theta,T_2,\ldots, T_n$ sont algébriquement
+    indépendants.
+\end{proof}
+\begin{rem}
+    Comparer avec la preuve de Sha. 
+\end{rem}
+Soit $R$ un anneau intègre et $K=Frac(R)$. On pose $H\in R[S]$ et
+$\Delta(H)=\prod(s_i-s_j)^2\in R$ son discriminant. Alors $H$ est
+séparable ssi $\Delta(H)\ne 0$.
+
+Maintenant si on note $\varphi\colon 
+R\to F$ (un morphisme de corps quelconque) et
+\[\tilde\varphi\colon R[S]\to F(S)\]
+alors $\Delta(\tilde\varphi(H))=\varphi(\Delta)$.
+
+\begin{lem}
+    Étant donné $H\in k[T_1,\ldots,T_n][S]$. Soit $X\in \A^n\times\A^1$
+    la variété associée. Si $\Delta=\disc(H)\in k[T_1,\ldots, T_n]$
+    alors \[X\cap D(\Delta)\]
+    est non vide et est l'ensemble des points lisses.
+\end{lem}
+\begin{rem}
+    Il suppose $H$ unitaire.
+\end{rem}
+\begin{proof}
+    Soit $q\in (\emptyset\ne) D(\Delta)\subseteq \A^n$. On note 
+    $\phi_q\colon k[T_1,\ldots, T_n]\to k$ t.q. $\phi_q(F)=F(q)$. Alors
+    si $s\in k$ est une racine de \[\tilde\phi_q(H)(S)\] on a 
+    $P=(q,s)\in X\cap D(\Delta)\ne \emptyset$. On regarde la jacobienne
+    de $H$ en $P$. On a 
+    \[\tilde\phi_q(H)(S)=\phi_q(\Delta)=\Delta(q)\ne 0\]
+    d'où $\tilde\phi_q(S)$ est séparable puis 
+    \[\partial_S H(P))=\tilde\phi(H)'(S)(s)\ne 0\]
+\end{proof}
+\begin{prop}
+    Le smooth locus est dense dans $X$.
+\end{prop}
+\begin{proof}
+    On prouve que tout les ouverts non vides contiennent un point lisse. 
+    On peut supposer $X$ affine intègre. On peut donc prendre le
+    corps de fonctions $k(X)$ et une extension séparable 
+    \[k(T_1,\ldots, T_n)\subset k(X).\]
+    On a donc $k(T_1,\ldots, T_n)(S)=k(T_1,\ldots, T_n)[S]/H(\bar T,S)$.
+    avec $H$ séparable en $S$. On se place sur un ouvert ou y'a pas
+    de dénominateurs. On a 
+    $\tilde H = g^{\deg(H)}H\in k[T_1,\ldots, T_n][gS]$ 
+    unitaire puis $k(\tilde H)=k(X)$ d'où on peut appliquer le résultat
+    à $\tilde H$.
+\end{proof}
+\section{Variétés normales}
+\begin{thm}
+    Soit $X$ une variété algébrique lisse en $P$. Alors
+    \begin{enumerate}
+	\item Il n'y a qu'une seule composante de $X$ passant par $P$.
+	\item Soit $U$ est ouvert affine connexe (implique intègre) 
+	    de $X$ alors $\Or_X(U)$ est intégralement clos. (dans 
+	    $Frac(\Or_X(U))$ qui est pas forcément $Frac(\Or_X(X))$.)
+	\item $\Or_{X,P}$ est factoriel.
+    \end{enumerate}
+\end{thm}
+\begin{rem}
+    On a 
+    \begin{enumerate}
+	\item Lisse + connexe implique intègre.
+	\item Si $\dim U=1$ alors $\Or_X(U)$ est de Dedekind.
+    \end{enumerate}
+\end{rem}
+\begin{prop}
+    Soit $P\in X$ et $d=\dim_P X$. Alors $X$ est lisse en $P$ ssi
+    pour tout voisinage ouvert petit affine de $P$, l'idéal $\m_P\subset
+    \Or_X(U)$ est généré par $d$ éléments. (Plus précisément 
+    $\m_P\Or_{X,P}$)
+\end{prop}
+\begin{proof}
+    Supposons que $\m$ est généré par $d$ éléments. Alors 
+    \[\m\to\m/\m^2\]
+    est généré par $d$ éléments en tant que $\Or_X(X)$-module d'où
+    en tant que $\Or_X(X)/\m$-module. Puis $\dim T_pX = d$.
+    À l'inverse si $X$ est lisse en $P$. On suppose $X$ affine. On
+    note $\m\subset A(X)$ l'idéal de $P$. On sait que $\m/\m^2$
+    est de dimension $d$ sur $A(X)/\m$, disons généré par $(\bar e_i)_i$.
+    D'où $\m=(e_1,\ldots, e_d)+\m^2$ puis 
+    $\m/(e_1,\ldots, e_d)+\m(\m/(e_1,\ldots,e_d)$. Par Nakayama il 
+    existe $f\notin \m$ tel que $f\m=(e_1,\ldots,e_d)$. D'où 
+    $\m A_f=(e_1,\ldots, e_d)A_f$. En particulier, 
+    $\m A_f$ est l'idéal maximal qui correspond à $P\in D(f)$.
+    D'où dans tout ouvert $U\subseteq D(f)$.
+\end{proof}
+\begin{cor}
+    Si $X$ est une courbe affine intègre. ALors $X$ est lisse ssi
+    $A(X)$ est de Dedekind.
+\end{cor}
+\begin{proof}
+    C'est juste que tout les localisés sont des DVR et on applique le
+    corollaire.
+\end{proof}
+\begin{defn}
+    $X$ est dite normale si pour tout les $U$ affine ouverts 
+    \[\textrm{$\Or_X(U)$ est intégralement clos}\]
+\end{defn}
+\begin{prop}
+    Si $X$ est affine, $A(X)$ intégralement clos implique $X$ normale.
+\end{prop}
+\begin{proof}
+    Étant donné $s\in k(X)$, on a $\Or_X(U)\hookrightarrow
+    A(X)_f$. D'où $f^rs$ est entier sur $A(X)$ donc $s\in A(X)_f$. 
+    Maintenant en prenant un recouvrement on a $s\in A(X)_{f_i}$. 
+    D'où par la propriété du faisceau $s\in \Or_X(U)$.
+\end{proof}
+\begin{rem}
+    La preuve rigoureuse doit utiliser la flèche canonique $\Or_X(U)
+    \to k(X)$.
+\end{rem}
+\begin{defn}
+    Une morphisme $X\to Y$ est affine si pour tout affine ouvert
+    $V$ de $Y$, $f^{-1}(V)$ est affine. Le morphisme est fini si
+    il est affine et pour tout ouvert affine $V\subseteq Y$ on a 
+    \[\textrm{$\Or_X(f^{-1}V)$ est fini sur $\Or_Y(V)$}\]
+\end{defn}
+\begin{rem}
+    On peut montrer que si il existe un recouvrement affine 
+    $Y=\cup_i V_i$ tq pour tout $i$, $f^{-1} V_i$ est affine (resp.
+    $\Or_Y(V)\to \Or_X(f^{-1}V)$ est fini) alors $f$ est affine
+    (resp. fini).
+\end{rem}
+
+\begin{defn}
+    Soit $X$ une variété intègre. La normalisation de $X$ est
+    une variété normale $X'$ muni d'un morphisme fini birationnel
+    \[X'\to X\]
+\end{defn}
+Soit $\phi\colon k(X)\to L$ une extension finie, la normalisation de 
+$X$ dans $L$ est un morphisme fini dominant
+\[\pi\colon X'\to X\]
+t.q $k(X')=L$, $X'$ est normal et $k(X)\to L$ est induit par $\pi$.
+\begin{prop}
+    Soit $A$ une $k$-algèbre intègre de type fini et $K=Frac(A)$.
+    Soit $B$ la clôture intégrale de $A$ dans $L$, $L$ une extension
+    finie de $K$. Alors $Frac(B)=L$ et $B$ est finie sur $A$.
+\end{prop}
+\begin{rem}
+    Si $L=K$, la normalisation est $Spm(\tilde A)\to Spm(A)$.
+\end{rem}
+\begin{ex}
+    Si $X=Z(T_1^2-T_2^3)\subseteq \A^2_k$. Alors
+    \[\A^1\to X\]
+    donné par $t\mapsto (t^3,t^2)$ est la normalisation.
+\end{ex}
 
 \printbibliography
 \end{document}

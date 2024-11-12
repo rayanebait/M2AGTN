@@ -1,41 +1,46 @@
 \babel@toc {french}{}\relax 
 \contentsline {chapter}{\numberline {1}Remarques générales}{5}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Quatrième point : produits fibrés, cas des variétés abstraites}{7}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Espace topologique sous jacent}{7}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Cas affine}{8}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Cas général : points techniques}{8}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Construction générale}{9}{section.2.4}%
-\contentsline {chapter}{\numberline {3}Troisième point : dimension}{11}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Les définitions}{11}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Définition topologique}{11}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Définition par les corps de fonctions}{11}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}Hypersurfaces}{12}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Cas affine}{12}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Cas intègre}{12}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Nombre d'équations d'un fermé}{13}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Dimension des fibres}{13}{subsection.3.2.4}%
-\contentsline {chapter}{\numberline {4}Deuxième point sur les cours : Variétés abstraites à la Weil}{15}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Premières définitions}{15}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Recollement de variétés}{17}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Sous-variétés}{18}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Variétés quasi-projectives abstraites}{18}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Le faisceau de fonctions régulières sur une variété projective}{19}{subsection.4.4.1}%
-\contentsline {chapter}{\numberline {5}Point sur le chapitre I : Variétés algébriques classiques}{21}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Résumé}{21}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Framework}{21}{section.5.2}%
-\contentsline {section}{\numberline {5.3}$k$-algèbres et Noether}{21}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Nullstellensatz}{23}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Topologie et irréductibles}{23}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Espaces projectifs}{24}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Fonctions régulières}{24}{section.5.7}%
-\contentsline {section}{\numberline {5.8}Morphismes de variétés affines, première déf}{25}{section.5.8}%
-\contentsline {chapter}{\numberline {6}Plan du cours}{27}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Variétés affines}{27}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Premières définitions}{27}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Nullstellensatz}{27}{subsection.6.1.2}%
-\contentsline {subsection}{\numberline {6.1.3}Topologie et irréductibles}{27}{subsection.6.1.3}%
-\contentsline {subsection}{\numberline {6.1.4}Espaces projectifs}{28}{subsection.6.1.4}%
-\contentsline {subsection}{\numberline {6.1.5}Fonctions régulières}{28}{subsection.6.1.5}%
-\contentsline {subsection}{\numberline {6.1.6}Morphismes d'ensembles algébriques}{28}{subsection.6.1.6}%
-\contentsline {section}{\numberline {6.2}Variétés affines abstraites}{28}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Espaces annelés}{28}{subsection.6.2.1}%
+\contentsline {section}{\numberline {1.1}Variétés vers schémas}{5}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Fonctions vs sections}{5}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Ambiguité du support}{6}{subsection.1.1.2}%
+\contentsline {chapter}{\numberline {2}Cinquième point : Séparation}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Petit lemme}{7}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Quatrième point : produits fibrés, cas des variétés abstraites}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Espace topologique sous jacent}{9}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Cas affine}{10}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Cas général : points techniques}{10}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Construction générale}{11}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Troisième point : dimension}{13}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Les définitions}{13}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Définition topologique}{13}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Définition par les corps de fonctions}{13}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Hypersurfaces}{14}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Cas affine}{14}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Cas intègre}{14}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Nombre d'équations d'un fermé}{15}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Dimension des fibres}{15}{subsection.4.2.4}%
+\contentsline {chapter}{\numberline {5}Deuxième point sur les cours : Variétés abstraites à la Weil}{17}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Premières définitions}{17}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Recollement de variétés}{19}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Sous-variétés}{20}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Variétés quasi-projectives abstraites}{20}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Le faisceau de fonctions régulières sur une variété projective}{21}{subsection.5.4.1}%
+\contentsline {chapter}{\numberline {6}Point sur le chapitre I : Variétés algébriques classiques}{23}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Résumé}{23}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Framework}{23}{section.6.2}%
+\contentsline {section}{\numberline {6.3}$k$-algèbres et Noether}{23}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Nullstellensatz}{25}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Topologie et irréductibles}{25}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Espaces projectifs}{26}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Fonctions régulières}{26}{section.6.7}%
+\contentsline {section}{\numberline {6.8}Morphismes de variétés affines, première déf}{27}{section.6.8}%
+\contentsline {chapter}{\numberline {7}Plan du cours}{29}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Variétés affines}{29}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Premières définitions}{29}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}Nullstellensatz}{29}{subsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.1.3}Topologie et irréductibles}{29}{subsection.7.1.3}%
+\contentsline {subsection}{\numberline {7.1.4}Espaces projectifs}{30}{subsection.7.1.4}%
+\contentsline {subsection}{\numberline {7.1.5}Fonctions régulières}{30}{subsection.7.1.5}%
+\contentsline {subsection}{\numberline {7.1.6}Morphismes d'ensembles algébriques}{30}{subsection.7.1.6}%
+\contentsline {section}{\numberline {7.2}Variétés affines abstraites}{30}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Espaces annelés}{30}{subsection.7.2.1}%

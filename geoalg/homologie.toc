@@ -10,6 +10,7 @@
 \contentsline {section}{\numberline {1.8}Variétés projectives}{12}{section.1.8}%
 \contentsline {chapter}{\numberline {2}Dimension}{13}{chapter.2}%
 \contentsline {chapter}{\numberline {3}Produits fibrés}{15}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Séparation}{15}{section.3.1}%
+\contentsline {section}{\numberline {3.1}Séparation et propreté}{15}{section.3.1}%
 \contentsline {chapter}{\numberline {4}Espace tangent}{17}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Variétés lisses}{18}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Variétés normales}{21}{section.4.2}%
