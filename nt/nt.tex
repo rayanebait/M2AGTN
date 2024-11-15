@@ -1127,6 +1127,316 @@ Topologiquement, ca ressemble à un revêtement.
     $\Or_L=\Z_p[\zeta_n]$ et est non ramifiée sur $\Z_p$ par le
     corollaire précédent.
 \end{ex}
+
+
+\section{Extensions monogènes}
+À rattraper : étant donné $K-L$ finie de corps valués discrets.
+Supp. $\Or_K-\tilde\Or_K$ est finie. Sous des hypothèses modestes,
+$\tilde\Or_K$ est monogène sur $\Or_K$. Par exemple,
+
+\begin{enumerate}
+    \item Si $K$ est complet et $L$ est totalement ramifiée 
+        ($[L:K]=e$, et l'extension résiduelle est triviale.).
+        Alors $\Or_L=\Or_K[\alpha]$ pour un $\alpha$ 
+        annulé par un polynôme d'Eisenstein ($v(a_i)>0,v(a_0)=1$).
+        Si en plus $L/K$ est modérée, ($e_{L/K}\wedge char(k)=1$
+        ou $char(k)=0$. On peut prendre $\alpha^n-\pi_K=0$).
+\end{enumerate}
+\begin{lem}
+    Si $K$ est complet, et on a une extension
+% https://q.uiver.app/#q=WzAsNSxbMCwwLCJLIl0sWzIsMCwiTCJdLFswLDEsImsiXSxbMSwxLCJrJyJdLFsyLDEsImtfTCJdLFswLDFdLFsyLDNdLFszLDRdLFswLDIsIiIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMSw0LCIiLDEseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV1d
+\[\begin{tikzcd}
+	K && L \\
+	k & {k'} & {k_L}
+	\arrow[from=1-1, to=1-3]
+	\arrow[no head, from=1-1, to=2-1]
+	\arrow[no head, from=1-3, to=2-3]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+\end{tikzcd}\]
+    avec $k'/k$ séparable. Alors il existe une
+    unique extension $L/K'/K$ t.q $k_{K'}=k'$.
+    Avec $K'/K$ non ramifiée.  
+\end{lem}
+\begin{lem}
+    On prends maintenant $e'|e_{L/K}$,
+    avec $e'$ premier à $char(k)$. Avec
+    $k_K-k_L$ purement inséparable. Alors
+    il existe un lift unique $L/K'/K$ t.q.
+    $k_K=k_{K'}$ et $K'/K$ est de degré $e'$
+    totalement ramifiée.
+
+\end{lem}
+\begin{thm}
+    Soit $K$ un corps complet et $L/K$ finie.
+    On considère
+% https://q.uiver.app/#q=WzAsNSxbMCwwLCJLIl0sWzIsMCwiTCJdLFswLDEsImsiXSxbMSwxLCJrJyJdLFsyLDEsImtfTCJdLFswLDFdLFsyLDMsInNlcCIsMl0sWzMsNF0sWzAsMiwiIiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxLDQsIiIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=
+\[\begin{tikzcd}
+	K && L \\
+	k & {k'} & {k_L}
+	\arrow[from=1-1, to=1-3]
+	\arrow[no head, from=1-1, to=2-1]
+	\arrow[no head, from=1-3, to=2-3]
+	\arrow["sep"', from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+\end{tikzcd}\]
+    On a 
+    \begin{enumerate}
+        \item Pour tout $k'\subset k_L$ séparable sur $k$
+            il existe une unique $K-K'-L$ une unique
+            sous extension non ramifiée $K-K'-L$ de corps
+            résiduel $=k'$.
+        \item Il existe une plus grande sous-extension non ramifiée
+            $K\subset K^u\subset L$ de $K$.
+        \item Il existe une plus grande sous-extension modérément 
+            ramifiée de $L$.
+    \end{enumerate}
+    On obtient $K-K^{un}-K^{tam}-L$ avec $[L:K^{tam}]$ une 
+    puissance de $p$.
+\end{thm}
+\begin{proof}[Preuve de 1.]
+    \textbf{ Existence} : on trouve un élément primitif de 
+    $k'/k$ séparable finie.
+    D'où $k'=k(\theta)$, on trouve $P\in \Or_K[X]$ t.q
+    $\theta$ est une racine de $\bar P$. Comme $P$ irréd
+    sur $k$. Alors irréd sur $\Or_K$ (TD6). Comme $\bar P$ 
+    est séparable, en regardant $P\in \Or_L[X]$ on peut 
+    lift $\theta$ par Hensel. Disons en $\alpha$.
+    On a en plus $K'=K[\alpha]/K$ et $\Or_K[\alpha]=\Or_{K'}$
+    car non ramifiée et $k'=k(\theta)=k_{K'}$.
+
+    \textbf{Unicité :} Si $K''/K$ est une autre extension t.q $k_{K''}=k'=k(\theta)$.
+    Alors $\theta$ lift en une racine $\alpha'\in K''\subset L$.
+    Le lemme dans Hensel dans $L$ fournit le même $\alpha'=\alpha$.
+    Maintenant $K'$ et $K''$ ont la même dimension, 
+    \[[K':K]=[k':k]=[K'':K]\]
+\end{proof}
+\begin{proof}[Preuve de 2.]
+    Soit $k'=k^s$ la clôture séparable de $k$
+    dans $k_L$. Alors on pose $K^{un}$ l'unique
+    extension non ramifiée t.q. $k_{K^{un}}=k^s$.
+    Si $K-K'-L$ est une extension non ramifiée, alors 
+    $k\subset k_{K'}\subset k^s\subset k_L$. Il existe 
+    \[K\subset K''\subset K^{un}\]
+    t.q. $k_{K''}=k_{K'}$. On obtient deux sous-extensions
+    non ramifiée de corps résiduels $k_{K'}$ on conclut
+    par $1.$.
+\end{proof}
+\begin{proof}[Preuve de 3.]
+    On a tjr $e_{L/K}=e_{L/K^{un}}$. On supp 
+    $char(k)>0$ sinon $K^{tam}=L$. Soit $e'$
+    le plus grand diviseur de $e$ non divisible
+    par $p$. Par le lemme précédent on a 
+% https://q.uiver.app/#q=WzAsNixbMCwwLCJLXnt1bn0iXSxbMiwwLCJMIl0sWzAsMSwia15zIl0sWzEsMSwia15zIl0sWzIsMSwia19MIl0sWzEsMCwiS157dGFtfSJdLFsyLDNdLFszLDRdLFsxLDQsIiIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCw1LCJlJyIsMV0sWzUsMV0sWzAsMiwiIiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
+\[\begin{tikzcd}
+	{K^{un}} & {K^{tam}} & L \\
+	{k^s} & {k^s} & {k_L}
+	\arrow["{e'}"{description}, from=1-1, to=1-2]
+	\arrow[no head, from=1-1, to=2-1]
+	\arrow[from=1-2, to=1-3]
+	\arrow[no head, from=1-3, to=2-3]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+\end{tikzcd}\]
+    On a $K^{tam}/K^{un}$ est totalement modérément
+    ramifiée. Et $K^{un}/K$ est non ramifiée sur $K$.
+    D'où $K^{tam}/K$ est modérément ramifiée.
+    On montre que c'est la plus grande, si on a $F/K$
+    modérée et $F\subset L$ on considère $F^{un}/K$
+    non ramfiée et remplacer $F$ par $F^{un}$. On
+    a $k_F=k^s$ et par $1.$ on obtient 
+    \[K^{un}\subset F\subset L\]
+    par la preuve précédente le lift de $\theta$ le 
+    générateur $K^{un}$ est dans $F$ (on peut prendre
+    le pol a coeff dans $\Or_F[X]$.)
+
+    Maintenant la preuve découle de l'unicité dans le 
+    lemme précédent.
+\end{proof}
+
+\begin{cor}
+    Soit $L/K$ finie et $K$ complet. On a 
+% https://q.uiver.app/#q=WzAsNixbMiwwLCJLXnt1bn0iXSxbNiwwLCJMIl0sWzQsMCwiS157dGFtfSJdLFswLDAsIksiXSxbNCwxLCJrX3tLXnt0YW19fSJdLFs2LDEsImtfTCJdLFswLDIsIm1vZCt0b3QiLDJdLFsyLDEsIltMOktee3RhbX1dPXBeciIsMl0sWzMsMCwibm9ufnJhbWlmacOpZSIsMl0sWzQsNSwidG90fmluc8OpcCIsMV0sWzIsNCwiIiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxLDUsIiIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=
+\[\begin{tikzcd}
+	K && {K^{un}} && {K^{tam}} && L \\
+	&&&& {k_{K^{tam}}} && {k_L}
+	\arrow["{non~ramifiée}"', from=1-1, to=1-3]
+	\arrow["{mod+tot}"', from=1-3, to=1-5]
+	\arrow["{[L:K^{tam}]=p^r}"', from=1-5, to=1-7]
+	\arrow[no head, from=1-5, to=2-5]
+	\arrow[no head, from=1-7, to=2-7]
+	\arrow["{tot~insép}"{description}, from=2-5, to=2-7]
+\end{tikzcd}\]
+\end{cor}
+
+\begin{ex}
+    Soit $K=\Q_p$,$L=\Q_p(\zeta_{p^r})$ et $r\geq 1$.
+    On a $\Q_p-\Q_p(\zeta_p)$ est modérément totalement
+    ramifiée de degré $p-1$. Maintenant par l'exam
+    \[[L:\Q_p(\zeta_p)]=p^{r-1}\]
+    est sauvagement totalement ramifiée. On pouvait 
+    écrire explicitement 
+    $\lambda_{p^r}^{p^{r-1}}=\lambda_p(1+\epsilon)$
+    avec $1+\epsilon$ une unité.
+
+    On obtient $\Q_p^{un}=\Q_p$ et $\Q_p^{tam}=\Q_p(\zeta_p)$.
+    Le polynôme d'Eisenstein est donné par 
+    \[1+\lambda_p=(1+\lambda_{p^r})^{r-1}\]
+\end{ex}
+
+\section{Théorie de Galois}
+Si on a $L/F/K$ avec $L/F$ galoisienne 
+alors $F/K$ est galoisienne ssi $Gal(L/K).F\subset F$.
+Et cette dernière condition fournie la suite exacte
+\[1\to Gal(L/F)\to Gal(L/K)\to Gal(F/K)\to 1\]
+Maintenant $L/K$ est normale ssi $K^s/K$ est galoisienne.
+Et $Aut_K(L)=Gal(K^s/K)$. Aussi $K\subset L\subset \tilde L$
+avec $\tilde L/K$ normale est galoisienne si $L/K$ est séparable.
+Il existe de telles extensions minimales.
+
+Maintenant si on regarde une extension galoisienne
+finie $L/K$ et $K$ de valuation discrète. Alors
+\[\Or_K\to \tilde\Or_K\]
+et finie et $\tilde\Or_K$ est semi-local de Dedekind.
+Maintenant $G=Gal(L/K)$ agit sur $Spm(\tilde\Or_K)$
+et on a
+\begin{prop}
+    $G$ agit transitivement sur $\tilde\Or_K$.
+\end{prop}
+\begin{lem}[Lemme d'évitement]
+    Soit $A$ un anneau commutatif et 
+    $\p_1,\ldots,\p_n$ des idéaux premiers.
+    Supp $\p_1\nsubset \p_i$ pour tout $i\geq2$.
+    Alors $\p_1\nsubset \cup_i \p_i$.
+\end{lem}
+\begin{proof}[Preuve du lemme]
+    Dans le cas des idéaux maximaux, c'est un
+    CRT direct. Le cas $n=3$ est plutôt simple ?
+    Sinon, par induction.
+\end{proof}
+\begin{proof}[Preuve de la proposition]
+    On fixe un idéal maximal $\m$ et on suppose 
+    qu'il existe $\m'$ t.q. $\m\ne \sigma(\m')$ pour tout 
+    $\sigma$. On obtient $x\in\m-\cup \sigma(\m')$.
+    Maintenant $N_{L/K}(x)\in \m_K\subset \m\cap \sigma(\m')$
+    d'où on a pour un $\m'$, $\sigma_0(x)\in \m'$ d'où
+    $x\in \sigma_0^{-1}(\m')$. Ce qui contredit l'hyptohèse.
+\end{proof}
+
+\begin{defn}
+    Soit $\m$ un idéal maximal de $\tilde \Or_K$, on 
+    définit $D_\m=\{\sigma(\m)=\m\}$ le groupe de décom-
+    position de $\m$. 
+\end{defn}
+On remarque que $D_\m$ agit sur $(\tilde\Or_K)_{\m}$
+d'où sur le corps résiduel $\tilde\Or_K/\m=:k_\m$.
+Si $\sigma\in D_\m$ et $\alpha\in\tilde\Or_K$ alors
+\[\sigma(\bar\alpha)=\bar(\sigma(\alpha))\]
+est bien défini. On obtient
+$D_\m\to Aut_k(k_\m)$ et on note 
+$I_\m$ le noyau tel que 
+\[1\to I_\m\to D_\m\to Aut_k(k_\m)\]
+c'est le groupe d'inertie en $\m$.
+\begin{cor}
+    Il existe une bijection entre les idéaux maximaux
+    et les coset $G/D_\m$ donnée par 
+    \[G\to Spm(\tilde\Or_K)\]
+    \[\sigma\mapsto \sigma(\m)\]
+\end{cor}
+\begin{rem}
+    Si $\sigma_0(\m)=\m'$ alors 
+    \[D_{\m'}=\sigma_0D_\m\sigma_0^{-1}\]
+    et
+    \[I_{\m'}=\sigma_0I_\m\sigma_0^{-1}\]
+\end{rem}
+\begin{cor}
+    Les indices de ramifications et les degrés
+    résiduels sont égaux à tout les
+    premiers. 
+\end{cor}
+On va montrer qu'en fait 
+\[1\to I_\m\to D_\m\to Aut_k(k_\m)\]
+s'étend en 
+\[1\to I_\m\to D_\m\to Aut_k(k_\m)\to 1\]
+\begin{lem}
+    L'extension $k_\m/k$ est normale.
+\end{lem}
+\begin{proof}
+    On montre que pour tout $\theta\in k_\m$, ses 
+    conjugués sont dans $k_\m$. On lift en un $\alpha$
+    dans $\tilde\Or_K$. G agit sur le polynôme min $P$ 
+    d'où $P\in \Or_K[X]$. Puis $\bar P\in k[X]$ (car unitaire).
+    D'où le polynome minimal de $\theta$ divise $P$ qui est 
+    split dans $k_\m$ par réduction.
+\end{proof}
+\begin{prop}
+    On montre que la s.e.c est exacte.
+\end{prop}
+\begin{proof}
+    On a vu que $k_\m/k$ est normale. On
+    note $k_\m^s$ la clôture séparable. Alors
+    $k_\m^s/k$ est galoisienne et $Aut_k(k_\m)=
+    Gal(k_\m^s/k)$. On écrit $\k_\m^s=k[\theta]$.
+    Soit $\tau\in Gal(k_\m^s/k)$, $\tau$ est 
+    déterminé par $\tau(\theta)$. On note
+    $r\colon D_\m\to Aut_k(k_\m)$, on montre
+    qu'il existe $\sigma\in D_\m$ tq 
+    \[r(\sigma)(\theta)=\tau(\theta)\]. On lift
+    $\theta$ en $\alpha\in \tilde\Or_K$. Alors
+    $r(\sigma)(\alpha)=\overline{\sigma(\alpha)}$.
+
+
+    On prends $P=\prod (X-\sigma(\alpha))\in \Or_K[X]$,
+    et on a $\bar P(\theta)=0$. Maintenant les conjugués
+    de $\theta$ sont des racines de $\bar P$, qui sont
+    des conjugués de $\alpha$. On a $\tau(\theta)=\sigma(\alpha)$
+    pour un $\sigma\in G$, reste à trouver $\sigma\in D_\m$. 
+    On peut le trouver en choisissant $\alpha$ mieux.
+
+    Plutôt que la flèche du haut dans 
+    % https://q.uiver.app/#q=WzAsNCxbMCwwLCJcXHRpbGRlXFxPcl9LIl0sWzEsMCwia19cXG0iXSxbMCwxLCJcXHRpbGRlXFxPcl9LIl0sWzEsMSwiXFxwcm9kX1xcbSBcXHRpbGRlXFxPcl9LL1xcbSJdLFswLDFdLFsyLDNdXQ==
+\[\begin{tikzcd}
+	{\tilde\Or_K} & {k_\m} \\
+	{\tilde\Or_K} & {\prod_\m \tilde\Or_K/\m}
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=2-1, to=2-2]
+\end{tikzcd}\]
+    on la factorise par la flèche du bas. Et on prends 
+    $\alpha$ tel que $\alpha=0$ modulo les autres premiers.
+    Reste à voir que les $\sigma\in G$ tels que 
+    $\overline{\sigma(\alpha)}=\tau(\theta)$ sont dans $D_\m$.
+    Par construction, $\alpha\in \m'$ pour $\m'\ne\m$. D'où
+    si $\sigma\notin D_\m$ alors $\sigma^{-1}\m=\m'\ne\m$ puis
+    $\sigma^{-1}\sigma\alpha\in \m'$, d'où $\sigma(\alpha)=0\mod \m$.
+    Ce qui est contradictoire si $k_\m^s\ne k$.
+\end{proof}
+Maintenant on peut regarder la tour 
+\[K-L^{D_\m}-L^{I_\m}-L\]
+et $\m$ correspond a une valeur absolue de $K$ à $L$,
+$|.|_\m$. On note les deux restrictions par $|.|_D$ et
+$|.|_I$.
+\begin{thm}
+    On a 
+    \begin{enumerate}
+        \item $(K,|.|_K)-(L^D,|.|_D)$ a indice de 
+            ramification $1$ et une extension de 
+            corps résiduels trivial.
+        \item $(L^D,|.|_D)-(L^I,|.|_I)$ est non
+            ramifiée et d'extension de corps 
+            résiduels $k-k_\m$.
+        \item $(L^I,|.|_I)-(L,|.|_L)$ est d'indice
+            de ramification $|D_\m|$ et l'extension
+            de corps résiduels est purement
+            inséparable.
+    \end{enumerate}
+\end{thm}
+\begin{rem}
+    $L^I/K$ est alors non ramifiée et $L^I/L^D$
+    est galoisienne non ramifiée.
+\end{rem}
+
+
+
 \printbibliography
 \end{document}
 

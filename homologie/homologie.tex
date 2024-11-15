@@ -2066,9 +2066,294 @@ On pose $R^nF(A)=H^n(F(I^\bullet))\in Dat$.
     avec un morphisme $F\to T^0$.
 \end{cor}
 
+\begin{defn}
+    Soit $F\colon \Cat\to \Dat$ exact à gauche et $\Cat$ a assez d'inj.
+    Un objet $C\in\Cat$ est $F$-acyclique si pour tout $n>0$ :
+    \[R^nF(C)=O_\Dat\]
+\end{defn}
+\begin{rem}
+    Les injectifs sont $F$-acycliques pour tout $F$.
+\end{rem}
+\begin{defn}
+    Une résolution $F$-acyclique de $A\in\Cat$ est une résolution
+    faite d'acycliques.
+\end{defn}
+
+\begin{prop}
+    Soit $A\in\Cat$, $A\to C^\bullet$ une résolution $F$-acyclique,
+    et $A\to I^\bullet$ une résolution injective. On a une extension
+    de $id_A$ en $C^\bullet\to I^\bullet$ unique à homotopie près. 
+    Alors la flèche \[F(C^\bullet)\to F^(I^\bullet)\] est un 
+    quasi-isomorphisme 
+    \[H^n(F(C^\bullet))\simeq H^n(F(I^\bullet))=R^nF(A)\]
+\end{prop}
+\begin{proof}
+    Utilise les suites spectrales.
+\end{proof}
+
+\chapter{Cohomologie des faisceaux}
+\section{Définition}
+Soit $X$ un e.t. et $PSh_{Ab}(X)$ (resp. $Sh_{Ab}(X)$) la catégorie des
+préfaisceaux en groupes abéliens. 
 
 
+\begin{rem}
+On va définir \[R^n\Gamma(X,\F)=:H^n(X,\F)\]
+y faut prouver que $Sh(X)$ est une catégorie abélienne, a assez 
+d'injectifs et que $\Gamma(X,\_)$ est exact à gauche.
+\end{rem}
 
+\begin{prop}
+    Les limite et les colimites existent dans $PSh(X)$ et sont calculées
+    arguments par arguments. 
+\end{prop}
+\begin{proof}[Idées de démonstration]
+    Soit $F\colon I\to PSh(X)$ un foncteur d'une petite catégorie $I$.
+    Alors pour tout $U\in Ouv(X)$ :
+    \[(\varinjlim_I(F_i))(U)=\varinjlim_I(F_i(U))\]
+    et 
+    \[(\varprojlim_I(F_i))(U)=\varprojlim_I(F_i(U))\]
+    maintenant on peut définir les préfaisceaux 
+    $U\mapsto \varprojlim_I(F_i(U))=:F_\infty$
+    par la condition d'avant. Faut montrer que c'est un faisceau.
+    Pour tout $i\in I$ on a une flèche $F_\infty(U)\to F_i(U)$
+    fonctorielle en $U$ d'où $F_\infty\to F_i$ dans $PSh(X)$.
+    Maintenant si $L\in PSh(X)$ est un cône on obtient $L(U)\to F_i(U)$
+    donc $L(U)\to F_\infty(U)$ fonctoriel en $U$. D'où $L\to F_\infty$
+    ce qui prouve que $F_\infty$ est bien universel. 
+
+\end{proof}
+\begin{cor}
+    $PSh_{Ab}(X)$ est abélienne, et même $PSh(X)$ sur une catégorie
+    abélienne.
+\end{cor}
+\begin{proof}
+    On a le faisceau nul. Le produit/coproduit est une limite/colimite
+    et on a l'isomorphisme entre coproduit et produit. On en déduit que 
+    \[\Hom_{PSh(X)}(F,G)\]
+    est un monoide commutatif. On définit 
+    facilement les inverses terme à terme donc c'est un groupe. 
+
+    On a montré que $PSh(X)$ est additive. 
+
+    Maintenant les noyaux et conoyaux existent. Reste à voir le 
+    théorème d'isomorphisme. On l'a clairement terme à terme.
+\end{proof}
+
+\begin{cor}
+    $Sh(X)$ est abélienne.
+\end{cor}
+\begin{proof}
+    Via l'adjonction $(\_)^\sharp\colon PSh(X)\leftrightarrow Sh(X):i$.
+    On a $(\_)^\sharp\circ i=id_{Sh(X)}$ et, $i$ préserve les limites,
+    $(\_)^\sharp$ préserve les colimites (en tant qu'adjoint à droite).
+    Étant donné un diagramme dans $Sh(X)$ : $(F_k)$ on le pousse dans 
+    $PSh(X)$ en $i(F_k)$ pour obtenir une limite $\varinjlim_ki( F_k)$.
+    Maintenant 
+    \[0\to F_k(U\cup V)\to F_k(U)\oplus F_k(V)\to F_k(U\cap V)\]
+    passe à la limite (le noyau est une limite) d'où 
+    \[\textrm{$\varprojlim_k i(F_k)$ est un faisceau}\]
+    et $(\varprojlim_k(i(F_k)))^\sharp=\varprojlim_k F_k$. D'où
+    $(\_)^\sharp$ préserve les colimites et les limites de diagrammes
+    de la forme 
+    \[I\to Sh(X)\to PSh(X)\]
+    en particulier l'objet $0$. 
+
+    Maintenant si $\F,\G\in Sh(X)$ alors 
+    \[(i(\F)\oplus i(\G))^\sharp=\F\oplus \G\]
+    est une somme directe dans $Sh(X)$. Pareil on récupère le noyau
+    et conoyau par faisceautisation. Les $\Hom$ sont clairement des
+    groupes abéliens car sont les mêmes que dans $PSh$. Enfin le
+    théorème d'isomorphisme se déduit sur les fibres par exemple.
+\end{proof}
+
+\begin{prop}
+    $Sh(X)$ a assez d'injectifs.
+\end{prop}
+\begin{proof}
+    DM.
+\end{proof}
+
+\begin{prop}
+    Pour tout $U\in Ouv(X)$, $\Gamma_U$ est exact à gauche.
+\end{prop}
+\begin{proof}
+    DM. 
+\end{proof}
+\begin{defn}
+    Soit $\F\in Sh(X)$. Les groupes de cohomologie de $X$ a coefficients
+    dans $\F$ sont les $H^n(X,\F)=R^n\Gamma(X,\F)$.
+\end{defn}
+\begin{rem}
+    Comment les calculer ? On prends une résolution injective
+    \[\F\to I^\bullet\]
+    dans $Sh(X)$. On applique $\Gamma(X,\_)$ :
+    \[0\to I^0(X)\to I^1(X)\to \ldots\]
+    puis $H^n(X,\F):=H^n(I^\bullet(X))$. Si $\F\to C^\bullet$
+    est acyclique on calcule de la même manière la cohomologie.
+\end{rem}
+\begin{exo}
+    Si on prends le faisceau constant $\underline A$ sur un point,
+    alors $H^n(\{x\},\underline A)$ c'est une cohomologie des groupes?
+\end{exo}
+
+\begin{ex}
+    Si $M$ est une variété différentielle de dimension $d$ et 
+    $\R$ le faisceau constant sur $M$. Le lemme de poincaré montre que
+    \[0\to \R\to \Omega^0\to \Omega^1\to \ldots\to \Omega^d\to 0\]
+    est une résolution de $\R$. On peut montrer que $\Omega^n$
+    est $\Gamma_M$ acyclique d'où
+\[H^n(M,\R)=H^n(\Omega^\bullet(M))=H^n_{dR}(X)\]
+    est la cohomologie de DeRham.
+\end{ex}
+\section{Faisceaux flasques}
+Soit $X$ un espace topologique. On montre que les faisceaux flasques
+sont acycliques pour $\Gamma(X,\_)$.
+
+\begin{prop}
+    Si on a une suite exacte courte $0\to \F'\to \F\to \F''\to$ 
+    dans $Sh(X)$ et si on supp $\F'$ flasque, alors
+    \[0\to \F'(U)\to \F(U)\to \F''(U)\to 0\]
+    est exacte dans $Ab$.
+\end{prop}
+\begin{proof}
+    DM.
+\end{proof}
+\begin{cor}
+    Soit $0\to \F'\to \F\to \F''\to 0$ une s.e.s dans $Sh(X)$, alors
+    si $\F$ et $\F''$ sont flasques, $\F''$ aussi.
+\end{cor}
+\begin{proof}
+    Soit $V\subseteq U\subseteq X$ des ouverts. On a une suite exacte
+    et un diagramme 
+% https://q.uiver.app/#q=WzAsMTAsWzAsMCwiMCJdLFsxLDAsIlxcRihVKSJdLFsyLDAsIlxcRihVKSJdLFszLDAsIlxcRicnKFUpIl0sWzQsMCwiMCJdLFswLDEsIjAiXSxbNCwxLCIwIl0sWzEsMSwiXFxGJyhWKSJdLFsyLDEsIlxcRihWKSJdLFszLDEsIlxcRicnKFYpIl0sWzAsMV0sWzEsMl0sWzMsNF0sWzIsM10sWzUsN10sWzcsOF0sWzgsOSwiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzMsOV0sWzksNl0sWzIsOCwiIiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzEsN10sWzIsOSwiIiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV1d
+\[\begin{tikzcd}
+	0 & {\F(U)} & {\F(U)} & {\F''(U)} & 0 \\
+	0 & {\F'(V)} & {\F(V)} & {\F''(V)} & 0
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=1-3, to=1-4]
+	\arrow[two heads, from=1-3, to=2-3]
+	\arrow[two heads, from=1-3, to=2-4]
+	\arrow[from=1-4, to=1-5]
+	\arrow[from=1-4, to=2-4]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow[two heads, from=2-3, to=2-4]
+	\arrow[from=2-4, to=2-5]
+\end{tikzcd}\]
+    dans $Ab$. D'où $\F(U)\to \F''(V)$ est surjective d'où 
+    $\F''(U)\to \F''(V)$ aussi.
+\end{proof}
+\begin{prop}
+    Soit $\F\in Sh(X)$. Il existe un faisceau flasque $C^0(\F)$
+    et un mono $\F\to C^0(\F)$. La construction est fonctorielle.
+\end{prop}
+\begin{proof}
+    On a $C^0(\F)(U):=\prod_{x\in U} \F_x$. Et 
+    \[\F(U)\to \prod_{x\in U} \F_x\]
+    est injective. Maintenant $C^0(\F)(U)\to C^0(\F)(V)$ est surjective.
+\end{proof}
+
+\begin{prop}
+    Tout faisceau injectif sur $X$ est flasque.
+\end{prop}
+\begin{proof}
+    Soit $I$ un faisceau injectif sur $X$. On a 
+% https://q.uiver.app/#q=WzAsNSxbMCwwLCIwIl0sWzEsMCwiSSJdLFsyLDAsIkNeMChJKSJdLFswLDEsIjAiXSxbMSwxLCJJIl0sWzAsMV0sWzEsMiwiXFxhbHBoYSJdLFszLDRdLFsxLDQsImlkIiwxXSxbMiw0LCJcXGV4aXN0IHIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0=
+\[\begin{tikzcd}
+	0 & I & {C^0(I)} \\
+	0 & I
+	\arrow[from=1-1, to=1-2]
+	\arrow["\alpha", from=1-2, to=1-3]
+	\arrow["id"{description}, from=1-2, to=2-2]
+	\arrow["{\exists r}"{description}, dashed, from=1-3, to=2-2]
+	\arrow[from=2-1, to=2-2]
+\end{tikzcd}\]
+    Puis pour tout $U$ on a un diagramme induit 
+% https://q.uiver.app/#q=WzAsNSxbMCwwLCIwIl0sWzEsMCwiSShVKSJdLFsyLDAsIkNeMChJKShVKSJdLFswLDEsIjAiXSxbMSwxLCJJKFUpIl0sWzAsMV0sWzEsMiwiXFxhbHBoYSJdLFszLDRdLFsxLDQsImlkIiwxXSxbMiw0LCJyKFUpIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV1d
+\[\begin{tikzcd}
+	0 & {I(U)} & {C^0(I)(U)} \\
+	0 & {I(U)}
+	\arrow[from=1-1, to=1-2]
+	\arrow["\alpha", from=1-2, to=1-3]
+	\arrow["id"{description}, from=1-2, to=2-2]
+	\arrow["{r(U)}"{description}, dashed, from=1-3, to=2-2]
+	\arrow[from=2-1, to=2-2]
+\end{tikzcd}\]
+    d'où $r(U)$ est surjectif pour tout $U\subseteq X$. Pour tout 
+    $V\subseteq U\subseteq X$, on a le diagramme commutatif
+% https://q.uiver.app/#q=WzAsNCxbMCwwLCJDXjAoSSkoVSkiXSxbMiwwLCJJKFUpIl0sWzAsMSwiQ14wKEkpKFYpIl0sWzIsMSwiSShWKSJdLFswLDEsInIoVSkiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMCwyLCIiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMSwzXSxbMCwzLCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMiwzLCIiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XV0=
+\[\begin{tikzcd}
+	{C^0(I)(U)} && {I(U)} \\
+	{C^0(I)(V)} && {I(V)}
+	\arrow["{r(U)}", two heads, from=1-1, to=1-3]
+	\arrow[two heads, from=1-1, to=2-1]
+	\arrow[two heads, from=1-1, to=2-3]
+	\arrow[from=1-3, to=2-3]
+	\arrow[two heads, from=2-1, to=2-3]
+\end{tikzcd}\]
+    on en déduit que $I$ est flasque.
+\end{proof}
+\begin{prop}
+    Soit $\F$ flasque sur $X$. Alors $\F$ est $\Gamma(U,\_)$-acyclique
+    pour tout $U\in Ouv(X)$.
+\end{prop}
+\begin{proof}
+    On prends $\F\to I^\bullet$ injective. On considère la
+    suite exacte courte 
+    \[0\to\F\to I\to I/\F\to 0\]
+    On a vu que $\F$ et $I$ sont flasques. D'où $I/\F$ aussi.
+    Soit $U\in Ouv(X)$. Alors la famille 
+    \[(R^n\Gamma(U,\_))_{n\geq 0}\]
+    est un foncteur cohomologique, d'où on a une suite exacte longue
+    % https://q.uiver.app/#q=WzAsOSxbMCwwLCIwIl0sWzEsMCwiSF4wKFUsXFxGKSJdLFsyLDAsIkheMChVLEkpIl0sWzMsMCwiSF4wKFUsSS9cXEYpIl0sWzEsMSwiSF4xKFUsXFxGKSJdLFsyLDEsIkheMShVLEkpIl0sWzMsMSwiSF4xKFUsSS9cXEYpIl0sWzEsMiwiSF4yKFUsXFxGKSJdLFsyLDIsIlxcbGRvdHMiXSxbMCwxXSxbMSwyXSxbMiwzXSxbMyw0XSxbNCw1XSxbNSw2XSxbNiw3XSxbNyw4XV0=
+\[\begin{tikzcd}
+	0 & {H^0(U,\F)} & {H^0(U,I)} & {H^0(U,I/\F)} \\
+	& {H^1(U,\F)} & {H^1(U,I)} & {H^1(U,I/\F)} \\
+	& {H^2(U,\F)} & \ldots
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-3, to=1-4]
+	\arrow[from=1-4, to=2-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-3, to=2-4]
+	\arrow[from=2-4, to=3-2]
+	\arrow[from=3-2, to=3-3]
+\end{tikzcd}\]
+    on a vu que la ligne du haut est exacte. D'où
+    comme $H^i(U,I)=0$ et la première flèche est injective, on 
+    obtient que $H^1(U,\F)=0$. Par induction on suppose que 
+    $H^i(U,\F)=0$ pour $1\leq i\leq n$ pour tout $\F$ flasque. On 
+    obtient une suite exacte courte 
+    \[H^n(U, I/\F)\to H^{n+1}(U,\F)\to H^{n+1}(U,I)\]
+    mais par hypothèse $H^n(U,I/\F)=0$ car $I/\F$ est flasque (on peut
+    swap $\F$ et $I/\F$ dans la preuve). On conclut facilement.
+\end{proof}
+
+\[\textrm{Résolution de Godemont : }\]
+Soit $\F\in Sh(X)$. On a un mono $\alpha\colon \F\to C^0(\F)$
+où $C^0(\F)$ est flasque. On définit
+\[Z^1(\F):=C^0(\F)/\F\]
+et
+\[C^1(\F):=C^0(Z^1(\F))\]
+on a une flèche $Z^1(\F)\to C^1(\F)$. On définit le reste par
+induction. On a un morphisme $d^n\colon C^n(\F)\to C^{n+1}(\F)$
+t.q. 
+\[0\to \F\to C^\bullet(\F)\]
+est exacte dans $Ch(Sh(X))$. 
+\begin{defn}
+    C'est la résolution de Godemont.
+\end{defn}
+\begin{rem}
+    La construction $C^\bullet(\_)$ est fonctorielle de 
+    $Sh(X)$ dans $Ch(Sh(X))$.
+\end{rem}
+\begin{rem}
+    Étant $\Gamma_U$ acyclique, la résolution calcule la bonne 
+    cohomologie.
+\end{rem}
 
 \printbibliography
 

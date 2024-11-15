@@ -1,14 +1,13 @@
 # Fdb version 4
-["biber homologie"] 1728670250.73207 "homologie.bcf" "homologie.bbl" "homologie" 1731447074.52372 0
-  "homologie.bcf" 1731447074.33088 107603 6012ece38ddd3b01ef7e7c735a8e3b0c "pdflatex"
+["biber nt"] 0 "nt.bcf" "nt.bbl" "nt" 1731674262.5465 0
+  "bib.bib" 0 -1 0 ""
+  "nt.bcf" 0 -1 0 "pdflatex"
   (generated)
-  "homologie.bbl"
-  "homologie.blg"
+  "nt.bbl"
+  "nt.blg"
   (rewritten before read)
-["pdflatex"] 1731447072.48301 "homologie.tex" "homologie.pdf" "homologie" 1731447074.52421 0
-  "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1727349926 2900 1537cc8184ad1792082cd229ecc269f4 ""
+["pdflatex"] 1731674260.66911 "nt.tex" "nt.pdf" "nt" 1731674262.54703 0
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1727349926 3524 cb3e574dea2d1052e39280babc910dc8 ""
-  "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1727349926 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1727349926 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1727349926 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm" 1727349926 1040 b84415f97d114011685943ade933dc71 ""
@@ -33,8 +32,6 @@
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1727349926 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1727349926 1120 8b7d695260f3cff42e636090a8002094 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmti12.tfm" 1727349926 1484 ed72f8f5cf654cda15ecc8e32bfcbee5 ""
-  "/usr/share/texmf-dist/fonts/tfm/public/cm/cmti7.tfm" 1727349926 1492 86331993fe614793f5e7e755835c31c5 ""
-  "/usr/share/texmf-dist/fonts/tfm/public/cm/cmti8.tfm" 1727349926 1504 1747189e0441d1c18f3ea56fafc1c480 ""
   "/usr/share/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm" 1727349926 688 37338d6ab346c2f1466b29e195316aa4 ""
   "/usr/share/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm" 1727349926 684 3a51bd4fd9600428d5264cf25f04bb9a ""
   "/usr/share/texmf-dist/fonts/tfm/public/rsfs/rsfs7.tfm" 1727349926 692 1b6510779f0f05e9cbf03e0f6c8361e6 ""
@@ -51,7 +48,6 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1727349926 36118 fad905eba93cff5bce1e185fe980a177 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb" 1727349926 21098 d4aee7c0aac232caac5688b586b9363c ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1727349926 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
-  "/usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb" 1727349926 136101 f533469f523533d38317ab5729d00c8a ""
   "/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1727349926 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1727349926 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "/usr/share/texmf-dist/tex/generic/babel/babel.sty" 1727349926 146276 10a40dabec03ce18494af0c3a51bcbdc ""
@@ -215,18 +211,16 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1727349926 41588 b43d3e860a4f94167ee1e725ff526a72 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1727525813.64639 5312047 b07fcd2a9090df96fc745b92a3db793b ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1727525771 7112996 302595b5d5fbdcab6fc147312b13f020 ""
-  "homologie.aux" 1731447074.32754 2439 59649d7cbe24b8d0816a6e59c98687cf "pdflatex"
-  "homologie.bbl" 1728670251.9742 466 ee04f40f768daeed26442158e95aba61 "biber homologie"
-  "homologie.out" 1731447074.33088 2145 79bfc409e88dcac23bd98c08f696deba "pdflatex"
-  "homologie.run.xml" 1731447074.33421 2338 275b6cc0b1373bcb976c23d9c7e660c5 "pdflatex"
-  "homologie.tex" 1731447070.7642 32017 dde24368c268bd1b0644104cb04609f5 ""
-  "homologie.toc" 1731447074.33421 1198 70648fc48daa158029c879e405e8d20b "pdflatex"
+  "nt.aux" 1731674262.26589 1685 cdd5a047f829533be4466cd141e24043 "pdflatex"
+  "nt.bbl" 0 -1 0 "biber nt"
+  "nt.out" 1731674262.26922 1567 3d6b06b0c56c0b62318a3969d8cbd449 "pdflatex"
+  "nt.run.xml" 1731674262.27255 2289 35846a34ca1fffb67bc4a8fbf1faa022 "pdflatex"
+  "nt.tex" 1731674259.63081 10568 510885f13e1aa8e23885a940518d9616 ""
   (generated)
-  "homologie.aux"
-  "homologie.bcf"
-  "homologie.log"
-  "homologie.out"
-  "homologie.pdf"
-  "homologie.run.xml"
-  "homologie.toc"
+  "nt.aux"
+  "nt.bcf"
+  "nt.log"
+  "nt.out"
+  "nt.pdf"
+  "nt.run.xml"
   (rewritten before read)
