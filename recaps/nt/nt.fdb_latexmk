@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber nt"] 0 "nt.bcf" "nt.bbl" "nt" 1731674262.5465 0
+["biber nt"] 0 "nt.bcf" "nt.bbl" "nt" 1731770125.40513 0
   "bib.bib" 0 -1 0 ""
   "nt.bcf" 0 -1 0 "pdflatex"
   (generated)
   "nt.bbl"
   "nt.blg"
   (rewritten before read)
-["pdflatex"] 1731674260.66911 "nt.tex" "nt.pdf" "nt" 1731674262.54703 0
+["pdflatex"] 1731770123.7089 "nt.tex" "nt.pdf" "nt" 1731770125.40561 0
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1727349926 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1727349926 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1727349926 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -42,7 +42,6 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1727349926 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1727349926 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1727349926 32362 179c33bbf43f19adbb3825bb4e36e57a ""
-  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1727349926 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1727349926 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1727349926 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1727349926 36118 fad905eba93cff5bce1e185fe980a177 ""
@@ -211,11 +210,11 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1727349926 41588 b43d3e860a4f94167ee1e725ff526a72 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1727525813.64639 5312047 b07fcd2a9090df96fc745b92a3db793b ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1727525771 7112996 302595b5d5fbdcab6fc147312b13f020 ""
-  "nt.aux" 1731674262.26589 1685 cdd5a047f829533be4466cd141e24043 "pdflatex"
+  "nt.aux" 1731770125.16207 1726 f0e4ee849f60a1e6988b64a23815005f "pdflatex"
   "nt.bbl" 0 -1 0 "biber nt"
-  "nt.out" 1731674262.26922 1567 3d6b06b0c56c0b62318a3969d8cbd449 "pdflatex"
-  "nt.run.xml" 1731674262.27255 2289 35846a34ca1fffb67bc4a8fbf1faa022 "pdflatex"
-  "nt.tex" 1731674259.63081 10568 510885f13e1aa8e23885a940518d9616 ""
+  "nt.out" 1731770125.1654 1835 be381678d768e18f39fad1e27740530e "pdflatex"
+  "nt.run.xml" 1731770125.16873 2289 35846a34ca1fffb67bc4a8fbf1faa022 "pdflatex"
+  "nt.tex" 1731770121.66201 7097 3028492cea874d337d7ee0f21c9dd056 ""
   (generated)
   "nt.aux"
   "nt.bcf"
