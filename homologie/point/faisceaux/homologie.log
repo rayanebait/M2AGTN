@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.9.28)  19 NOV 2024 16:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.9.28)  20 NOV 2024 18:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -772,15 +772,24 @@ Package: appendix 2020/02/08 v1.2c extra appendix facilities
 \c@@ppsavesec=\count454
 \c@@ppsaveapp=\count455
 )
-\c@heur=\count456
-\c@rem=\count457
-\c@note=\count458
-\c@conj=\count459
-\c@prob=\count460
-\c@quest=\count461
-\c@prot=\count462
-\c@algo=\count463
-Package hyperref Info: Option `colorlinks' set `true' on input line 127.
+\c@thm=\count456
+\c@lem=\count457
+\c@prop=\count458
+\c@cor=\count459
+\c@heur=\count460
+\c@rem=\count461
+\c@note=\count462
+\c@conj=\count463
+\c@prob=\count464
+\c@quest=\count465
+\c@prot=\count466
+\c@algo=\count467
+\c@defn=\count468
+\c@exmp=\count469
+\c@exo=\count470
+\c@ex=\count471
+\c@exs=\count472
+Package hyperref Info: Option `colorlinks' set `true' on input line 128.
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
@@ -788,36 +797,36 @@ Package csquotes Info: Redefining alias 'default' -> 'french'.
  (./homologie.aux)
 \openout1 = `homologie.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count464
+\scratchcounter=\count473
 \scratchdimen=\dimen274
 \scratchbox=\box68
-\nofMPsegments=\count465
-\nofMParguments=\count466
+\nofMPsegments=\count474
+\nofMParguments=\count475
 \everyMPshowfont=\toks46
-\MPscratchCnt=\count467
+\MPscratchCnt=\count476
 \MPscratchDim=\dimen275
-\MPnumerator=\count468
-\makeMPintoPDFobject=\count469
+\MPnumerator=\count477
+\makeMPintoPDFobject=\count478
 \everyMPtoPDFconversion=\toks47
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -825,7 +834,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring ON on input line 132.
+Package hyperref Info: Link coloring ON on input line 133.
  (./homologie.out) (./homologie.out)
 \@outlinefile=\write5
 \openout5 = `homologie.out'.
@@ -841,19 +850,20 @@ Package biblatex Info: Automatic encoding selection.
 \openout4 = `homologie.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'homologie.bbl' found.
- (./homologie.bbl)
-Package biblatex Info: Reference section=0 on input line 132.
-Package biblatex Info: Reference segment=0 on input line 132.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 134.
- (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+Package biblatex Info: ... file 'homologie.bbl' not found.
+
+No file homologie.bbl.
+Package biblatex Info: Reference section=0 on input line 133.
+Package biblatex Info: Reference segment=0 on input line 133.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 135.
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 134.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 135.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 134.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 135.
  (/usr/share/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
@@ -887,26 +897,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [4
 
-] [5]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.71667pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.71667pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
-
-[6
-
 ]
 \bbl@ensure@french {Chapitre} 1.
-LaTeX Font Info:    Trying to load font information for U+euf on input line 146.
-(/usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [7]
-Overfull \hbox (22.31932pt too wide) in paragraph at lines 221--224
-[][]\OT1/cmr/bx/n/12 Proposition 1.1.9. []\OT1/cmr/m/it/12 Soit $\OML/cmm/m/it/12 Z$ \OT1/cmr/m/it/12 un en-sem-ble alg^^Sebrique affine. Alors $\OML/cmm/m/it/12 Z$ \OT1/cmr/m/it/12 est irr^^Seductible
- []
-
+[5]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -914,7 +907,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[8{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+[6]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -922,226 +915,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[9]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[10]
-Overfull \hbox (20.80554pt too wide) in paragraph at lines 376--385
-[][]\OT1/cmr/m/n/12 Etant donn^^Se $\OML/cmm/m/it/12 f [] [] X \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 Y$\OT1/cmr/m/n/12 , on d^^Sefinit $\OML/cmm/m/it/12 f[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 U\OT1/cmr/m/n/12 ) [] [] \OMS/cmsy/m/n/12 O[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 U\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ! O[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 f[]U\OT1/cmr/m/n/12 )$
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[11]
-Overfull \hbox (9.98058pt too wide) in paragraph at lines 437--442
-\OT1/cmr/m/n/12 Si on d^^Sefinit la lo-cal-i-sa-tion ho-mog^^Rene en $\OML/cmm/m/it/12 P$ \OT1/cmr/m/n/12 ho-mog^^Rene, avec $\OML/cmm/m/it/12 B \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 k\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 T[]; [] ; T[]\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 =I$\OT1/cmr/m/n/12 ,
- []
-
-
-Overfull \hbox (5.30203pt too wide) in paragraph at lines 437--442
-\OT1/cmr/m/n/12 via $\OML/cmm/m/it/12 B[]$ \OT1/cmr/m/n/12 les frac-tions de degr^^Ses $0$. Plus rigoureuse-ment, via $\OML/cmm/m/it/12 k\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 T[]; [] ; T[]\OT1/cmr/m/n/12 ][]\OML/cmm/m/it/12 =I[]$
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[12]
-\bbl@ensure@french {Chapitre} 2.
-[13
-
-]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[14
-
-]
-\bbl@ensure@french {Chapitre} 3.
-
-Overfull \hbox (6.05737pt too wide) in paragraph at lines 470--472
-[][]\OT1/cmr/bx/n/12 Exemple 3.1.2. []\OT1/cmr/m/n/12 Les vari^^Set^^Ses alg^^Sebriques affine sont s^^Separ^^See, parce que $\OML/cmm/m/it/12 A\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 
-
- []
-
-[15]
-Overfull \hbox (22.22566pt too wide) in paragraph at lines 525--528
-[][]\OT1/cmr/bx/n/12 Remarque 8. []\OT1/cmr/m/it/12 Si $\OML/cmm/m/it/12 Y$ \OT1/cmr/m/it/12 est s^^Separ^^See, $\OT1/cmr/m/n/12 ^^@[]$ \OT1/cmr/m/it/12 est ferm^^Se dans $\OML/cmm/m/it/12 X \OMS/cmsy/m/n/12 ^^B \OML/cmm/m/it/12 Y$\OT1/cmr/m/it/12 . En ef-fet, $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 id[]; f\OT1/cmr/m/n/12 ) [] [] \OML/cmm/m/it/12 X \OMS/cmsy/m/n/12 !
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[16]
-\bbl@ensure@french {Chapitre} 4.
-
-Overfull \hbox (3.01155pt too wide) in paragraph at lines 553--554
-[][]\OT1/cmr/bx/n/12 D^^Sefinition 4.0.1. []\OT1/cmr/m/n/12 Soit $\OML/cmm/m/it/12 X \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 Z\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 I\OT1/cmr/m/n/12 )$ une vari^^Set^^Se alg^^Sebrique et $\OML/cmm/m/it/12 P \OT1/cmr/m/n/12 = (\OML/cmm/m/it/12 a[]; [] ; a[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 2
- []
-
-[17
-
-]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[18]
-Overfull \hbox (0.9179pt too wide) in paragraph at lines 662--665
-\OT1/cmr/m/n/12 car $\OML/cmm/m/it/12 T[] \OMS/cmsy/m/n/12 ' \OT1/cmr/m/n/12 (\U/euf/m/n/12 m\OML/cmm/m/it/12 =f\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 =\OT1/cmr/m/n/12 (\U/euf/m/n/12 m\OML/cmm/m/it/12 =f\OT1/cmr/m/n/12 )[]$. Avec $\OML/cmm/m/it/12 dimY \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 dimX \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 1$, par r^^Securrence $\OML/cmm/m/it/12 dimT[] \OMS/cmsy/m/n/12 ^^U
- []
-
-
-Overfull \hbox (23.30019pt too wide) in paragraph at lines 681--682
-[]\OT1/cmr/m/n/12 Directement on a $[] \OML/cmm/m/it/12 T[]X \OT1/cmr/m/n/12 = [][] [](\OML/cmm/m/it/12 J\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 )[]) = \OML/cmm/m/it/12 n \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 rk\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 J\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 )[])$.
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[19]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[20]
-Overfull \hbox (48.86736pt too wide) in paragraph at lines 775--778
-\OT1/cmr/m/it/12 est int^^Segralement clos. (dans $\OML/cmm/m/it/12 Frac\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 O[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 U\OT1/cmr/m/n/12 ))$ \OT1/cmr/m/it/12 qui est pas forc^^Sement $\OML/cmm/m/it/12 Frac\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 O[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 ))$\OT1/cmr/m/it/12 .) 
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[21]
-Overfull \hbox (11.9283pt too wide) in paragraph at lines 831--833
-[][]\OT1/cmr/bx/n/12 Remarque 16. []\OT1/cmr/m/it/12 La preuve rigoureuse doit utiliser la fl^^Reche canon-ique $\OMS/cmsy/m/n/12 O[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 U\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 !
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[22]
-Overfull \hbox (3.65518pt too wide) in paragraph at lines 857--860
-[]\OT1/cmr/bx/n/12 Proposition 4.2.8. []\OT1/cmr/m/it/12 Soit $\OML/cmm/m/it/12 A$ \OT1/cmr/m/it/12 une $\OML/cmm/m/it/12 k$\OT1/cmr/m/it/12 -alg^^Rebre int^^Regre de type fini et $\OML/cmm/m/it/12 K \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 Frac\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A\OT1/cmr/m/n/12 )$\OT1/cmr/m/it/12 .
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[23]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[24
-
-]
-\bbl@ensure@french {Chapitre} 5.
-[25]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[26]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[27]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[28]
-
-LaTeX Warning: Empty bibliography on input line 1093.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[29] (./homologie.aux)
+[7] (./homologie.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `homologie.out' has not changed.
-(rerunfilecheck)             Checksum: 8AC438DECBC6D0CE896BD12EE6F4E91C;2290.
+(rerunfilecheck)             Checksum: 7B9E4DA52C4D056F2C73D311348510D4;1335.
 Package logreq Info: Writing requests to 'homologie.run.xml'.
 \openout1 = `homologie.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32244 strings out of 476076
- 622575 string characters out of 5793775
- 1947187 words of memory out of 5000000
- 53717 multiletter control sequences out of 15000+600000
- 571259 words of font info for 89 fonts, out of 8000000 for 9000
+ 31499 strings out of 476076
+ 605585 string characters out of 5793775
+ 1935187 words of memory out of 5000000
+ 53112 multiletter control sequences out of 15000+600000
+ 568775 words of font info for 79 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 131i,15n,135p,682b,1776s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on homologie.pdf (29 pages, 242103 bytes).
+ 131i,12n,135p,682b,1776s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
+Output written on homologie.pdf (7 pages, 136524 bytes).
 PDF statistics:
- 421 PDF objects out of 1000 (max. 8388607)
- 358 compressed objects within 4 object streams
- 149 named destinations out of 1000 (max. 500000)
- 141 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 159 PDF objects out of 1000 (max. 8388607)
+ 124 compressed objects within 2 object streams
+ 23 named destinations out of 1000 (max. 500000)
+ 85 words of extra memory for PDF output out of 10000 (max. 10000000)
 

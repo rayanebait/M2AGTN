@@ -866,6 +866,269 @@ t.q $k(X')=L$, $X'$ est normal et $k(X)\to L$ est induit par $\pi$.
     \[\A^1\to X\]
     donné par $t\mapsto (t^3,t^2)$ est la normalisation.
 \end{ex}
+\chapter{Courbes algébriques}
+Une courbe algébrique est une variété séparée de dimension pure $1$.
+\begin{rem}
+    Un morphisme fini est fermé. Y'a la preuve du td, ou y'a la 
+    preuve générale de Spec.
+\end{rem}
+\begin{defn}
+    Pour rappel, $f$ est fini si $\Or_Y(V_i)\to \Or_Y(f^{-1}V_i)$
+    est fini pour un recouvrement affine de $Y$.
+\end{defn}
+
+\begin{proof}
+    Le point c'est que $f$ est surjective et $f(Z(f^\sharp(I(Z))))$
+    est dense dans $Z$ là ou ca fait sens.
+\end{proof}
+
+\begin{lem}
+    Si $f\colon X\to Y$ est fini et $Y$ est séparée (resp. propre) alors
+    $X$ est séparée (resp. propre).
+\end{lem}
+\begin{proof}
+    On doit checker que $X$ est séparée et universellement close.
+    On regarde $X\times_Y \hookrightarrow X\times_k X$, on a 
+    \[X\times_Y X=(f\times f)^{-1}(\Delta(Y))\]
+    est fermée car $Y$ est séparée. On a clairement
+    \[\Delta(X)\subset X\times_Y X\]
+    il suffit de montrer que $\Delta(X)$ est fermée dedans. On 
+    prend un recouvrement affine $\cup V_i= Y$. Maintenant
+    $X\times_Y X$ est recouverte par les ouverts (check) $U_i\times_{V_i} U_i$
+    avec $U_i=f^{-1}V_i$. Il suffit de montrer que $\Delta(U_i)$ est fermée 
+    dans $U_i\times_{V_i} U_i$. Maintenant, 
+\[U_i\to \Delta(U_i)\hookrightarrow U_i\times_{V_i} U_i\hookrightarrow U_i\times_k U_i\]
+    est fermée. D'où $X$ est séparée. (on a pas utilisé la finitude)
+
+    Soit $Z$ une variété algébrique. On regarde
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJaXFx0aW1lc19rIFgiXSxbMSwxLCJaXFx0aW1lc19rIFkiXSxbMiwwLCJaIl0sWzAsMV0sWzEsMl0sWzAsMl1d
+\[\begin{tikzcd}
+	{Z\times_k X} && Z \\
+	& {Z\times_k Y}
+	\arrow[from=1-1, to=1-3]
+	\arrow[from=1-1, to=2-2]
+	\arrow[from=2-2, to=1-3]
+\end{tikzcd}\]
+    il suffit de montrer que $Z\times X\to Z\times Y$ est fermée, c'est
+    clairement un morphisme fini car localement, les morphismes finis
+    sont affines d'où on peut supposer $Z,X,Y$ affines et en regardant
+% https://q.uiver.app/#q=WzAsNCxbMCwwLCJBKFkpIl0sWzIsMCwiQShYKSJdLFswLDEsIkEoWSlcXG90aW1lcyBBKFopIl0sWzIsMSwiQShYKVxcb3RpbWVzIEEoWikiXSxbMCwxXSxbMCwyXSxbMiwzXSxbMSwzXV0=
+\[\begin{tikzcd}
+	{A(Y)} && {A(X)} \\
+	{A(Y)\otimes A(Z)} && {A(X)\otimes A(Z)}
+	\arrow[from=1-1, to=1-3]
+	\arrow[from=1-1, to=2-1]
+	\arrow[from=1-3, to=2-3]
+	\arrow[from=2-1, to=2-3]
+\end{tikzcd}\]
+    on obtient le résultat.
+\end{proof}
+
+\begin{lem}
+    Soit $K$ un corps de fonction de degré de transcendance $1$.
+    Il existe une courbe intègre lisse et propre telle que $K=k(X)$.
+\end{lem}
+\begin{proof}
+    C'est un gros sketch de preuve. Soit $K$ une extension finie de 
+    $k(X)$, alors $K=k(X)[T]/(P)= Frac(k[X][T]/(P))$ est le corps de 
+    fonction d'une $k$-algèbre réduite de type fini. On prends une
+    variété affine associée $Z$ et on obtient $\bar Z\subseteq \Pr^n$.
+    Maintenant $\bar Z$ est intègre propre. Il reste à normaliser.
+    On prends $X\to \bar Z$ sa normalisation. Alors la flèche est finie
+    d'où $X$ est intègre propre et normale.
+\end{proof}
+\begin{note}
+    Pour rappel, si $Y$ est séparée et $X$ intègre alors si 
+    $f,g\colon X\to Y$ et $g|_U=f|_U$ alors $f=g$.
+\end{note}
+\begin{note}
+    La propreté permet d'étendre uniquement de $U$ à $X$
+    dans le cas des courbes.
+\end{note}
+\begin{note}
+    Dans le cas lisse, les composantes connexes coincident avec les
+    irréductibles.
+\end{note}
+\begin{thm}
+    Si $U$ est une courbe algébrique lisse. Soit $Y$ une
+    variété algébrique propre et $V\subseteq U$ ouvert. Alors toute
+    flèche $f\colon V\to Y$ il existe un unique $g\colon U\to Y$
+    qui étend $f$.
+\end{thm}
+\begin{proof}
+    Il suffit de prouver l'existence, $U-V$ est un nombre fini de point.
+    On montre qu'on peut l'étendre en chaque point. On prends $P\in W
+    \subset U$ affine. On étend comme suit
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJXXFxjYXAgViJdLFsyLDAsIlciXSxbMCwxLCJZIl0sWzAsMSwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMSwyLCIiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMCwyXV0=
+\[\begin{tikzcd}
+	{W\cap V} && W \\
+	Y
+	\arrow[hook, from=1-1, to=1-3]
+	\arrow[from=1-1, to=2-1]
+	\arrow[dashed, from=1-3, to=2-1]
+\end{tikzcd}\]
+    On peut supposer $U$ affine et $V=U-\{P\}$. Soit $A=A(U)$, et
+    soit $\m\leq A$ maximal. Comme $U$ est lisse on peut supposer
+    \[\m=(t).\]
+    On considère 
+    \[f\colon V\to Y\]
+    et $V\simeq\Gamma_f\subseteq V\times Y\subseteq U\times Y$ fermé car
+    $Y$ est séparée. Soit $Z=\bar\Gamma_f\subseteq U\times Y$, alors
+    $Z$ est birationnel à $U$. On va prover que $Z\to U$ est un
+    isomorphisme. Si c'est le cas, $U\to Z\to Y$ étend $f$ donc on 
+    est bon.
+
+    On a $U\times Y\to U$ est fermée car $Y$ est propre. D'où 
+    $h\colon Z\to U$ est fermée donc surjective. On note 
+    $z\in h^{-1}(P)$. Soit $B=\Or_Z(W)$ un voisinage ouvert 
+    $W$ de $z$. Il y a une flèche $A(U)\hookrightarrow B=A(W)
+    \hookrightarrow A(W) \hookrightarrow K=Frac(A)$. Soit $b\in B$
+    et $b=t^na/u$ avec $n\in \Z$ et $a,u\notin \m$. On obtient 
+    $bu=t^na$ d'où $0=(bu)(z)=t^n(z)a(z)$ d'où $t^n(z)=0$ car 
+    $a(z)\ne 0$. D'où $n\geq 1$ et $b\in A[1/u]$. Comme $B$ est
+    finiment générée, $A\subset B\subset A[1/u_0]$ pour un 
+    $u_0\notin \m$. D'où $B[1/u_0]=A[1/u_0]$. On prouve que 
+    \[h\colon h^{-1}(D(u_0))\cap W\simeq D(u_0)\]
+    On prends $\{z_1,\ldots,z_r\}=h^{-1}(P)$ t.q pour tout $i=1,\ldots,r$
+    il existe $P\in U_0$ et $g_i\colon W_i\simeq U_0$ contenu dans
+    $h\colon Z\to U$. Ca implique que $r=1$ sinon $g_1^{-1}$ et 
+    $g_2^{-1}$ sont deux morphismes différents qui coincident avec
+    l'inverse de $\Gamma_f \to V$.
+% https://q.uiver.app/#q=WzAsNixbMCwwLCJcXEdhbW1hX2YiXSxbMSwwLCJWIl0sWzEsMSwiVSJdLFswLDEsIloiXSxbMCwyLCJXXzAiXSxbMSwyLCJVXzAiXSxbMywyLCJoIl0sWzAsMywiIiwxLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMSwyLCIiLDEseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs1LDIsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzQsMywiIiwxLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbNCw1LCJcXHNpbWVxIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzAsMSwiXFxzaW1lcSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
+\[\begin{tikzcd}
+	{\Gamma_f} & V \\
+	Z & U \\
+	{W_0} & {U_0}
+	\arrow["\simeq"{description}, draw=none, from=1-1, to=1-2]
+	\arrow[hook, from=1-1, to=2-1]
+	\arrow[hook, from=1-2, to=2-2]
+	\arrow["h", from=2-1, to=2-2]
+	\arrow[hook, from=3-1, to=2-1]
+	\arrow["\simeq"{description}, draw=none, from=3-1, to=3-2]
+	\arrow[hook, from=3-2, to=2-2]
+\end{tikzcd}\]
+
+\end{proof}
+
+\begin{cor}
+    Soit $X,Y$ deux courbes entières lisses propres et birationnelles.
+    Alors elles sont isomorphes.
+\end{cor}
+\begin{proof}
+    Simplement, la flèche entre les ouverts, $f|_U$, et son inverse, 
+    $g|_U$ s'étendent à $X$, $Y$. Puis $g\circ f|_U=id|_U$. Pareil
+    de l'autre côté.
+\end{proof}
+\begin{ex}
+    En général c'est faux, $\Pr^2\simeq_{bir} \Pr^1\times \Pr^1$
+    sont birationnels mmais pas isomorphes.
+\end{ex}
+\begin{lem}
+    Un morphisme de courbe propres lisses intègres est constant
+    ou fini.
+\end{lem}
+\begin{proof}
+    COmme $X$ est propre, $f$ est fermé. Alors $f(X)$ est $Y$ ou un
+    point. On suppose que c'est $Y$, alors on a $k(Y)\to k(X)$ est
+    finie. On normalise $Y$ en $\pi\colon X'\to Y$ dans $k(X)$.
+    On a que $\pi$ est finie et $X'$ est normale avec $k(X')=k(X)$.
+    On a 
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJYIl0sWzEsMCwiWSJdLFswLDEsIlgnIl0sWzAsMSwiZiIsMV0sWzAsMiwiZ1xcc2ltZXEiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMiwxLCJcXHBpIiwxXV0=
+\[\begin{tikzcd}
+	X & Y \\
+	{X'}
+	\arrow["f"{description}, from=1-1, to=1-2]
+	\arrow["{g\simeq}"{description}, draw=none, from=1-1, to=2-1]
+	\arrow["\pi"{description}, from=2-1, to=1-2]
+\end{tikzcd}\]
+    et $X',X$ induisent la même $k(Y)\hookrightarrow k(X)=k(X')$.
+    D'où $f=\pi\circ g^{-1}$. Comme $\pi$ est finie $f$ est finie.
+\end{proof}
+\begin{thm}
+    Il existe une équivalence de catégorie entre
+    \[\textrm{les corps de fonction de degré de transcendance $1$ }\]
+    et
+    \[\textrm{Les courbes algébriques intègre propre lisse}\]
+\end{thm}
+\begin{cor}
+    Toute courbe intègre lisse propre admet un morphisme fini
+    \[X\to \Pr^1\]
+\end{cor}
+\begin{thm}
+    Toute courbe intègre lisse propre est projective.
+\end{thm}
+\begin{proof}
+    On prends un recouvrement affine $(V_i)_i$ fini. On étend un 
+    des $V_i$ à $\Pr^n$ en $X_i$. Maintenant, $X_i$ est pas forcément
+    lisse, et on prend $P=\prod X_i$ le produit, qui est projective.
+    On regarde l'extension 
+% https://q.uiver.app/#q=WzAsNCxbMCwxLCJcXGNhcCBVX2kiXSxbMSwxLCJcXHByb2QgXFxvdmVybGluZXtVX2l9Il0sWzAsMiwiWCJdLFsxLDAsIlxccHJvZCBVX2kiXSxbMCwxLCJmIiwxXSxbMCwyLCIiLDEseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFsyLDEsImciLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMCwzXSxbMywxXV0=
+\[\begin{tikzcd}
+	& {\prod U_i} \\
+	{\cap U_i} & {\prod \overline{U_i}} \\
+	X
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=2-1, to=1-2]
+	\arrow["f"{description}, from=2-1, to=2-2]
+	\arrow[hook, from=2-1, to=3-1]
+	\arrow["g"{description}, dashed, from=3-1, to=2-2]
+\end{tikzcd}\]
+    comme $f$ s'étend car $P$ est propre. Et on pose $g(X)=Z$.
+    Alors $Z$ est projective et intègre. On montre qu'elle est
+    lisse et propre. On montre que tout point $z\in Z$ admet un
+    voisinage affine normal. Alors $z=g(x)$ pour un $x\in U_i$
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJVX2kiXSxbMSwwLCJaIl0sWzEsMSwiWF9pIl0sWzAsMV0sWzEsMl0sWzAsMiwiIiwxLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XV0=
+\[\begin{tikzcd}
+	{U_i} & Z \\
+	& {X_i}
+	\arrow[from=1-1, to=1-2]
+	\arrow[hook, from=1-1, to=2-2]
+	\arrow[from=1-2, to=2-2]
+\end{tikzcd}\]
+    $g$ est une inclusion car $\cap U_i\hookrightarrow X_i$
+    est une inclusion et $X_i$ est séparée. On prends un voisinage
+    affine de $z$ contenu dans $f(U)$ (Les $Z-f(U)\subseteq f(X-U_i)$
+    sont finis). On a 
+% https://q.uiver.app/#q=WzAsNCxbMCwwLCJmXnstMX1XIl0sWzEsMCwiVyJdLFsxLDEsImZeey0xfVciXSxbMiwxLCJYX2kiXSxbMCwxLCIiLDEseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMSwyXSxbMCwyLCJpZCIsMV0sWzIsMywiXFxzdWJzZXRlcSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
+\[\begin{tikzcd}
+	{f^{-1}W} & W \\
+	& {f^{-1}W} & {X_i}
+	\arrow[two heads, from=1-1, to=1-2]
+	\arrow["id"{description}, from=1-1, to=2-2]
+	\arrow[from=1-2, to=2-2]
+	\arrow["\subseteq"{description}, draw=none, from=2-2, to=2-3]
+\end{tikzcd}\]
+    ce qui implique que $\Or_Z(W)\hookrightarrow \Or_X(f^{-1}W)$ d'où
+    $f^{-1}W\simeq W$. Maintenant $f^{-1}W$ est lisse connectée. Donc
+    normale. D'où $Z$ est lisse et birationnelle à $X$ donc isomorphe.
+\end{proof}
+
+\section{Diviseurs}
+Les diviseurs sur une courbe intègre lisse sont des sommes formelles
+\[D=\sum n_P(P)\in Z[|X|]=Z^1(X)\]
+pour $P\in X$, on a $v_P\colon k(X)^\times\to \Z$ une valuation 
+discrète, via $k(X)=Frac(\Or_{X,P})$ comme $X$ est lisse.
+
+\begin{prop}
+    Soit $f\in k(X)-0$, alors $v_x(f)=0$ sauf en un nombre fini de 
+    $x$.
+\end{prop}
+\begin{proof}
+    On a $f=a/b\in \Or_X(U)$ $U$ affine. Alors $v_x(f)=0$
+    si $x\notin Z(a)\cup Z(b)$, mais c'est un nombre fini de points
+    et $X-U$ est fini.
+\end{proof}
+\begin{ex}
+    Sur $X=\Pr^1$, $t\in k(t)$ alors, $div(t)=(0)-(\infty)$. Y'a
+    plusieurs remarques, $k(t)=k(\Pr^1)$ c'est via une écriture dans
+    une carte. Le cgt de carte c'est $t\mapsto 1/t$, i.e. 
+    $(U_1, 1/t)\sim (U_0,t)$.
+\end{ex}
+\begin{defn}
+    On définit $Pic(X)=Z^1(X)/div(k(X)^\times)$.
+\end{defn}
+On a $div(f)=div_0(f)-div_\infty(f)=$
+
 
 \printbibliography
 \end{document}
