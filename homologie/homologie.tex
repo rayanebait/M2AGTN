@@ -67,6 +67,7 @@ sorting=ynt
 \newcommand{\Spec}{\textrm{Spec}}
 \newcommand{\Supp}{\textrm{Supp}}
 \renewcommand{\Im}{\textrm{Im}}
+\newcommand{\Ouv}{\textrm{Ouv}}
 
 
 \newcommand{\cL}{\mathscr{L}}
@@ -2384,10 +2385,286 @@ tels que
 \end{note}
 Si $\F\in Sh(X)$, alors $R\Gamma(X,\F)$ est un complexe borné par 
 le bas de groupes abélienes divisibles. Similairement, si
-\[\F\in Ch^+(Sh(X))\to K^+(X)\to D^+(X)\]
-on a $H^i(X,\F^\bullet)=H^i(R\Gamma(X,\F^\bullet))$
+\[\F^*\in Ch^+(Sh(X))\to K^+(X)\to D^+(X)\]
+on a $H^i(X,\F^*)=H^i(R\Gamma(X,\F^*))$.
+
+\begin{prop}
+    On considère $f\colon X\to Y$ et $g\colon Y\to Z$. Il existe un
+    isomorphisme naturel de foncteurs
+    \[R(g\circ f)_*\simeq (R\circ g_*)\circ(Rf_*)\colon D^+(X)\to D^+(Z)\]
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJEXisoWCkiXSxbMSwwLCJEXisoWSkiXSxbMSwxLCJEXisoWikiXSxbMCwxLCJSZl8qIl0sWzEsMiwiUmdfKiJdLFswLDIsIlIoZ1xcY2lyYyBmKV8qIiwyXV0=
+\[\begin{tikzcd}
+	{D^+(X)} & {D^+(Y)} \\
+	& {D^+(Z)}
+	\arrow["{Rf_*}", from=1-1, to=1-2]
+	\arrow["{R(g\circ f)_*}"', from=1-1, to=2-2]
+	\arrow["{Rg_*}", from=1-2, to=2-2]
+\end{tikzcd}\]
+    De manière similaire on a un isomorphisme naturel
+
+    \[L(g\circ f)_*\simeq (L\circ f_*)\circ(Lg_*)\colon D^+(Z)\to D^+(X)\]
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJEXisoWCkiXSxbMSwwLCJEXisoWSkiXSxbMSwxLCJEXisoWikiXSxbMCwxLCJSZl8qIl0sWzEsMiwiUmdfKiJdLFswLDIsIlIoZ1xcY2lyYyBmKV8qIiwyXV0=
+\[\begin{tikzcd}
+	{D^+(Z)} & {D^+(Y)} \\
+	& {D^+(X)}
+	\arrow["{Lg_*}", from=1-1, to=1-2]
+	\arrow["{L(g\circ f)_*}"', from=1-1, to=2-2]
+	\arrow["{Lf_*}", from=1-2, to=2-2]
+\end{tikzcd}\]
+\end{prop}
+\begin{proof}
+    Soit $I^*\in K^+(I_{Sh(X)})=:D^+(X)$. On a 
+    \[Rf_*(I^*)=f_*I^*\in D^+(Y)\]
+    et \[Rg_*(Rf_*(I^*))=g_*(f_*I^*)\]
+    comme $f_*$ préserve les injectifs 
+    et
+    \begin{align*}
+	g_*(f_*I^*)&=(g_*\circ f_*)I^*\\
+		   &=(g\circ f)_*I^*\\
+		   &=R(g\circ f)_* I^*
+    \end{align*}
+    Comme $Lf^*\circ Lg^*$ est adjoint à gauche de $Rg_*\circ Rf_*\simeq
+    R(g\circ f)_*$ et donc est $L(g\circ f)^*$ car les adjoints sont
+    défs à unique isomorphisme près. D'où
+    \[Lf^*\circ Lg^*\simeq L(g\circ f)^*\]
+\end{proof}
+
+\begin{cor}
+    Soit $f\colon X\to Y$ une flèche continue et $\F\in Sh(X)$. Alors
+    \begin{enumerate}
+	\item $\forall i\geq 0$ $H^i(Y,Rf_*\F)=H^i(X,\F)$.
+	\item Si $R^if_*\F=0$ pour tout $i>0$ alors 
+	    \[H^i(Y,f_*\F)=H^i(X,\F)\]
+    \end{enumerate}
+\end{cor}
+\begin{proof}
+    Pour 1. : on regarde
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJYIl0sWzEsMCwiWSJdLFsxLDEsIlxce3hcXH0iXSxbMCwxLCJmIl0sWzEsMiwiZyIsMl0sWzAsMiwiZ1xcY2lyYyBmIiwyXV0=
+\[\begin{tikzcd}
+	X & Y \\
+	& {\{x\}}
+	\arrow["f", from=1-1, to=1-2]
+	\arrow["{g\circ f}"', from=1-1, to=2-2]
+	\arrow["g"', from=1-2, to=2-2]
+\end{tikzcd}\]
+    d'où 
+    \begin{align*}
+	R\Gamma(X,\F)&=R(g\circ f)_*\F\\
+		     &=Rg_*(Rf_*\F)\\
+		     &=R\Gamma(Y,Rf_*\F)
+    \end{align*}
+    et on applique $H(\_)$ pour obtenir
+    \[H^i(R\Gamma(X,\F))\simeq H^i(R\Gamma(Y,Rf_*\F))\]
+    càd
+    \[H^i(X,\F)\simeq H^i(Y,Rf_*\F)\]
 
 
+    Pour 2. : $Rf_*\F=0$ pour tout $i>0$ d'où
+    \[f_*\F\to Rf_*\F\]
+    est un quasi-iso car
+    \[H^0(f_*\F)\simeq H^0(Rf_*\F)\]
+    et $H^i(f_*\F)=0=H^i(f_*\F)=R^if_*\F$. Il suit que 
+    \[H^n(Y,f_*\F)\simeq H^n(Y,Rf_*\F)\]
+    mais il manque qqch.
+\end{proof}
+\begin{prop}
+    Soit $f\colon X\to Y$ une fonction continue et $\F$ un faisceau
+    sur $X$. Pour tout $n\geq 0$, $R^nf_*\F$ est le faisceau associé
+    au préfaisceau
+    \[\Ouv(Y)^{op}\to Ab\]
+    t.q $V\mapsto H^n(f^{-1}V,\F)$.
+\end{prop}
+\begin{proof}
+    On prends $F\to I^\bullet$. On a pour tout $n\geq 0$
+    \[R^nf_*\F=H^n(f_*I^\bullet)\in Sh(Y)\]
+    et on calcule explicitement via 
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJJXntuLTF9Il0sWzEsMCwiSV57bn0iXSxbMiwwLCJJXntuKzF9Il0sWzAsMSwiZF97bi0xfSIsMl0sWzEsMiwiZF9uIiwyXV0=
+\[\begin{tikzcd}
+	{I^{n-1}} & {I^{n}} & {I^{n+1}}
+	\arrow["{d_{n-1}}"', from=1-1, to=1-2]
+	\arrow["{d_n}"', from=1-2, to=1-3]
+\end{tikzcd}\]
+\[H^n(f_*I^\bullet)=\frac{\ker(f_*d^n)}{im(f_*d^{n-1})}\]
+    maintenant pour tout $V\in \Ouv(Y)$
+    \[\ker(f_* d^n)(V)=\ker(I^n(f^{-1}V)\to I^{n+1}(f^{-1}V))\]
+    et
+    \[im(f_*d^{n-1})=(V\mapsto im(I^{n-1}(f^{-1}V)\to I^n(f^{-1}V)))^\sharp\]
+    maintenant 
+    \[\frac{\ker(f_*d^n)}{im(f_*d^{n-1})}=(V\mapsto \frac{\ker(f_*d^n)(V)}{im(f_*d^{n-1})(V)})^\sharp\]
+    Il suit que
+    \[R^nf_*\F=(V\mapsto H^n(\ldots\to I^{n-1}(f^{-1}V)\to I^n(f^{-1}V)
+    \to I^{n+1}(f^{-1}V)\to\ldots))^\sharp\]
+    mais $H^n(I^\bullet(f^{-1} V))=H^n(f^{-1}V,\F)$.
+\end{proof}
+\begin{prop}
+    Soit $f\colon X\to Y$ et $\G\in Sh(Y)$. On a une flèche
+    canonique
+    \[H^n(Y,\G)\to H^n(X,f^*\G)\]
+\end{prop}
+\begin{proof}
+    Soit $\G\to I^\bullet$ inj. Comme $f^*$ est exact, 
+    $f^*\G\to f^*I^\bullet$ est une résolution. Maintenant si
+    $f^*\G\to J^\bullet$ est une résolution inj. Il existe 
+    \[\alpha\colon f^*I^*\to J^*\]
+    qui étend $id_{f^*\G}$ unique à homotopie près. Soit 
+    \[a\colon Id_{Sh(Y)}\to f_*f^*\]
+    l'unité de l'adjonction. Inversement, soit 
+    \[b\colon f^*f_*id_{Sh(X)}\to id_{Sh(X)}\]
+    la co-unité. On a 
+    \[\Gamma(Y,a(I^\bullet))\colon \Gamma(Y,I^\bullet)\to \Gamma(Y,f_*f^*I^\bullet)=\Gamma(X,f^*I^\bullet)\to \Gamma(X,J^*)\]
+    En appliquant $H^n(\_)$ on obtient $H^n(Y,\G)\to H^n(X,f^*\G)$.
+\end{proof}
+\begin{prop}
+    Soit $\G^*\in D^+(Y)$. On a une flèche canonique \[R\Gamma(Y,\G^*)
+\to R\Gamma(X,Lf^*\G).\]
+\end{prop}
+\begin{proof}
+    Soit $a\colon Id_{D^+(Y)}\to Rf_*Lf^*$, ca donne 
+    \[R\Gamma(Y,\G^*)\to R\Gamma(Y,Rf_*(Lf^*\G))\simeq R\Gamma(X,Lf^*\G)\]
+\end{proof}
+\begin{rem}
+    Soit $A\in Ab$. Pour tout $n\geq 0$ on a un foncteur 
+    \[Top^{op}\to Ab\]
+    t.q. $X\mapsto H^n(X, A_X)$ où $A_X$ est le faisceau constant
+    associé à $A$ sur $X$.
+\end{rem}
+Pour tout $X\in Top$, soit $f_X\colon X\to \{*\}$. Soit
+$A\in Ab\simeq Sh(\{*\})$. Si $f\colon X\to Y$ et par % https://q.uiver.app/#q=WzAsMyxbMCwxLCJYIl0sWzEsMSwiWSJdLFsxLDAsIlxceypcXH0iXSxbMCwxLCJmIiwyXSxbMCwyLCJmX1giXSxbMSwyLCJmX1kiLDJdXQ==
+\[\begin{tikzcd}
+	& {\{*\}} \\
+	X & Y
+	\arrow["{f_X}", from=2-1, to=1-2]
+	\arrow["f"', from=2-1, to=2-2]
+	\arrow["{f_Y}"', from=2-2, to=1-2]
+\end{tikzcd}\]
+on obtient $f_X=f_Y\circ f$ d'où 
+\[A_X=f_X^* A=f^*(f_Y^* A)\simeq f^*(A_Y)\]
+puis pour tout $n\geq 0$ on obtient 
+\[H^n(Y, A_Y)\to H^n(X,A_X)\]
+
+\begin{prop}
+    Soit $X$ un espace topologique, $Z\subseteq X$ un fermé et
+    $i\colon Z\hookrightarrow X$. On a
+    \begin{enumerate}
+	\item $i_*\colon Sh(Z)\to Sh(X)$ est exact.
+	\item La co-unité \[i^*i_*\to id_{Sh(Z)}\] est un isomorphisme
+	    de foncteurs.
+	\item Pour tout $\F\in Sh(Z)$ et tout $n\geq 0$, on a 
+	    un isomorphisme
+	    \[H^n(X,i_*\F)\simeq H^n(Z,\F)\]
+    \end{enumerate}
+\end{prop}
+\begin{proof}
+    Soit $x\in X$, et soit $\F\in Sh(Z)$. On calcule
+    \begin{align*}
+	(i_*\F)_x&=\varprojlim_{x\in U\subset X} i_*\F(U)\\
+		 &=\varprojlim_{x\in U}\F(U\cap Z)\\
+		 &=\varprojlim_{x\in U}\F(U\cap Z)\\
+		 &=\begin{cases}0\textrm{ si $x\notin Z$}\\
+		     \F_x\textrm{ sinon}
+		 \end{cases}
+    \end{align*}
+    on déduit $1.$ via
+    \[0\to \F'\to \F\to \F''\to 0\]
+    exacte dans $Sh(Z)$. Alors la suite est exacte sur les fibres 
+    en tout $x\in Z$. D'où
+    \[0\to (i_*\F')_x\to (i_*\F)_x\to (i_x\F'')_x\to 0\]
+    est exacte pour tout $x\in X$. Puis 
+    \[0\to (i_*\F')\to (i_*\F)\to (i_x\F'')\to 0\]
+    est exacte dans $Sh(X)$. Pour $2.$ on a $\alpha\colon i^*i_*\F\to\F$
+    qui induit
+    \[(i^*i_*\F)_x=(i_*\F)_x=\F_x\to\F_x\]
+    où la dernière flèche est l'identité, pour tout $x\in Z$. D'où
+    le résultat. Pour $3.$, $i_*$ est exact et préserve les injectifs,
+    d'où si $\F\to I^\bullet$ est une résolution inj, $i_*\F\to 
+    i_*I^\bullet$ aussi. En plus 
+    \[\Gamma(X,i_*I^\bullet)=\Gamma(Z,I^\bullet)\]
+    d'où en appliquant la cohomologie
+    \[H^n(X,i_*\F)\simeq H^n(Z,\F)\]
+\end{proof}
+\section{Suites de Mayer-Vietoris et cohomologie des sphères}
+Étant donné $Z\subseteq X$ un fermé. On définit
+\[H^n(Z,\F):=H^n(Z,i^*\F)\]
+pour un faisceau $\F\in Sh(X)$. 
+\begin{prop}
+    Soit $X=Y\cup Z$ une union de deux fermés. Pour tout $\F\in Sh(X)$
+    on a une suite exacte longue de cohomologie
+    \[0\to H^0(X,\F)\to H^0(Y,\F)\oplus H^0(Z,\F)\to H^0(Y\cap Z),\F)
+    \to H^1(X,\F)\to \ldots\]
+\end{prop}
+\begin{rem}
+    Si on connaît la cohomologie sur deux fermés et leur intersections
+    on la connaît sur $X$.
+\end{rem}
+\begin{proof}
+    On pose $g\colon Y\to X$, $h\colon Z\to X$ et $i\colon Y\cap Z\to X$
+    les inclusions. Claim : on a une suite exacte courte dans $Sh(X)$ donnée par 
+% https://q.uiver.app/#q=WzAsNSxbMCwwLCIwIl0sWzEsMCwiXFxGIl0sWzIsMCwiZ18qZ14qXFxGXFxvcGx1cyBoXypoXipcXEYiXSxbMywwLCJpXypcXEYiXSxbNCwwLCIwIl0sWzAsMV0sWzEsMiwiKFxcYWxwaGEsXFxiZXRhKSIsMl0sWzIsMywiXFxnYW1tYSIsMl0sWzMsNF1d
+\[\begin{tikzcd}
+	0 & \F & {g_*g^*\F\oplus h_*h^*\F} & {i_*\F} & 0
+	\arrow[from=1-1, to=1-2]
+	\arrow["{(\alpha,\beta)}"', from=1-2, to=1-3]
+	\arrow["\gamma"', from=1-3, to=1-4]
+	\arrow[from=1-4, to=1-5]
+\end{tikzcd}\]
+    Si le claim est vrai, on obtiens la proposition en appliquant le
+    foncteur cohomologique 
+    \[(H^n(X,\_),\delta)_{n\geq 0}\]
+    (i.e. en prenant la suite exacte longue) car on a 
+    \[H^n(X,g_*g^*\F\oplus h_*h^*\F)=
+	H^n(X,g_*g^*\F)\oplus H^n(X,h_*h^*\F)=
+    H^n(Y,g^*\F)\oplus H^n(Z,h^* \F)\]
+    et $H^n(X,i_*\F)=H^n(Y\cap Z,\F)$.
+\end{proof}
+\begin{proof}[Démonstration du claim]
+    On pose $\alpha\colon \F\to g_*g^*\F$, $\beta\colon\F\to h_*h*^*\F$
+    les flèches d'adjonctions. La flèche $(\alpha,\beta)$ est donnée
+    par la propriété universelle du produit. On considère
+% https://q.uiver.app/#q=WzAsMyxbMCwxLCJZXFxjYXAgWiJdLFsxLDEsIlkiXSxbMSwwLCJYIl0sWzAsMSwiZiIsMl0sWzEsMiwiZyIsMl0sWzAsMiwiaSJdXQ==
+\[\begin{tikzcd}
+	& X \\
+	{Y\cap Z} & Y
+	\arrow["i", from=2-1, to=1-2]
+	\arrow["f"', from=2-1, to=2-2]
+	\arrow["g"', from=2-2, to=1-2]
+\end{tikzcd}\]
+    avec $i=g\circ f$, $i_*\simeq g_*\circ f_*$ et 
+    $i_*\simeq f^*\circ g^*$. On a 
+    \[g_*g^*\F\to g_*(f_*f^*)g_*\F\]
+    induite par $id\to f_*f^*$. D'où 
+\[g_*g^*\F\to g_*(f_*f^*)g^*\F=(g\circ f)_*(g\circ f)^*\F=i_*i^*\F.\]
+    On a une transformation naturelle $g_*g^*\to i_*i^*$ et pareil
+    pour $h$. On obtient
+    \[\gamma_1\colon g_*g^*\F\to i_*i^*\F\]
+    \[\gamma_2\colon h_*h^*\F\to i_*i^*\F\]
+    et on pose $\gamma=(\gamma_1,-\gamma_2)$ de
+    \[g_*g^*\F\oplus h_*h^*\F\to i_*i^*\F\]
+    Il reste à montrer que la suite est exacte. C'est clairement
+    un complexe. On montre que c'est exact sur les fibres.
+    Soit $x\in X$, on a plusieurs cas 
+    \begin{enumerate}
+	\item Si $x\in Y\cap Z$, on obtient la suite
+	    \[0\to \F_x\to (g_*g^*\F)_x\oplus (h_*h^*\F)_x\to
+	    (i_*i^*\F)_x\to 0\]
+	qui est égale à 
+	    \[0\to \F_x\to \F_x\oplus \F_x\to
+	    \F_x\to 0\]
+	et les flèches sont $s_x\mapsto (s_x,s_x)$ et $(s_x,s_x')\mapsto
+	s_x-s_x'$. D'où l'exactitude.
+	\item Si $x\in Y-(Z\cap Y)$ : la suite devient
+	    \[0\mapsto \F_x\to \F_x\oplus 0\to 0\to 0\]
+	    et la flèche est l'identité $s_x\mapsto (s_x,0)$.
+	\item Le dernier cas est identique.
+    \end{enumerate}
+    Ce qui conclut la preuve car $X=Y\cup Z$.
+\end{proof}
+
+\begin{prop}
+    Soit $U,V\subseteq X$ des ouverts. Pour tout $\F\in Sh(X)$ on
+    a une suite exacte longue
+    \[0\to H^0(U\cup V,\F)\to H^0(U,\F)\oplus H^0(V,\F)\to H^0(U\cap V),\F)
+    \to H^1(U\cup V,\F)\to \ldots\]
+\end{prop}
 
 \printbibliography
 
