@@ -1,0 +1,260 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath,  amsthm,enumerate}
+\usepackage{csquotes}
+\usepackage[provide=*,french]{babel}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{quiver, tikz}
+
+%symbole caligraphique
+\usepackage{mathrsfs}
+
+%hyperliens
+\usepackage{hyperref}
+
+%pseudo-code
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+
+%bibliographie
+\usepackage[
+backend=biber,
+style=alphabetic,
+sorting=ynt
+]{biblatex}
+
+
+\definecolor{wgrey}{RGB}{148, 38, 55}
+
+\setlength\parindent{24pt}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\rel}{\omathcal{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Cat}{\mathcal{C}}
+\newcommand{\Dat}{\mathcal{D}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\Or}{\mathcal{O}}
+\newcommand{\F}{\mathscr F}
+\newcommand{\Hom}{\textrm{Hom}}
+\newcommand{\disc}{\textrm{disc}}
+\newcommand{\Pic}{\textrm{Pic}}
+\newcommand{\End}{\textrm{End}}
+\newcommand{\Spec}{\textrm{Spec}}
+\newcommand{\Supp}{\textrm{Supp}}
+\renewcommand{\Im}{\textrm{Im}}
+\newcommand{\Ouv}{\textrm{Ouv}}
+\newcommand{\im}{\textrm{im}}
+
+
+\newcommand{\cL}{\mathscr{L}}
+\newcommand{\G}{\mathscr{G}}
+\newcommand{\D}{\mathscr{D}}
+\newcommand{\E}{\mathscr{E}}
+\renewcommand{\P}{\mathscr{P}}
+\renewcommand{\H}{\mathscr{H}}
+
+\makeatletter
+\newcommand{\colim@}[2]{%
+  \vtop{\m@th\ialign{##\cr
+    \hfil$#1\operator@font colim$\hfil\cr
+    \noalign{\nointerlineskip\kern1.5\ex@}#2\cr
+    \noalign{\nointerlineskip\kern-\ex@}\cr}}%
+}
+\newcommand{\colim}{%
+  \mathop{\mathpalette\colim@{\rightarrowfill@\scriptscriptstyle}}\nmlimits@
+}
+\renewcommand{\varprojlim}{%
+  \mathop{\mathpalette\varlim@{\leftarrowfill@\scriptscriptstyle}}\nmlimits@
+}
+\renewcommand{\varinjlim}{%
+  \mathop{\mathpalette\varlim@{\rightarrowfill@\scriptscriptstyle}}\nmlimits@
+}
+\makeatother
+
+\theoremstyle{plain}
+\newtheorem{thm}[subsection]{Théoreme}
+\newtheorem{lem}[subsection]{Lemme}
+\newtheorem{prop}[subsection]{Proposition}
+\newtheorem{cor}[subsection]{Corollaire}
+\newtheorem{heur}{Heuristique}
+\newtheorem{rem}{Remarque}
+\newtheorem{note}{Note}
+
+\theoremstyle{definition}
+\newtheorem{conj}{Conjecture}
+\newtheorem{prob}{Problème}
+\newtheorem{quest}{Question}
+\newtheorem{prot}{Protocole}
+\newtheorem{algo}{Algorithme}
+\newtheorem{defn}[subsection]{Définition}
+\newtheorem{exmp}[subsection]{Exemples}
+\newtheorem{exo}[subsection]{Exercices}
+\newtheorem{ex}[subsection]{Exemple}
+\newtheorem{exs}[subsection]{Exemples}
+\newtheorem{slog}{Slogan}
+
+\theoremstyle{remark}
+
+\definecolor{wgrey}{RGB}{148, 38, 55}
+\definecolor{wgreen}{RGB}{100, 200,0} 
+\hypersetup{
+    colorlinks=true,
+    linkcolor=wgreen,
+    urlcolor=wgrey,
+    filecolor=wgrey
+}
+
+\title{Exercices d'algèbre homologique}
+\author{Rayane Bait}
+\date{ }
+
+\begin{document}
+\maketitle
+
+\section*{Exercice 0.1}
+On utilise les notations de l'exercice. Soit 
+% https://q.uiver.app/#q=WzAsNSxbMSwwLCJcXEYnIl0sWzAsMCwiMCJdLFsyLDAsIlxcRiJdLFszLDAsIlxcRicnIl0sWzQsMCwiKCopIl0sWzEsMF0sWzAsMiwiZiIsMl0sWzIsMywiZyIsMl1d
+\[\begin{tikzcd}
+	0 & {\F'} & \F & {\F''} & {(*)}
+	\arrow[from=1-1, to=1-2]
+	\arrow["f"', from=1-2, to=1-3]
+	\arrow["g"', from=1-3, to=1-4]
+\end{tikzcd}\]
+une suite exacte dans $Sh(X)$ et $U\subseteq X$ un ouvert de $X$.
+On doit montrer que 
+% https://q.uiver.app/#q=WzAsNCxbMSwwLCJcXEYnKFUpIl0sWzAsMCwiMCJdLFsyLDAsIlxcRihVKSJdLFszLDAsIlxcRicnKFUpIl0sWzEsMF0sWzAsMiwiZihVKSIsMl0sWzIsMywiZyhVKSIsMl1d
+\[\begin{tikzcd}
+	0 & {\F'(U)} & {\F(U)} & {\F''(U)}
+	\arrow[from=1-1, to=1-2]
+	\arrow["{f(U)}"', from=1-2, to=1-3]
+	\arrow["{g(U)}"', from=1-3, to=1-4]
+\end{tikzcd}\]
+est exacte dans $Ab$.
+Autrement dit que $\ker(f(U))=0$ et $\im(f(U))=\ker(g(U))$ dans $Ab$.
+
+On montre d'abord le premier point. Soit $s\in \ker(f(U))$ et
+$x\in X$. Par commutativité de 
+% https://q.uiver.app/#q=WzAsNSxbMSwwLCJcXEYnKFUpIl0sWzIsMCwiXFxGKFUpIl0sWzEsMSwiXFxGX3giXSxbMiwxLCJcXEYnX3giXSxbMCwxLCIwIl0sWzAsMSwiZihVKSIsMl0sWzAsMl0sWzIsM10sWzEsM10sWzQsMl1d
+\[\begin{tikzcd}
+	& {\F'(U)} & {\F(U)} \\
+	0 & {\F_x} & {\F'_x}
+	\arrow["{f(U)}"', from=1-2, to=1-3]
+	\arrow["{f_x}"', from=2-2, to=2-3]
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=1-3, to=2-3]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+\end{tikzcd}\]
+pour les flèches évidentes et par exactitude de la ligne du bas,
+on a $(U,s)=(V_x,0)\in \F_x$ pour tout $x\in U$. Quitte à remplacer
+$V_x$ par $U\cap V_x$, on peut supposer $V_x\subset U$. En particulier,
+on obtient un recouvrement de $U$ par des ouverts $V_x$ tels que 
+\[s|_{V_x}=0\]
+pour tout $x\in U$. D'où $s=0\in \F(U)$ car $\F$ est un faisceau. On a 
+montré que $f(U)$ est injective pour tout ouvert $U$ de $X$. 
+
+On montre maintenant le second point par double inclusion, d'abord
+$\ker(g(U))\subset \im(f(U))$ : Soit $s\in \ker(g(U))$ et $x\in U$, par
+commutativité de 
+% https://q.uiver.app/#q=WzAsNCxbMCwwLCJcXEYoVSkiXSxbMSwwLCJcXEYnJyhVKSJdLFswLDEsIlxcRl94Il0sWzEsMSwiXFxGJydfeCJdLFswLDEsImcoVSkiLDJdLFswLDJdLFsyLDMsImdfeCIsMl0sWzEsM11d
+\[\begin{tikzcd}
+	{\F(U)} & {\F''(U)} \\
+	{\F_x} & {\F''_x}
+	\arrow["{g(U)}"', from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow[from=1-2, to=2-2]
+	\arrow["{g_x}"', from=2-1, to=2-2]
+\end{tikzcd}\]
+on a, $g_x((U,s))=0$. Maintenant par exactitude de
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJcXEYnX3giXSxbMSwwLCJcXEZfeCJdLFsyLDAsIlxcRicnX3giXSxbMCwxLCJmX3giLDJdLFsxLDIsImdfeCIsMl1d
+\[\begin{tikzcd}
+	{\F'_x} & {\F_x} & {\F''_x}
+	\arrow["{f_x}"', from=1-1, to=1-2]
+	\arrow["{g_x}"', from=1-2, to=1-3]
+\end{tikzcd}\]
+il existe $(V_x, s'_x)\in \F'_x$ tel que $f_x((V_x,s'_x))=(U,s)$. Quitte
+à prendre $V_x\cap U=V_x$ on peut supposer $V_x\subset U$. Maintenant
+par commutativité de
+% https://q.uiver.app/#q=WzAsOSxbMSwwLCJcXEYnKFUpIl0sWzIsMCwiXFxGKFUpIl0sWzEsMiwiXFxGJ194Il0sWzIsMiwiXFxGX3giXSxbMCwyLCIwIl0sWzAsMCwiMCJdLFswLDEsIjAgIl0sWzEsMSwiXFxGJyhWX3gpIl0sWzIsMSwiXFxGKFZfeCkiXSxbMCwxLCJmKFUpIiwyXSxbMiwzLCJmX3giLDJdLFs0LDJdLFs1LDBdLFs2LDddLFs3LDgsImYoVl94KSIsMl0sWzEsOF0sWzAsN10sWzcsMl0sWzgsM11d
+\[\begin{tikzcd}
+	0 & {\F'(U)} & {\F(U)} \\
+	{0 } & {\F'(V_x)} & {\F(V_x)} \\
+	0 & {\F'_x} & {\F_x}
+	\arrow[from=1-1, to=1-2]
+	\arrow["{f(U)}"', from=1-2, to=1-3]
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=1-3, to=2-3]
+	\arrow[from=2-1, to=2-2]
+	\arrow["{f(V_x)}"', from=2-2, to=2-3]
+	\arrow[from=2-2, to=3-2]
+	\arrow[from=2-3, to=3-3]
+	\arrow[from=3-1, to=3-2]
+	\arrow["{f_x}"', from=3-2, to=3-3]
+\end{tikzcd}\]
+on obtient $f(V_x)(s'_x)=s|_{V_x}$ pour chaque $x\in U$ et 
+$U=\cup_{x\in U} V_x$. Enfin, pour tout $x,x'\in U$, par commutativité
+de
+% https://q.uiver.app/#q=WzAsNixbMCwxLCJcXEYnKFZfeFxcY2FwIFZfe3gnfSkiXSxbMSwxLCJcXEYnKFZfeFxcY2FwIFZfe3gnfSkiXSxbMCwwLCJcXEYnKFZfeCkiXSxbMSwwLCJcXEYoVl94KSJdLFswLDIsIlxcRicoVl97eCd9KSJdLFsxLDIsIlxcRihWX3t4J30pIl0sWzAsMV0sWzIsM10sWzIsMF0sWzMsMV0sWzQsNV0sWzQsMF0sWzUsMV1d
+\[\begin{tikzcd}
+	{\F'(V_x)} & {\F(V_x)} \\
+	{\F'(V_x\cap V_{x'})} & {\F'(V_x\cap V_{x'})} \\
+	{\F'(V_{x'})} & {\F(V_{x'})}
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=3-1, to=2-1]
+	\arrow[from=3-1, to=3-2]
+	\arrow[from=3-2, to=2-2]
+\end{tikzcd}\]
+on a 
+\[f(V_x\cap V_{x'})(s'_x|_{V_x\cap V_{x'}})=s|_{V_x\cap V_{x'}}=
+f(V_x\cap V_{x'})(s'_{x'}|_{V_x\cap V_{x'}})\]
+d'où par injectivité de $f(V_x\cap V_{x'})$ on a 
+\[s'_x|_{V_x\cap V_{x'}}=s'_{x'}|_{V_x\cap V_{x'}}\]
+comme $\F'$ est un faisceau on peut relever les $s'_x$ en un $s'\in U$.
+Par commutativité du carré du haut dans l'avant dernier diagramme, comme
+$\F$ est un faisceau et $f(V_x)(s'|_{V_x})=s|_{V_x}$ on obtient que
+$f(U)(s')=s$ d'où $\ker(g(U))\subset \im(f(U))$. 
+
+Soit maintenant $s=f(U)(s')$ pour $s'\in \F'(U)$. Pour tout $x\in U$,
+par commutativité de 
+% https://q.uiver.app/#q=WzAsNixbMCwxLCJcXEYnX3giXSxbMSwxLCJcXEZfeCJdLFsyLDEsIlxcRicnX3giXSxbMCwwLCJcXEYnKFUpIl0sWzEsMCwiXFxGKFUpIl0sWzIsMCwiXFxGJycoVSkiXSxbMCwxLCJmX3giLDJdLFsxLDIsImdfeCIsMl0sWzMsNF0sWzQsNV0sWzMsMF0sWzQsMV0sWzUsMl1d
+\[\begin{tikzcd}
+	{\F'(U)} & {\F(U)} & {\F''(U)} \\
+	{\F'_x} & {\F_x} & {\F''_x}
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=1-3, to=2-3]
+	\arrow["{f_x}"', from=2-1, to=2-2]
+	\arrow["{g_x}"', from=2-2, to=2-3]
+\end{tikzcd}\]
+et par exactitude de la ligne du bas on a 
+\[(V_x,0)=g_x(f_x((U,s')))=g_x((U,s)).\]
+On obtient un recouvrement 
+$U=\cup_x V_x$ de $U$ par les $V_x$ tel que 
+$g(U)(s)|_{V_x}=g(V_x)(s|_{V_x})=0$.
+Comme $\F''$ est un faisceau, on obtient $g(U)(s)=0$ d'où 
+$\ker(g(U))=\im(f(U))$.
+
+\section*{Exercice 0.2}
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
