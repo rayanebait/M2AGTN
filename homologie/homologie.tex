@@ -2355,6 +2355,40 @@ est exacte dans $Ch(Sh(X))$.
     cohomologie.
 \end{rem}
 
+\chapter{Hypercohomologie}
+À rattraper.
+
+
+Soit $\F\in Sh(X)$. On considère 
+% https://q.uiver.app/#q=WzAsNCxbMCwwLCJTaChYKSJdLFsxLDAsIkReKyhYKSJdLFswLDEsIlxcRiJdLFsxLDEsIkleXFxidWxsZXQiXSxbMCwxXSxbMiwzLCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtYXBzIHRvIn19fV1d
+\[\begin{tikzcd}
+	{Sh(X)} & {D^+(X):=D^+(Sh(X))} \\
+	\F & {I^\bullet}
+	\arrow[from=1-1, to=1-2]
+	\arrow[maps to, from=2-1, to=2-2]
+\end{tikzcd}\]
+
+d'où $\F$ dans la catégorie dérivée, avec $I^\bullet$ une
+résolution injective. On déf
+\[Rf_*(\F):=Rf_*(I^\bullet)=f_*I^\bullet\]
+
+qui est complexe borné par en dessous de faisceaux injectifs sur $Y$
+tels que 
+\[H^i(Rf_*\F)=H^i(f_*I^\bullet)=:R^if_*(\F).\] 
+\begin{defn}
+    $Rf_*$ est le foncteur dérivé total de $f_*$.
+\end{defn}
+\begin{note}
+    Soit $f\colon X\to \{*\}$, on note $f_*=\Gamma(X,\_)$ et
+    \[Rf_*=:R\Gamma(X,\_)\colon D^+(X)\to D^+(Ab).\]
+\end{note}
+Si $\F\in Sh(X)$, alors $R\Gamma(X,\F)$ est un complexe borné par 
+le bas de groupes abélienes divisibles. Similairement, si
+\[\F\in Ch^+(Sh(X))\to K^+(X)\to D^+(X)\]
+on a $H^i(X,\F^\bullet)=H^i(R\Gamma(X,\F^\bullet))$
+
+
+
 \printbibliography
 
 
