@@ -65,6 +65,7 @@ sorting=ynt
 \renewcommand{\a}{\mathfrak a}
 \newcommand{\I}{\mathfrak I}
 \newcommand{\Hom}{\textrm{Hom}}
+\newcommand{\Gal}{\textrm{Gal}}
 \newcommand{\disc}{\textrm{disc}}
 \newcommand{\Pic}{\textrm{Pic}}
 \newcommand{\End}{\textrm{End}}
@@ -1260,12 +1261,12 @@ $\tilde\Or_K$ est monogène sur $\Or_K$. Par exemple,
 \[\begin{tikzcd}
 	K && {K^{un}} && {K^{tam}} && L \\
 	&&&& {k_{K^{tam}}} && {k_L}
-	\arrow["{non~ramifiée}"', from=1-1, to=1-3]
+	\arrow["{non~ramifiee}"', from=1-1, to=1-3]
 	\arrow["{mod+tot}"', from=1-3, to=1-5]
 	\arrow["{[L:K^{tam}]=p^r}"', from=1-5, to=1-7]
 	\arrow[no head, from=1-5, to=2-5]
 	\arrow[no head, from=1-7, to=2-7]
-	\arrow["{tot~insép}"{description}, from=2-5, to=2-7]
+	\arrow["{tot~insep}"{description}, from=2-5, to=2-7]
 \end{tikzcd}\]
 \end{cor}
 
@@ -1306,8 +1307,8 @@ et on a
 \begin{lem}[Lemme d'évitement]
     Soit $A$ un anneau commutatif et 
     $\p_1,\ldots,\p_n$ des idéaux premiers.
-    Supp $\p_1\nsubset \p_i$ pour tout $i\geq2$.
-    Alors $\p_1\nsubset \cup_i \p_i$.
+    Supp $\p_1\nsubseteq \p_i$ pour tout $i\geq2$.
+    Alors $\p_1\nsubseteq \cup_i \p_i$.
 \end{lem}
 \begin{proof}[Preuve du lemme]
     Dans le cas des idéaux maximaux, c'est un
@@ -1376,7 +1377,7 @@ s'étend en
     On a vu que $k_\m/k$ est normale. On
     note $k_\m^s$ la clôture séparable. Alors
     $k_\m^s/k$ est galoisienne et $Aut_k(k_\m)=
-    Gal(k_\m^s/k)$. On écrit $\k_\m^s=k[\theta]$.
+    Gal(k_\m^s/k)$. On écrit $k_\m^s=k[\theta]$.
     Soit $\tau\in Gal(k_\m^s/k)$, $\tau$ est 
     déterminé par $\tau(\theta)$. On note
     $r\colon D_\m\to Aut_k(k_\m)$, on montre
@@ -1435,7 +1436,162 @@ $|.|_I$.
     est galoisienne non ramifiée.
 \end{rem}
 
+\begin{thm}
+    On a les résultats suivants :
+    \begin{enumerate}
+        \item $|.|_\m$ est l'unique extension de $|.|_D$ à $L$ et 
+    \[L\otimes_{L^D}\widehat{(L^D,|.|_D)}\simeq \widehat{(L,|.|_\m)}\]
+    en plus $\widehat{(L,|.|_\m)}$ est galoisienne sur 
+    $\widehat{(L^D,|.|_D)}$ de groupe de Galois $D$.
+        \item $(K,|.|_K)-(L^D,|.|_D)$ a indice de ramification $1$
+            et extension résiduelle triviale. Puis, 
+            \[\widehat{(K,|.|_K)}\simeq \widehat{(L^D,|.|_D)}\]
+            c'est un exercice.
+        \item $(L^D,|.|_D)-(L^I,|.|_I)$ est galoisienne, non ramifiée,
+            d'extension résiduelle galoisienne de groupe de galois
+            $D/I$.
+        \item L'extension résiduelle de $(L^I,|.|_I)-(L,|.|_\m)$ est
+            purement inséparable et \[e_{(L,|.|_\m)/(L^I,|.|_I)}=
+            e_{(L,|.|_\m)/K}\]
+    \end{enumerate}
+\end{thm}
+\begin{proof}
+    Pour $1.$, on sait que $L^D-L$ est de groupe de galois $D$ et que
+    $D$ fixe $\m_0$ par déf. On a prouvé que $D$ agit transitivement
+    sur les extensions de $|.|_D$ à $L$. D'où il y'a une seule extension
+    $|.|_{\m_0}$. Maintenant, la surjection canonique
+    \[L\otimes_K \rightarrow \prod L_i\]
+    où $L_i=\widehat{(L,|.|_i)}$. Maintenant par le point d'avant
+    y'a qu'un seul $L_i=L_0$ pour :
+\[L\otimes_{L^D}\widehat{L^D}\to \widehat{(L,|.|_\m)}\]
+    d'où à gauche c'est local, puis $L$ est séparable sur
+    $L^D$ d'où c'est réduit. Maintenant à gauche c'est de dimension
+    finie réduit et local sur un corps complet. Donc c'est un corps.
 
+    \begin{exo}
+        Soit $L/K$ galoisienne, et $\Omega$ une extension de $K$
+        t.q. $L_\Omega:=L\otimes_K \Omega$ est un corps. Alors
+        \begin{enumerate}
+            \item $L_\Omega/\Omega$ est galoisienne et la flèche 
+                canonique \[\Gal(L/K)\to \Gal(L_\Omega/\Omega)\]
+                est un isomorphisme. Où $\sigma\in \Gal(L/K)$ agit
+                via $x\otimes y\mapsto \sigma(x)\otimes y$.
+            \item Pour toute extensions $K\subset F\subset L$ :
+                \[F\to F\otimes_K\Omega\subset L\otimes_K\Omega\]
+                est une bijection entre
+                \[\{\textrm{Sous-extensions de $L$}\}\leftrightarrow
+                \{\textrm{Sous-extensions de $L\otimes_K\Omega$}\}\]
+            t.q 
+            $\Gal(L/K)\simeq \Gal(L\otimes_K\Omega/F\otimes_K\Omega)$.
+        \end{enumerate}
+    \end{exo}
+    en admettant l'exercice on obtient 
+    \[D\simeq \Gal(L\otimes_{L^D}\widehat{L^D}/\widehat{L^D})\]
+    et $\widehat{L^D}-L\otimes_{L^D}\widehat{L^D}$.
+
+    Pour $2.$, on a $[L:K]=\sum e_if_i$ et quand c'est galoisien
+    $=(|G|/|D|)e_{L/K}f_{L/K}$. D'où pour $L^D-L$, on obtient 
+    $e_{L/K}f_{L/K}=|D|=[L:L^D]=e_{(L,|.|_\m)}/L^Df_{(L,|.|_\m)/L^D}$.
+    En regardant $K-L^D-L$ et $e_{L/K}f_{L/K}=e_{L/L^D}e_{L^D/K}f_{L/
+    L^D}f_{L^D/K}$ d'où $e_{L^D/K}f_{L^D/K}=1$.
+
+    Pour $3./4.$, $L^I-L$ est galoisienne et dessus, $I=D$ d'où
+    $Aut(k_\m/k_I)=1$ et $k_I-k_\m$ est purement inséparable.
+    Pareil $L^D-L^I$ est galoisienne de groupe de galois $D/I\simeq
+    Gal(k_\m^s/k)=Aut(k_\m/k)$ (avec $k_\m^s$ la cloture de $k$ dans
+    $k_\m$). Maintenant comme $k_I-k_\m$ est purement inséparable
+    d'où $k_\m^s\subset k_I$. On a 
+    \[[k_I:k]\geq[k_\m^s:k]=|D/I|=[L^I:L^D]=e_{L^I/L^D}[k_I:k_D]=e_{L^I/L^D}[k_I:k]\]
+    d'où $e_{L^I/L^D}=1$ puis $k_\m^s=k_I$. On obtient $3.$. Enfin
+    pour $4.$, on a vu que l'extension résiduelle est purement
+    inséparable et $e_{L/L^I}=e_{L/K}$.
+\end{proof}
+
+\begin{rem}
+    Garder $1\to I\to D\to Aut(k_\m/k)\to 1$ en tête.
+\end{rem}
+
+\begin{rem}
+    Dans le cas galoisien, $L^I=K^{un}$ dans $(L, |.|_\m)$ (pas facile).
+    Aussi, si $k$ est parfait alors $k_\m=k_\m^s$.
+\end{rem}
+\begin{rem}
+    Si $D$ est distingué dans $\Gal(L/K)$ alors $L^D-L^I$ est inerte 
+    et $K-L^D$ est split ($e=f=1$)! Enfin, $K-L^I$ est la plus grande
+    extension non ramifiée.
+\end{rem}
+\begin{cor}
+    $K-(L,|.|_\m)$ est modérément ramifiée ssi 
+    $|I|$ est premier à $p=car(k)$. Ça implique que 
+    \[(L^I,|.|_I)-(L,|.|_\m)\]
+    est totalement ramifiée.
+\end{cor}
+\begin{proof}
+    Dans
+    \[K-(L^I,|.|_I)-(L,|.|_\m)\]
+    l'extensio est modérément ramifiée ssi $(L^I,|.|_I)-L$ est 
+    modérément ramifiée et on conclut avec le dernier thm.
+\end{proof}
+
+Sachant qu'il donne les pdfs, jsp si ca vaut le coup de noter. Jvais
+commenter. Et noter les thms.
+\begin{thm}
+    Avec les notations d'avant,
+    \begin{enumerate}
+        \item si $char(k)=0$, alors $I$ est
+    cyclique. 
+        \item si $p=char(k)>0$, on a 
+            \[1\to P\to I\to T\to 1\]
+        avec $T$ cyclique, $|T|$ premier à $p$ est $|P|=p^m$ maximal.
+    \end{enumerate}
+    en conséquence, $P$ est l'unique $p$-Sylow de $I$. Unique car
+    normal.
+\end{thm}
+Il utiliser le cas complet et $K-K^{tam}-L$. Critère galoisiens à revoir
+! je calcule pas du tout assez. ni exos concrets.
+
+\begin{rem}
+    Si $L/K$ est galoisienne on a la décomposition :
+    \[K-L^D-L^I-L^P-L\]
+    avec $L^I-L^P$ modérée et $L^P-L$ sauvage.
+\end{rem}
+Maintenant c'est l'étude de $P$. On regarde une filtration
+\[P=G_1\supseteq G_2\supseteq\ldots\]
+Il suppose $k$ parfait. D'où $L^D-L$ a extension résiduelle séparable.
+Et \[\Or_L=\Or_{L^D}[\alpha]\].
+
+\begin{defn}
+    $G_{-1}=D$, $\m_L\subset \Or_L$. On pose
+    \[G_i:=\ker(D\to Aut(\Or_L/\m_L^{i+1}))\]
+    on a $G_i=\{\sigma\in D| \sigma(x)-x\in \m_L^{i+1}\}$. Par déf
+    $G_0=I$.
+\end{defn}
+\begin{lem}
+    $\sigma\in G_i$ ssi $\sigma(\alpha)-\alpha\in \m_L^{i+1}$.
+\end{lem}
+On définit 
+\begin{defn}
+    $U^{(0)}=\Or_L^*$ et $U^{(i)}=1+\m_L^i$.
+\end{defn}
+\begin{prop}
+    Pour tout $i\geq 0$, 
+    \[G_i/G_{i+1}\hookrightarrow U^{(i)}/U^{(i+1)}\simeq k\]
+\end{prop}
+
+\begin{cor}
+    On a
+    \begin{enumerate}
+        \item $G_0/G_1$ est cyclique d'ordre premier à $p$.
+        \item $G_i/G_{i+1}\simeq (\Z/p\Z)^{r_i}$ pour tout $i\geq 1$.
+    \end{enumerate}
+\end{cor}
+\begin{prop}
+    On a $G_i=\{1\}$ pour $i>>1$.
+\end{prop}
+\begin{note}
+    On note $i_G(\sigma)=v_L(\sigma(\alpha)-\alpha)$. Pour $K=L^I$
+    et $\Or_L=\Or_K[\alpha]$. Avec $\sigma\ne 1$.
+\end{note}
 
 \printbibliography
 \end{document}
