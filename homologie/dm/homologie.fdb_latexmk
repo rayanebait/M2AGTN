@@ -1,11 +1,11 @@
 # Fdb version 4
-["biber homologie"] 1732203892.42528 "homologie.bcf" "homologie.bbl" "homologie" 1732216238.64042 0
-  "homologie.bcf" 1732216238.53488 107165 6a1f18da45f7d323c63c8157ca46e9d3 "pdflatex"
+["biber homologie"] 1732370131.96411 "homologie.bcf" "homologie.bbl" "homologie" 1732395120.33724 0
+  "homologie.bcf" 1732395120.20946 107165 6a1f18da45f7d323c63c8157ca46e9d3 "pdflatex"
   (generated)
   "homologie.bbl"
   "homologie.blg"
   (rewritten before read)
-["pdflatex"] 1732216237.3857 "homologie.tex" "homologie.pdf" "homologie" 1732216238.64068 0
+["pdflatex"] 1732395118.87772 "homologie.tex" "homologie.pdf" "homologie" 1732395120.33751 2
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1727349926 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1727349926 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1727349926 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -29,11 +29,13 @@
   "/usr/share/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm" 1727349926 684 3a51bd4fd9600428d5264cf25f04bb9a ""
   "/usr/share/texmf-dist/fonts/tfm/public/rsfs/rsfs7.tfm" 1727349926 692 1b6510779f0f05e9cbf03e0f6c8361e6 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1727349926 32080 340ef9bf63678554ee606688e7b5339d ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1727349926 30251 6afa5cb1d0204815a708a080681d4674 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1727349926 36741 fa121aac0049305630cf160b86157ee4 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb" 1727349926 37166 8ab3487cbe3ab49ebce74c29ea2418db ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1727349926 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1727349926 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1727349926 32362 179c33bbf43f19adbb3825bb4e36e57a ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1727349926 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1727349926 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1727349926 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1727349926 32587 1788b0c1c5b39540c96f5e42ccd6dae8 ""
@@ -199,11 +201,11 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1727349926 41588 b43d3e860a4f94167ee1e725ff526a72 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1732175331.65648 5312047 b07fcd2a9090df96fc745b92a3db793b ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1732175312 7113015 9d9568c643641c7157949420f513395a ""
-  "homologie.aux" 1732216238.53154 350 5c9a95b3f047ed72aa88a2c042a2d4af "pdflatex"
-  "homologie.bbl" 1732203893.34304 0 d41d8cd98f00b204e9800998ecf8427e "biber homologie"
-  "homologie.out" 1732216238.13821 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "homologie.run.xml" 1732216238.53488 2264 83ef8c9814cf1089fd47cf9a10a23ce6 "pdflatex"
-  "homologie.tex" 1732216236.11486 8592 79bd7841b3853e387efe7afd052272c4 ""
+  "homologie.aux" 1732395120.20612 350 39a0e1b134bbef49de8dfe1c7f53757c "pdflatex"
+  "homologie.bbl" 1732370134.99681 0 d41d8cd98f00b204e9800998ecf8427e "biber homologie"
+  "homologie.out" 1732395119.63612 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "homologie.run.xml" 1732395120.20946 2264 83ef8c9814cf1089fd47cf9a10a23ce6 "pdflatex"
+  "homologie.tex" 1732395117.84611 15790 af4008e074a1ec489ab435c1b4433e7e ""
   (generated)
   "homologie.aux"
   "homologie.bcf"

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.11.21)  21 NOV 2024 20:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.11.21)  23 NOV 2024 21:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -847,7 +847,62 @@ Overfull \hbox (3.06621pt too wide) in paragraph at lines 137--140
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] (./homologie.aux)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
+./homologie.tex:263: Undefined control sequence.
+l.263 		\[\coker
+                \colon U\mapsto \coker(U):=\coker(\F(U)\to\F'(U))\]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./homologie.tex:263: Undefined control sequence.
+l.263 		\[\coker\colon U\mapsto \coker
+                                      (U):=\coker(\F(U)\to\F'(U))\]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./homologie.tex:263: Undefined control sequence.
+l.263 		\[\coker\colon U\mapsto \coker(U):=\coker
+                                                 (\F(U)\to\F'(U))\]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[3]
+./homologie.tex:360: Missing { inserted.
+<to be read again> 
+                   ^
+l.360 même pour $d_0^'
+                       '$ et $g_n$  via $d_0''^{n-1}\circ C^0(g_{n-1})$.
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+./homologie.tex:360: Missing } inserted.
+<inserted text> 
+                }
+l.360 même pour $d_0^''$
+                          et $g_n$  via $d_0''^{n-1}\circ C^0(g_{n-1})$.
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[4]
+Overfull \hbox (5.39732pt too wide) in paragraph at lines 405--408
+[]\OT1/cmr/m/n/12 On mon-tre main-tenant que $\OML/cmm/m/it/12 C[]\OT1/cmr/m/n/12 ([](\U/rsfs/m/n/12 F[] \OMS/cmsy/m/n/12 ! \U/rsfs/m/n/12 F\OT1/cmr/m/n/12 )[]) = [](\OML/cmm/m/it/12 C[]\OT1/cmr/m/n/12 (\U/rsfs/m/n/12 F[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 C[]\OT1/cmr/m/n/12 (\U/rsfs/m/n/12 F\OT1/cmr/m/n/12 ))[]$.
+ []
+
+[5] [6] (./homologie.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -859,18 +914,18 @@ Package logreq Info: Writing requests to 'homologie.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31611 strings out of 476076
- 612531 string characters out of 5793774
+ 31905 strings out of 476076
+ 619919 string characters out of 5793774
  1960187 words of memory out of 5000000
- 53250 multiletter control sequences out of 15000+600000
- 567208 words of font info for 74 fonts, out of 8000000 for 9000
+ 53536 multiletter control sequences out of 15000+600000
+ 567515 words of font info for 75 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  131i,16n,135p,682b,1709s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on homologie.pdf (3 pages, 113468 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
+Output written on homologie.pdf (6 pages, 150599 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
- 53 compressed objects within 1 object stream
- 6 named destinations out of 1000 (max. 500000)
+ 111 PDF objects out of 1000 (max. 8388607)
+ 76 compressed objects within 1 object stream
+ 14 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

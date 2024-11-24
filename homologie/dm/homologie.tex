@@ -247,6 +247,173 @@ $\ker(g(U))=\im(f(U))$.
 
 \section*{Exercice 0.2}
 
+\section*{Exercice 0.3}
+On utilisera librement dans tout l'exercice que $Sh(X)$ est une
+catégorie abélienne avec les résultats suivants du cours : 
+\begin{enumerate}
+	\item Le noyau d'une flèche $f\colon F\to F'$ dans $Sh(X)$
+		coincide avec le faisceau défini par 
+		\[\ker(U):=\ker(\F(U)\to\F'(U))\]
+	\item L'image d'une flèche $f\colon F\to F'$ dans $Sh(X)$
+		coincide avec le faisceautisé du préfaisceau défini
+		par
+		\[\im\colon U\mapsto \im(U):=\im(\F(U)\to\F'(U))\]
+	\item Le conoyau d'une flèche $f\colon F\to F'$ dans $Sh(X)$
+		coincide avec le faisceautisé du préfaisceau défini
+		\[\coker\colon U\mapsto \coker(U):=\coker(\F(U)\to\F'(U))\]
+	\item Le faisceau $0_{Sh(X)}$ défini par $0_{Sh(X)}(U):= 0_{Ab}$
+		est un objet zéro dans $Sh(X)$.
+\end{enumerate}
+On note $(\_)^\sharp\colon PSh(X)\to Sh(X)$ le foncteur de 
+faisceautisation. Enfin, si $\F$ est un faisceau sur un espace 
+topologique on pourra décrire une section $\bar s\colon U\to Et(\F)$ 
+de l'espace étalé de $\F$ comme un tuple 
+$(s_x)_{x\in U}=(\bar s(x))_{x\in U}$.
+
+\begin{center}
+	\textbf{1)}
+\end{center}
+Soit $\F$ un faisceau dans $Sh(X)$. Pour tout $x\in X$, on a 
+$0=0_{F_x}\in \F_x$ un élément neutre car
+$\F_x$ est un groupe abélien. En particulier, pour tout ouverts 
+$V\subseteq U$ de $X$, si $s=(s_x)_{x\in V}\in C^0(\F(V))$ alors
+si on note $s':=(s'_x)_{x\in U}$ la section telle que $s'_x=s_x$ pour
+$x\in V$ et $s'_x=0$ pour $x\in U-V$ on a $s'|_V=s$ d'où $C^0(\F)$
+est flasque.
+
+\begin{center}
+	\textbf{2)}
+\end{center}
+Soit $\F\in Sh(X)$. On définit $i^0(\F)\colon \F\to C^0(\F)$ le
+morphisme de faisceau défini par 
+$i^0(\F)(U)\colon s\mapsto (s_x)_{x\in U}$ pour tout ouvert $U$ de $X$
+et où $s_x\in \F_x$ est 
+l'image de $s$ dans la fibre $\F_x$ induite par $\F$. On montre que
+$i^0(\F)$ est injectif en montrant que $\ker(i^0(\F))=0_{Sh(X)}$. 
+Soit $U$ un ouvert sur $X$ et $s\in \ker(i^0(\F))(U)$, alors 
+$(s_x)_{x\in U}=((V_x, 0))_{x\in U}$, en particulier $s|_{V_x}=0$ 
+et $\cup V_x = U$ d'où $s=0\in \F(U)$.
+
+\begin{center}
+	\textbf{3)}
+\end{center}
+On définit en plus $Z^0(\F)=\F$, $d_0^0\colon C^0(\F)\to Z^1(\F)$
+et $d^0=i^0(\F)\circ(d_0^0)$. On suppose maintenant défini
+$d_0^{i-1}\colon C^{i-1}(\F) \to Z^i(\F)$ et 
+\[d^{i-1}=i^0(Z^{i-1})\circ(d_0^{i-1})\colon C^{i-1}(\F)\to C^i(\F)\]
+pour $n\geq i\geq 1$. 
+
+\begin{center}
+	\textbf{4)}
+\end{center}
+
+\begin{center}
+	\textbf{5)}
+\end{center}
+On montre d'abord que $C^\bullet(\_)$ est un foncteur. Étant donné
+$g\circ f \colon \F'\to \F\to \F'' $ dans $Sh(X)$. On pose d'abord
+$f_0=f$ et $g_0=g$, on définit ensuite $Z^n(\F')\to Z^n(\F)$ pour tout
+$n\geq 1$.
+
+Supposons d'abord que $C^0(\_)$ est exact et soit 
+% https://q.uiver.app/#q=WzAsNSxbMSwwLCJcXEYnIl0sWzAsMCwiMCJdLFsyLDAsIlxcRiJdLFszLDAsIlxcRicnIl0sWzQsMCwiKCopIl0sWzEsMF0sWzAsMiwiZiIsMl0sWzIsMywiZyIsMl1d
+\[\begin{tikzcd}
+	0 & {\F'} & \F & {\F''} & 0 & {(*)}
+	\arrow[from=1-1, to=1-2]
+	\arrow["f"', from=1-2, to=1-3]
+	\arrow["g"', from=1-3, to=1-4]
+	\arrow[from=1-4, to=1-5]
+\end{tikzcd}\]
+une suite exacte dans $Sh(X)$. On montre que le morphisme de complexe
+induit $0\to C^\bullet(\F')\to C^\bullet(\F)\to C^\bullet(\F'')\to 0$
+est exact. Il suffit de montrer qu'il l'est à chaque niveau, c'est à
+dire que pour tout $n\geq 0$ 
+\[0\to C^n(\F')\to C^n(\F)\to C^n(\F'')\to 0\]
+est exact. En plus on a supposé que $C^0(\_)$ était exact, il suffit
+donc de montrer que 
+\[0\to Z^n(\F')\to Z^n(\F)\to Z^n(\F'')\to 0\]
+est exact. On le montre par récurrence sur $n$. En posant $Z^0(\F):=\F$
+on obtient le cas $n=0$ par l'hypothèse $(*)$. Supposons 
+maintenant le résultat vrai pour $0\leq i\leq n-1$.
+On considère le diagramme 
+
+% https://q.uiver.app/#q=WzAsOCxbMSwwLCJBIl0sWzIsMCwiQiJdLFszLDAsIkMiXSxbNCwwLCIwIl0sWzMsMSwiQyciXSxbMiwxLCJCJyJdLFsxLDEsIkEnIl0sWzAsMSwiMCJdLFswLDEsIlxcYWxwaGEiXSxbMSwyLCJcXGJldGEiXSxbMiwzXSxbNSw0LCJcXGJldGEnIl0sWzYsNSwiXFxhbHBoYSciXSxbNyw2XSxbMCw2LCJ1Il0sWzEsNSwidiJdLFsyLDQsInciXV0=
+\[\begin{tikzcd}
+	0 & {C^{n-1}(\F')} & {C^{n-1}(\F)} & {C^{n-1}(\F'')} & 0 \\
+	0 & {Z^n(\F')} & {Z^n(\F)} & {Z^n(\F'')} & 0
+	\arrow["C^0(f_{n-1})", from=1-2, to=1-3]
+	\arrow["d'^{n-1}", from=1-2, to=2-2]
+	\arrow["C^0(g_{n-1})", from=1-3, to=1-4]
+	\arrow["d^{n-1}", from=1-3, to=2-3]
+	\arrow[from=1-4, to=1-5]
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=2-4, to=2-5]
+	\arrow["d''^{n-1}", from=1-4, to=2-4]
+	\arrow[from=2-1, to=2-2]
+	\arrow["{f_n}", from=2-2, to=2-3]
+	\arrow["{g_n}", from=2-3, to=2-4]
+\end{tikzcd}\]
+où on note que $f_0=f$, $g_0=g$ et $f_n$ est la flèche induite de 
+$d_0^{n-1}\circ C^0(f_{n-1})$ avec $C^0(d_0^{n-1})=d^{n-1}$ pour
+$n\geq 1$ 
+par passage au quotient dans la catégorie abélienne $Sh(X)$, de 
+même pour $d_0^''$ et $g_n$  via $d_0''^{n-1}\circ C^0(g_{n-1})$.
+
+
+
+
+
+On montre maintenant que $C^0(\_)\colon Sh(X)\to Sh(X)$ est
+exact. Soit $f\colon \F'\to\F$ dans $Sh(X)$. La flèche $C^0(f)$ est 
+donnée par
+\[C^0(f)(U)\colon (s'_x)_{x\in U}\mapsto (f_x(s'_x))_{x\in U}\] 
+où $f_x\colon \F'_x\to \F_x$ est la flèche induite par $f$ sur les
+fibres. Il suffit de montrer que 
+$C^0(\ker(\F'\to \F))=\ker(C^0(\F')\to C^0(\F))$
+et $C^0(\im(\F'\to \F))=\im(C^0(\F')\to C^0(\F))$. Si c'est le cas,
+alors comme $C^0(0_{Sh(X)})=0_{Sh(X)}$, car tout produit d'objets
+terminaux est terminal, on obtient directement pour toute suite exacte
+% https://q.uiver.app/#q=WzAsNSxbMSwwLCJcXEYnIl0sWzAsMCwiMCJdLFsyLDAsIlxcRiJdLFszLDAsIlxcRicnIl0sWzQsMCwiKCopIl0sWzEsMF0sWzAsMiwiZiIsMl0sWzIsMywiZyIsMl1d
+\[\begin{tikzcd}
+	0 & {\F'} & \F & {\F''} & 0 & {(*)}
+	\arrow[from=1-1, to=1-2]
+	\arrow["f"', from=1-2, to=1-3]
+	\arrow["g"', from=1-3, to=1-4]
+	\arrow[from=1-4, to=1-5]
+\end{tikzcd}\]
+dans $Sh(X)$ que
+% https://q.uiver.app/#q=WzAsNSxbMSwwLCJcXEYnIl0sWzAsMCwiMCJdLFsyLDAsIlxcRiJdLFszLDAsIlxcRicnIl0sWzQsMCwiKCopIl0sWzEsMF0sWzAsMiwiZiIsMl0sWzIsMywiZyIsMl1d
+\[\begin{tikzcd}
+	0 & {C^0(\F')} & {C^0(\F)} & {C^0(\F'')} & 0 & {(*)}
+	\arrow[from=1-1, to=1-2]
+	\arrow["C^0(f)"', from=1-2, to=1-3]
+	\arrow["C^0(g)"', from=1-3, to=1-4]
+	\arrow[from=1-4, to=1-5]
+\end{tikzcd}\]
+est exacte par fonctorialité de $C^0(\_)$. 
+
+On commence par montrer que
+$C^0(\ker(\F'\to \F))=\ker(C^0(\F')\to C^0(\F))$. Par la description
+donnée en $1.$ on a 
+\[\ker(C^0(\F')\to C^0(\F))(U)=\ker(\prod_{x\in U} f_x\colon \prod_{x\in U} \F'_x\to \prod_{x\in U} \F_x)\]
+et de plus $C^0(\ker(\F'\to \F))(U)=\prod_{x\in U}\ker(\F'\to\F)_x$, 
+il suffit donc de montrer que si 
+\[(s_x)_{x\in U}\in \ker(\prod_{x\in U} f_x\colon \prod_{x\in U} \F'_x\to \prod_{x\in U} \F_x)\]
+alors pour tout $x\in U$ on a $s_x\in \ker(f_x)$ et inversement.
+Mais c'est immédiat par définition du noyau dans $Ab$. 
+
+On montre maintenant que 
+$C^0(\im(\F'\to \F)^\sharp)=\im(C^0(\F')\to C^0(\F))^\sharp$.
+Par la description donnée en 2. on peut écrire 
+\[\im(C^0(\F')\to C^0(\F))(U)=\{(f_xs'_x)_{x\in U}| s'_x\in \F'_x\}\]
+et on remarque que c'est déjà un faisceau par définition des 
+restrictions. En plus $C^0(\im(\F'\to \F)^\sharp)=C^0(\im(\F'\to\F))$
+car un préfaisceau et son faisceautisé ont les mêmes fibres, en
+particulier $C^0(\im(\F'\to\F))$ et $\im(C^0(\F')\to C^0(\F))$ ont 
+la même description donc coincident. On en déduit de $C^0(\_)$ est
+exact.
+
+
 
 
 
