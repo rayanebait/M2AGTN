@@ -1,15 +1,15 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'homologie.blg'
-[105] biber:340> INFO - === jeu. nov. 21, 2024, 10:35:50
-[124] Biber.pm:419> INFO - Reading 'homologie.bcf'
-[210] Biber.pm:979> INFO - Found 1 citekeys in bib section 0
-[231] Biber.pm:4419> INFO - Processing section 0
-[242] Biber.pm:4610> INFO - Looking for bibtex file 'bib.bib' for section 0
-[246] bibtex.pm:1713> INFO - LaTeX decoding ...
-[317] bibtex.pm:1519> INFO - Found BibTeX data source 'bib.bib'
-[382] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[382] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'variable = shifted' with 'variable = non-ignorable'
-[382] Biber.pm:4239> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'fr-FR'
-[382] Biber.pm:4245> INFO - No sort tailoring available for locale 'fr-FR'
-[384] bbl.pm:660> INFO - Writing 'homologie.bbl' with encoding 'UTF-8'
-[384] bbl.pm:763> INFO - Output to homologie.bbl
+[101] biber:340> INFO - === lun. nov. 25, 2024, 11:05:36
+[118] Biber.pm:419> INFO - Reading 'homologie.bcf'
+[195] Biber.pm:979> INFO - Found 1 citekeys in bib section 0
+[214] Biber.pm:4419> INFO - Processing section 0
+[224] Biber.pm:4610> INFO - Looking for bibtex file 'bib.bib' for section 0
+[227] bibtex.pm:1713> INFO - LaTeX decoding ...
+[289] bibtex.pm:1519> INFO - Found BibTeX data source 'bib.bib'
+[347] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[348] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[348] Biber.pm:4239> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'fr-FR'
+[348] Biber.pm:4245> INFO - No sort tailoring available for locale 'fr-FR'
+[349] bbl.pm:660> INFO - Writing 'homologie.bbl' with encoding 'UTF-8'
+[350] bbl.pm:763> INFO - Output to homologie.bbl

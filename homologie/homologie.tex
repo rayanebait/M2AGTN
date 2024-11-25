@@ -2666,6 +2666,75 @@ pour un faisceau $\F\in Sh(X)$.
     \to H^1(U\cup V,\F)\to \ldots\]
 \end{prop}
 
+\section{Cohomologie des sphères}
+On utilise qu'un espace topologique homotope à un point a
+\[H^n(X,\Z)\simeq H^n(\{*\},\Z)\simeq \begin{cases} \Z\textrm{ n= 0}\\
+0\end{cases}\]
+\begin{rem}
+    La cohomologie à coefficients constant est invariante par 
+    homotopie.
+\end{rem}
+On écrit $S^1=[-1,1]\cup[-1,1]$ avec l'union des deux hémisphères.
+En plus $Y\cap Z=\{-1,1\}$. On obtient 
+\[H^n(Y,\Z)=H^n(Z,\Z)=\begin{cases}\Z\textrm{ $n=0$}\\0\end{cases}\]
+En plus à l'aide de Mayer-Vietoris on montre que
+\[H^n(Y\cap Z, \Z)=H^n(\{*\},\Z)\oplus H^n(\{*\},\Z)\]
+Maintenant en appliquant Mayer-Vietoris à nouveau on obtient
+\[0\to H^0(S^1)\to H^0(Y)\oplus H^0(Y)\oplus H^0(\Z)\to H^0(Y\cap Z)
+\to H^1(S^1)\to 0\]
+avec $H^n(S^1)=0$ pour $n\geq 2$. En haut on a 
+\[0\to \Z\to \Z\oplus \Z\to \Z\oplus\Z\to H^1(S^1)\to 0\]
+Où la première flèche est la diagonale et la deuxième est
+$(a,b)\to (a-b,a-b)$ (on peut regarder les flèches localement?).
+Maintenant là deuxième flèche donne $\Z=coker(\to)=H^1(S^1)$.
+
+En fait l'argument se généralise et on peut calculer la cohomologie
+des sphères $S^n$. On montre que 
+\[H^m(S^n,\Z)=\begin{cases} \Z,\textrm{ $m=0$ ou $m=n$}\\ 0,\textrm{ $m\ne 0,n$}\end{cases}\]
+
+On l'a montré pour $n=1$. On utilise maintenant $Y$ l'hémisphère
+nord et $Z$ l'hémisphère sud, pour la première coordonnée par 
+exemple. L'induction se passe au moment où on montre que pour
+$n\geq 2$ on a $Y\cap Z=S^{n-1}$. En plus, $Y\simeq B^n\simeq Z$ qui
+est contractile. Maintenant l'argument est identique.
+
+\begin{rem}
+    On regarde le faisceau constant à chaque fois quand on dit 
+    $H^m(S^n, \Z)$ et comme c'est connexe le $H^0$ c'est bien
+    clair.
+\end{rem}
+
+\begin{thm}[Théorème du point fixe de Brauer]
+    Soit $n\geq 1$ et $f\colon B^n\to B^n$ une fonction continue.
+    Alors $f$ a un point fixe.
+\end{thm}
+\begin{proof}  
+    On suppose qu'il en existe une sans point fixe. Alors pour
+    tout $y\in B^n$, $f(y)\ne y$. Alors on peut définir un
+    rétract $S^{n-1}\to B^n\to S^{n-1}$. Celui tel que
+     \[r\colon B^n\to S^{n-1}\]
+    est défini par $r(y)=S^{n-1}\cap (y, f(y)[$ où à droite c'est la 
+    demi-droite passant par $y$ et $f(y)$ sans $f(y)$. On obtient
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJIXm4oU157bi0xfSxcXFopIl0sWzIsMCwiSF4qKEJebixcXFopIl0sWzIsMSwiSF4qKFNee24tMX0sXFxaKSJdLFsxLDIsImleKiJdLFswLDEsInJeKiIsMV0sWzAsMiwiaWQiLDFdXQ==
+\[\begin{tikzcd}
+	{H^*(S^{n-1},\Z)} && {H^*(B^n,\Z)} \\
+	&& {H^*(S^{n-1},\Z)}
+	\arrow["{r^*}"{description}, from=1-1, to=1-3]
+	\arrow["id"{description}, from=1-1, to=2-3]
+	\arrow["{i^*}", from=1-3, to=2-3]
+\end{tikzcd}\]
+    Où $i^*$ est surjective. Pour $n\geq 2$ on obtient une flèche
+    surjective
+    \[0=H^{n-1}(B^n,\Z)\to H^{n-1}(S^{n-1},\Z)=\Z\]
+    ce qui est contradictoire. Si $n=1$, $H^0(B^1,\Z)=\Z$ et
+    $H^0(S^0,\Z)=\Z\oplus\Z$ sachant $S^0=\{-1,1\}$ contradiction
+    à nouveau car y'a pas ce genre de surjection.
+\end{proof}
+\begin{cor}
+    Supposons qu'il existe un homéomorphisme  entre $S^n$
+    et $S^m$. Alors $n=m$.
+\end{cor}
+
 \printbibliography
 
 

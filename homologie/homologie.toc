@@ -20,3 +20,4 @@
 \contentsline {section}{\numberline {4.2}Faisceaux flasques}{43}{section.4.2}%
 \contentsline {chapter}{\numberline {5}Hypercohomologie}{47}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Suites de Mayer-Vietoris et cohomologie des sphères}{52}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Cohomologie des sphères}{54}{section.5.2}%
