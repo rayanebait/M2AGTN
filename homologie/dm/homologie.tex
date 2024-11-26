@@ -1,0 +1,797 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath,  amsthm,enumerate}
+\usepackage{csquotes}
+\usepackage[provide=*,french]{babel}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{quiver, tikz}
+
+%symbole caligraphique
+\usepackage{mathrsfs}
+
+%hyperliens
+\usepackage{hyperref}
+
+%pseudo-code
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+
+%bibliographie
+\usepackage[
+backend=biber,
+style=alphabetic,
+sorting=ynt
+]{biblatex}
+
+
+\definecolor{wgrey}{RGB}{148, 38, 55}
+
+\setlength\parindent{24pt}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\rel}{\omathcal{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Cat}{\mathcal{C}}
+\newcommand{\Dat}{\mathcal{D}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\Or}{\mathcal{O}}
+\newcommand{\F}{\mathscr F}
+\newcommand{\Hom}{\textrm{Hom}}
+\newcommand{\disc}{\textrm{disc}}
+\newcommand{\Pic}{\textrm{Pic}}
+\newcommand{\End}{\textrm{End}}
+\newcommand{\Spec}{\textrm{Spec}}
+\newcommand{\Supp}{\textrm{Supp}}
+\renewcommand{\Im}{\textrm{Im}}
+\newcommand{\Ouv}{\textrm{Ouv}}
+\newcommand{\im}{\textrm{im}}
+\newcommand{\coker}{\textrm{coker}}
+\newcommand{\coim}{\textrm{coim}}
+
+
+\newcommand{\cL}{\mathscr{L}}
+\newcommand{\G}{\mathscr{G}}
+\newcommand{\D}{\mathscr{D}}
+\newcommand{\E}{\mathscr{E}}
+\renewcommand{\P}{\mathscr{P}}
+\renewcommand{\H}{\mathscr{H}}
+
+\makeatletter
+\newcommand{\colim@}[2]{%
+  \vtop{\m@th\ialign{##\cr
+    \hfil$#1\operator@font colim$\hfil\cr
+    \noalign{\nointerlineskip\kern1.5\ex@}#2\cr
+    \noalign{\nointerlineskip\kern-\ex@}\cr}}%
+}
+\newcommand{\colim}{%
+  \mathop{\mathpalette\colim@{\rightarrowfill@\scriptscriptstyle}}\nmlimits@
+}
+\renewcommand{\varprojlim}{%
+  \mathop{\mathpalette\varlim@{\leftarrowfill@\scriptscriptstyle}}\nmlimits@
+}
+\renewcommand{\varinjlim}{%
+  \mathop{\mathpalette\varlim@{\rightarrowfill@\scriptscriptstyle}}\nmlimits@
+}
+\makeatother
+
+\theoremstyle{plain}
+\newtheorem{thm}[subsection]{Théoreme}
+\newtheorem{lem}[subsection]{Lemme}
+\newtheorem{prop}[subsection]{Proposition}
+\newtheorem{cor}[subsection]{Corollaire}
+\newtheorem{heur}{Heuristique}
+\newtheorem{rem}{Remarque}
+\newtheorem{note}{Note}
+
+\theoremstyle{definition}
+\newtheorem{conj}{Conjecture}
+\newtheorem{prob}{Problème}
+\newtheorem{quest}{Question}
+\newtheorem{prot}{Protocole}
+\newtheorem{algo}{Algorithme}
+\newtheorem{defn}[subsection]{Définition}
+\newtheorem{exmp}[subsection]{Exemples}
+\newtheorem{exo}[subsection]{Exercices}
+\newtheorem{ex}[subsection]{Exemple}
+\newtheorem{exs}[subsection]{Exemples}
+\newtheorem{slog}{Slogan}
+
+\theoremstyle{remark}
+
+\definecolor{wgrey}{RGB}{148, 38, 55}
+\definecolor{wgreen}{RGB}{100, 200,0} 
+\hypersetup{
+    colorlinks=true,
+    linkcolor=wgreen,
+    urlcolor=wgrey,
+    filecolor=wgrey
+}
+
+\title{Exercices d'algèbre homologique}
+\author{Rayane Bait}
+\date{ }
+
+\begin{document}
+\maketitle
+
+\section*{Exercice 0.1}
+On utilise les notations de l'exercice. Soit 
+% https://q.uiver.app/#q=WzAsNSxbMSwwLCJcXEYnIl0sWzAsMCwiMCJdLFsyLDAsIlxcRiJdLFszLDAsIlxcRicnIl0sWzQsMCwiKCopIl0sWzEsMF0sWzAsMiwiZiIsMl0sWzIsMywiZyIsMl1d
+\[\begin{tikzcd}
+	0 & {\F'} & \F & {\F''} & {(*)}
+	\arrow[from=1-1, to=1-2]
+	\arrow["f"', from=1-2, to=1-3]
+	\arrow["g"', from=1-3, to=1-4]
+\end{tikzcd}\]
+une suite exacte dans $Sh(X)$ et $U\subseteq X$ un ouvert de $X$.
+On doit montrer que 
+% https://q.uiver.app/#q=WzAsNCxbMSwwLCJcXEYnKFUpIl0sWzAsMCwiMCJdLFsyLDAsIlxcRihVKSJdLFszLDAsIlxcRicnKFUpIl0sWzEsMF0sWzAsMiwiZihVKSIsMl0sWzIsMywiZyhVKSIsMl1d
+\[\begin{tikzcd}
+	0 & {\F'(U)} & {\F(U)} & {\F''(U)}
+	\arrow[from=1-1, to=1-2]
+	\arrow["{f(U)}"', from=1-2, to=1-3]
+	\arrow["{g(U)}"', from=1-3, to=1-4]
+\end{tikzcd}\]
+est exacte dans $Ab$.
+Autrement dit que $\ker(f(U))=0$ et $\im(f(U))=\ker(g(U))$ dans $Ab$.
+
+On montre d'abord le premier point. Soit $s\in \ker(f(U))$ et
+$x\in X$. Par commutativité de 
+% https://q.uiver.app/#q=WzAsNSxbMSwwLCJcXEYnKFUpIl0sWzIsMCwiXFxGKFUpIl0sWzEsMSwiXFxGX3giXSxbMiwxLCJcXEYnX3giXSxbMCwxLCIwIl0sWzAsMSwiZihVKSIsMl0sWzAsMl0sWzIsM10sWzEsM10sWzQsMl1d
+\[\begin{tikzcd}
+	& {\F'(U)} & {\F(U)} \\
+	0 & {\F_x} & {\F'_x}
+	\arrow["{f(U)}"', from=1-2, to=1-3]
+	\arrow["{f_x}"', from=2-2, to=2-3]
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=1-3, to=2-3]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+\end{tikzcd}\]
+pour les flèches évidentes et par exactitude de la ligne du bas,
+on a $(U,s)=(V_x,0)\in \F_x$ pour tout $x\in U$. Quitte à remplacer
+$V_x$ par $U\cap V_x$, on peut supposer $V_x\subset U$. En particulier,
+on obtient un recouvrement de $U$ par des ouverts $V_x$ tels que 
+\[s|_{V_x}=0\]
+pour tout $x\in U$. D'où $s=0\in \F(U)$ car $\F$ est un faisceau. On a 
+montré que $f(U)$ est injective pour tout ouvert $U$ de $X$. 
+
+On montre maintenant le second point par double inclusion, d'abord
+$\ker(g(U))\subset \im(f(U))$ : Soit $s\in \ker(g(U))$ et $x\in U$, par
+commutativité de 
+% https://q.uiver.app/#q=WzAsNCxbMCwwLCJcXEYoVSkiXSxbMSwwLCJcXEYnJyhVKSJdLFswLDEsIlxcRl94Il0sWzEsMSwiXFxGJydfeCJdLFswLDEsImcoVSkiLDJdLFswLDJdLFsyLDMsImdfeCIsMl0sWzEsM11d
+\[\begin{tikzcd}
+	{\F(U)} & {\F''(U)} \\
+	{\F_x} & {\F''_x}
+	\arrow["{g(U)}"', from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow[from=1-2, to=2-2]
+	\arrow["{g_x}"', from=2-1, to=2-2]
+\end{tikzcd}\]
+on a, $g_x((U,s))=(U,0)$. Maintenant par exactitude de
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJcXEYnX3giXSxbMSwwLCJcXEZfeCJdLFsyLDAsIlxcRicnX3giXSxbMCwxLCJmX3giLDJdLFsxLDIsImdfeCIsMl1d
+\[\begin{tikzcd}
+	{\F'_x} & {\F_x} & {\F''_x}
+	\arrow["{f_x}"', from=1-1, to=1-2]
+	\arrow["{g_x}"', from=1-2, to=1-3]
+\end{tikzcd}\]
+il existe $(V_x, s'_x)\in \F'_x$ tel que $f_x((V_x,s'_x))=(U,s)$. Quitte
+à prendre $V_x\cap U=V_x$ on peut supposer $V_x\subset U$. Maintenant
+par commutativité de
+% https://q.uiver.app/#q=WzAsOSxbMSwwLCJcXEYnKFUpIl0sWzIsMCwiXFxGKFUpIl0sWzEsMiwiXFxGJ194Il0sWzIsMiwiXFxGX3giXSxbMCwyLCIwIl0sWzAsMCwiMCJdLFswLDEsIjAgIl0sWzEsMSwiXFxGJyhWX3gpIl0sWzIsMSwiXFxGKFZfeCkiXSxbMCwxLCJmKFUpIiwyXSxbMiwzLCJmX3giLDJdLFs0LDJdLFs1LDBdLFs2LDddLFs3LDgsImYoVl94KSIsMl0sWzEsOF0sWzAsN10sWzcsMl0sWzgsM11d
+\[\begin{tikzcd}
+	0 & {\F'(U)} & {\F(U)} \\
+	{0 } & {\F'(V_x)} & {\F(V_x)} \\
+	0 & {\F'_x} & {\F_x}
+	\arrow[from=1-1, to=1-2]
+	\arrow["{f(U)}"', from=1-2, to=1-3]
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=1-3, to=2-3]
+	\arrow[from=2-1, to=2-2]
+	\arrow["{f(V_x)}"', from=2-2, to=2-3]
+	\arrow[from=2-2, to=3-2]
+	\arrow[from=2-3, to=3-3]
+	\arrow[from=3-1, to=3-2]
+	\arrow["{f_x}"', from=3-2, to=3-3]
+\end{tikzcd}\]
+on obtient $f(V_x)(s'_x)=s|_{V_x}$ pour chaque $x\in U$ et 
+$U=\cup_{x\in U} V_x$. Enfin, pour tout $x,x'\in U$, par commutativité
+de
+% https://q.uiver.app/#q=WzAsNixbMCwxLCJcXEYnKFZfeFxcY2FwIFZfe3gnfSkiXSxbMSwxLCJcXEYnKFZfeFxcY2FwIFZfe3gnfSkiXSxbMCwwLCJcXEYnKFZfeCkiXSxbMSwwLCJcXEYoVl94KSJdLFswLDIsIlxcRicoVl97eCd9KSJdLFsxLDIsIlxcRihWX3t4J30pIl0sWzAsMV0sWzIsM10sWzIsMF0sWzMsMV0sWzQsNV0sWzQsMF0sWzUsMV1d
+\[\begin{tikzcd}
+	{\F'(V_x)} & {\F(V_x)} \\
+	{\F'(V_x\cap V_{x'})} & {\F(V_x\cap V_{x'})} \\
+	{\F'(V_{x'})} & {\F(V_{x'})}
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=3-1, to=2-1]
+	\arrow[from=3-1, to=3-2]
+	\arrow[from=3-2, to=2-2]
+\end{tikzcd}\]
+on a 
+\[f(V_x\cap V_{x'})(s'_x|_{V_x\cap V_{x'}})=s|_{V_x\cap V_{x'}}=
+f(V_x\cap V_{x'})(s'_{x'}|_{V_x\cap V_{x'}})\]
+d'où par injectivité de $f(V_x\cap V_{x'})$ on a 
+\[s'_x|_{V_x\cap V_{x'}}=s'_{x'}|_{V_x\cap V_{x'}}\]
+comme $\F'$ est un faisceau on peut relever les $s'_x$ en un $s'\in U$.
+Par commutativité du carré du haut dans l'avant dernier diagramme, comme
+$\F$ est un faisceau et $f(V_x)(s'|_{V_x})=s|_{V_x}$ on obtient que
+$f(U)(s')=s$ d'où $\ker(g(U))\subset \im(f(U))$. 
+
+Soit maintenant $s=f(U)(s')$ pour $s'\in \F'(U)$. Pour tout $x\in U$,
+par commutativité de 
+% https://q.uiver.app/#q=WzAsNixbMCwxLCJcXEYnX3giXSxbMSwxLCJcXEZfeCJdLFsyLDEsIlxcRicnX3giXSxbMCwwLCJcXEYnKFUpIl0sWzEsMCwiXFxGKFUpIl0sWzIsMCwiXFxGJycoVSkiXSxbMCwxLCJmX3giLDJdLFsxLDIsImdfeCIsMl0sWzMsNF0sWzQsNV0sWzMsMF0sWzQsMV0sWzUsMl1d
+\[\begin{tikzcd}
+	{\F'(U)} & {\F(U)} & {\F''(U)} \\
+	{\F'_x} & {\F_x} & {\F''_x}
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=1-3, to=2-3]
+	\arrow["{f_x}"', from=2-1, to=2-2]
+	\arrow["{g_x}"', from=2-2, to=2-3]
+\end{tikzcd}\]
+et par exactitude de la ligne du bas on a 
+\[(V_x,0)=g_x(f_x((U,s')))=g_x((U,s)).\]
+On obtient un recouvrement 
+$U=\cup_x V_x$ de $U$ par les $V_x$ tel que 
+$g(U)(s)|_{V_x}=g(V_x)(s|_{V_x})=0$.
+Comme $\F''$ est un faisceau, on obtient $g(U)(s)=0$ d'où 
+$\ker(g(U))=\im(f(U))$.
+
+\section*{Exercice 0.2}
+\begin{center}
+	\textbf{1)}
+\end{center}
+Avec les notations de l'exercice, on montre que $S$ est inductif et 
+non vide. Par exactitude sur les fibres, pour $x\in U$ il existe 
+$(V_x, s_x)$ telle que $g_x((V_x,s_x))=(V'_x,s_x)$. En particulier,
+$(V_x,s_x)$ est dans $S$ donc $S$ est non vide.
+Soit maintenant $((U_i, s_i))_{i\in I}$ une chaîne donnée par un ordre
+total $I$. Alors pour $i,j\in I$ et $i\leq j$ on a 
+\[s_j|_{U_i\cap U_j}=s_j|_{U_i}=s_i=s_i|_{U_i\cap U_j}\]
+d'où la famille se relève en un $s\in \cup_{i\in I} U_i$ tel que 
+$s|_{U_i}=s_i$ et $U_i\subset \cup_{j\in I}U_j$ alors 
+\[(\cup_{i\in I} U_i, s)\]
+est un majorant de $((U_i,s_i))_{i\in I}$, on montre qu'il est dans $S$.
+On a $g(\cup_{i\in I} U_i)(s)|_{U_i}=s''|_{U_i}$ pour tout $i\in I$,
+d'où $g(\cup_{i\in I} U_i)(s)=s''|_{\cup_{i\in I} U_i}$ par unicité 
+du relèvement. D'où $S$ est inductif puis en appliquant le lemme
+de Zorn à $S$ le résultat.
+\begin{center}
+	\textbf{2)}
+\end{center}
+Soit $(s, V)$ un élément maximal de $S$. Si $U-V$ est non vide alors on 
+prends $x\in U-V$ et localement, $(V_x, c_x)$ un antécédent de 
+$(U,s'')$ par $g_x$. Alors $s|_{V_x\cap V}\ne c_x|_{V_x\cap V}$ car
+sinon on pourrait relever $c_x$ et $s$ en un $c\in \F(V_x\cup V)$
+tel que $c|_{V_x}=c_x$, $c|_{V}=s$ et $f(V_x\cup V)(c)=s''|_{V_x\cup V}$
+ce qui contredit la maximalité de $(V,s)$. Supposons donc que 
+$s|_{V_x\cap V}\ne c_x|_{V_x\cap V}$. Alors 
+\[s|_{V_x\cap V}- c_x|_{V_x\cap V}\in \ker(g(V_x\cap V))\]
+or par l'exercice $1$, $0\to \F'(U)\to \F(U)\to \F''(U)$
+est exacte au milieu, d'où \[s|_{V_x\cap V}- c_x|_{V_x\cap V}\in 
+\im(f(V_x\cap V)).\]
+Comme $\F'$ est flasque, on relève un antécédent $c'\in \F'(V_x\cap V)$
+en $c'_x\in \F'(V_x)$. Alors $c_x-f(V_x)(c'_x)$ et $s$ coincide 
+sur $V_x\cap V$, en effet 
+\[(c_x-f(V_x)(c'_x))|_{V_x\cap V}= c_x|_{V_x\cap V}-c_x|_{V_x\cap V}
++s|_{V_x\cap V}=s|_{V_x\cap V}\]
+En plus, $g(V_x)(c_x-f(V_x)(c'_x))=g(V_x)(c_x)=s''|_{V_x}$. D'où
+on peut relever $c_x+f(V_x)(c'_x)$ et $s$ en un $c\in \F(V_x\cup U)$
+tel que $(V_x\cup V, c)\in S$.
+Comme $V_x$ n'est pas inclu dans $U$, on obtient $(V,s)<(V_x\cup U, c)$
+ce qui contredit la maximalité de $(V,s)$. D'où $U-V$ est vide 
+et $s$ est un antécédent de $s''$ puis l'exactitude à droite.
+
+\section*{Exercice 0.3}
+On utilisera librement dans tout l'exercice que $Sh(X)$ est une
+catégorie abélienne avec les résultats suivants du cours : 
+\begin{enumerate}
+	\item Le noyau d'une flèche $f\colon \F\to \F'$ dans $Sh(X)$
+		coincide avec le faisceau défini par 
+		\[\ker\colon U\mapsto \ker(U):=\ker(\F(U)\to\F'(U))\]
+	\item L'image d'une flèche $f\colon \F\to \F'$ dans $Sh(X)$
+		coincide avec le faisceautisé du préfaisceau défini
+		par
+		\[\im\colon U\mapsto \im(U):=\im(\F(U)\to\F'(U))\]
+	\item Le conoyau d'une flèche $f\colon \F\to \F'$ dans $Sh(X)$
+		coincide avec le faisceautisé du préfaisceau défini
+		\[\coker\colon U\mapsto \coker(U):=\coker(\F(U)\to\F'(U))\]
+	\item La coimage d'une flèche $f\colon \F\to \F'$ dans $Sh(X)$
+		coincide avec le faisceautisé du préfaisceau défini
+		\[\coim\colon U\mapsto \coim(U):=\coim(\F(U)\to\F'(U))\]
+	\item Le faisceau $0_{Sh(X)}$ défini par $0_{Sh(X)}(U):= 0_{Ab}$
+		est un objet zéro dans $Sh(X)$.
+\end{enumerate}
+On note $(\_)^\sharp\colon PSh(X)\to Sh(X)$ le foncteur de 
+faisceautisation. Enfin, si $\F$ est un faisceau sur un espace 
+topologique on pourra décrire une section $\bar s\colon U\to Et(\F)$ 
+de l'espace étalé de $\F$ au dessus de $U$ comme un tuple 
+$(s_x)_{x\in U}=(\bar s(x))_{x\in U}$.
+
+\begin{center}
+	\textbf{1)}
+\end{center}
+Soit $\F$ un faisceau dans $Sh(X)$. Pour tout $x\in X$, on a 
+$0=0_{F_x}\in \F_x$ un élément neutre car
+$\F_x$ est un groupe. En particulier, pour tout ouverts 
+$V\subseteq U$ de $X$, si $s=(s_x)_{x\in V}\in C^0(\F)(V)$ alors
+si on note $s':=(s'_x)_{x\in U}$ la section telle que $s'_x=s_x$ pour
+$x\in V$ et $s'_x=0$ pour $x\in U-V$ on a $s'|_V=s$ d'où $C^0(\F)$
+est flasque.
+
+\begin{center}
+	\textbf{2)}
+\end{center}
+Soit $\F\in Sh(X)$. On définit $i^0(\F)\colon \F\to C^0(\F)$ le
+morphisme de faisceau défini par 
+$i^0(\F)(U)\colon s\mapsto (s_x)_{x\in U}$ pour tout ouvert $U$ de $X$
+et où $s_x\in \F_x$ est 
+l'image de $s$ dans la fibre $\F_x$ induite par $\F$. On montre que
+$i^0(\F)$ est injectif en montrant que $\ker(i^0(\F))=0_{Sh(X)}$. 
+Soit $U$ un ouvert sur $X$ et $s\in \ker(i^0(\F))(U)$, alors 
+$(s_x)_{x\in U}=((V_x, 0))_{x\in U}$, en particulier $s|_{V_x\cap U}=0$ 
+et $\cup V_x\cap U = U$ d'où $s=0\in \F(U)$, en particulier on a bien 
+$\ker(i^0(\F))=0_{Sh(X)}$.
+
+\begin{center}
+	\textbf{3)}
+\end{center}
+On définit en plus $Z^0(\F)=\F$, $d_0^0\colon C^0(\F)\to Z^1(\F)$
+et $d^0=i^0(\F)\circ(d_0^0)$. On suppose maintenant défini
+$d_0^{i-1}\colon C^{i-1}(\F) \to Z^i(\F)$ et 
+\[d^{i-1}=i^0(Z^{i-1})\circ(d_0^{i-1})\colon C^{i-1}(\F)\to C^i(\F)\]
+pour $n\geq i\geq 1$. On pose 
+\[d_0^{n}=\coker(i^0(Z^{n-1}(\F))):=(C^{n-1}(\F)\to Z^n(\F))\]
+la flèche canonique du conoyau et $d^n=i^0(Z^n(\F))\circ d_0^n$. 
+
+\begin{center}
+	\textbf{4)}
+\end{center}
+
+On commence par remarquer qu'un noyau est invariant par post-composition
+par un monomorphisme, de même une image est invariante par 
+pré-composition par un épimorphisme dans une catégorie abélienne.
+On le montre en annexe.
+\newline
+
+On montre maintenant que $0\to \F\to C^\bullet(\F)$ est exacte. 
+Par la question 2), et comme les morphismes injectifs de faisceaux sont
+des monomorphismes, par un exercice du cours $0\to \F\to C^0(\F)$ est 
+exacte. On montre donc que $\F\to C^\bullet(\F)$ est exacte. On utilise
+ici $\im$ pour désigner l'image catégorique.
+Par la première partie de la remarque précédente et par la question 2)
+on a 
+$\ker(d^n)=\ker(d_0^n)$. Maintenant par construction, et par le cours 
+\begin{align*}
+	\ker(d_0^n)&=\ker(\coker(i^0(Z^n)))\\
+		   &=\ker(\coker(Z^n(\F)\to C^n(\F)))\\
+		   &=\im(Z^n(\F)\to C^n(\F))\\
+		   &=\im(C^{n-1}(\F)\to C^n(\F))\\
+\end{align*}
+où la dernière égalité est dûe à la deuxième partie de la remarque
+précédente car 
+$(C^{n-1}(\F)\to Z^n(\F))=\coker(Z^{n-1}(\F)\to C^{n-1}(\F))$
+est un épimorphisme. En particulier, $0\to \F\to C^\bullet(\F)$ est
+exacte.
+
+\begin{center}
+	\textbf{5)}
+\end{center}
+
+
+
+Dans cet exercice on désigne par $d(\F)^n$ (resp. $d(\F)_0^n$) la
+flèche $C^n(\F)\to C^{n+1}(\F)$ (resp. $C^n(\F)\to Z^{n+1}(\F)$) 
+construite en 3).
+\newline
+
+Étant donné $f\colon \F'\to \F$ dans $Sh(X)$ on commence par construire 
+$C^0(f)$ et $C^\bullet(f)$ avant de montrer que $C^0(\_)$ et 
+$C^\bullet(\_)$ sont des foncteurs exacts. Ça suffit à prouver le 
+résultat, en effet si $C^\bullet(\_)$ est un foncteur exact alors pour
+toute suite exacte \[0\to \F'\to \F\to \F''\to 0\]
+dans $Sh(X)$ et tout ouvert $U\subset X$,
+comme $C^n(\F')=C^0(Z^n(\F'))$ est flasque par la question 1),
+\[0\to C^n(\F')(U)\to C^n(\F)(U)\to C^n(\F'')(U)\to 0\] est exacte
+par l'exercice 2. D'où le résultat.
+
+On commence par montrer que $C^0(\_)$ est un foncteur. On pose
+\[C^0(f)(U)\colon (s_x)_{x\in U}\mapsto (f_x s_x)_{x\in U}.\]
+Par définition, le diagramme
+% https://q.uiver.app/#q=WzAsNCxbMCwwLCJcXEYnIl0sWzEsMCwiXFxGIl0sWzAsMSwiQ14wKFxcRicpIl0sWzEsMSwiQ14wKFxcRikiXSxbMSwzLCJpXjAoXFxGKSJdLFswLDIsImleMChcXEYnKSIsMl0sWzIsMywiQ14wKGYpIiwyXSxbMCwxLCJmIl1d
+\[\begin{tikzcd}
+	{\F'} & \F \\
+	{C^0(\F')} & {C^0(\F)}
+	\arrow["f", from=1-1, to=1-2]
+	\arrow["{i^0(\F')}"', from=1-1, to=2-1]
+	\arrow["{i^0(\F)}", from=1-2, to=2-2]
+	\arrow["{C^0(f)}"', from=2-1, to=2-2]
+\end{tikzcd}\]
+commute et $C^0(f)$ est bien un morphisme de faisceau. Maintenant 
+si $g\colon \F\to \F''$ est une autre flèche dans $Sh(X)$ alors 
+$C^0(g\circ f)=C^0(g)\circ C^0(f)$ par définition car le foncteur
+fibre $(\_)_x \colon Sh(X)\to Ab$ pour $x\in X$ est un foncteur. Enfin
+$C^0(id_\F)=id_{C^0(\F)}$ pour la même raison. D'où
+$C^0(\_)$ est un foncteur.
+\newline
+
+On construit maintenant 
+$C^\bullet(f)=(f^n\colon C^n(\F')\to C^n(\F))_{n\geq 0}$ 
+étant donné $f \colon \F'\to \F$ dans $Sh(X)$. On pose
+$f^0=C^0(f)$, il suffit de construire $Z^\bullet(f):=
+(f_0^n\colon Z^n(\F')\to Z^n(\F))$ telles que 
+% https://q.uiver.app/#q=WzAsNCxbMCwwLCJDXntuLTF9KFxcRicpIl0sWzEsMCwiQ157bi0xfShcXEYpIl0sWzAsMSwiWl5uKFxcRicpIl0sWzEsMSwiWl5uKFxcRikiXSxbMSwzLCJkXzBee24tMX0iXSxbMCwyLCJkXzBee24tMX0iLDJdLFsyLDMsImZfMF57bn0iLDJdLFswLDEsImZfe24tMX0iXV0=
+\[\begin{tikzcd}
+	{C^{n-1}(\F')} & {C^{n-1}(\F)} \\
+	{Z^n(\F')} & {Z^n(\F)}
+	\arrow["{f_{n-1}}", from=1-1, to=1-2]
+	\arrow["{d(\F')_0^{n-1}}"', from=1-1, to=2-1]
+	\arrow["{d(\F)_0^{n-1}}", from=1-2, to=2-2]
+	\arrow["{f_0^{n}}"', from=2-1, to=2-2]
+\end{tikzcd}\]
+commute pour tout $n\geq 0$ et de poser $(f^n)_{n\geq0}=(C^0(f_0^n))$.
+On le fait par récurrence sur $n$. Pour $n=1$ on regarde
+% https://q.uiver.app/#q=WzAsNixbMCwxLCJDXnswfShcXEYnKSJdLFsxLDEsIkNeezB9KFxcRikiXSxbMCwyLCJaXjEoXFxGJykiXSxbMSwyLCJaXjEoXFxGKSJdLFswLDAsIlxcRiciXSxbMSwwLCJcXEYiXSxbMSwzLCJkXzBeezB9Il0sWzAsMiwiZF8wXnswfSIsMl0sWzAsMSwiZl4wIl0sWzQsMF0sWzQsNSwiZiJdLFs1LDFdLFsyLDMsImZfMF4xIiwyXV0=
+\[\begin{tikzcd}
+	{\F'} & \F \\
+	{C^{0}(\F')} & {C^{0}(\F)} \\
+	{Z^1(\F')} & {Z^1(\F)}
+	\arrow["f", from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow[from=1-2, to=2-2]
+	\arrow["{f^0}", from=2-1, to=2-2]
+	\arrow["{d_0^{0}}"', from=2-1, to=3-1]
+	\arrow["{d_0^{0}}", from=2-2, to=3-2]
+	\arrow["{f_0^1}"', from=3-1, to=3-2]
+\end{tikzcd}\]
+et on veut construire la flèche du bas. On remarque que
+$(\F'\to C^0(\F'))$ se factorise par $\ker(d(\F)_0^0\circ f^0)$. En effet
+par commutatitivité du carré du haut et exactitude de la colonne de
+droite on a
+\[0_{\F',Z^1(\F)}=0_{\F,Z^1(\F)}\circ f=(d(\F)_0^0\circ i^0(\F))\circ f=d(\F)_0^0\circ f^0\circ
+i^0(\F')\] 
+d'où $\F'\to C^0(\F')$ se factorise par le noyau. On écrit maintenant
+\begin{align*}
+	Z^1(\F')&=\coker(\F'\to C^0(\F'))\\
+		&=\coim(C^0(\F')\to Z^1(\F'))
+\end{align*}
+où la dernière égalité est par construction. Par le point précédent,
+en notant 
+\[\F'=\ker\left(C^0(\F)\to \coim(C^0(\F')\to Z^1(\F'))\right)\]
+on obtient une flèche
+\[\ker\left(C^0(\F')\to \coim(C^0(\F')\to Z^1(\F'))\right)\to \ker(d_0^0\circ f^0)\]
+d'où une flèche induite 
+\[\coim\left(C^0(\F')\to \coim(C^0(\F')\to Z^1(\F'))\right)\to \coim(d_0^0\circ f^0)\]
+en particulier, le membre de gauche est 
+$\coim(C^0(\F')\to Z^1(\F'))=Z^1(\F')$. Finalement, on obtient
+une flèche induite
+\[f_0^1\colon Z^1(\F')\to \coim(d(\F)_0^0\circ f^0)\to\im(d(\F)_0^0\circ f^0) \to Z^1(\F)\] 
+ce qui conclut le cas $n=1$. La commutativité étant par construction.
+Le cas $n\geq 2$ se fait de manière identique en remplaçant $\F=Z^0(\F)$
+par $Z^{n-1}(\F)$, $C^0(\F)$ par $C^n(\F)$ et $Z^1(\F)$ par $Z^n(\F)$.
+\newline
+
+On suppose maintenant que $C^\bullet$ est un foncteur, une 
+preuve est en annexe si elle était demandée.
+\newline
+
+On montre maintenant que $C^\bullet$ est exact. Supposons d'abord que $C^0(\_)$ est exact et soit 
+% https://q.uiver.app/#q=WzAsNSxbMSwwLCJcXEYnIl0sWzAsMCwiMCJdLFsyLDAsIlxcRiJdLFszLDAsIlxcRicnIl0sWzQsMCwiKCopIl0sWzEsMF0sWzAsMiwiZiIsMl0sWzIsMywiZyIsMl1d
+\[\begin{tikzcd}
+	0 & {\F'} & \F & {\F''} & 0 & {(*)}
+	\arrow[from=1-1, to=1-2]
+	\arrow["f"', from=1-2, to=1-3]
+	\arrow["g"', from=1-3, to=1-4]
+	\arrow[from=1-4, to=1-5]
+\end{tikzcd}\]
+une suite exacte dans $Sh(X)$. On montre que le morphisme de complexe
+induit $0\to C^\bullet(\F')\to C^\bullet(\F)\to C^\bullet(\F'')\to 0$
+est exact. Il suffit de montrer pour tout $n\geq 0$ la suite
+\[0\to C^n(\F')\to C^n(\F)\to C^n(\F'')\to 0\]
+est exacte dans $Sh(X)$. En plus on a supposé que $C^0(\_)$ était exact,
+il suffit donc de montrer que la suite
+\[0\to Z^n(\F')\to Z^n(\F)\to Z^n(\F'')\to 0\]
+est exacte. On le montre par récurrence sur $n$. En posant $Z^0(\F):=\F$
+on obtient le cas $n=0$ par l'hypothèse $(*)$. Supposons 
+maintenant le résultat vrai pour $0\leq i\leq n-1$.
+On considère le diagramme 
+
+% https://q.uiver.app/#q=WzAsMTAsWzAsMSwiMCJdLFsxLDEsIkNee24tMX0oXFxGJykiXSxbMiwxLCJDXntuLTF9KFxcRikiXSxbMywxLCJDXntuLTF9KFxcRicnKSJdLFs0LDEsIjAiXSxbMSwwLCJaXntuLTF9KFxcRicpIl0sWzIsMCwiWl57bi0xfShcXEYpIl0sWzMsMCwiWl57bi0xfShcXEYnJykiXSxbNCwwLCIwIl0sWzAsMCwiMCJdLFsxLDIsIkNeMChmXzBee24tMX0pIl0sWzIsMywiQ14wKGdfMF57bi0xfSkiXSxbMyw0XSxbMCwxXSxbNSw2LCJmXzBee24tMX0iXSxbNiw3LCJmXzBee24tMX0iXSxbNSwxXSxbNiwyXSxbNywzXSxbNyw4XSxbOSw1XV0=
+\[\begin{tikzcd}
+	0 & {Z^{n-1}(\F')} & {Z^{n-1}(\F)} & {Z^{n-1}(\F'')} & 0 \\
+	0 & {C^{n-1}(\F')} & {C^{n-1}(\F)} & {C^{n-1}(\F'')} & 0
+	\arrow[from=1-1, to=1-2]
+	\arrow["{f_0^{n-1}}", from=1-2, to=1-3]
+	\arrow[from=1-2, to=2-2]
+	\arrow["{f_0^{n-1}}", from=1-3, to=1-4]
+	\arrow[from=1-3, to=2-3]
+	\arrow[from=1-4, to=1-5]
+	\arrow[from=1-4, to=2-4]
+	\arrow[from=2-1, to=2-2]
+	\arrow["{C^0(f_0^{n-1})}", from=2-2, to=2-3]
+	\arrow["{C^0(g_0^{n-1})}", from=2-3, to=2-4]
+	\arrow[from=2-4, to=2-5]
+\end{tikzcd}\]
+Par hypothèse de récurrence, les lignes sont exactes. En plus, par 
+fonctorialité de $C^0(\_)$ et par construction, le diagramme commute.
+Comme $Sh(X)$ est abélienne, on applique le lemme du serpent pour obtenir
+la suite exacte
+% https://q.uiver.app/#q=WzAsOCxbMSwwLCJcXGtlcihpXjAoWl57bi0xfShcXEYnKSkpIl0sWzAsMCwiMCJdLFsyLDAsIlxca2VyKGleMChaXntuLTF9KFxcRikpKSJdLFszLDAsIlxca2VyKGleMChaXntuLTF9KFxcRicnKSkpIl0sWzEsMSwiXFxjb2tlcihpXjAoWl57bi0xfShcXEYnKSkpIl0sWzIsMSwiXFxjb2tlcihpXjAoWl57bi0xfShcXEYpKSkiXSxbMywxLCJcXGNva2VyKGleMChaXntuLTF9KFxcRicnKSkpIl0sWzQsMSwiMCJdLFsxLDBdLFswLDIsIlxca2VyKGZfMF57bi0xfSkiXSxbMiwzLCJcXGtlcihnXzBee24tMX0pIl0sWzMsNF0sWzUsNl0sWzQsNV0sWzYsN11d
+\[\begin{tikzcd}
+	0 & {\ker(i^0(Z^{n-1}(\F')))} & {\ker(i^0(Z^{n-1}(\F)))} & {\ker(i^0(Z^{n-1}(\F'')))} \\
+	& {\coker(i^0(Z^{n-1}(\F')))} & {\coker(i^0(Z^{n-1}(\F)))} & {\coker(i^0(Z^{n-1}(\F'')))} & 0
+	\arrow[from=1-1, to=1-2]
+	\arrow["{\ker(f_0^{n-1})}", from=1-2, to=1-3]
+	\arrow["{\ker(g_0^{n-1})}", from=1-3, to=1-4]
+	\arrow[from=1-4, to=2-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-3, to=2-4]
+	\arrow[from=2-4, to=2-5]
+\end{tikzcd}\]
+or $i^0(\F)$ est un monomorphisme de faisceaux pour tout $\F\in Sh(X)$,
+d'où on obtient une suite exacte
+% https://q.uiver.app/#q=WzAsNSxbMSwwLCJcXGNva2VyKGleMChaXntuLTF9KFxcRicpKSkiXSxbMiwwLCJcXGNva2VyKGleMChaXntuLTF9KFxcRikpKSJdLFszLDAsIlxcY29rZXIoaV4wKFpee24tMX0oXFxGJycpKSkiXSxbNCwwLCIwIl0sWzAsMCwiMCJdLFsxLDJdLFswLDFdLFsyLDNdLFs0LDBdXQ==
+\[\begin{tikzcd}
+	0 & {\coker(i^0(Z^{n-1}(\F')))} & {\coker(i^0(Z^{n-1}(\F)))} & {\coker(i^0(Z^{n-1}(\F'')))} & 0
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-3, to=1-4]
+	\arrow[from=1-4, to=1-5]
+\end{tikzcd}\]
+mais par définition $\coker(i^0(Z^{n-1}(\F)))=Z^n(\F)$ pour tout 
+faisceau $\F$. D'où le résultat, enfin la preuve du lemme du serpent
+permet de placer la suite du dessus dans un diagramme commutatif
+% https://q.uiver.app/#q=WzAsMTAsWzAsMCwiMCJdLFsxLDAsIkNee24tMX0oXFxGJykiXSxbMiwwLCJDXntuLTF9KFxcRikiXSxbMywwLCJDXntuLTF9KFxcRicnKSJdLFs0LDAsIjAiXSxbMSwxLCJaXntufShcXEYnKSJdLFsyLDEsIlpee259KFxcRikiXSxbMywxLCJaXntufShcXEYnJykiXSxbNCwxLCIwIl0sWzAsMSwiMCJdLFsxLDIsIkNeMChmXzBee24tMX0pIl0sWzIsMywiQ14wKGdfMF57bi0xfSkiXSxbMyw0XSxbMCwxXSxbNSw2LCJmXzBee24tMX0iXSxbNiw3LCJmXzBee24tMX0iXSxbMSw1XSxbMiw2XSxbMyw3XSxbNyw4XSxbOSw1XV0=
+\[\begin{tikzcd}
+	0 & {C^{n-1}(\F')} & {C^{n-1}(\F)} & {C^{n-1}(\F'')} & 0 \\
+	0 & {Z^{n}(\F')} & {Z^{n}(\F)} & {Z^{n}(\F'')} & 0
+	\arrow[from=1-1, to=1-2]
+	\arrow["{C^0(f_0^{n-1})}", from=1-2, to=1-3]
+	\arrow["d(\F')_0^{n-1}",from=1-2, to=2-2]
+	\arrow["{C^0(g_0^{n-1})}", from=1-3, to=1-4]
+	\arrow["d(\F)_0^{n-1}",from=1-3, to=2-3]
+	\arrow[from=1-4, to=1-5]
+	\arrow["d(\F'')_0^{n-1}",from=1-4, to=2-4]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-3, to=2-4]
+	\arrow[from=2-4, to=2-5]
+\end{tikzcd}\]
+d'où par commutativité des carrés, les flèches du bas sont bien 
+$f_0^n$ et $g_0^n$ en appliquant le lemme de l'annexe sur la 
+fonctorialité de $C^\bullet$ sachant que $d(\F')_0^{n-1}$ et 
+$d(\F)_0^{n-1}$ sont des épimorphismes.
+\newline
+
+On montre enfin que $C^0(\_)\colon Sh(X)\to Sh(X)$ est
+exact. Soit $f\colon \F'\to\F$ dans $Sh(X)$. La flèche $C^0(f)$ est 
+donnée par
+\[C^0(f)(U)\colon (s'_x)_{x\in U}\mapsto (f_x(s'_x))_{x\in U}\] 
+où $f_x\colon \F'_x\to \F_x$ est la flèche induite par $f$ sur les
+fibres. Il suffit de montrer que 
+$C^0(\ker(\F'\to \F))=\ker(C^0(\F')\to C^0(\F))$
+et $C^0(\im(\F'\to \F))=\im(C^0(\F')\to C^0(\F))$. Si c'est le cas,
+alors comme $C^0(0_{Sh(X)})=0_{Sh(X)}$, car tout produit d'objets
+terminaux est terminal, on obtient directement pour toute suite exacte
+% https://q.uiver.app/#q=WzAsNSxbMSwwLCJcXEYnIl0sWzAsMCwiMCJdLFsyLDAsIlxcRiJdLFszLDAsIlxcRicnIl0sWzQsMCwiKCopIl0sWzEsMF0sWzAsMiwiZiIsMl0sWzIsMywiZyIsMl1d
+\[\begin{tikzcd}
+	0 & {\F'} & \F & {\F''} & 0 & {(*)}
+	\arrow[from=1-1, to=1-2]
+	\arrow["f"', from=1-2, to=1-3]
+	\arrow["g"', from=1-3, to=1-4]
+	\arrow[from=1-4, to=1-5]
+\end{tikzcd}\]
+dans $Sh(X)$ que
+% https://q.uiver.app/#q=WzAsNSxbMSwwLCJcXEYnIl0sWzAsMCwiMCJdLFsyLDAsIlxcRiJdLFszLDAsIlxcRicnIl0sWzQsMCwiKCopIl0sWzEsMF0sWzAsMiwiZiIsMl0sWzIsMywiZyIsMl1d
+\[\begin{tikzcd}
+	0 & {C^0(\F')} & {C^0(\F)} & {C^0(\F'')} & 0 & {(*)}
+	\arrow[from=1-1, to=1-2]
+	\arrow["C^0(f)"', from=1-2, to=1-3]
+	\arrow["C^0(g)"', from=1-3, to=1-4]
+	\arrow[from=1-4, to=1-5]
+\end{tikzcd}\]
+est exacte par fonctorialité de $C^0(\_)$. 
+
+On commence par montrer que
+$C^0(\ker(\F'\to \F))=\ker(C^0(\F')\to C^0(\F))$. Par la description
+donnée en $1.$ on a 
+\[\ker(C^0(\F')\to C^0(\F))(U)=\ker(\prod_{x\in U} f_x\colon \prod_{x\in U} \F'_x\to \prod_{x\in U} \F_x)\]
+et de plus $C^0(\ker(\F'\to \F))(U)=\prod_{x\in U}\ker(\F'\to\F)_x$, 
+il suffit donc de montrer que si 
+\[(s_x)_{x\in U}\in \ker(\prod_{x\in U} f_x\colon \prod_{x\in U} \F'_x\to \prod_{x\in U} \F_x)\]
+alors pour tout $x\in U$ on a $s_x\in \ker(f_x)$ et inversement.
+Mais c'est immédiat par définition du noyau dans $Ab$. 
+
+On montre maintenant que 
+$C^0(\im(\F'\to \F)^\sharp)=\im(C^0(\F')\to C^0(\F))^\sharp$.
+Par la description donnée en 2. on peut écrire 
+\[\im(C^0(\F')\to C^0(\F))(U)=\{(f_xs'_x)_{x\in U}| s'_x\in \F'_x\}\]
+et on remarque que c'est déjà un faisceau par définition des 
+restrictions. En plus $C^0(\im(\F'\to \F)^\sharp)=C^0(\im(\F'\to\F))$
+car un préfaisceau et son faisceautisé ont les mêmes fibres, en
+particulier $C^0(\im(\F'\to\F))$ et $\im(C^0(\F')\to C^0(\F))$ ont 
+la même description donc coincident. On en déduit de $C^0(\_)$ est
+exact.
+
+\[\textrm{\textbf{6)}}\]
+La preuve est exactement identique à celle du cours en remplaçant
+la définition de $H^n(\F, U)$ du cours par la notre.
+
+\[\textrm{\textbf{7)}}\]
+On remarque que pour tout $n\geq 0$, $Z^n(\F)$ est flasque si 
+$\F$ est flasque. En effet, c'est clair pour $n=0$, maintenant si 
+$n\geq 1$ on a une suite exacte 
+\[0\to Z^{n-1}(\F)\to C^n(\F)\to Z^n(\F)\to 0\]
+et par récurrence $Z^{n-1}(\F)$ est flasque de même, 
+$C^n(\F)=C^0(Z^{n-1}(\F))$ est flasque par la question 1), d'où par le
+cours $Z^n(\F)$ est flasque. Maintenant, par l'exercice $2$ pour tout
+ouvert $U\subseteq X$ 
+\[0\to Z^{n-1}(\F)(U)\to C^n(\F)(U)\to Z^n(\F)(U)\to 0\qquad (**)\]
+est exacte dans $Ab$ or par définition 
+\[H^n(C^\bullet(\F), U):=\ker(d(\F)^n(U))/\im(d(\F)^{n-1}(U))\]
+d'où par $(**)$ et par les annexes 1.1 et 1.2 on a 
+\begin{enumerate}
+	\item $\ker(d(\F)^n(U))=\ker(d(\F)_0^n(U))=Z^{n-1}(\F)(U)$.
+	\item $Z^{n-1}(\F)(U)=\im(i^0(Z^{n-1})(U))=\im(d(\F)^{n-1}(U))$.
+\end{enumerate}
+Puis $H^n(C^\bullet(\F),U)=0$ pour tout $n\geq 1$.
+
+
+\[\textrm{\textbf{8)}}\]
+On commence par remarquer qu'un faisceau abélien $\G$ sur $X^\delta$
+est de la forme $\G(U)=\prod_{x\in U} \G_x$ pour tout ouvert
+$U$ de $X^\delta$.
+
+En effet pour tout ouvert $U\subseteq X^\delta$ et pour
+toute section $s\in \G(U)$ on peut relever la collection 
+$(s|_{\{x\}})_{x\in U}$ de manière unique car 
+$\{x\}\cap \{x'\}=\emptyset$ pour tout deux points distincts $x$ et $x'$ 
+de $X$ d'où la condition de recollement sur les intersections est vide.
+De même, on peut relever toute famille 
+\[(s_x)_{x\in U}\in \prod_{x\in U} \G(\{x\})\] en un unique 
+$s\in \G(U)$ tel que $s|_{\{x\}}=s_x$. En particulier,
+$\G(U)\simeq\prod_{x\in U}\G(\{x\})$.
+\newline
+
+Il reste à montrer que $\G(\{x\})=\G_x$
+pour tout $x\in X^\delta$. Mais $\G(\{x\})$ est un majorant du diagramme
+filtrant donné par $(\G(U))_{x\in U}$ muni des restrictions, qui 
+appartient au diagramme. En particulier on obtient directement 
+$\varprojlim_{x\in U} \G(U)=\G(\{x\})$ et le résultat.
+\newline
+
+Enfin, on pose
+$\G=f^*\F$ pour $\F$ un faisceau abélien sur $X$. Alors pour tout
+ouvert $U\subseteq X^\delta$ on a 
+\[f^*\F(U)=\prod_{x\in U} (f^*\F)_x = \prod_{x\in U} \F_x\]
+où la dernière égalité est par le cours et le fait que $f(x)=x$. On 
+conclut en remarquant que $f_*f^*\F$ est le faisceau 
+\[U\mapsto \prod_{x\in U}\F_x\]
+de $\Ouv(X)$ dans $Ab$ et qu'il coincide exactement avec $C^0(\F)$ d'où
+le premier résultat de l'exercice.
+\newline
+Pour le second, soit $\F\in Sh(X)$, on doit montrer qu'il existe
+un injectif $I$ de $Sh(X)$ et une flèche $\F\to I$ telle que 
+\[0\to \F\to I\]
+est exacte. On commence par montrer que $Sh(X^\delta)$ a assez
+d'injectifs. Soit $\G$ un objet de $Sh(X^\delta)$, on a par le 
+point précédent que $\G(U)=\prod_{x\in U}\G_x$. On sait par le
+cours que $Ab$ a assez d'injectifs, pour tout $x\in X$ soit donc
+$0\to \G_x\to I_x$ une suite exacte telle que $I^\delta_x$ est injectif
+dans $Ab$. Le préfaisceau \[I^\delta\colon U\mapsto \prod_{x\in U}
+I^\delta_x\]
+est clairement un faisceau pour les restrictions données par les
+projections. C'est un injectif de $Sh(X^\delta)$ car les flèches de
+de faisceaux sur $X^\delta$ sont déterminées sur les singletons. 
+Enfin, on obtient une flèche injective $\G\to I^\delta$
+où l'injectivité peut-être vue directement terme à terme. D'où
+$Sh(X^\delta)$ a assez d'injectifs.
+\newline
+
+On montre enfin que $Sh(X)$ a assez d'injectifs. Si 
+$\F$ est un faisceau abélien sur $X$, soit 
+\[0\to f^*\F\to I^\delta\]
+une suite exacte dans $Sh(X^\delta)$ où $I^\delta$ est injectif. On
+pose $I:=f_* I^\delta$. Par le cours le foncteur $f_*$ d'image directe
+préserve les injectifs et est exact. En plus par la question 2) et 
+la premiere partie de la question 8) si on note 
+\[i\colon \F\to C^0(\F)\simeq f_*f^*\F \to I\]
+alors $i$ est injective et $I$ est injectif dans $Sh(X)$ d'où
+$Sh(X)$ a assez d'injectifs.
+
+
+\section{Résultats annexes}
+\subsection{Noyau et post-composition par un monomorphisme}
+On doit montrer que si
+$(i_K\colon K\to X)=\ker(f\colon X\to Y)$ et $j\colon Y\to Z$ est un
+monomorphisme, alors $\ker(X\to Y\to Z)=(i_K\colon K\to X)$ pour 
+$X,Y,Z,K$ dans une catégorie abélienne quelconque.
+
+En effet si on note $(i_K'\colon K'\to X) =\ker(X\to Y\to Z)$ alors 
+\[j\circ 0_{K',Y}=j\circ f\circ i_K'=0_{K',Z}\]
+d'où $f\circ i_K'=0_{K',Y}$ car $j$ est un monomorphisme. On obtient
+$k'\colon K'\to K$ une flèche telle que $K'\to K\to X=i_K'$.
+À l'inverse on a $j\circ (f\circ i_K)=j\circ 0_{K, Y}=0_{K, Z}$ d'où 
+on obtient $k'\colon K\to K'$ une flèche telle que $K\to K'\to X=i_K$,
+en particulier, \[i_K\circ id_K=i_K'\circ k=i_K\circ k'\circ k\] et 
+\[i_K'\circ id_K'=i_K\circ k'=i_K'\circ k\circ k'\]
+or comme $i_K$ et $i_K'$ sont des monomorphismes
+par le cours, $k$ est un isomorphisme d'inverse $k'$. 
+
+
+\subsection{Image et pré-composition par un épimorphisme}
+On doit montrer que dans une catégorie
+abélienne quelconque, si $e\colon Z\to X$ est un épimorphisme et 
+$f\colon X\to Y$ une flèche quelconque, alors $\im(f)=\im(f\circ e)$.
+Par le cours, $\im(f)=(\im(f)\to Y)=\ker(Y\to \coker(X\to Y))$. Il 
+suffit donc de montrer que $C:=\coker(X\to Y)=\coker(Z\to X\to Y)=:C'$.
+En regardant dans la catégorie opposée, on obtient les mêmes
+hypothèse que dans la section 1.1 d'où le résultat.
+
+
+\subsection{Fonctorialité de $C^\bullet$}
+Pour montrer la fonctorialité de $C^\bullet$ il faut montrer que
+si $g\colon \F\to \F''$ est une autre flèche dans $Sh(X)$ alors 
+dans la construction de 5) on a $(g\circ f)_0^n=g_0^n\circ f_0^n$
+pour tout $n\geq 0$. On prouve par récurrence sur $n$ que
+\[(g\circ f)_0^n=g_0^n\circ f_0^n\]
+alors 
+\[(g\circ f)^n=g^n\circ f^n\]
+par fonctorialité de $C^0$. Le cas $n=0$ est immédiat par définition
+ On suppose $n\geq 1$.
+On conclut à l'aide du lemme suivant en remplaçant 
+\begin{itemize}
+	\item $A$ par $C^{n-1}(\F')$,
+	\item $C$ par $C^{n-1}(\F'')$,
+	\item $D$ par $Z^n(\F')$,
+	\item $F$ par $Z^n(\F'')$
+	\item $f$ par $(g\circ f)^{n-1}=g^{n-1}\circ f^{n-1}$ par récurrence,
+	\item $d_A$ par $d(\F')_0^{n-1}$ qui bien un épimorphisme
+		car un conoyau.
+	\item $d_C$ par $d(\F'')_0^{n-1}$
+	\item $h_1$ par $g_0^n\circ f_0^n$ et $h_2$ par $(g\circ f)_0^n$.
+\end{itemize}
+\begin{lem}
+	Soit deux diagrammes commutatifs 
+% https://q.uiver.app/#q=WzAsNCxbMCwwLCJBIl0sWzIsMCwiQyJdLFswLDEsIkQiXSxbMiwxLCJGIl0sWzAsMiwiZF9BIl0sWzEsMywiZF9DIl0sWzIsMywiaF8yIiwxXSxbMCwxLCJmIiwxXV0=
+\[\begin{tikzcd}
+	A && C \\
+	D && F
+	\arrow["f"{description}, from=1-1, to=1-3]
+	\arrow["{d_A}", from=1-1, to=2-1]
+	\arrow["{d_C}", from=1-3, to=2-3]
+	\arrow["{h_1}"{description}, from=2-1, to=2-3]
+\end{tikzcd}\]
+	et 
+% https://q.uiver.app/#q=WzAsNCxbMCwwLCJBIl0sWzIsMCwiQyJdLFswLDEsIkQiXSxbMiwxLCJGIl0sWzAsMiwiZF9BIl0sWzEsMywiZF9DIl0sWzIsMywiaCIsMV0sWzAsMSwiZiIsMV1d
+\[\begin{tikzcd}
+	A && C \\
+	D && F
+	\arrow["f"{description}, from=1-1, to=1-3]
+	\arrow["{d_A}", from=1-1, to=2-1]
+	\arrow["{d_C}", from=1-3, to=2-3]
+	\arrow["h_2"{description}, from=2-1, to=2-3]
+\end{tikzcd}\]
+	dans une catégorie abélienne $\Cat$ tels que $d_A$
+	est un épimorphisme. Alors $h_1=h_2$.
+\end{lem}
+\begin{proof}
+	La preuve consiste à dire que 
+	$h_1\circ d_A=d_C\circ f=h_2\circ d_A$. D'où $h_1=h_2$ car
+	$d_A$ est un épimorphisme.
+\end{proof}
+
+
+\end{document}
+
+
