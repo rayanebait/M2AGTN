@@ -1127,7 +1127,278 @@ discrète, via $k(X)=Frac(\Or_{X,P})$ comme $X$ est lisse.
 \begin{defn}
     On définit $Pic(X)=Z^1(X)/div(k(X)^\times)$.
 \end{defn}
-On a $div(f)=div_0(f)-div_\infty(f)=$
+On a $div(f)=div_0(f)-div_\infty(f)$.
+
+\begin{defn}
+    On définit aussi le degré $\deg\colon Z^1(C)\to \Z$
+\end{defn}
+On veut montrer que ça passe au quotient.
+\begin{defn}
+    On déf
+    \[f_*\colon Z^1(X)\to Z^1(Y)\]
+    par 
+    $f_*(\sum n_P(P)=\sum n_P(f(P))=\sum_{Q\in Y} (\sum_{P\in f^{-1}P}n_P)(Q)$.
+\end{defn}
+Si $f$ est constante, alors $f_*=0$. Pour tout $y\in Y$ et 
+$x\in f^{-1}(y)$, on a une extension de DVR
+\[f_x\colon \Or_{Y,y}\to \Or_{X,x}\]
+\begin{defn}
+    On déf la ramification 
+    $e_{x,y}:=e_{\m_x,\m_y}=v_{\m_x}(f_x(\pi_y))$.
+\end{defn}
+\begin{defn}
+    On définit ensuite $f^*\colon Z^1(Y)\to Z^1(X)$ par 
+    \[\sum n_y(y)\mapsto \sum_x e_{x,f(x)}n_{f(x)}(x)\]
+\end{defn}
+\begin{ex}
+    Pour $f\in K(X)$, on a $f\colon U\to \A^1$ régulière. Elle s'étend
+    en $f\colon U\to \P^1$ puis $f\colon X\to \P^1$ car $X$ est
+    projective. On a alors $div(f)=f^*((0)-(\infty))$
+\end{ex}
+\begin{defn}
+    Si $f\colon X\to Y$ est un morphisme fini de courbes.
+    On déf $\deg(f)=[K(Y):K(X)]$.
+\end{defn}
+\begin{cor}
+    Comme $k=\bar k$, pour tout $y\in Y$ on a 
+    \[\deg(f)=\sum_{f(x)=y} e_{x,y}\]
+\end{cor}
+La preuve c'est juste que le degré résiduel est tjr $1$!
+\begin{cor}
+    Soit $f\colon X\to Y$ fini de courbes, alors pour tout $D\in Z^1(Y)$
+    \[f_*f^*D=\deg(f)D\]
+\end{cor}
+\begin{proof}
+    Suffit de le montrer pour les diviseurs $(y)\in Z^1(Y)$.
+    On a 
+    \begin{align*}
+	f_*f^*(y)&=f_*(\sum_{x\in f^{-1}(y)} e_{x,y}n_{y}(x))\\
+		 &=f_*(\sum_{x\in f^{-1}(y)} e_{x,y}(x))\\
+		 &=(\sum_{x\in f^{-1}(y)}e_{x,y})(y)\\
+		 &=\deg(f)(y)
+    \end{align*}
+\end{proof}
+\begin{lem}
+    Si $X=\P^1(k)$ alors $\deg(div(K(X)^\times))=0$.
+\end{lem}
+\begin{proof}
+    Suffit de le montrer pour $t-a$ si $f\in k(t)$. Mais
+    \[div(t-a)=(a)-(\infty)\]
+    d'où le résultat.
+\end{proof}
+\begin{prop}
+    Soit $f\colon X\to Y$ un morphisme fini de courbes lisses propre.
+    Si $D\in Z^1(Y)$, alors 
+    \[\deg(f^*(D))=\deg(f)\deg(D)\]
+\end{prop}
+\begin{proof}
+    $\deg(f^*D)=\deg(f_*f^* D)=\deg(\deg(f)D)=\deg(f)\deg(D)$
+\end{proof}
+\begin{cor}
+    Pour toute courbe lisse propre intègre :
+    \[\deg(div(K(X)^\times))=0\]
+\end{cor}
+On obtient un morphisme
+\[\deg\colon Pic(X)\to \Z\]
+\begin{prop}
+    Si $X=\P^1(k)$, $\deg$ est un isomorphisme.
+\end{prop}
+\begin{prop}
+    Soit $X$ une courbe intègre lisse projective. Si il existe
+    $x_0,x_1\in X$ t.q $(x_0)\sim (x_1)$, alors 
+    \[X\simeq \P^1(k)\]
+\end{prop}
+\begin{proof}
+    Il existe $f\in K(X)^*$ t.q. $div(f)=(x_0)-(x_1)=f^*((0)-(\infty))$
+    d'où $f^*(0)=(x_1)$ puis $\deg(f)=1$ et $f$ est un isomorphisme
+    \[X\simeq \P^1(k)\]
+\end{proof}
+\section{Espaces de Riemann-Roch}
+Soit $D$ un diviseur sur $X$. On pose
+\[L(D):=\{f\in K(X)^*|div(f)+D\geq 0\}\cup \{0\}\]
+avec $D\geq 0$ si $n_x\geq 0$ pour tout $x$. En plus on pose aussi
+\[|D|:=\P_-(L(D))=\{D'\in Z^1(X)|D'\sim D,D'\geq 0\}\]
+\begin{ex}
+    $L(0)=\Or_X(X)=k$.
+\end{ex}
+\begin{rem}
+    $L(D)$ est un espace vectoriel.
+\end{rem}
+\begin{prop}
+    On note $l(D)=dim_k L(D)$.
+    \begin{enumerate}
+	\item Si $D\sim E$, $l(D)=l(E)$.
+	\item $\deg(D)<0\implies l(D)=0$.
+	\item Si $D'\leq D$ alors $l(D')\leq l(D)\leq l(D')+\deg(D)
+	    -\deg(D')$.
+	\item Si $\deg(D)\geq 0$ alors $l(D)\leq \deg(D)+1$.
+	\item Si $\deg(D)=0$, alors $l(D)>0$ ssi $D\sim 0$.
+    \end{enumerate}
+\end{prop}
+\begin{proof}
+    Pour $1.$ si $D\sim E$ alors $|D|=|E|$, d'où $l(D)-1=l(E)-1$.
+    Pour $2.$, $|D|=\emptyset$, psq si $D'\sim D$ alors 
+    $\deg(D')=\deg(D)$ et si $D'\geq 0$, $\deg(D')\geq 0$.
+
+    Pour $3.$, si $D'<D$, alors $l(D')\leq l(D)$ car on a 
+    \[|D'|\hookrightarrow |D|\]
+    via $E\mapsto E+D-D'$ (car $D-D'\geq 0$).
+
+    Y suffit de montrer pour $D=D'+(x)$ que 
+    $l(D)\leq l(D')+1$ par récurrence. Soit $t_x$ une coordonnée 
+    locale en $x$. Si $f\in L(D)-0$ alors $v_x(f_*t_x^{n_x})\geq 0$
+    où $n_x=v_x(D)$. On a
+    \[v_x(ft_x^{n_x})=v_x(f)+n_x\geq 0\]
+    et on pose 
+    \[\rho\colon L(D)\to k\]
+    donnée par $f\mapsto (ft_x^{n_x})(x)$.
+    \newline
+    Et là on fait de l'algèbre
+    linéaire, omg d'où ça sort. 
+    \newline
+    On a $\ker(\rho)=\{f\in K(X)^*|div(ft_x^{n_x-1})\geq 0\}=L(D)$.
+    D'où $l(D')\leq l(D)-1$.
+
+    Pour $4.$ si $D\geq 0=:D'$, alors 
+    \[l(D)\leq l(0)+\deg(D)\leq \deg(D)+1\]
+
+    Pour $5.$, si $\deg(D)=0$, alors $l(D)>0$ d'où $|D|\ne \emptyset$
+    puis il existe $E\geq 0$ t.q $E\sim D$ mais si $E\geq 0$ et 
+    $\deg(E)=0$ alors $E=0$ d'où $D\sim 0$.
+\end{proof}
+\begin{cor}
+    $L(D)$ est un $k$-espace vectoriel de dimension finie !!
+\end{cor}
+Par exemple, sur $\P^1(k)$, $l([0])=2$. Et 
+$L(D)=<t^{-i},i=0,\ldots,\deg(D)>$.
+
+\section{Théorème de Riemann-Roch}
+Soit $X$ une courbe intègre lisse propre. Il existe $g\geq 0$
+et un diviseur $K_X$ t.q. pour tout $D\in Z^1(X)$
+\[l(D)-l(K_X-D)=\deg(D)+1-g\]
+\begin{defn}
+    On appelle $g$ le genre de $X$.
+\end{defn}
+\begin{lem}
+    On a $\deg(K_X)=2g-2$ et $l(K_X)=g$.
+\end{lem}
+\begin{lem}
+    $K_X$ est unique à équivalence linéaire.
+\end{lem}
+\begin{proof}
+    Si il existe un autre $K_X$ qui marche, $K_X'$, alors
+    \[\deg(K_X-K_X')=0\]
+    puis \[l(K_X')-l(K_X-K_X')=g-1\]
+    implique que $l(K_X-K_X')=1$, d'où $K_X\sim K_X'$.
+\end{proof}
+\begin{cor}
+    Si $\deg(D)>2g-2$, alors 
+    \[l(D)=\deg(D)+1-g\]
+\end{cor}
+
+\section{Différentielles de Kahler}
+Il dit que le livre de Qing Liu est une bonne source.
+\begin{defn}
+    Soit $B$ une $k$-algèbre et $F$ la $B$-algèbre libre générée
+    par les symboles $db$ pour $b\in B$. On note $E$ le sous-module
+    de $F$ généré par $d\lambda$ pour $\lambda\in k$, $d(b_1+b_2)-
+    d(b_1)-d(b_2)$ et $d(b_1b_2)-b_1d(b_2)-b_2d(b_1)$. On pose
+    \[\Omega^1_{B/k}:=F/E\]
+\end{defn}
+\begin{rem}
+    C'est un module pas un anneau là.
+\end{rem}
+\begin{ex}
+    On remarque que si $B=k[T]$ alors $d(P(T))=P'(T)dT$ et 
+    \[\Omega_{k[T]/k}=k[T]dT\]
+\end{ex}
+\begin{exo}
+    $S^{-1}\Omega^1_{B/k}\simeq \Omega^1_{S^{-1}B/k}$.
+\end{exo}
+\begin{defn}
+    Soit $X$ une variété algébrique, on définit un $\Or_X$-module
+    $\Omega^1_{X/k}$ par 
+    \[\Omega^1_{X/k}(U):=\Omega^1_{\Or_X(U),k}\]
+    pour tout ouvert affine.
+\end{defn}
+Par l'exercice, $\Omega^1_{X/k})_x=\Omega^1_{\Or_{X,x},k}$. 
+\begin{prop}
+    Si $X$ est une courbe algébrique lisse, alors 
+    $\Omega^{-1}_{X,x}$ est un $\Or_{X,x}-module$ libre de rang $1$.
+\end{prop}
+\begin{proof}
+    On peut supposer $X\hookrightarrow \A^n(k)$ affine donnée
+    par $F_1,\ldots,F_m$ dans $k[T_1,\ldots, T_n]$. Le rang
+    de $J(X)_x$ est $n-1$ d'où on peut garder que $F_1,\ldots,
+    F_{n-1}$ dans la jacobienne. Puis $X\subset Z(F_1,\ldots, F_{n-1})$
+    d'où égalité. Maintenant la jacobienne est de taille $n-1\times n$,
+    on la complète en ajoutant la ligne $(1,0,\ldots, 0)$ la matrice
+    devient inversible en $x$. On multiplie la nouvelle matrice par
+    la colonne $(dT_1,\ldots, dT_n)$. On obtient $(d(T_1),dF_1,\ldots,
+    dF_n)$. Maintenant, 
+    \[A(X)=k[T_1,\ldots, T_n]/(F_1,\ldots, F_n)\]
+    d'où dans $\Omega^{-1}_{A(X),k}$, $dF_i=0$ pour tout $i$. Puis
+    $(dT_1,dF_1,\ldots, dF_n)=(dT_1,0,\ldots,0)$ dans les 
+    différentielles. En particulier,
+    \[\Omega^1_{\Or_{X,x}/k}=\Or_{X,x}dT_1\]
+\end{proof}
+
+\begin{ex}
+    Soit $K$ un corps de fonctions. Alors $\Omega^1_{K,k}$ est de
+    dimension $1$ sur $K$. En effet, $K$ est une extension finie
+    séparable de $k(t)$. D'où $K=k(t)[X]/P(X)$. Puis 
+    \[\Omega^1_{K,k}=<dt,dX>\]
+    Mais $0=dP(X)=P'(X)dX$ et $P'(X)\ne 0$. D'où $dX=0$ puis
+    \[\Omega^1_{K,k}=Kdt=\Omega^1_{k(t),k}\otimes_k K\] 
+\end{ex}
+Soit $X$ une courbe lisse propre intègre. Et soit 
+$\omega\in \Omega^1_{K(X),k}$. Soit $x\in X$, alors 
+\[\omega=fdt_x\]
+pour $f\in K(X)$. On définit alors
+\[ord_x\omega:=v_x(f)\]
+\begin{ex}
+    Pour $\P^1(k)$, on a $ord_a dt=ord_a d(t-a)=0$ pour $a\in \A^1(k)$.
+    À l'infini, la coordonnée locale est $s=1/t$. D'où
+    $dt=d(1/s)=-(1/s^2)ds$ d'où $ord_\infty dt=-2$.
+\end{ex}
+
+Si $\omega\in \Omega^1_{K(X),k}$, on définit
+\[div(w)=\sum_{x\in X} (ord_x\omega)(x)\]
+faut montrer que le support est fini, il le fait pas, il dit que 
+ça se fait bien. 
+
+Comme $\Omega^1_{K(X),k}$ est de dimension $1$, le diviseur est
+unique.
+\begin{defn}
+    On définit $K_X=div(\omega)$ pour toute forme différentielle
+    $\Omega^1_{K(X),k}$.
+\end{defn}
+
+\begin{ex}
+    On a $\deg(K_{\P^1(k)})=-2=-2+2.g$ d'où $g=0$ pour $\P^1(k)$.
+\end{ex}
+
+\begin{thm}[Riemann-Hurwitz]
+    Soit $f\colon X\to Y$ un morphisme fini séparable de courbes
+    lisses propres intègres. Alors
+    \[2g(X)-2\geq \deg(f)(2g(Y)-2)+\sum_{x\in X}(e_{x,f(x)}-1)\]
+    avec égalité si 
+    \begin{enumerate}
+	\item $char(k)=0$
+	\item $char(k)=p>0$ et $p\nmid e_{x,f(x)}$ pour tout $x$
+	    t.q $e_{x,f(x)}\ne 0$.
+    \end{enumerate}
+\end{thm}
+\begin{rem}
+    Si $f\colon X\to Y$ et $\omega=gdt$ sur $Y$, alors
+    \[f^*\omega=f^*gd(f^*t)\]
+\end{rem}
+\begin{cor}
+    Soit $f\colon \P^1(k)\to Y$ avec $Y$ lisse propre connectée. 
+    Alors $Y$ est de genre $0$. Puis on peut montrer que $Y$ est 
+    isomorphe à $\P^1(k)$.
+\end{cor}
+
 
 
 \printbibliography

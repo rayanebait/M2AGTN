@@ -64,15 +64,17 @@ sorting=ynt
 \newcommand{\End}{\textrm{End}}
 \newcommand{\Spec}{\textrm{Spec}}
 \newcommand{\Supp}{\textrm{Supp}}
-\newcommand{\supp}{\textrm{supp}}
 \renewcommand{\Im}{\textrm{Im}}
+\newcommand{\m}{\mathfrak{m}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\p}{\mathfrak{p}}
 
 
 \newcommand{\cL}{\mathscr{L}}
 \newcommand{\G}{\mathscr{G}}
 \newcommand{\D}{\mathscr{D}}
 \newcommand{\E}{\mathscr{E}}
-\renewcommand{\P}{\mathscr{P}}
+\newcommand{\Po}{\mathscr{P}}
 \renewcommand{\H}{\mathscr{H}}
 
 \makeatletter
@@ -113,6 +115,9 @@ sorting=ynt
 \newtheorem{exo}[subsection]{Exercices}
 \newtheorem{ex}[subsection]{Exemple}
 \newtheorem{exs}[subsection]{Exemples}
+\newtheorem{res}{Résumé}
+\newtheorem{rep}{Réponse}
+\newtheorem{cons}{Conséquence}
 
 \theoremstyle{remark}
 
@@ -125,40 +130,81 @@ sorting=ynt
     filecolor=wgrey
 }
 
-\title{Background pour le cours de géometrie}
-\date{2023-2024}
+\title{Géométrie algébrique}
+\date{}
 
 \begin{document}
 \maketitle
 \tableofcontents
-\chapter{Différentielles}
-À faire : Jacobiennes et plan tangent. 
-\begin{defn}
-  Soit $f\colon \R^n\to \R^m$ une $C^k$-flèche. On peut déf la jacobienne
-  \[J(f)\colon \R^n\to M_{n\times m}(\R)\]
-  par \[J(f)(x)=\begin{pmatrix} \partial_{x_1} f_1 & \ldots & 
-    \partial_{x_n} f_1\\ \vdots & \ldots & \vdots \\ \partial_{x_1}
-  f_m & \ldots & \partial_{x_n} f_m \end{pmatrix}\]
-\end{defn}
-Bon maintenant, on peut les vecteurs de la jacobienne forment une 
-base de l'espace tangent à l'image de $f$!
-
-\begin{defn}
-  La dérivée totale de $f$ en $P$ notée $d_Pf$ est l'application linéaire
-  donnée par la jacobienne.
-\end{defn}
-J'imagine que avec des fonctions $C^{\infty}$, cette dérivée totale 
-est vraiment une bonne notion de dérivée.
-
-\chapter{TD1}
-
-\section{}
-\section{Topologies}
-\begin{defn}[Topologie quotient]
-    Topologie la plus fine qui rend la projection continue.
-\end{defn}
-i.e. $U\subset \tilde X$ ouvert ssi $\pi^{-1}(U)$ ouvert.
 
 
+
+Idées des développements : Cadre $\to$ comment se ramener à ce cadre.
+Aussi comparer le cas quasi-projectif au cas général.
+
+\chapter{Exemples de variétés}
+\section{Quotients}
+Étudier des morphismes $\A^n(k)\to \A^n(k)/G$. Ils sont finis par 
+le cours, le revoir. Aussi $X/G$.
+
+\section{Fibrés et variétés projectives}
+Systèmes linéaires.
+
+\section{Variétés rationnelles}
+C'est des variétés birationnelles à $\P^n(k)$. On peut en dire 
+beaucoup de choses.
+\subsection*{Le cas de $\P^1(k)$}
+Être birationnel à $\P^1_k$ ça force à être de dimension $1$ et 
+irréductible.
+
+
+\section{Variété de drapeaux}
+\section{Grassmaniennes}
+\section{Variétés abéliennes}
+Ça c'est bcp plus dur, mais on sait qu'elles sont projectives.
+\section{Groupes algébriques}
+
+\chapter{Variétés}
+Ici le but c'est de décrire les propriétés des variétés elles-même,
+une bonne ambition ce serait de décrire aussi comment sont préservées
+ces propriétés.
+\section{Variétés normales et morphismes finis}
+Ici c'est 
+\[f\colon X\to Y\]
+\chapter{Morphismes de variétés}
+
+
+\chapter{Catégories de variétés}
+Le but de cette section c'est de se déplacer dans des catégories 
+de variétés pour voir ce qu'y se passe. 
+
+\section{Tentative de marches pas aléatoires dans \textbf{k-Var}}
+Une marche aléatoire sur un corps algébriquement clos ca semble assez
+difficile à définir mdr. Par contre y'a des variétés qui sont cool
+à atteindre. Typiquement les
+\[\A^n_k,\P^n_k.\]
+\subsection*{Diviseurs et fonctions régulières}
+Si on se met dans \textbf{k-Var}, la catégorie des variétés,
+on peut toujours trouver 
+\[X\to \P^1\]
+dominante (sauf si $dim(X)=0$) via l'exemple canonique 
+$f\in \Or_X(U)\ne k$ alors 
+\[\bar f\colon X\to \P^1\]
+par contre 
+\[X\to \A^1\]
+dominante c'est pas toujours possible vu que $X$ peut-être propre par
+exemple. 
+Bon ce qu'on peut faire dans le cas quasi-projectif
+
+
+\section{Variétés rationnelles}
+
+
+
+
+
+
+
+\printbibliography
 \end{document}
 
