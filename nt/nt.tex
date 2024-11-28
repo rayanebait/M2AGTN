@@ -63,6 +63,7 @@ sorting=ynt
 \newcommand{\m}{\mathfrak m}
 \newcommand{\p}{\mathfrak p}
 \renewcommand{\a}{\mathfrak a}
+\renewcommand{\P}{\mathbb P}
 \newcommand{\I}{\mathfrak I}
 \newcommand{\Hom}{\textrm{Hom}}
 \newcommand{\Gal}{\textrm{Gal}}
@@ -1592,6 +1593,73 @@ On définit
     On note $i_G(\sigma)=v_L(\sigma(\alpha)-\alpha)$. Pour $K=L^I$
     et $\Or_L=\Or_K[\alpha]$. Avec $\sigma\ne 1$.
 \end{note}
+
+
+\chapter{Deux applications au cas global}
+IL va parler de
+\begin{enumerate}
+    \item Hauteurs sur $\P^n(\bar\Q)$.
+    \item Riemann-Hurwitz.
+\end{enumerate}
+\section{Hauteurs sur $\P^n(\bar\Q)$}
+On peut écrire $x\in \P^n(\Q)$ comme un tuple
+primitif dans $\Z$. On définit ensuite
+\[x=[x_1,\ldots,x_n]\mapsto H(x)=\max|x_i|>0\]
+On fixe $B\in\R$, alors
+\[\{P\in \P^n(\Q)|H(P)\leq B\}\]
+est fini.
+\begin{rem}
+    Pour $r\in\Q^*$, on a la formule du produit
+    \[|r|_\infty\prod_p |r|_p=1\]
+    pour les valeurs absolues normalisées.
+\end{rem}
+Soit maintenant $M_\Q$ les places normalisées de $\Q$, on déf
+\[H(P)=\prod_{v\in M_\Q} sup_i \{|P_i|_v\}\]
+avec cette fois $P\in \P^n(\Q)$. Alors $H(P)$ est bien défini.
+On veut étendre la définition à d'autres corps.
+
+\begin{defn}
+    Pour un corps $K$, un ensemble de valeurs absolues $M_K$ non
+    équivalentes, et
+    un ensemble $\lambda_v>0$ on dit que $(K,M_K,\{\lambda_v\}_v)$
+    vérifie la formule du produit si
+    \begin{enumerate}
+        \item $|x|_v=1$ pour tout $v\in M_K$ sauf un nb fini.
+        \item Il y'a qu'un nombre fini de valeurs absolues
+            archimédiennes $v\in M_K$.
+        \item $\forall x\in K^*$, $\prod_{v\in M_K} ||x||_v=1$
+            où $||x||_v=|x|_v^{\lambda_v}$.
+    \end{enumerate}
+\end{defn}
+Étend donné $(K,M_K,\{\lambda_v\}_v)$ qui satisfait la formule du
+produit, et $L/K$ finie séparable. On peut définir naturellement
+$(L,M_L,\{\lambda_w\}_w)$ satisfaisant la formule du produit via
+\begin{enumerate}
+    \item Pour tout $v\in M_v$, on prends les $w_i|v$.
+    \item On modifie $|.|_w$ via
+    \[L\otimes_K\widehat{(K,v)}\simeq \prod_{i=1}^r\widehat{(L,w_i)}\]
+    et sur $L_{w_i}/K_v$ on déf
+    \[||x||_w:=||N_{L_w/K_v}(x)||_v^{1/d}\]
+    où $d=[L:K]$ et $||.||_v$ c'est $|.|_v^{\lambda_v}$. Pour rappel on
+    avait $|x|_w=|N_{L_w/K_v}(x)|_v^{1/[L_w:K_v]}$. On obtient
+    \[||x||_w=(|x|_w^{[L_w:L_v]/d})^{\lambda_v}=|x|_w^{\lambda_w}\]
+\end{enumerate}
+\begin{lem}
+    On a
+    \begin{enumerate}
+        \item Pour $x\in L$, $v\in M_K$ :
+            \[\prod_{w|v}||x||_w=||N_{L/K}(x)||_v^{1/d}\]
+        \item $\prod_{w\in M_L}||x||_w=1$.
+        \item $(L,M_L,\{\lambda_w\}_w)$ satisfait la formule du
+            produit.
+    \end{enumerate}
+\end{lem}
+
+
+
+
+
+
 
 \printbibliography
 \end{document}

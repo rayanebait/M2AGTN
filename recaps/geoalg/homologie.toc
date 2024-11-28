@@ -12,4 +12,4 @@
 \contentsline {chapter}{\numberline {3}Morphismes de variétés}{9}{chapter.3}%
 \contentsline {chapter}{\numberline {4}Catégories de variétés}{11}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Tentative de marches pas aléatoires dans \textbf {k-Var}}{11}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Variétés rationnelles}{11}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Variétés rationnelles}{12}{section.4.2}%
