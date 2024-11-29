@@ -139,72 +139,26 @@ sorting=ynt
 
 
 
-Idées des développements : Cadre $\to$ comment se ramener à ce cadre.
-Aussi comparer le cas quasi-projectif au cas général.
-
-\chapter{Exemples de variétés}
-\section{Quotients}
-Étudier des morphismes $\A^n(k)\to \A^n(k)/G$. Ils sont finis par 
-le cours, le revoir. Aussi $X/G$.
-
-\section{Fibrés et variétés projectives}
-Systèmes linéaires. Variétés ayant des fibrés amples. Diviseur
-canonique ample. Riemann-Roch.
-
-\section{Variétés rationnelles}
-C'est des variétés birationnelles à $\P^n(k)$. On peut en dire 
-beaucoup de choses.
-\subsection*{Le cas de $\P^1(k)$}
-Être birationnel à $\P^1_k$ ça force à être de dimension $1$ et 
-irréductible.
-
-
-\section{Variété de drapeaux}
-\section{Grassmaniennes}
-\section{Variétés abéliennes}
-Ça c'est bcp plus dur, mais on sait qu'elles sont projectives.
-\section{Groupes algébriques}
-
-\chapter{Variétés}
-Ici le but c'est de décrire les propriétés des variétés elles-même,
-une bonne ambition ce serait de décrire aussi comment sont préservées
-ces propriétés.
-\section{Variétés normales et morphismes finis}
-Ici c'est 
-\[f\colon X\to Y\]
-\chapter{Morphismes de variétés}
-
-
-\chapter{Catégories de variétés}
-Le but de cette section c'est de se déplacer dans des catégories 
-de variétés pour voir ce qu'y se passe. 
-
-Les marches aléatoires ça pourrait mdr, dans l'ensemble des coniques
-sur $\Q$ par exemple mdr. Ou sur un corps fini, y'a des probabilités
-claires là!
-\section{Tentative de marches pas aléatoires dans \textbf{k-Var}}
-Une marche aléatoire sur un corps algébriquement clos ca semble assez
-difficile à définir mdr. Par contre y'a des variétés qui sont cool
-à atteindre. Typiquement les
-\[\A^n_k,\P^n_k.\]
-\subsection*{Diviseurs et fonctions régulières}
-Si on se met dans \textbf{k-Var}, la catégorie des variétés,
-on peut toujours trouver 
-\[X\to \P^1\]
-dominante (sauf si $dim(X)=0$) via l'exemple canonique 
-$f\in \Or_X(U)\ne k$ alors 
-\[\bar f\colon X\to \P^1\]
-par contre 
-\[X\to \A^1\]
-dominante c'est pas toujours possible vu que $X$ peut-être propre par
-exemple. 
-Bon ce qu'on peut faire dans le cas quasi-projectif
-
-
-\section{Variétés rationnelles}
-
-
-
+\chapter{Commentaires}
+\section{Nullstellensatz}
+En fait ce fameux flou qui a du mal à discerner deux idéaux strictement
+inclus l'un dans l'autre : le nullstellensatz permet de dire 
+$I(Z(J))=rad(J)$, en particulier si on veut discerner 
+\[J_1\subset J_2\]
+on regarde les variétés associées
+\[Z(J_1)\supsetneq Z(J_2)\]
+et le nullstellensatz nous dit bien que la distinction
+géométrique est la bonne puisqu'alors
+\[\sqrt J_1\subsetneq \sqrt J_2\]
+typiquement, géometriquement si $g$ est régulière sur $D(f)$, alors on
+a un recouvrement $D(f)\subset\cup D(g_i)$ où $g|_{U_i}=h_i/g_i$. On 
+déduit \textbf{avec} le nullstellensatz que 
+\[\sqrt{(f)}\subset \sqrt{(g_i,i)}\]
+en particulier $f^r=\sum a_ig_i$. Le fait que ce soit le radical qui
+détermine la géometrie des variétés permet aussi de dire que :
+\[f^r=\sum a_i'g_i^2\]
+de ça on déduit l'intuition usuelle que les fonctions sur $D(f)$ c'est
+juste localiser.
 
 
 

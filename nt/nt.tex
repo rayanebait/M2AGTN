@@ -1654,7 +1654,204 @@ $(L,M_L,\{\lambda_w\}_w)$ satisfaisant la formule du produit via
             produit.
     \end{enumerate}
 \end{lem}
+\begin{proof}
+    Dans une $F$-algèbre finie $E$, $N_{F/E}(x):=\det_{F/E}(m_x)$. 
+    Si $F-F'$ est une extension alors $E\otimes_F F'$ est une 
+    $F'$-algèbre finie. On a 
+    \[N_{E/F}(x)=N_{E\otimes_F F'/F'}(x\otimes 1)\]
+    d'où comme $L\otimes_K K_v=\prod_{w\mid v} L_w$, $m_{x\otimes 1}$
+    est diagonale par bloc. D'où on obtient
+    \[N_{L/K}(x)=N_{L\otimes_K K_v}(x\otimes 1)=\prod_{w\mid v} N_{L_w/K_v}(x)\]
+    enfin, 
+    \begin{align*}
+    ||N_{L/K}(x)||_v&=\prod_{w\mid v}||N_{L_w/K_v}(x)||_v\\
+                    &=\prod_{w\mid v}||x||_w^d\\
+                    &=(\prod_{w\mid v}||x||_w)^d\\
+                    &=\prod_{v\in M_K}(\prod_{w\mid v}||x||_w)^d\\
+                    &=\prod_{v\in M} ||N_{L/K}(x)||_v^d\\
+                    &=1
+    \end{align*}
+\end{proof}
+On peut donc étendre à toute extension finie de $\Q$ via 
+\[||w||_w=|x|_v^{[L_w:K_v]/d}\]
+\begin{defn}
+    Si $[K:\Q]<+\infty$ alors pour tout $P=[x_0:\ldots:x_n]\in \P^n(K)$,
+    on définit
+    \[H_K(P)=\prod_{v\in M_K}(sup_i\{||x_i||_v\})\]
+\end{defn}
+C'est bien défini par la formule du produit. Maintenant si
+$K\subset L$ finie, et $P\in \P^n(K)\subset \P^n(L)$ on a
+\[H_K(P)=H_L(P)!\]
+Ça se vérifie bien par $\sum_{w\mid v} [L_w:K_v]=[L:K]$.
+\begin{defn}
+    Pour $P\in \P^n(\bar\Q)$ il existe $[K:\Q]<+\infty$, $P\in\P^n(K)$
+    alors on définit
+    \[H(P):=H_K(P)\]
+\end{defn}
+\begin{rem}
+    Si $\sigma\in Aut(\bar Q/Q)$ alors $H(\sigma(P))=H(P)$. On peut
+    supposer $K-\Q$ galoisien. Alors $\sigma\in Aut(K/\Q)$. Maintenant
+    ça sécrit directement sachant que $\sigma$ agit
+    sur $M_K$ par $||x||_{\sigma(v)}=||\sigma(x)||_{\sigma(v)}$
+    et est un automorphisme donc change juste les index dans le 
+    produit $H(P)$.
+\end{rem}
+On peut à nouveau montrer que 
+\[\{P\in\P^n(\bar Q)|H(P)\leq B\}\]
+est fini en ajoutant que $\deg(P)$ est borné.
+\begin{thm}[Propriété de Northcott]
+    Soit $B>0$, alors
+    \[\{P\in \P(\bar \Q)|H(P)\leq B, \deg(P)\leq B\}\]
+    est fini.
+\end{thm}
+\begin{rem}
+    C'est pas aussi restrictif que $P\in \P^n(K)$. Y'a un nb
+    infini d'extensions de corps de degré bornés par $B$.
+\end{rem}
+\begin{proof}
+    On se ramène à $n=1$. Pour tout $j\leq n$, si on fixe $j$ on a
+    \[sup_i ||x_i||_v\geq sup\{1,||x_j||_v\}\]
+    d'où \[B\geq H(P)\geq H([1,x_j])\]
+    et $\deg[1,x_j]\leq \deg(P)$, en particulier $[1,x_j]$ vérifie
+    les hypothèses. Comme on a qu'un nombre fini de
+    coordonnées. Suffit de le montrer pour $\P^1(\bar Q)$. On
+    prends le pol min $f$ de $\alpha$ t.q $P=[1:\alpha]$. Et 
+    $d=\deg(\Q(\alpha))$. On a $d\leq B$ nécessairemment. En notant
+    $f(X)=\sum_{i=1}^d a_i X^i$ on 
+    borne $H([1,a_i])$ en terme de $B$. Soit les racines $\alpha_i$ de 
+    $f$. On a $||a_i||_v\leq c(v,d)max_{1\leq j\leq d}||\alpha_j||_v$
+    avec $c(v,d)=\begin{cases} 1\textrm{ si $v$ est ultramétrique}\\
+    d\textrm{ sinon}\end{cases}$
+    Maintenant, 
+    \begin{align*}
+    \prod_v||a_i||_v &\leq \prod_v c(v,d)\prod_v max_j||\alpha_j||_v\\
+                     &\leq \prod_v c(v,d)\prod_v max_j(sup\{1,||\alpha_j||\})
+    \end{align*}
+    Maintenant $\prod_v sup\{1,||a_i||_v\}\leq \prod_v c(v,d)\prod_j
+    H([1,\alpha_j])$. Maintenant le terme de droite est borné
+    par $B^d$ et $\prod_v c(v,d)\leq d^{[L:Q]}\leq d^{d!}\leq B^{B!}$. 
+    D'où le résultat.
+\end{proof}
+\section{Riemann-Hurwitz}
+Soit $X$ une variété lisse intègre projective sur $k$ algébriquement
+clos. On note $d=dim(X)$. 
+\begin{thm}[Dualité de Serre]
+    Pour tout faisceau $\F$ sur $X$ localement de rang fini $r$.
+    Pour $0\leq i\leq d$ :
+    \[H^i(X,\F)\]
+    est un $k$-espace vectoriel de dimension finie. ET Via les
+    cup-produits il existe
+    \[H^i(X,\F)\times H^{d-i}(H,\F^\wedge\otimes_{\Or_X}\Omega^d_{X/k}
+    \to H^d(X,\Omega^d_{X/k})\simeq k\colon tr\]
+    $k$-bilinéaire non dégénérée. On obtient 
+    \[H^i(X,\F)\simeq H^{d-i}(H,\F^\wedge\otimes_{\Or_X}\Omega^d_{X/k}\]
+    et en posant $d=1$ et $r=1$ on obtient Riemann-Roch.
+\end{thm}
+\begin{rem}
+    $\Omega^d_{X/k}$ est le faisceau dualizant sur $X$.
+\end{rem}
+Soit $f\colon X\to Y$ un morphisme fini de variété intègres lisses
+projectives sur $k$. Il existe une flèche canonique
+\[f^*\colon\Omega^d_{Y/k}\to \Omega^d_{X/k}\]
+donnée par $dg\mapsto d(f^\sharp g)$. Par des faits généraux sur
+les formes différentielles
+\[\Omega^d_{X/k}=f^*\Omega^d_{Y/k}\otimes\omega_f\]
+où $\omega_f$ est le faisceau dualizant relatif à $f$. En plus
+$\Omega^d_{X/k},\Omega^d_{Y/k}$ sont localement libres de rang $1$.
+D'où $\omega_f$ aussi. On veut étudier $\omega_f$. On suppose que
+$f$ est localement monogène sur $Y$. I.e. pour tout $y\in Y$,
+il existe $y\in V$ 
+\[\Or_Y(V)\to\Or_X(f^{-1}V)\]
+t.q. $\Or_X(f^{-1}V)=\Or_Y(V)[\alpha]$ en tant que $k$-algèbres.
+On note $P(T)\in \Or_Y(V)[T]$ le polynôme minimal de $\alpha$
+sur $Frac(\Or_Y(V))$. On a bien $P\in \Or_Y(V)[T]$ car intégralement
+clos.
+\newline
+On suppose maintenant que $k(Y)\to k(X)$ est séparable. À nouveau
+par des faits généraux sur les formes différentielles, on a 
+\[\omega_f(f^{-1}(V))=P'(\alpha)^{-1}\Or_X(f^{-1}V)\]
+En particulier, $\Omega^d_{X/k}=f^*\Omega^d_{Y/k}\otimes \omega_f$
+d'où \[f^*\Omega^d_{Y/k}=P'(\alpha)\Omega^d_{X/k}\]
+sur $f^{-1}(V)$. 
+\newline
+On suppose maintenant que $dim(X)=1$. Soit $I_f\subset \Or_X$
+le faisceau d'idéaux localement généré par $P'(\alpha)$.
+On a 
+\[f^*\Omega_{Y/k}=I_f\Omega_{X/k}\]
+maintenant $\Omega_{X/k}$ équivaut à $K_X$. Pareil pour $Y$.
+On obtient $K_X=f^*K_y+V(I_f)$ avec $V(I_f)=\sum_{x\in X}\dim_k(\Or_{X,x}/I_f)[x]$.
 
+\begin{thm}
+    Soit $f\colon X\to Y$ un morphisme fini séparable de courbes
+    lisses intègres sur $k$. Alors
+    \[2(g(X)-1)=2d(g(Y)-1)+\deg(V(I_f))\]
+    où $d=\deg(f)$.
+\end{thm}
+Maintenant $\deg V(I_f)$ se calcule par la théorie de la ramification
+sur $\Or_{Y,y}\to \Or_{X,x}$. On a $\Or_X(f^{-1}V)=\Or_Y(V)[\alpha]$
+et $I_f(f^{-1}V)=P'(\alpha)\Or_X(f^{-1}V)$. On a ensuite
+\[dim_k \Or_{X,x}/I_{f,x}=dim_k\Or_{X,x}/(P'(\alpha))=v_x(P'(\alpha))\]
+d'où $V(I_f)=\sum_x v_x(P'(\alpha))[x]$. Maintenant, 
+\[\Or_{Y,y}-\tilde\Or_{Y,y}\]
+est monogène car $k$ intégralement clos d'où extension résiduelles
+triviale donc séparables et $k$ est infini. Les idéaux maximaux de 
+$\tilde\Or_{Y,y}$ sont les points tels que $x\in f^{-1}y$. 
+Si $f^{-1}(y)=x$, $\Or_{Y,y}-\Or_{X,x}$ est totalement ramifiée d'où
+\[\Or_{X,x}=\Or_{Y,y}[t_x]\]
+puis $t_x$ est une racine d'un pol d'eisenstein
+\[T^e+a_1T^{e-1}+\ldots+a_e\in\Or_{Y,y}[T]\]
+et $a_i\in \m_y\Or_{Y,y}$. On obtient $P'(t_x)=eX^{e-1}+(*)$ avec
+$(*)\in\m_y$. D'où $(e-i)a_i\in t_y\Or_{X,x}$. En particulier, 
+la valuation du terme de droite est plus grand que $v_x(t_y)=e$. Enfin
+$v_x(et_x^{e-1})=v_x(e)+e-1$. 
+\newline
+Tout dépend de $v_x(e)$.
+\begin{enumerate}
+    \item Si $char k=0$ ou $0<char k=p\nmid e$ alors $v_x(e)=0$.
+    d'où $v_x(P'(\alpha))=e-1$.
+    \item Sinon, $v_x(P'(\alpha))\geq e$.
+\end{enumerate}
+\begin{cor}
+    Sous les hypothèses précédentes 
+    \[2(g(X)-1)=2d(g(Y)-1)+\sum_{x\in X}(e_{x/y}-1)\]
+    ssi $f$ est modérément ramifiée, i.e. $\forall x\in X$, 
+    $\Or_{Y,f(x)}-\Or_{X,x}$ est modérée.
+\end{cor}
+Dans le cas de la ramification sauvage, on suppose que 
+\[f\colon X\to Y\]
+est galoisienne. On a $G$ qui agit sur $X$ et $X/G\simeq Y$. On note
+$D_x=\{\sigma\in G|\sigma(x)=x\}$. Étend donné $f(x)=y$ et 
+\[\Or_{Y,y}\to \tilde\Or_{Y,y}\subset k(X)\]
+les idéaux maximaux de $\tilde\Or_{Y,y}$ sont en bij avec les points
+de $f^{-1}(y)$. On suppose que $D_x=G$, alors
+\[\Or_{X,x}=\Or_{Y,y}[\alpha]\]
+est monogène. On veut calculer $v_x(P'(\alpha))$. 
+\begin{prop}
+    On a \[dim_k\Or_{X,x}/(I_{f,x})=\sum_{\sigma\in G-id} i_G(\sigma)=
+\sum_{i\geq 0} (|G_i|-1)\]
+    où les $G_i$ sont les groupes de décomposition.
+\end{prop}
+\begin{proof}
+    On a $P(T)=\prod_G (T-\sigma(\alpha))$ et 
+    \[P'(\alpha)=\prod_{\sigma\ne id} (\alpha-\sigma(\alpha))\]
+    puis 
+    \[v_x(P'(\alpha))=\sum_{\sigma\ne id} v_x(\alpha-\sigma(\alpha))\]
+    et à droite on reconnaît $i_G(\sigma)$. On réecrit mtn
+    \[\sum_{\sigma\ne id} i_G(\alpha)=\sum_{i\geq 0}\sum_{i_G(\sigma)=i}
+    \sum_{i\geq 0}(|G_{i-1}|-|G_i|)\]
+\end{proof}
+\begin{ex}
+    Si $p=2$ :
+    \[X:~y^2+x^Ny=xQ(x)\]
+    t.q $Q(0)\ne 0$. On a $X\to \P^1(k)$. Par le critère jacobien,
+    $(0,0)$ est un point lisse. Maintenant via $\alpha=y$ et 
+    $k[x,y]=k[x][y]$ on a $G=<\sigma>$ et $\sigma(y)=y+x^N$. Enfin
+    \[dim_k\Or_{X,(0,0)}/I_{f,(0,0)}=i_G(\sigma)=v_{(0,0)}(\sigma(y)-y)=v_{(0,0)}(x^N)=Nv_{(0,0)}(x)\]
+    et on a $v_{(0,0)}(x)=2$ car 
+    $y^2=x(Q(x)+x^{N-1}y)$ avec $(Q(x)+x^{N-1}y)\in \Or_{X,(0,0)}^\times$.
+    Dans $V(I_f)$ le coefficient en $(0,0)$ est $2N> e_{(0,0)}-1=1$.
+    On obtient $2(g(X)-1)=2.2(0-1)+(\_)\geq -4+ 2N$.
+\end{ex}
 
 
 
