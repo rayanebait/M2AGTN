@@ -1321,10 +1321,10 @@ Il dit que le livre de Qing Liu est une bonne source.
     \[\Omega^1_{X/k}(U):=\Omega^1_{\Or_X(U),k}\]
     pour tout ouvert affine.
 \end{defn}
-Par l'exercice, $\Omega^1_{X/k})_x=\Omega^1_{\Or_{X,x},k}$. 
+Par l'exercice, $(\Omega^1_{X/k})_x=\Omega^1_{\Or_{X,x},k}$. 
 \begin{prop}
     Si $X$ est une courbe algébrique lisse, alors 
-    $\Omega^{-1}_{X,x}$ est un $\Or_{X,x}-module$ libre de rang $1$.
+    $(\Omega^{1}_{X/k})_x$ est un $\Or_{X,x}-module$ libre de rang $1$.
 \end{prop}
 \begin{proof}
     On peut supposer $X\hookrightarrow \A^n(k)$ affine donnée
@@ -1334,10 +1334,10 @@ Par l'exercice, $\Omega^1_{X/k})_x=\Omega^1_{\Or_{X,x},k}$.
     d'où égalité. Maintenant la jacobienne est de taille $n-1\times n$,
     on la complète en ajoutant la ligne $(1,0,\ldots, 0)$ la matrice
     devient inversible en $x$. On multiplie la nouvelle matrice par
-    la colonne $(dT_1,\ldots, dT_n)$. On obtient $(d(T_1),dF_1,\ldots,
-    dF_n)$. Maintenant, 
+    la colonne $(\partial T_1,\ldots, \partial T_n)$. On obtient
+    $(d(T_1),dF_1,\ldots, dF_n)$. Maintenant, 
     \[A(X)=k[T_1,\ldots, T_n]/(F_1,\ldots, F_n)\]
-    d'où dans $\Omega^{-1}_{A(X),k}$, $dF_i=0$ pour tout $i$. Puis
+    d'où dans $\Omega^{1}_{A(X),k}$, $dF_i=0$ pour tout $i$. Puis
     $(dT_1,dF_1,\ldots, dF_n)=(dT_1,0,\ldots,0)$ dans les 
     différentielles. En particulier,
     \[\Omega^1_{\Or_{X,x}/k}=\Or_{X,x}dT_1\]

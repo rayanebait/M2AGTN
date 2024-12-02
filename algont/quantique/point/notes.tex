@@ -152,7 +152,75 @@ quotient en $<a>$ on veut trouver le "noyau". On regarde
 \end{align*}
 et on à $q_y=\sum_{x\in 2^n} (-1)^{x.y}|f(x)>$. Le claim c'est qu'on
 obtient un vecteur $v\in \F_2^n$ uniformément distribué orthogonal
-à $a$ en sortie. 
+à $a$ en sortie. Ça se voit direct en regardant $y.a\mod 2$ :
+\begin{align*}
+    q_y&=\sum_{\bar x\in (\Z/2\Z)^n/<a>} (1+(-1)^{a.y})((-1)^{x.y}|f(x)>\\
+\end{align*}
+\begin{align*}
+    a.y=1\mod 2 \to q_y&=\sum_{\bar x\in (\Z/2\Z)^n/<a>} (1+(-1)^{a.y})((-1)^{x.y}|f(x)>\\
+                &=0\\
+    a.y=0\mod 2 \to q_y&=\sum_{\bar x\in (\Z/2\Z)^n/<a>} (1+(-1)^{a.y})((-1)^{x.y}|f(x)>\\
+                       &=\sum_{\bar x\in (\Z/2\Z)^n/<a>} ((-1)^{x.y}|f(x)>\\
+\end{align*}
+En particulier, y'a que les $y.a=0\mod 2$ qui ont une proba de sortir.
+L'uniforme distribution est claire.
+
+Pour obtenir $a$, on peut lancer l'algorithme jusqu'à obtenir une base
+de $<a>^T$.
+\begin{rem}
+    La proba d'avoir une base en $m$ étapes se calcule bien, regarder
+    la matrice des $m$ vecteurs colonnes. Calculer sur le rang 
+    sur les lignes! On obtient une proba 
+    $P_{d+k}\geq 1-\frac{1}{q^k(q-1)}=1-\frac{1}{2^k}$ avec $q=2$ ici
+    et $d=n-1=dim <a>^T$.
+\end{rem}
+
+\section{Transormée de Fourier quantique}
+On a une nouvelle porte, \[QFT(|x>)=\frac{1}{2^{n/2}}\sum_{y\in 2^n}
+\zeta_{2^n}^{x.y}|y>.\]
+Et on peut l'utiliser pour trouver la période d'une fonction! Y'a
+une nuance dans la suite :
+\newline
+\begin{center}
+\textbf{On part de $\Z/2^n\Z$ et pas $(\Z/2\Z)^n$, puis
+$xy$ est le produit dans $\Z/2^n\Z$ pas le produit scalaire}.
+\end{center}
+\begin{prob}
+    $f\colon \F_2^n\to X$ telle qu'il existe $d\leq n$ t.q :
+    \begin{enumerate}
+        \item $f$ est $2^d$-périodique.
+        \item $f(x)=f(y)$ ssi $2^d\mid x-y$.
+    \end{enumerate}
+\end{prob}
+Le circuit
+\begin{center}
+\begin{quantikz}
+    &\gate{H^{\otimes n}}&\gate[2]{Uf}&\gate{QFT^{\otimes n}}&\meter{}&\\
+    &&&&&
+\end{quantikz}
+\end{center}
+mesure un $|y>$ uniforme divisible par $2^{n-d}$. En particulier,
+on a une manière de chopper une période de la forme
+$2^d$ en itérant. Donc en gros comme d'hab on regarde :
+\[\sum_{x\in \Z/2^n\Z} |x>|f(x)>\]
+et on applique $QFT$ cette fois pour obtenir :
+\[\sum_{x\in \Z/2^n\Z}\sum_{y\in \Z/2^n\Z}\zeta_{2^n}^{xy}|y>|f(x)>\]
+et on pose
+\[q_y=1/2^n\sum_{x\in \Z/2^n\Z}\zeta_{2^n}^{xy}|f(x)>\]
+puis on écrit $x=a+2^db$, alors $f(x)=f(a)$. On peut montrer que
+\begin{enumerate}
+    \item si $2^{n-d}\mid y$ alors $||q_y||^2=1/2^d$. 
+    \item sinon $||q_y||^2=0$.
+\end{enumerate}
+
+
+\textbf{Fait :} En gros, en prenant la QFT comme boite noire,
+j'ai revu deutsh josza et simon. Puis Shor pour trouver les périodes
+de la forme $2^k$. Ensuite pour une période de la forme $r$ générale,
+on peut l'estimer à partir du circuit du dessus.
+\textbf{À faire :}  Comprendre l'estimation d'abord, via les fractions
+continues. Puis comprendre la QFT sans boite noire mais ca c'est moins
+important. Faut savoir construire $|x>\mapsto |0>+\zeta_{2^n}^{x}|1>$.
 
 
 
