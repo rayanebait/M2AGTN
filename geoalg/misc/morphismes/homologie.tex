@@ -117,6 +117,7 @@ sorting=ynt
 \newtheorem{exo}[subsection]{Exercices}
 \newtheorem{ex}[subsection]{Exemple}
 \newtheorem{exs}[subsection]{Exemples}
+\newtheorem{concl}{Conclusion}
 
 \theoremstyle{remark}
 
@@ -225,14 +226,58 @@ Dans le cas des variétés c'est pareil. $X$ est isomorphe à un ouvert
 de $Y$.
 
 \section{Immersions fermées}
-
 On demande à ce que $f(X)$ soit fermé et $X\to f(X)$ soit un 
 isomorphisme. Pour rappel on peut seulement demander à ce que ce soit
 un homéomorphisme et $f^\sharp$ est surjective.
 \begin{rem}
   Dans le stacks ils disent même qu'on peut dire que c'est un morphisme 
   affine tel que $f^\sharp$ est surjective. C'est super intuitif ducoup.
+  Et l'équivalence à l'air claire! 
 \end{rem}
+
+\subsection{Rappel sur $f^{-1}$}
+À nouveau, on peut le voir comme un ensemble de classes d'équivalences
+avant de faisceautiser.
+\subsection{À faire}
+Regarder cette co-unité et la préservation des épis/mono.
+Les adjoints ça préserve les limites/colimites finies. Et adjoint
+à gauche préserve toutes les colimites. 
+
+\subsection{Étude de la déf}
+En gros ce qu'on voudrait c'est l'équivalence entre :
+\begin{enumerate}
+  \item Structure donnée par $X$ sur $f(X)$, via $f_*\Or_X$.
+  \item Structure donnée par $Y$ sur $f(X)$, via $i_{f(X)}^{-1}\Or_Y$.
+\end{enumerate}
+pour $i_{f(X)}\colon f(X)\hookrightarrow Y$ l'inclusion. Où la
+deuxième structure est la structure naturelle.
+\newline
+
+Pour un fermé $Z\subset Y$. On peut d'abord regarder si 
+\[\Or_Y\to (i_Z)_*i_Z^{-1}\Or_Y\]
+est surjectif. C'est marrant ça provient de la co-unité.
+À remarquer, 
+\[((i_Z)_*i_Z^{-1}\Or_Y)_y=\begin{cases}(i_Z^{-1}\Or_Y)_{y}=\Or_{Y,y}\textrm{ Si }y\in Z\\
+0\textrm{ sinon, car limite vide}\end{cases}\]
+Maintenant la surjectivité est claire sur les fibres on a 
+\[i_Z^\sharp\begin{cases}\Or_{Y,y}\to \Or_{Y,i_Z(y)}\textrm{ si }y\in Z\\
+  \Or_{Y,y}\to 0\textrm{ sinon.}
+\end{cases}\]
+Maintenant tout se recolle, en posant $f(X)=Z$ alors 
+\[\Or_Y\to (i_{f(X)})_*\Or_{f(X)}\simeq (i_{f(X)})_*i_{f(X)}^{-1}\Or_Y\to 0\]
+est exacte. D'où la surjectivité qu'on voulait. 
+\begin{concl}
+  Pour conclure, la structure naturelle sur $Z\subset Y$ est donnée
+  par $i_Z^{-1}\Or_Y$. Et naturellement, la définition par $X\simeq f(X)$
+  est la bonne. En particulier, on obtient $i_Z^{-1}\Or_Y\simeq f_*\Or_X$
+  pour $Z=f(X)$.
+\end{concl}
+\newline 
+Pour l'inverse, si $\Or_Y\to f_*\Or_X\to 0$ est exacte. On note
+$I$ le noyau, et si $f$ est affine.
+Inversement, si $\Or_Y\to f_*\Or_X\to 0$ est exacte on peut dire quelque
+chose.
+
 \subsection{Cas affine}
 Pour le cas affine c'est plus simple si $f\colon X\to Y$ a une image
 fermée, le morphisme induit
@@ -240,6 +285,11 @@ fermée, le morphisme induit
 est surjectif parce que $f(X)=\overline{f(X)}=Z(\ker(f^\sharp(Y)))$
 d'où ça se factorise en
 \[A(Y)\to A(Y)/I(Z(\ker(f^\sharp(Y))))\simeq A(X).\]
+En fait en termes de faisceaux, si on regarde
+
+\[0\to I\to \Or_Y\to f_*\Or_X\to 0\]
+on peut poser $I\colon U\mapsto I(f(X))\Or_Y(U)$.
+
 \subsection{Cas des variétés}
 
 
@@ -270,6 +320,7 @@ faut remarquer si
 
 
 \chapter{Morphismes finis}
+\section{Fini implique affine}
 \section{Surjectivité des morphismes finis}
 Ducoup si on regarde la condition $x\in f^{-1}(y)$, ça se traduit par
 $f_*\m_y\subset \m_x$. Inversement, si $f^{-1}(y)$ est vide alors

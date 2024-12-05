@@ -72,6 +72,9 @@
 \newtheorem{heur}{Heuristique}
 \newtheorem{rem}{Remarque}
 \newtheorem{note}{Note}
+\newtheorem{concl}{Conclusion}
+\newtheorem{res}{Résumé}
+\newtheorem{strat}{Stratégie}
 
 \theoremstyle{definition}
 \newtheorem{conj}{Conjecture}
@@ -185,6 +188,7 @@ une nuance dans la suite :
 \textbf{On part de $\Z/2^n\Z$ et pas $(\Z/2\Z)^n$, puis
 $xy$ est le produit dans $\Z/2^n\Z$ pas le produit scalaire}.
 \end{center}
+\subsection{Cas $r=2^d$}
 \begin{prob}
     $f\colon \F_2^n\to X$ telle qu'il existe $d\leq n$ t.q :
     \begin{enumerate}
@@ -222,8 +226,63 @@ on peut l'estimer à partir du circuit du dessus.
 continues. Puis comprendre la QFT sans boite noire mais ca c'est moins
 important. Faut savoir construire $|x>\mapsto |0>+\zeta_{2^n}^{x}|1>$.
 
+\textbf{Finalement :} Ça vaut le coup de comprendre comment marche
+la QFT pour le td ? Ou au moins pour l'algorithmique.
+
+\subsection{Construire la porte QFT}
+En gros on utilise la factorisation :
+\begin{align*}
+    QFT(|x>)&=\frac{1}{2^{n/2}}\sum_{y\in 2^n}\zeta_{2^n}^{xy}|y>\\
+            &=\frac{1}{2^{n/2}}\sum_{y_0,\ldots,y_{n-1}\in \{0,1\}}
+            \prod_{i=0,\ldots,{n-1}}
+        \zeta_{2^n}^{x2^iy_i}|y_i>\\
+            &=\frac{1}{2^{n/2}}\prod_{i=0,\ldots,n-1}(|0>+\zeta_{2^n}^{x2^i}|1>)\\
+\end{align*}
+en particulier, y suffit de savoir construire 
+\[\frac{|0>+\zeta_{2^{n-i}}^{x}|1>}{\sqrt{2}}\]
+Mais ça on peut le faire avec un controlled phase shift :
+\begin{align*}
+    \frac{|0>+\zeta_{2^{n-i}}^{x}|1>}{\sqrt{2}}&=\frac{|0>+\zeta_{2^{n-i}}^{x_0+\ldots+2^{n-i}x_i}|1>}{\sqrt{2}}\\
+                                               &=\frac{|0>+\prod_{j=0}^{n-i}\zeta_{2^{n-i-j}}^{x_j}|1>}{\sqrt{2}}\\
+\end{align*}
 
 
+Au sens où la c'est juste une suite de phase shifts là où 
+$x_j=1$.
+\begin{concl}
+    Là on a construit un circuit $Q_i$ qui créé le qbit du dessus
+    qui agit que sur la $n-i-1$-ème entrée. En particulier pour
+    appliquer la QFT, on fait successivement $Q_0$ puis $Q_1$, $\ldots$.
+\end{concl}
+\subsection{Le cas $r$ général}
+Bon là on savait trouver une période de la forme $2^d$. Maintenant
+on veut trouver une période quelconque. On va faire exactement
+la même chose et voir ce qu'y se passe.
+\begin{res}
+    En gros, la sortie de Shor est une approximation de $k/r$ une 
+    fraction proche à $2^{n+1}$, i.e. :
+    \[|y/2^n - j/r|<1/2^{n+1}\]
+    On connaît par $j/r$ mais on peut montrer avec une telle 
+    approximation que il existe un convergent de $y$, $p_n/q_n$ tel
+    que $p_n/q_n = j/r$!
+\end{res}
+On peut montrer avec des théorèmes sur les fractions continues que 
+pour une sortie de Shor $y$, il existe $j$ tel que 
+$|y/2^n-j/r|<1/2^{n+1}$ et par la théorie des fractions continues, $j/r$
+est un convergent de $y$! I.e. y'a dans la fraction continue on peut
+trouver $p_n/q_n$ t.q $p_n/q_n=j/r$, wow.
+
+\begin{strat}
+    Ducoup la stratégie c'est : 
+    \begin{enumerate}
+        \item Lancer Shor et obtenir $y$.
+        \item Calculer les convergents de $y/2^n$, $(p_i/q_i)$.
+        \item Vérifier si $f(0)=f(q_i)$ pour un $i$, si oui
+            retourner $q_i$.
+    \end{enumerate}
+    À la dernière étape ce sera vrai par la théorie parce que une
+    condition c'est $2^n>r^2$ et on le choisit comme ça.
+\end{strat}
 
 
 \end{document}

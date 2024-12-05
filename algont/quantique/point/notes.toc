@@ -4,3 +4,6 @@
 \contentsline {section}{\numberline {1.2}Deutsch-Josza}{5}{section.1.2}%
 \contentsline {section}{\numberline {1.3}Simon}{6}{section.1.3}%
 \contentsline {section}{\numberline {1.4}Transormée de Fourier quantique}{7}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Cas $r=2^d$}{7}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Construire la porte QFT}{9}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Le cas $r$ général}{9}{subsection.1.4.3}%

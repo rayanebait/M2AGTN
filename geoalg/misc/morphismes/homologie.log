@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.11.21)  3 DEC 2024 23:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.11.21)  4 DEC 2024 10:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -780,7 +780,8 @@ Package: appendix 2020/02/08 v1.2c extra appendix facilities
 \c@quest=\count461
 \c@prot=\count462
 \c@algo=\count463
-Package hyperref Info: Option `colorlinks' set `true' on input line 130.
+\c@concl=\count464
+Package hyperref Info: Option `colorlinks' set `true' on input line 131.
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
@@ -788,36 +789,36 @@ Package csquotes Info: Redefining alias 'default' -> 'french'.
  (./homologie.aux)
 \openout1 = `homologie.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count464
+\scratchcounter=\count465
 \scratchdimen=\dimen274
 \scratchbox=\box68
-\nofMPsegments=\count465
-\nofMParguments=\count466
+\nofMPsegments=\count466
+\nofMParguments=\count467
 \everyMPshowfont=\toks46
-\MPscratchCnt=\count467
+\MPscratchCnt=\count468
 \MPscratchDim=\dimen275
-\MPnumerator=\count468
-\makeMPintoPDFobject=\count469
+\MPnumerator=\count469
+\makeMPintoPDFobject=\count470
 \everyMPtoPDFconversion=\toks47
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -825,7 +826,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring ON on input line 135.
+Package hyperref Info: Link coloring ON on input line 136.
  (./homologie.out) (./homologie.out)
 \@outlinefile=\write5
 \openout5 = `homologie.out'.
@@ -844,17 +845,17 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'homologie.bbl' not found.
 
 No file homologie.bbl.
-Package biblatex Info: Reference section=0 on input line 135.
-Package biblatex Info: Reference segment=0 on input line 135.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 137.
+Package biblatex Info: Reference section=0 on input line 136.
+Package biblatex Info: Reference segment=0 on input line 136.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 138.
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 137.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 138.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 137.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 138.
  (/usr/share/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
@@ -892,13 +893,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 \bbl@ensure@french {Chapitre} 1.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 147.
+(hyperref)                removing `math shift' on input line 148.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 147.
+(hyperref)                removing `math shift' on input line 148.
 
-LaTeX Font Info:    Trying to load font information for U+euf on input line 171.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 172.
 (/usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) [5]
@@ -912,7 +913,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [6]
 \bbl@ensure@french {Chapitre} 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 221--223
+Underfull \hbox (badness 10000) in paragraph at lines 222--224
 
  []
 
@@ -921,9 +922,38 @@ Overfull \hbox (0.38762pt too wide) in paragraph at lines 229--232
 \OT1/cmr/m/n/12 Pour rap-pel on peut seule-ment de-man-der ^^Ra ce que ce soit un hom^^Seomorphisme
  []
 
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 238.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 238.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 238.
+
 [7
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 252--255
+
+ []
+
+
+./homologie.tex:275: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.275 \newline
+              
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -932,19 +962,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [8]
-\bbl@ensure@french {Chapitre} 3.
 
-Overfull \hbox (9.23058pt too wide) in paragraph at lines 251--254
-\OT1/cmr/m/n/12 Y'a un cas qui est ^^Sevident que je veux traiter celui des vari^^Set^^Ses quasi-projectives.
- []
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 263.
-
-[9
-
-]
+[9]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -955,7 +980,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [10
 
 ]
-\bbl@ensure@french {Chapitre} 4.
+\bbl@ensure@french {Chapitre} 3.
+
+Overfull \hbox (9.23058pt too wide) in paragraph at lines 302--305
+\OT1/cmr/m/n/12 Y'a un cas qui est ^^Sevident que je veux traiter celui des vari^^Set^^Ses quasi-projectives.
+ []
+
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 314.
+
 [11]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -967,18 +1001,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [12
 
 ]
+\bbl@ensure@french {Chapitre} 4.
+[13]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[14
+
+]
 \bbl@ensure@french {Chapitre} 5.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 280.
+(hyperref)                removing `math shift' on input line 332.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 280.
+(hyperref)                removing `math shift' on input line 332.
 
-[13]
+[15]
 
-LaTeX Warning: Empty bibliography on input line 339.
+LaTeX Warning: Empty bibliography on input line 391.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -987,30 +1033,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[14] (./homologie.aux)
+[16] (./homologie.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `homologie.out' has not changed.
-(rerunfilecheck)             Checksum: 195CFC97891C7768788F776716847000;3025.
+(rerunfilecheck)             Checksum: 9EDF22F5D48FBC91C4B73B89055023BC;3579.
 Package logreq Info: Writing requests to 'homologie.run.xml'.
 \openout1 = `homologie.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31793 strings out of 476076
- 613048 string characters out of 5793774
- 1945187 words of memory out of 5000000
- 53387 multiletter control sequences out of 15000+600000
- 571367 words of font info for 90 fonts, out of 8000000 for 9000
+ 31822 strings out of 476076
+ 613462 string characters out of 5793774
+ 1946187 words of memory out of 5000000
+ 53407 multiletter control sequences out of 15000+600000
+ 571839 words of font info for 92 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  131i,15n,135p,682b,1799s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on homologie.pdf (14 pages, 168960 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
+Output written on homologie.pdf (16 pages, 182157 bytes).
 PDF statistics:
- 248 PDF objects out of 1000 (max. 8388607)
- 201 compressed objects within 3 object streams
- 37 named destinations out of 1000 (max. 500000)
- 157 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 285 PDF objects out of 1000 (max. 8388607)
+ 234 compressed objects within 3 object streams
+ 46 named destinations out of 1000 (max. 500000)
+ 189 words of extra memory for PDF output out of 10000 (max. 10000000)
 
