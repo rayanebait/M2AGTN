@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1733422008.89247 "notes.tex" "notes.pdf" "notes" 1733422010.56638 0
+["pdflatex"] 1733423329.09203 "notes.tex" "notes.pdf" "notes" 1733423330.73236 0
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1727349926 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1727349926 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1727349926 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -214,10 +214,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1727349926 41588 b43d3e860a4f94167ee1e725ff526a72 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1732175331.65648 5312047 b07fcd2a9090df96fc745b92a3db793b ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1732175312 7113015 9d9568c643641c7157949420f513395a ""
-  "notes.aux" 1733422010.38472 1302 1ea6c6cdec35300901c11fba3adf69c8 "pdflatex"
-  "notes.out" 1733422010.38472 1071 7a5cd6b3b46a441fc04d96e8595ed260 "pdflatex"
-  "notes.tex" 1733422007.15996 9883 b12db627e46c18efe2e5b731dd186fad ""
-  "notes.toc" 1733422010.38472 683 4e90d58c40204c059c03aa35270e177c "pdflatex"
+  "notes.aux" 1733423330.58151 1432 1098fc42bf047868eed2035b5eccdcfd "pdflatex"
+  "notes.out" 1733423330.58151 1274 d780cebd28feea8c9c256348caeb8a62 "pdflatex"
+  "notes.tex" 1733423326.75018 10487 6eb769f5d973b4f853c926da72331b7a ""
+  "notes.toc" 1733423330.58151 772 0f14e5dbf4b5a1c2073847a3c52c53f2 "pdflatex"
   (generated)
   "notes.aux"
   "notes.log"

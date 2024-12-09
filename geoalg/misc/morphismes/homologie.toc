@@ -20,4 +20,4 @@
 \contentsline {section}{\numberline {5.1}Fini implique affine}{15}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Surjectivité des morphismes finis}{15}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Trouver un ouvert dans $f(X)$}{15}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Projections}{15}{section.5.4}%
+\contentsline {section}{\numberline {5.4}Projections}{16}{section.5.4}%

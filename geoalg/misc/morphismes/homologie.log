@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.11.21)  4 DEC 2024 10:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.11.21)  5 DEC 2024 22:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -942,19 +942,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 252--255
  []
 
 
-./homologie.tex:275: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.275 \newline
-              
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -982,13 +969,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 ]
 \bbl@ensure@french {Chapitre} 3.
 
-Overfull \hbox (9.23058pt too wide) in paragraph at lines 302--305
+Overfull \hbox (9.23058pt too wide) in paragraph at lines 301--304
 \OT1/cmr/m/n/12 Y'a un cas qui est ^^Sevident que je veux traiter celui des vari^^Set^^Ses quasi-projectives.
  []
 
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 314.
+(hyperref)                than one, level fixed on input line 313.
 
 [11]
 
@@ -1016,15 +1003,23 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 \bbl@ensure@french {Chapitre} 5.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 332.
+(hyperref)                removing `math shift' on input line 333.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 332.
+(hyperref)                removing `math shift' on input line 333.
 
 [15]
 
-LaTeX Warning: Empty bibliography on input line 391.
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[16]
+
+LaTeX Warning: Empty bibliography on input line 409.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1033,7 +1028,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[16] (./homologie.aux)
+[17] (./homologie.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1045,18 +1040,18 @@ Package logreq Info: Writing requests to 'homologie.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31822 strings out of 476076
- 613462 string characters out of 5793774
+ 31824 strings out of 476076
+ 613474 string characters out of 5793774
  1946187 words of memory out of 5000000
  53407 multiletter control sequences out of 15000+600000
  571839 words of font info for 92 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  131i,15n,135p,682b,1799s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on homologie.pdf (16 pages, 182157 bytes).
+Output written on homologie.pdf (17 pages, 186518 bytes).
 PDF statistics:
- 285 PDF objects out of 1000 (max. 8388607)
- 234 compressed objects within 3 object streams
- 46 named destinations out of 1000 (max. 500000)
+ 290 PDF objects out of 1000 (max. 8388607)
+ 238 compressed objects within 3 object streams
+ 48 named destinations out of 1000 (max. 500000)
  189 words of extra memory for PDF output out of 10000 (max. 10000000)
 

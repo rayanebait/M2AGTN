@@ -284,6 +284,20 @@ trouver $p_n/q_n$ t.q $p_n/q_n=j/r$, wow.
     condition c'est $2^n>r^2$ et on le choisit comme ça.
 \end{strat}
 
-
+\section{Factorisation et log discret}
+Pour la factorisation, la page wiki explique bien!
+\begin{strat}
+    En gros
+    \begin{enumerate}
+        \item Prendre un entier plus petit que $n$ premier à $N$, 
+    disons $a$ (si il est pas premier on a fini).
+        \item Calculer son ordre avec l'algo de Shor (on a besoin de 
+            l'ordre.
+        \item Si $r$ est pair, alors $N|(a^{r/2}-1)(a^{r/2}+1)$
+            mais peut diviser aucun des deux donc a deux facteurs !
+        \item Il doit y avoir un $r$ pair, parce que sinon $N=2^k$.
+            Donc itérer.
+    \end{enumerate}
+\end{strat}
 \end{document}
 

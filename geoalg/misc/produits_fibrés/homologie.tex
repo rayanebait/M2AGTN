@@ -63,12 +63,14 @@ sorting=ynt
 \newcommand{\Pic}{\textrm{Pic}}
 \newcommand{\End}{\textrm{End}}
 \newcommand{\Spec}{\textrm{Spec}}
+\newcommand{\Spm}{\textrm{Spm}}
 \newcommand{\Supp}{\textrm{Supp}}
 \renewcommand{\Im}{\textrm{Im}}
 
 
 \newcommand{\m}{\mathfrak{m}}
 \newcommand{\p}{\mathfrak{p}}
+\newcommand{\q}{\mathfrak{p}}
 
 
 \newcommand{\cL}{\mathscr{L}}
@@ -105,6 +107,7 @@ sorting=ynt
 \newtheorem{heur}{Heuristique}
 \newtheorem{rem}{Remarque}
 \newtheorem{note}{Note}
+\newtheorem{strat}{Stratégie}
 
 \theoremstyle{definition}
 \newtheorem{conj}{Conjecture}
@@ -136,12 +139,89 @@ sorting=ynt
 \maketitle
 \tableofcontents
 
-\chapter{Sur les $\bar k$-variétés}
-Ici je veux décrire le produit fibré sur les variétés d'abord.
-Ducoup, faut décrire la bijection entre les morphismes $Spec(\bar k)\to X$
-et $|X|$. 
 
 \chapter{Produits fibrés et foncteur de points}
+\section{Remarques sur le lemme de Yoneda}
+Le légendaire. Je l'énonce que pour ce qui m'intéresse.
+En gros on a un foncteur $h_{\_}:=(X\mapsto \Hom_C(\_,X)$
+qui est pleinement fidèle, autrement dit les diagrammes :
+% https://q.uiver.app/#q=WzAsNixbMSwwLCJYIl0sWzEsMSwiWSJdLFsyLDAsImhfWDo9XFxIb21fQyhcXF8sWCkiXSxbMiwxLCJoX1k6PVxcSG9tX0MoXFxfLFkpIl0sWzAsMCwiXFxIb21fe0N9KFxcXyxcXF8pIl0sWzAsMSwiXFxIb21fe0N9KFxcXyxcXF8pIl0sWzAsMSwiZiIsMl0sWzIsM10sWzAsMl0sWzEsM10sWzQsMCwiXFxjb2xvbiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs1LDEsIlxcY29sb24iLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=
+\[\begin{tikzcd}
+	{\Hom_{C}(\_,\_)} & X & {h_X:=\Hom_C(\_,X)} \\
+	{\Hom_{C}(\_,\_)} & Y & {h_Y:=\Hom_C(\_,Y)}
+	\arrow["\colon"{description}, draw=none, from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow["f"', from=1-2, to=2-2]
+	\arrow[from=1-3, to=2-3]
+	\arrow["\colon"{description}, draw=none, from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+\end{tikzcd}\]
+commutent et 
+\[\Hom_C(X,Y)\to \Hom_{\widehat C}(h_X,h_Y)\]
+est une bijection donnée par 
+\[f\mapsto (W\mapsto (\alpha(W)(g)=f\circ g)).\]
+\begin{rem}
+  L'énoncé général s'écrit plutôt :
+  \[\Hom_{\widehat C}(h_X,h_Y)\ni \alpha\mapsto (\alpha(X)(id_X)\colon X\to Y)\]
+\end{rem}
+\begin{rem}
+  Voir le carnet pour des choses plus deep. Pas oublier
+  que c'est bien grâce à ça les propriétés universelles!
+\end{rem}
+\section{Point de vue du foncteur de point}
+Essentiellement, avoir un morphisme de schémas
+$X\to Y$ équivaut alors à avoir une flèche 
+$h_X\to h_Y$. Si on traduit sur les schémas, il 
+suffit d'avoir 
+% https://q.uiver.app/#q=WzAsNCxbMCwwLCJYX1MoVCkiXSxbMSwwLCJZX1MoVCkiXSxbMCwxLCJYX1MoVCcpIl0sWzEsMSwiWV9TKFQnKSJdLFswLDJdLFsyLDNdLFswLDFdLFsxLDNdXQ==
+\[\begin{tikzcd}
+	{X_S(T)} & {Y_S(T)} \\
+	{X_S(T')} & {Y_S(T')}
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=2-1, to=2-2]
+\end{tikzcd}\]
+pour tout $T=Spec(B)$ affine. Plusieurs
+choses à debunker : pas oublier comment retrouver le morphisme
+de faisceaux. Pas oublier le morphisme topologique.
+
+
+\section{Propriété universelle et cas $k$-schéma}
+En gros c'est l'unique triplé $(X\times_S Y, p,q)$
+tel que \[\Hom_{Sch/S}(W, X\times_S Y)\to \Hom_{Sch/S}(W,X)\times \Hom_{Sch/S}(W,Y)\]
+donné par $h\mapsto (p\circ h,q\circ h)$ est une bijection.
+\subsection{Étude de la définition}
+À noter, la propriété de composition $W\to (X\to S)=W\to (Y\to S)$
+est bien contenue dans la définition parce que c'est des 
+$S$-morphismes. Donc y'a pas de $\times_S$ c'est juste $\times$.
+Dans le cas des variétés, on a automatiquement des 
+$\bar k$-schémas.
+\begin{quest}
+  Impact ?
+\end{quest}
+
+\begin{rem}
+  Y'a pas encore de lemme de Yoneda explicit là, autre que pour
+  dire que c'est l'unique triplé tel que la propriété universelle.
+\end{rem}
+
+
+\section{Remarques sur le foncteur de points}
+En fait si on a un objet qui représente le produit de foncteurs
+de points alors c'est le produit fibré. C'est pour ça que ça 
+suffit! Ça l'air vachement utile. 
+\begin{strat}
+  \item Identifier l'ensemble $\to$ par exemple
+    $|X\times_k Y|=|X|\times_k|Y|$ dans le cas $k=\bar k$.
+  \item Identifier l'espace topologique. Ça ça a l'air d'être
+    induit.
+  \item Identifier le faisceau : voir comment faire de l'algèbre.
+    (se rappeler de la preuve que les variétés projectives sont
+    propres)
+\end{strat}
+
+\section{Foncteur de points}
 Petite intuition du foncteur de points : en fait sur un $R$-schéma $T$
 on a des $R$-flèches $T\to \Spec(R[T_1,\ldots,T_n])$, essentiellement 
 c'est donné par 
@@ -159,10 +239,48 @@ en particulier des équations pour des sections globales de $T$.
 
 
 \section{Construction}
+\subsection{Cas affine}
+Étant donné $\Spec(A)$ et $\Spec(B)$ des $C$-schémas affines. Le 
+produit fibré est $\Spec(A\otimes_C B)$ (par l'équivalence de 
+catégorie). Le faisceau a pour fibres ? Via le morphisme 
+topologique 
+\[X\times_Z Y\to |X|\times_{|Z|}|Y|\]
+
+\[(A_\p\otimes_{} B_\q)\]
+\subsection{}
 
 
 
+\chapter{Sur les $\bar k$-variétés}
+\section{Construction}
+Donc là 
+\[A(X)\otimes_k A(Y)=k[T_1,\ldots, T_n, S_1,\ldots, S_m]/(I,J)\]
+donc le produit fibré est 
+\[Z(I,J)\subset \A_k^{n+m}\]
+et le faisceau
+\section{Adapter les définitions : la bijection ensembliste}
+Donc en regardant même pas les schémas, les variétés sur $\bar k$
+qu'on regarde correspondent à des $\bar k$-schémas. Mais en 
+fait plus simplement, dans le cas affine on à $X\simeq Spm(A(X))$
+avec la topologie de Zariski ($\{\m|I\subset \m\}=V(I)$), i.e.
+$Spm(A(X))$ est une variété à la Weil! Donc ça fait sens d'écrire :
+\[Y,X\to \Spm(k)\]
+on déduit direct par le produit fibré dans une catégorie $C$ 
+quelconque (donc ici $C=k-$Var) dans la catégorie variétés
+abstraites que
+\[\Hom_{k-Var}(\Spm(k), X\times_k Y)\approx \Hom_{k-Var}(\Spm(k),X)
+\times \Hom_{k-Var}(\Spm(k),Y)\]
+via Yoneda maintenant on obtient 
+\[|X\times_k Y|=|X|\times_k|Y|\]
+une bijection d'ensemble !
 
+\begin{rem}
+  C'est pas un homéomorphisme, Yoneda agit au niveau ensembliste.
+\end{rem}
+\section{Topologie}
+On peut remarquer $X\times_k Y$ contient (strictement) la topologie
+produit, sinon 
+\section{Faisceau}
 
 \printbibliography
 \end{document}

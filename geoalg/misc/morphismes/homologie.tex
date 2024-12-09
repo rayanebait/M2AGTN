@@ -272,7 +272,6 @@ est exacte. D'où la surjectivité qu'on voulait.
   est la bonne. En particulier, on obtient $i_Z^{-1}\Or_Y\simeq f_*\Or_X$
   pour $Z=f(X)$.
 \end{concl}
-\newline 
 Pour l'inverse, si $\Or_Y\to f_*\Or_X\to 0$ est exacte. On note
 $I$ le noyau, et si $f$ est affine.
 Inversement, si $\Or_Y\to f_*\Or_X\to 0$ est exacte on peut dire quelque
@@ -321,6 +320,8 @@ faut remarquer si
 
 \chapter{Morphismes finis}
 \section{Fini implique affine}
+Je crois que c'est pas définition. Pas besoin d'aller chercher
+pourquoi là je pense.
 \section{Surjectivité des morphismes finis}
 Ducoup si on regarde la condition $x\in f^{-1}(y)$, ça se traduit par
 $f_*\m_y\subset \m_x$. Inversement, si $f^{-1}(y)$ est vide alors
@@ -338,6 +339,23 @@ technique habituelle puis tout dérouler en utilisant le fait
 que les morphismes finis sont surjectifs. La deuxième c'est
 juste que la première projection on peut trouver un ouvert dans
 l'image d'un ouvert facilement.
+
+\begin{rem}
+  Y'a quand même un petit truc intéressant, le morphisme induit par 
+  l'inclusion
+  \[k[Y][u_1,\ldots, u_r]\subset k[X]\]
+  on l'interprète en $X\to Y\times \A^r$, en disant que 
+  $k[\A^r]=k[u_1,\ldots, u_r]$ sauf que y'a une subtilité pour que ça
+  marche. Vaudrait mieux dire \[k[Y][T_1,\ldots, T_r]\hookrightarrow
+  f_*k[Y][u_1,\ldots, u_r]\]
+  pour que ce soit plus clair. Autrement dit, le statut de 
+  $u_1,\ldots,u_r$ comme fonctions sur $\A^r$ est pas clair, c'est pas 
+  le même que celui de $u_1,\ldots, u_r$ sur $X$ ? Aussi, ça marche 
+  parce que être algébriquement indépendant sur $k(Y)$ implique l'être
+  sur $k$ ! Et ça c'est peut-être non trivial, au sens où on a une
+  flèche dominante $X\supset U\to \A^r$ ($U$ un ouvert de définition
+  des $u_i$).
+\end{rem}
 
 \section{Projections}
 Ça c'était cool, et plus deep que prévu. Ducoup, 
