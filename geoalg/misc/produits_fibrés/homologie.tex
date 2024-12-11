@@ -251,6 +251,42 @@ topologique
 
 
 
+\chapter{Produits tensoriels}
+Via \href{https://kconrad.math.uconn.edu/blurbs/linmultialg/tensorprod.pdf}{ça}, un petit cours du légendaire Keith Conrad.
+Aussi les exercices de Vakil seraient cools.
+\section{Quand est-ce que $m\otimes n= 0$?}
+Étant donné une application bilinéaire 
+\[f\colon M\times N\to K\]
+on peut la factoriser via $M\times N\to M\otimes N\to K$. Alors
+$f(m,n)=0$ dès que $m\otimes n=0$. L'inverse est aussi vrai parce
+que $M\times N\to M\otimes N$ est bilinéaire!
+
+\begin{rem}
+  Suffit donc de trouver $M\times N\to K$ bilinéaire
+  telle que $(m,n)\mapsto k\ne 0$ pour prouver que 
+  $m\otimes n\ne 0$.
+\end{rem}
+\section{Cas des polynômes}
+J'aimerai montrer que si $k[T_1,\ldots, T_n]\to A$ est injective
+et $k[S_1,\ldots,S_m]\to B$ aussi alors 
+\[k[T_1,\ldots,T_n,S_1,\ldots,S_m]\to A\otimes_k B\]
+aussi. Avec ce morphisme étant celui qui étend
+\[k[T_1,\ldots,T_n]\times k[S_1,\ldots, S_m]\to A\otimes_k B\]
+donné par $(f,g)\mapsto f\otimes g$. 
+\begin{rem}
+  Si on prouve que $A$ et $B$ sont des quotients d'anneaux de 
+  polynômes c'est immédiat.
+\end{rem}
+\subsection{Produits d'anneaux de polynômes}
+On a 
+$k[T_1,\ldots, T_n]\otimes_k k[S_1,\ldots,S_m]=k[T_1,\ldots, T_n,S_1,\ldots, S_m]$.
+Pour le prouver on peut juste remarquer que $(f,g)\mapsto f.g$
+est universelle et bilinéaire. 
+
+\subsection{Injectivité}
+Ducoup clairement $f\otimes g\ne0$  par ce que $f.g\ne 0$ dès
+que $f\ne 0$ ou $g\ne 0$. Ensuite si $\sum_i a_i f_i\otimes g_i=0$
+
 \chapter{Sur les $\bar k$-variétés}
 \section{Construction}
 Donc là 
@@ -277,9 +313,14 @@ une bijection d'ensemble !
 \begin{rem}
   C'est pas un homéomorphisme, Yoneda agit au niveau ensembliste.
 \end{rem}
-\section{Topologie}
+\section{Topologie : cas quasi-projectif}
+Essentiellement, on regarde la topologie induite sur $\A^n\times
+\A^m$, donc quand on a $\Pr^n\times \Pr^m$, $Z^+(I)$ donné par 
+la graduation de $\Pr^n$ est la bonne topologie par restriction.
+
+\section{Topologie : cas général}
 On peut remarquer $X\times_k Y$ contient (strictement) la topologie
-produit, sinon 
+produit, sinon dans le cas p
 \section{Faisceau}
 
 \printbibliography

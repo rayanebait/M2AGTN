@@ -9,8 +9,14 @@
 \contentsline {section}{\numberline {1.6}Construction}{7}{section.1.6}%
 \contentsline {subsection}{\numberline {1.6.1}Cas affine}{7}{subsection.1.6.1}%
 \contentsline {subsection}{\numberline {1.6.2}}{7}{subsection.1.6.2}%
-\contentsline {chapter}{\numberline {2}Sur les $\bar k$-variétés}{9}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Construction}{9}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Adapter les définitions : la bijection ensembliste}{9}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Topologie}{10}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Faisceau}{10}{section.2.4}%
+\contentsline {chapter}{\numberline {2}Produits tensoriels}{9}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Quand est-ce que $m\otimes n= 0$?}{9}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Cas des polynômes}{9}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Produits d'anneaux de polynômes}{10}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Injectivité}{10}{subsection.2.2.2}%
+\contentsline {chapter}{\numberline {3}Sur les $\bar k$-variétés}{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Construction}{11}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Adapter les définitions : la bijection ensembliste}{11}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Topologie : cas quasi-projectif}{12}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Topologie : cas général}{12}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Faisceau}{12}{section.3.5}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.11.21)  9 DEC 2024 18:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.11.21)  11 DEC 2024 15:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -933,20 +933,44 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 \bbl@ensure@french {Chapitre} 2.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 254.
+(hyperref)                removing `math shift' on input line 257.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 254.
+(hyperref)                removing `\otimes' on input line 257.
 
 
-Overfull \hbox (3.71088pt too wide) detected at line 272
-[][]\OT1/cmr/m/n/12 ([](\OML/cmm/m/it/12 k\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; X \OMS/cmsy/m/n/12 ^^B[] \OML/cmm/m/it/12 Y\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^Y [][]\OT1/cmr/m/n/12 ([](\OML/cmm/m/it/12 k\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; X\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^B [][]\OT1/cmr/m/n/12 ([](\OML/cmm/m/it/12 k\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; Y\OT1/cmr/m/n/12 )
- []
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 257.
 
 [9]
 
-LaTeX Warning: Empty bibliography on input line 285.
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[10]
+\bbl@ensure@french {Chapitre} 3.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 290.
+
+
+Overfull \hbox (3.71088pt too wide) detected at line 308
+[][]\OT1/cmr/m/n/12 ([](\OML/cmm/m/it/12 k\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; X \OMS/cmsy/m/n/12 ^^B[] \OML/cmm/m/it/12 Y\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^Y [][]\OT1/cmr/m/n/12 ([](\OML/cmm/m/it/12 k\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; X\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^B [][]\OT1/cmr/m/n/12 ([](\OML/cmm/m/it/12 k\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; Y\OT1/cmr/m/n/12 )
+ []
+
+[11
+
+]
+
+LaTeX Warning: Empty bibliography on input line 326.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -955,30 +979,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[10] (./homologie.aux)
+[12] (./homologie.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `homologie.out' has not changed.
-(rerunfilecheck)             Checksum: 61133BFFB9669B444F2D1B81F58814B2;2611.
+(rerunfilecheck)             Checksum: 6D2EC654CDFC901B79511318F5E402CA;3737.
 Package logreq Info: Writing requests to 'homologie.run.xml'.
 \openout1 = `homologie.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31712 strings out of 476076
- 610759 string characters out of 5793774
+ 31729 strings out of 476076
+ 610955 string characters out of 5793774
  1941187 words of memory out of 5000000
- 53307 multiletter control sequences out of 15000+600000
- 575128 words of font info for 105 fonts, out of 8000000 for 9000
+ 53314 multiletter control sequences out of 15000+600000
+ 575364 words of font info for 106 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  131i,18n,135p,682b,1776s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on homologie.pdf (10 pages, 150121 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on homologie.pdf (12 pages, 167015 bytes).
 PDF statistics:
- 205 PDF objects out of 1000 (max. 8388607)
- 167 compressed objects within 2 object streams
- 34 named destinations out of 1000 (max. 500000)
- 133 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 256 PDF objects out of 1000 (max. 8388607)
+ 213 compressed objects within 3 object streams
+ 44 named destinations out of 1000 (max. 500000)
+ 181 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.11.21)  10 DEC 2024 08:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.11.21)  11 DEC 2024 15:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**homologie.tex
-(./homologie.tex
+**nakayama.tex
+(./nakayama.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
 (/usr/share/texmf-dist/tex/latex/base/book.cls
@@ -785,8 +785,8 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'french'.
- (./homologie.aux)
-\openout1 = `homologie.aux'.
+ (./nakayama.aux)
+\openout1 = `nakayama.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 135.
 LaTeX Font Info:    ... okay on input line 135.
@@ -826,9 +826,9 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package hyperref Info: Link coloring ON on input line 135.
- (./homologie.out) (./homologie.out)
+ (./nakayama.out) (./nakayama.out)
 \@outlinefile=\write5
-\openout5 = `homologie.out'.
+\openout5 = `nakayama.out'.
 
 Package biblatex Info: Trying to load language 'french'...
 Package biblatex Info: ... file 'french.lbx' found.
@@ -838,12 +838,12 @@ File: french.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout4 = `homologie.bcf'.
+\openout4 = `nakayama.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'homologie.bbl' not found.
+Package biblatex Info: ... file 'nakayama.bbl' not found.
 
-No file homologie.bbl.
+No file nakayama.bbl.
 Package biblatex Info: Reference section=0 on input line 135.
 Package biblatex Info: Reference segment=0 on input line 135.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 137.
@@ -874,23 +874,47 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [2
 
-] (./homologie.toc)
+] (./nakayama.toc)
 \tf@toc=\write6
-\openout6 = `homologie.toc'.
-
-
-Overfull \hbox (8.3558pt too wide) in paragraph at lines 141--141
-[]\OT1/cmr/bx/n/17.28 L'^^Sequivalence de cat^^Segorie avec les vari^^Set^^Ses
- []
-
-
-Underfull \vbox (badness 3354) has occurred while \output is active []
+\openout6 = `nakayama.toc'.
 
  [3]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 166.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.71667pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.71667pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
+
+[4
+
+]
+\bbl@ensure@french {Chapitre} 1.
+
+Overfull \hbox (11.8028pt too wide) in paragraph at lines 158--161
+[]\OT1/cmr/m/n/12 Si on prends deux familles alg^^Sebriquement ind^^Sependantes et $\OML/cmm/m/it/12 K$ \OT1/cmr/m/n/12 alg^^Sebriques
+ []
+
+[5]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.71667pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.71667pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
+
+[6]
+\bbl@ensure@french {Chapitre} 2.
+[7
+
+]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 227.
  (/usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
+
+LaTeX Warning: Empty bibliography on input line 230.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -898,37 +922,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[4]
-\bbl@ensure@french {Chapitre} 1.
-
-LaTeX Warning: Empty bibliography on input line 228.
-
-[5
-
-] (./homologie.aux)
+[8] (./nakayama.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-Package rerunfilecheck Info: File `homologie.out' has not changed.
-(rerunfilecheck)             Checksum: CD4CDD3B8C7DA7290EBF355A57FE347F;1454.
-Package logreq Info: Writing requests to 'homologie.run.xml'.
-\openout1 = `homologie.run.xml'.
+Package rerunfilecheck Info: File `nakayama.out' has not changed.
+(rerunfilecheck)             Checksum: 587206DDD1508D571791970D77B1293A;1886.
+Package logreq Info: Writing requests to 'nakayama.run.xml'.
+\openout1 = `nakayama.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31593 strings out of 476076
- 608474 string characters out of 5793774
- 1940187 words of memory out of 5000000
- 53209 multiletter control sequences out of 15000+600000
+ 31492 strings out of 476076
+ 605738 string characters out of 5793774
+ 1935187 words of memory out of 5000000
+ 53090 multiletter control sequences out of 15000+600000
  569483 words of font info for 82 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 131i,16n,135p,682b,1774s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on homologie.pdf (5 pages, 139677 bytes).
+ 131i,12n,135p,681b,1776s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on nakayama.pdf (8 pages, 150033 bytes).
 PDF statistics:
- 134 PDF objects out of 1000 (max. 8388607)
- 100 compressed objects within 1 object stream
- 15 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 187 PDF objects out of 1000 (max. 8388607)
+ 149 compressed objects within 2 object streams
+ 33 named destinations out of 1000 (max. 500000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 

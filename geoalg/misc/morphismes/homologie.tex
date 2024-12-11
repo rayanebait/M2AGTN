@@ -207,8 +207,30 @@ des critères pour que le morphisme de faisceau soit surjectif ou
 injectif.
 
 \subsection{Cas affine}
-si $Y$ est affine, 
 
+\section{Utilisation de la caractérisation $f^\sharp(g)=g\circ f$}
+\subsection{Variétés affines vers espaces localement annelés}
+Pour montrer que $Z\mapsto (Z,\Or_Z)$ est un pleinement fidèle
+faut montrer qu'étant donné $f\colon X\to Y$, et $g\in \Or_Y(V)$
+alors $g\circ f\in \Or_X(f^{-1}V)$.
+\begin{rem}
+  C'est bien une \textbf{fonction}, mais c'est pas clair qu'elle
+  est régulière.
+\end{rem}
+Dans notre cas avec la définition faut prouver que $g\circ f$ est
+régulière sachant qu'on a 
+\[f_*\colon A(Y)\to A(X).\]
+Pour $x_0\in f^{-1}V$ on prends $f(x_0)\subset V_0$ tel que 
+$g|_{V_0}=G/H$ avec $H(f(x_0))\ne 0$, alors
+$g|_{V_0}\circ f=f_*G/f_*H$ (comme fonctions) est bien
+une fraction avec $f_*H(x_0)\ne 0$.
+\begin{rem}
+  $f_*$ se définit via $\A^n\to \A^m$.
+\end{rem}
+À l'inverse faut montrer que de $f^\sharp$ on peut trouver une
+fonction polynomiale $X\to Y\subset \A^m$. Typiquement via
+$k[T_1,\ldots, T_m]\to A(X)$ et $f^\sharp(g)=g\circ f$ sur les
+coordonnées.
 
 
 
