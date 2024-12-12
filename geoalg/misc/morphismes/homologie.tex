@@ -338,6 +338,54 @@ faut remarquer si
 
 
 \chapter{Morphismes séparés}
+\section{Exos}
+Séparé ssi il existe un recouvrement affine $\cup_i X_i$ t.q
+\begin{enumerate}
+  \item $X_i\cap X_j$ est affine.
+  \item $X_i\cap X_j\to X_i\times X_j$ est une immersion fermée.
+\end{enumerate}
+Application : Produits de variétés séparées sont séparées.
+Application 2 : Variétés projectives sont séparées.
+\subsection{Ligne à double point}
+On la construit via $T\mapsto T$ sur $D(T)\subset \A^1$.
+J'appelle $L$ le recollement et ses ouverts c'est clair. Pour 
+le faisceau ses sections globales c'est clair aussi via le critère.
+Pour la séparation, si $O_1,O_2$ c'est
+les deux points du recollement alors $(O_1,O_2)\notin \Delta_L$
+mais tout ouvert qui contient $(O_1,O_2)$ contient un $D(f_1)\times
+D(f_2)$ et $D(f_1)\cap D(f_2)\ne 0$ d'où $\Delta_L$ est pas fermé.
+
+\section{Intersections d'affines est affine}
+Si $X\to k$ est séparé, alors pour tout $U,V$ affines :
+\[U\cap V\to U\cap V\times U\cap V\to U\times V\]
+est une immersion fermée vers un affine! Ça donne une réciproque
+au truc d'avant.
+
+\section{Sur des $k$-schémas}
+On veut que 
+\[\Delta_S(X)\colon X\to X\times_S X\]
+soit une immersion fermée. Alors $X\to S$ est
+séparé.
+\begin{rem}
+  Pour rappel, on prends $X\times_S Y = (i_X,i_Y)^{-1}(\Delta_k(S))$
+  où $i_X$ et $i_Y$ sont les morphismes structurants.
+\end{rem}
+
+\chapter{Morphismes propres}
+On dit que $X\to S$ est propre si $X$ est
+universellement fermé dans $Sch/S$ et séparé
+(y'a une condition de finitude aussi).
+\section{La ligne a point double est universellement fermée
+mais pas séparée}
+Petit exercice.
+
+\section{Conséquence de la propreté}
+Soit $X$ est propre : 
+\begin{enumerate}
+  \item Si $Y$ est séparée, tout morphisme $X\to Y$ est fermé.
+\end{enumerate}
+
+
 
 
 \chapter{Morphismes finis}
