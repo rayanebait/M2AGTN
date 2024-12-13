@@ -338,14 +338,23 @@ faut remarquer si
 
 
 \chapter{Morphismes séparés}
-\section{Exos}
+\section{Un critère}
 Séparé ssi il existe un recouvrement affine $\cup_i X_i$ t.q
 \begin{enumerate}
   \item $X_i\cap X_j$ est affine.
   \item $X_i\cap X_j\to X_i\times X_j$ est une immersion fermée.
 \end{enumerate}
-Application : Produits de variétés séparées sont séparées.
+\subsection*{Preuve}
+De gauche à droite c'est une section plus tard, de droite à gauche
+c'est que $\Delta_X\cap X_i\times X_j=\Delta_{X_i\cap X_j}$ qui
+est fermé par hypothèse. Et être fermé est une condition locale
+sur la base.
+L'immersion fermée est dû au fait
+que la surjectivité du faisceau se voit sur les fibres.
+\subsection*{Applications}
+Application 1: Produits de variétés séparées sont séparées.
 Application 2 : Variétés projectives sont séparées.
+
 \subsection{Ligne à double point}
 On la construit via $T\mapsto T$ sur $D(T)\subset \A^1$.
 J'appelle $L$ le recollement et ses ouverts c'est clair. Pour 
@@ -358,8 +367,9 @@ D(f_2)$ et $D(f_1)\cap D(f_2)\ne 0$ d'où $\Delta_L$ est pas fermé.
 \section{Intersections d'affines est affine}
 Si $X\to k$ est séparé, alors pour tout $U,V$ affines :
 \[U\cap V\to U\cap V\times U\cap V\to U\times V\]
-est une immersion fermée vers un affine! Ça donne une réciproque
-au truc d'avant.
+est une immersion fermée vers un affine! Parce que 
+\[\Delta_X\cap( U\times V) =\Delta_{U\cap V}.\]
+Ça donne une réciproque au truc d'avant.
 
 \section{Sur des $k$-schémas}
 On veut que 
@@ -384,6 +394,8 @@ Soit $X$ est propre :
 \begin{enumerate}
   \item Si $Y$ est séparée, tout morphisme $X\to Y$ est fermé.
 \end{enumerate}
+
+
 
 
 
