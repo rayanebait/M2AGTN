@@ -24,7 +24,8 @@
 \contentsline {section}{\numberline {4.3}Sur des $k$-schémas}{16}{section.4.3}%
 \contentsline {chapter}{\numberline {5}Morphismes propres}{17}{chapter.5}%
 \contentsline {section}{\numberline {5.1}La ligne a point double est universellement fermée mais pas séparée}{17}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Conséquence de la propreté}{17}{section.5.2}%
+\contentsline {section}{\numberline {5.2}Si $X\to Y$ est fini et $Y$ est propre alors $X$ est propre}{17}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Conséquence de la propreté}{17}{section.5.3}%
 \contentsline {chapter}{\numberline {6}Morphismes finis}{19}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Fini implique affine}{19}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Surjectivité des morphismes finis}{19}{section.6.2}%

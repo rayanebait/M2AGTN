@@ -129,7 +129,7 @@ sorting=ynt
     filecolor=wgrey
 }
 
-\title{Notes perso : Géométrie algébrique}
+\title{Dimension et nombre d'équations}
 \date{}
 
 \begin{document}
@@ -216,7 +216,22 @@ La preuve consiste à dire
 Tout irréductible affine $Z$ de dimension $s$ dans $\A^n$ est une 
 composante d'un
 \[Z\subseteq Z(f_1,\ldots, f_{n-s})\]
-dont toutes les composantes ont dimension $s$. 
+dont toutes les composantes ont dimension $s$. On peut le faire
+par récurrence sur $0\leq n-s\leq n$. On a 
+\begin{enumerate}
+    \item $n-s=0 :$ On est sur $\A^n$.
+    \item $n-s=1 :$ C'est un $Z(f)$, le fait que les composantes
+	aient dimension $n-1$ c'est juste que c'est des 
+	$Z(P_i)$ avec $\prod P_i^{e_i}=f$.
+    \item On prends $Z$ de dimension $s$ dans $Z_1$ de dimension
+	$s+1$, alors $Z_1\subset Z(f_1,\ldots, f_{n-(s+)})$ avec
+	les hypothèses.
+    \item On baisser la dimension de toutes les composantes de $1$
+	on peut intersecter avec $Z\subset Z(f)$. Donc on prends
+	$f\in I(Z)$ et on veut que $Z_i\nsubseteq Z(f)$ donc 
+	$f\notin I(Z_i)$. Donc $f\in I(Z)-\cup_i I(Z_i)$. Et ça
+	par lemme d'évitement.
+\end{enumerate}
 
 À l'inverse
 \[Z(f_1,\ldots, f_{s})\subset \A^n(k)\]
@@ -225,7 +240,10 @@ est de dimension $\geq n-s$.
 On en déduit que si $f\colon X\to Y$ est dominant alors
 \[\dim(f^{-1}(y))\geq \dim(X)-\dim(Y)\]
 parce que $f^{-1}(y)\subseteq Z(f_*\m_y)$ et $\m_y$ est défini
-par $\dim(Y)$ équations !
+par $\dim(Y)$ équations ! 
+
+pour l'ouvert, factoriser un morphisme fini et là c'est clair
+que $dim f^{-1}(Z).= dim Z$ si $f$ fini dominant.
 
 \printbibliography
 \end{document}

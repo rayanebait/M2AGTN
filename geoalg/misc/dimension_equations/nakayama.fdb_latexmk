@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber nakayama"] 0 "nakayama.bcf" "nakayama.bbl" "nakayama" 0 0
+["biber nakayama"] 0 "nakayama.bcf" "nakayama.bbl" "nakayama" 1734183281.85874 0
   "bib.bib" 0 -1 0 ""
   "nakayama.bcf" 0 -1 0 "pdflatex"
   (generated)
   "nakayama.bbl"
   "nakayama.blg"
   (rewritten before read)
-["pdflatex"] 1733926813.8026 "nakayama.tex" "nakayama.pdf" "nakayama" 1733926815.6146 0
+["pdflatex"] 1734183280.08106 "nakayama.tex" "nakayama.pdf" "nakayama" 1734183281.85925 0
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1727349926 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1727349926 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1727349926 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -206,14 +206,14 @@
   "/usr/share/texmf-dist/tex/latex/url/url.sty" 1727349926 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty" 1727349926 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1727349926 41588 b43d3e860a4f94167ee1e725ff526a72 ""
-  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1732175331.65648 5312047 b07fcd2a9090df96fc745b92a3db793b ""
-  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1732175312 7113015 9d9568c643641c7157949420f513395a ""
-  "nakayama.aux" 1733926815.35495 1857 7934b406de867b8a0c64ab1b60ed4acf "pdflatex"
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1734138070.76283 5312047 b07fcd2a9090df96fc745b92a3db793b ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1734138058 7113013 9f79dde3fcd46c5618501cc550ad55c9 ""
+  "nakayama.aux" 1734183281.57218 1857 39f7833be515d7e72eac0cd02b28d705 "pdflatex"
   "nakayama.bbl" 0 -1 0 "biber nakayama"
-  "nakayama.out" 1733926815.35829 1886 587206ddd1508d571791970d77b1293a "pdflatex"
-  "nakayama.run.xml" 1733926815.36162 2331 fcb1ed9b1bffa35c4238b3fcb17bc711 "pdflatex"
-  "nakayama.tex" 1733926810.52182 6960 1a0169f9ca14cdba8a0b83cdf3dd7147 ""
-  "nakayama.toc" 1733926815.36162 956 d40a56f0604b29cb1bec8a2ac63985f0 "pdflatex"
+  "nakayama.out" 1734183281.57551 1886 587206ddd1508d571791970d77b1293a "pdflatex"
+  "nakayama.run.xml" 1734183281.57884 2331 fcb1ed9b1bffa35c4238b3fcb17bc711 "pdflatex"
+  "nakayama.tex" 1734183278.26883 7759 abb43154a52b945aee1ba27b34a83e71 ""
+  "nakayama.toc" 1734183281.57884 956 d0f4773a9e939242b579d89f9b6e66e7 "pdflatex"
   (generated)
   "nakayama.aux"
   "nakayama.bcf"

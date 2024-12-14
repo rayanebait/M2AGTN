@@ -131,7 +131,7 @@ sorting=ynt
     filecolor=wgrey
 }
 
-\title{Notes perso : Géométrie algébrique}
+\title{Lissité sur les schémas}
 \date{}
 
 \begin{document}
@@ -229,10 +229,18 @@ l'une des variables :
         est non vide.
 \end{enumerate}
 \subsection{Cas général}
-Toute variété de dim $r$ est birationnelle a une hypersurface
-de $\Pr^{r+1}$. I.e. $k(X)\simeq k(T_1,\ldots, T_r, z)$ avec $z$
+On remarque que sur chaque affine :
+\begin{enumerate}
+    \item Être lisse est une condition ouverte via le jacobien.
+        En particulier l'ensemble des points lisses est ouvert,
+        faut montrer qu'il est non vide et dense partout.
+\end{enumerate}
+Ensuite, toute variété intègre de $\dim = r$ est birationnelle a
+une hypersurface
+de $\Pr^{r+1}$. I.e. \[k(X)\simeq k(T_1,\ldots, T_r, z)\] avec $z$
 séparable sur $k(T_1,\ldots, T_n)$. Comme on doit juste montrer
-que tout les ouverts contiennent un point lisse c'est fini.
+que tout les ouverts contiennent un point lisse c'est fini 
+par la section d'avant.
 
 \subsection{Autre approche : via le critère jacobien}
 On se ramène au cas affine irréductible et on montre que l'ensemble
