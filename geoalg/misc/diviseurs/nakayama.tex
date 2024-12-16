@@ -65,6 +65,7 @@ sorting=ynt
 \newcommand{\Spec}{\textrm{Spec}}
 \newcommand{\Supp}{\textrm{Supp}}
 \renewcommand{\Im}{\textrm{Im}}
+\newcommand{\im}{\textrm{im}}
 
 
 \newcommand{\m}{\mathfrak{m}}
@@ -118,6 +119,7 @@ sorting=ynt
 \newtheorem{exo}[subsection]{Exercices}
 \newtheorem{ex}[subsection]{Exemple}
 \newtheorem{rep}{Réponse}
+\newtheorem{concl}{Conclusion}
 \newtheorem{exs}[subsection]{Exemples}
 
 \theoremstyle{remark}
@@ -131,95 +133,57 @@ sorting=ynt
     filecolor=wgrey
 }
 
-\title{Normalisation}
+\title{Courbes géometriquement intègres propres lisses?}
 \date{}
+
 
 \begin{document}
 \maketitle
 \tableofcontents
 \[\ldots\]   
-\chapter{Caractérisation}
-On dit qu'une variété algébrique intègre $X$ est normale si pour
-tout ouvert $U\subset X$, $\Or_X(U)$ est intégralement clos.
-\section{Localisation et cloture intégrale}
-À savoir que la localisation commute avec clôture intégrale.
-À prouver (c'est pas dur).
 
-Pour $S$ une partie multiplicative, si $A$ est intégralement clos,
-et $x^n+\sum a_i x^i=0$ avec $a_i\in S^{-1}A$. Il existe $s$ tel
-que $sx\in A$ puis $x\in S^{-1}A$. Si $A$ est pas intégralement
-clos c'est pareil en fait.
+Je regarde quasi toujours $f\colon X\to Y$ entre courbes 
+géometriquement intègres propres lisses. 
 
-\section{Cas affine}
-Il suffit que $A(X)$ soit intégralement clos ! Car pour tout 
-$U=\cup D(f_i)$ on a \[\Or_X(U)=\cap_i A(D(f_i))\]
-et que cette intersection est intégralement close car les
-$A(X)_{f_i}$ sont intégralement clos par la propriété de 
-commutativité du dessus.
+\section{Cadre}
+Donc un tel $X\to Y$ est surjectif fini. Et on peut supposer
+$X,Y$ projectives.
 
-\section{Cas général}
+\chapter{Ramification sur les courbes}
+De $f^\sharp\colon \Or_Y\to f_*\Or_X$ on a
+\[\Or_{Y,f(x)}\to \Or_{X,x}\]
+défini par 
+\[(g,V_{f(x)})\mapsto (f^\sharp(V_{f(x)})(g), f^{-1}V_{f(x)})\]
+\begin{note}
+  Juste un petit rappel de définitions.
+\end{note}
+\section{La facilité du cadre !}
+Donc y se passe un truc fun, si $B/A$ est une extension finie
+d'anneaux de Dedekind on sait que 
+\[[Frac(B):Frac(A)]=\sum e_if_i\]
+en particulier,
+\begin{enumerate}
+  \item Pour toutes courbes intègres propres lisses,
+    $X\to Y$ non constant est fini ! 
+  \item En particulier, on prends un affine qui contient $f^{-1}y$
+    par exemple $f^{-1}U$ avec $y\in U$ affine! 
+  \item D'où $\sum e_{x/y}=[k(X):k(Y)]$! (On est sur $k$ 
+    algébriquement clos)
+\end{enumerate}
+
+\section{La différence}
+On a $\Or_X(X)=\Or_Y(Y)=k$. Donc pas d'arguments globaux.
+
+\section{Nombre fini de points ramifiés.}
+On peut se ramener a un ouvert affine le complémentaire a qu'un
+nombre fini de points. Ensuite, on regarde le discriminant d'un
+$\theta$ tel que $k(Y)(\theta)=k(X)$ et $\theta$ entier sur 
+$A(U)$ avec $U$ l'ouvert de $Y$. Ensuite c'est l'argument usuel.
+
 \begin{rem}
-    Étant donné un ouvert affine $U$, on a $\Or_{X,x}=A(U)_{\p_x}$,
-    en particulier par propriété de commutativité du dessus
-    c'est encore intégralement clos.
+  À noter qu'on peut donc pas faire systématiquement tout 
+  globalement.
 \end{rem}
-On peut prouver que dans une variété intègre on a toujours
-\[\Or_X(U)=\cap_{x\in U} \Or_{X,x}\]
-en particulier toutes les sous-variétés de $X$ sont normales si
-$X$ est normale. Ce sera utile pour la normalisation.
-
-\chapter{Normalisation}
-Une/la normalisation c'est un 
-\[\pi\colon X'\to X\]
-birationnel fini avec $X'$ normale. On peut aussi normaliser dans 
-une extension $L$ de $k(X)$. La première est la normalisation
-dans $k(X)$. C'est unique à isomorphisme canonique près.
-\section{Clôture intégrale dans une extension finie, cas des
-$k$-algèbres}
-\begin{thm}
-    Si $A$ est une $k$-algèbre de t.f intègre, typiquement $A(X)$,
-    et $L/k(X)$ finie. Alors $\tilde A=B$ dans $L$ est finie sur
-    $A$.
-\end{thm}
-C'est étonnant ducoup vu qu'on assume rien sur l'extension et 
-la caractéristique. Faut utiliser la normalisation de Noether
-pour la partie purement inséparable.
-
-\section{Construction}
-Étant donné une $k$-algèbre de type fini intègre, suffit de
-savoir que sa clôture intégrale dans un corps est de type 
-fini sur $k$ intègre. Puis on trouve une variété affine ! Ensuite
-on peut recoller.
-\subsection*{Cas affine}
-C'est direct.
-
-\subsection*{Unicité}
-Donc en gros de
-\[\Or_{X'}(\pi^{-1}U)=\cap_{x\in \pi^{-1}U}\Or_{X',x}\]
-car $X'$ normale implique intègre par déf. On déduit que 
-\[\pi^{-1}U\]
-est normale, en plus par finitude de $\pi$. C'est affine si $U$
-est affine et c'est forcément la clôture de $A(U)$ dans $k(X')$.
-D'où l'unicité canonique. 
-\subsection*{Cas général}
-Y suffit de prendre les normalisations affines
-\[\pi_i\colon X_i'\to X_i\]
-et de remarquer que $\pi_i^{-1}(X_i\cap X_j)$ et 
-$\pi_j^{-1}(X_i\cap X_j)$ sont deux normalisations de $X_i\cap X_j$
-d'où par l'unicité on peut recoller les $X_i'$!
-
-\subsection*{Normalisation simple}
-Donc si on normalise dans $k(X)$, on peut remarquer que la 
-birationalité est pas trop dure. Car 
-\[A(X)\subset\tilde{A(X)}\subset k(X)\]
-et $\tilde{A(X)}$ de type fini sur $k$ force 
-\[\tilde{A(X)}=k[f_i/g_i,i=1,\ldots, r]\] avec $f_i,g_i\in A(X)$.
-En particulier, \[A(X)_{g_1\ldots g_r}=\tilde{A(X)}.\] Ça montre
-que pour tout $x\in D(g_1\ldots g_r)$, $\Or_{X,x}$ est 
-intégralement clos. D'où $D(g_1\ldots g_r)$ est normale puis
-la birationalité par unicité.
-
-
 
 
 \printbibliography

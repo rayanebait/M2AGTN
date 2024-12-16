@@ -292,6 +292,40 @@ plusieurs approches :
     Pas besoin de considérer $T_{P,\cap Z(\p_i)}$.
 \end{rem}
 
+\subsection{Nombre d'équations d'une variété lisse bis.}
+Si $X$ est affine intègre lisse de dimension $d$ dans $\A^n$, 
+alors $X=Z(f_1,\ldots, f_{n-d})$! On peut l'écrire avec exactement
+$n-d$ équations. En fait on regarde
+
+\[0\to I/I\cap \eta^2\to \eta/\eta^2\to \m/\m^2\to 0\]
+la dimension à gauche est $n-d$! La dimension au milieu $n$ et
+la dimension a droite $d$ par lissité. Par Nakayama, 
+\[gI=(f_1,\ldots, f_{n-d})\]
+d'où sur $D(g)$ :
+\[X\cap D(g)=Z(f_1,\ldots, f_{n-d})\cap D(g)\]
+par l'égalité des dimensions et l'intégrité de $X$ :
+\[X\subset Z(f_1,\ldots, f_{n-d})\]
+
+\subsection{Interprétation du Jacobien}
+On peut regarder $J(X)$ dans $M_n(A(X)$ via à nouveau
+\[0\to I/I\cap \n^2\to \n/\n^2\to \m/\m^2\to 0\]
+en complétant $I/I\cap\n^2$ dans $\n/\n^2$ avec $T_1,\ldots,
+T_d$ ou plutôt une base de $\m/\m^2$ ? C'est à dire
+en regardant 
+\[J(X)=\begin{pmatrix}
+    1& 0&\ldots&&0\\
+    0&1&\ldots&& 0\\
+    0&\ldots&1&\dots&0\\
+     &&dF_1&&\\
+     &&\vdots&&\\
+     &&dF_{n-d}&&\\
+    \end{pmatrix}
+\]
+ça a le même rang que celle d'avant sur les lignes. Si on suppose
+que \[I/I\cap \n^2\oplus \bigoplus_i kT_i\] joue le rôle de
+$I/I\cap \n^2$ alors on a remplaçé $X$ par son image dans 
+$\A^{n+d}$.
+
 
 
 \printbibliography

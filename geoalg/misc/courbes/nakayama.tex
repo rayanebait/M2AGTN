@@ -65,6 +65,7 @@ sorting=ynt
 \newcommand{\Spec}{\textrm{Spec}}
 \newcommand{\Supp}{\textrm{Supp}}
 \renewcommand{\Im}{\textrm{Im}}
+\newcommand{\im}{\textrm{im}}
 
 
 \newcommand{\m}{\mathfrak{m}}
@@ -132,7 +133,7 @@ sorting=ynt
     filecolor=wgrey
 }
 
-\title{Notes perso : Géométrie algébrique}
+\title{Courbes géometriquement intègres propres lisses?}
 \date{}
 
 \begin{document}
@@ -158,7 +159,7 @@ Le but c'est de montrer l'équivalence de catégorie entre
 \end{enumerate}
 Alors $X$ est lisse car normale, birationnelle à
 $U$ donc $K=k(U)=k(X)$ et propre car $\pi$ est fini
-et $Y$ est propre.
+et $\bar U$ est propre.
 
 \section{Étendre des morphismes}
 Étant donné $C$ une courbe lisse. On peut étendre
@@ -172,11 +173,14 @@ le morphisme étendu :
 \begin{enumerate}
   \item De $f\colon U\to Y$ on identifie 
     \[\Gamma_f\subset U\times Y\]
-    et $U$. Ensuite on prends
+    et $U$. 
+  \item L'idée est que en notant
     \[Z=\overline{\Gamma_f}\subset C\times Y\]
-    l'image de $id_C\times f$.
+    alors $Z\to C$ est surjective car $C\times Y$ est fermée
+    (\textbf{hypothèse de Y propre})
+    et $U\subset \im(Z\to C)$.
   \item Le candidat est maintenant
-    \[(p_1|_{\Gamma_f})^{-1}\circp_2 \colon C\to Z \to Y.\]
+    \[(p_1|_{Z})^{-1}\circ p_2 \colon C\to Z \to Y.\]
 \end{enumerate} 
 Ce qu'on montre c'est que $p_1\colon C\times Y \supset Z\to C$
 est un isomorphisme. 
@@ -209,6 +213,25 @@ construit un morphisme autour de $z\in g^{-1} p$.
   \item Enfin, il est définit en $p$!
 \end{enumerate}
 
+\subsection{Explication résumée}
+En points clés :
+\begin{enumerate}
+  \item $W$ et $C$ sont birationnelles : Ça force le sens de 
+    $b$ s'écrit $t^n a/u$ localement, car $A(W)\hookrightarrow
+    Frac(A(C))$.
+  \item $b$ est régulière d'où $b\in A(C)_{u}$.
+\end{enumerate}
+Je sais pas si l'écrire via l'uniformisante c'est pas overkill?
+C'est pour sûr pour faire apparaître la régularité en $P$.
+
+Maintenant 
+\begin{enumerate}
+  \item Ce "localement" est commun à tout les générateurs via
+    $\m_P=(t)$ sur un ouvert.
+  \item On obtient $A(W)_{u_0}\simeq A(C)_{u_0}$ via le 
+    morphisme induit $A(W)\hookrightarrow k(C)$.
+\end{enumerate}
+
 \begin{concl}
   On sait étendre les morphismes $C-\{p\} \to Y$ 
   si $C$ est lisse et $Y$ est propre.
@@ -231,6 +254,9 @@ Un tel morphisme est soit constant soit fini surjectif !
 
 \section{Les courbes propres intègres propres lisses sont projectives.}
 Comme le résultat de la section!
+
+\chapter{Ramification}
+\section{}
 
 
 
