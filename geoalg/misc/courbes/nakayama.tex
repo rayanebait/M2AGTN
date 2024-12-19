@@ -259,6 +259,51 @@ Comme le résultat de la section!
 \section{}
 
 
+\chapter{Questions de définitions}
+\section{$f\in \Or_C(C-\Supp_\infty(f))$}
+La question est non triviale, au sens des définitions. Ça revient
+à dire que $D(f)\cup D(1/f)=C$. Le but c'est de dire que 
+\begin{enumerate}
+  \item $f\in \Or_C(D(1/f))$.
+  \item Pour tout $P\in C$, $P\in D(f)$ ou $P\in D(1/f)$ d'où
+    on regarde en $P$, $(f,D(1/f))=(u_pt_p,V_p)$ et inversement.
+\end{enumerate}
+Bon bah faut faire deux choses :
+\begin{enumerate}
+  \item Dire ce que c'est que $D(1/f),D(f)$.
+  \item Montrer que $f\in \Or_C(D(1/f))$.
+\end{enumerate}
+\subsection{$D(1/f)$?}
+On a deux manières de le voir, en fait la bonne et qui me
+"déçoit" un peu c'est de recouvrir par des affines. Et là
+on sait comment étendre $1/f$ au maximum. L'autre c'est
+par zorn et par exemple :
+\[f.1/f=1\in k(X)\]
+sauf qu'à droite ça s'étend partout donc à gauche aussi puis
+$D(f)\cup D(1/f)=X$.
+
+\subsection{$f\in \Or_C(D(1/f))$}
+En fait c'est un peu con quand on y pense. Faut vraiment juste
+recouvrir par des affines et étendre au maximum sur un 
+recouvrement. C'est clair quand $C$ est affine!
+
+\subsection{Définition}
+Maintenant pour l'étendre :
+\begin{enumerate}
+  \item $C-\Supp_\infty(f)$ est fini.
+  \item Pour chaque point $p\in C-\Supp_\infty(f)=D(1/f)$, on a 
+    \[(t_pu,U_p)=(f,D(1/f))\]
+  d'où $f(p):=t_p(p)u_p(p)$ est défini, si t'es toujours pas 
+  convaincu, dans une carte affine c'est évident que $t_pu$ a une
+  valeur en $p$. Et pour être vraiment rigoureux
+  on voit qu'on peut relever ces trucs locaux partout et
+  recoller !
+\end{enumerate}
+Un petit détail, ducoup si c'est pas des fonctions, faut utiliser
+cette histoire de rigueur.
+\begin{note}
+  Sur un schéma, tout se passe comme la version recollement.
+\end{note}
 
 
 \printbibliography

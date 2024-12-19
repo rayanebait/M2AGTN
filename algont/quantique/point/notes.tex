@@ -119,6 +119,21 @@ C'est un exo à la con mais c'est instructif, on regarde
 \end{align*}
 et là suffit d'ajuster theta puis de refaire des phases shifts.
 
+\section{$\frac{3}{5}|0>+\frac{4}{5}|1>$ et $\frac{5}{13}|0>-\frac{12}{13}|1>$}
+Déjà par rapport à la section d'avant, on aurait juste pu faire
+\[
+\begin{quantikz}
+    &\gate{H}&\gate{R_\theta}&\gate{X}&\gate{R_{-\theta}}&\gate{H}&
+\end{quantikz}
+\]
+est c'est fini, on obtient 
+\[|0>\mapsto cos(\theta)|0>+sin(\theta)|1>\]
+et
+\[|1>\mapsto -sin(\theta)|0>-cos(\theta)|1>\]
+maintenant si $|0>\mapsto \frac{3}{5}|0>+\frac{4}{5}|1>$
+et $|1>\mapsto \frac{5}{13}|0>-\frac{12}{13}|1>$ on peut voir
+que sur $|0>+|1>$ ça préserve pas la norme.
+
 \section{Deutsch-Josza}
 Donc l'algorithme permet de décider si $f\colon 2^n\to 2$ est constante
 ou équilibrée (Comme un morphisme de groupes $(\Z/2\Z)^n\to \F_2$).
