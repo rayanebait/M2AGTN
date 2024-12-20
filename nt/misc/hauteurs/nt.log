@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.12.14)  19 DEC 2024 23:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.11.21)  3 DEC 2024 19:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**homologie.tex
-(./homologie.tex
+**nt.tex
+(./nt.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
 (/usr/share/texmf-dist/tex/latex/base/book.cls
@@ -496,38 +496,38 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
 \Hy@SectionHShift=\skip56
+) (/usr/share/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+ (/usr/share/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+) (/usr/share/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count317
+\c@ALG@rem=\count318
+\c@ALG@nested=\count319
+\ALG@tlm=\skip57
+\ALG@thistlm=\skip58
+\c@ALG@Lnr=\count320
+\c@ALG@blocknr=\count321
+\c@ALG@storecount=\count322
+\c@ALG@tmpcounter=\count323
+\ALG@tmplength=\skip59
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
 ) (/usr/share/texmf-dist/tex/latex/algorithms/algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
  (/usr/share/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count317
+\c@float@type=\count324
 \float@exts=\toks43
 \float@box=\box65
 \@float@everytoks=\toks44
 \@floatcapt=\box66
-) (/usr/share/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 )
 \@float@every@algorithm=\toks45
-\c@algorithm=\count318
-) (/usr/share/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
-Package: algpseudocode 
- (/usr/share/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
-Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
-
-Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count319
-\c@ALG@rem=\count320
-\c@ALG@nested=\count321
-\ALG@tlm=\skip57
-\ALG@thistlm=\skip58
-\c@ALG@Lnr=\count322
-\c@ALG@blocknr=\count323
-\c@ALG@storecount=\count324
-\c@ALG@tmpcounter=\count325
-\ALG@tmplength=\skip59
-)
-Document Style - pseudocode environments for use with the `algorithmicx' style
+\c@algorithm=\count325
 ) (/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
 \f@nch@headwidth=\skip60
@@ -772,53 +772,61 @@ Package: appendix 2020/02/08 v1.2c extra appendix facilities
 \c@@ppsavesec=\count454
 \c@@ppsaveapp=\count455
 )
-\c@heur=\count456
-\c@rem=\count457
-\c@note=\count458
-\c@conj=\count459
-\c@prob=\count460
-\c@quest=\count461
-\c@prot=\count462
-\c@algo=\count463
-\c@slog=\count464
-Package hyperref Info: Option `colorlinks' set `true' on input line 129.
+\c@thm=\count456
+\c@lem=\count457
+\c@prop=\count458
+\c@cor=\count459
+\c@heur=\count460
+\c@rem=\count461
+\c@rembis=\count462
+\c@note=\count463
+\c@conj=\count464
+\c@prob=\count465
+\c@quest=\count466
+\c@prot=\count467
+\c@algo=\count468
+\c@defn=\count469
+\c@defnbis=\count470
+\c@ex=\count471
+\c@exo=\count472
+Package hyperref Info: Option `colorlinks' set `true' on input line 110.
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'french'.
- (./homologie.aux)
-\openout1 = `homologie.aux'.
+ (./nt.aux)
+\openout1 = `nt.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count465
+\scratchcounter=\count473
 \scratchdimen=\dimen274
 \scratchbox=\box68
-\nofMPsegments=\count466
-\nofMParguments=\count467
+\nofMPsegments=\count474
+\nofMParguments=\count475
 \everyMPshowfont=\toks46
-\MPscratchCnt=\count468
+\MPscratchCnt=\count476
 \MPscratchDim=\dimen275
-\MPnumerator=\count469
-\makeMPintoPDFobject=\count470
+\MPnumerator=\count477
+\makeMPintoPDFobject=\count478
 \everyMPtoPDFconversion=\toks47
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -826,10 +834,10 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring ON on input line 134.
- (./homologie.out) (./homologie.out)
+Package hyperref Info: Link coloring ON on input line 115.
+ (./nt.out) (./nt.out)
 \@outlinefile=\write5
-\openout5 = `homologie.out'.
+\openout5 = `nt.out'.
 
 Package biblatex Info: Trying to load language 'french'...
 Package biblatex Info: ... file 'french.lbx' found.
@@ -839,22 +847,23 @@ File: french.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout4 = `homologie.bcf'.
+\openout4 = `nt.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'homologie.bbl' found.
- (./homologie.bbl)
-Package biblatex Info: Reference section=0 on input line 134.
-Package biblatex Info: Reference segment=0 on input line 134.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 136.
- (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+Package biblatex Info: ... file 'nt.bbl' not found.
+
+No file nt.bbl.
+Package biblatex Info: Reference section=0 on input line 115.
+Package biblatex Info: Reference segment=0 on input line 115.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 117.
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 136.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 117.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 136.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 117.
  (/usr/share/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
@@ -874,33 +883,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [2
 
-] (./homologie.toc)
-\tf@toc=\write6
-\openout6 = `homologie.toc'.
-
- [3]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.71667pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.71667pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
-
-[4
-
-] [5]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.71667pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.71667pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
-
-[6
-
 ]
 \bbl@ensure@french {Chapitre} 1.
-[7{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+[3]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -908,509 +893,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[8]
-Overfull \hbox (0.36618pt too wide) in paragraph at lines 241--243
-\OT1/cmr/m/n/12 Soit $\OML/cmm/m/it/12 X$ \OT1/cmr/m/n/12 un es-pace topologique et $\OML/cmm/m/it/12 A$ \OT1/cmr/m/n/12 un \OT1/cmr/m/it/12 "ob-jet ab^^Selien"\OT1/cmr/m/n/12 . On d^^Sefinit le pr^^Sefaisceau
- []
-
-
-Overfull \hbox (7.10812pt too wide) in paragraph at lines 285--286
-[][]\OT1/cmr/bx/n/12 D^^Sefinition 1.4.3 \OT1/cmr/m/n/12 (Fais-ceau quo-tient)\OT1/cmr/bx/n/12 . [][]\OT1/cmr/m/n/12 A nou-veau on fais-ceautise le pr^^Sefaisceau
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[9]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[10]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[11]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[12]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[13]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[14]
-\bbl@ensure@french {Chapitre} 2.
-[15
-
-]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[16]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[17]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[18]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[19]
-Overfull \hbox (18.5174pt too wide) detected at line 872
-[]
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[20]
-Overfull \hbox (17.64787pt too wide) in paragraph at lines 918--919
-[][]\OT1/cmr/bx/n/12 Remarque 28. []\OT1/cmr/m/it/12 On a $[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 ) = [](\OML/cmm/m/it/12 A \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 coim\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 ))$ \OT1/cmr/m/it/12 et $\OML/cmm/m/it/12 coker\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 coker\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 im\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 !
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[21]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[22]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[23]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[24]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[25]
-Overfull \hbox (10.51395pt too wide) in paragraph at lines 1255--1256
-[][]\OT1/cmr/bx/n/12 Corollaire 2.3.2. []\OT1/cmr/m/it/12 Le lemme du ser-pent est vrai dans n'im-porte quelle cat^^Segorie. 
- []
-
-
-Overfull \hbox (49.49176pt too wide) in paragraph at lines 1266--1266
-[]\OT1/cmr/bx/n/17.28 Foncteurs en-tre cat^^Segories ad-di-tives/ab^^Seliennes 
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[26]
-Overfull \hbox (5.62236pt too wide) in paragraph at lines 1289--1291
-[][]\OT1/cmr/bx/n/12 Lemme 2.4.2. []\OT1/cmr/m/it/12 Un fonc-teur ex-act ^^Ra gauche $\OML/cmm/m/it/12 C \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 D$ \OT1/cmr/m/it/12 en-tre cat^^Segories ab^^Seliennes
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[27]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[28
-
-]
-\bbl@ensure@french {Chapitre} 3.
-[29]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[30]
-Overfull \hbox (3.96234pt too wide) detected at line 1443
-[]
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[31]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[32]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[33]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[34]
-Underfull \hbox (badness 10000) in paragraph at lines 1764--1769
-
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[35]
-Underfull \hbox (badness 10000) in paragraph at lines 1823--1838
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1839--1847
-
- []
-
-
-Overfull \hbox (56.0282pt too wide) in paragraph at lines 1851--1854
-\OT1/cmr/m/n/12 Pareil de l'autre c^ot^^Se et on ob-tient des iso-mor-phismes canon-iques $\OML/cmm/m/it/12 H[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 f[]\OT1/cmr/m/n/12 ))\OML/cmm/m/it/12 ; H[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 g[]\OT1/cmr/m/n/12 ))$.
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[36]
-Underfull \hbox (badness 10000) in paragraph at lines 1917--1930
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1917--1930
-
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[37]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[38]
-Overfull \hbox (4.54185pt too wide) in paragraph at lines 2024--2027
-\OT1/cmr/m/n/12 Cette ^^Setape donne ex-acte-ment l'in-duc-tion. (\OT1/cmr/bx/n/12 CHECK QUE []A MARCHE\OT1/cmr/m/n/12 )
- []
-
-
-Overfull \hbox (6.6039pt too wide) in paragraph at lines 2033--2036
-[][]\OT1/cmr/bx/n/12 D^^Sefinition 3.4.4. []\OT1/cmr/m/n/12 Soit $\OMS/cmsy/m/n/12 C\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 D$ \OT1/cmr/m/n/12 comme avant. Un fonc-teur co-ho-mologique $\OML/cmm/m/it/12 T [] [] \OMS/cmsy/m/n/12 C !
- []
-
-
-Overfull \hbox (2.14442pt too wide) in paragraph at lines 2059--2063
-[][]\OT1/cmr/bx/n/12 Th^^Seoreme 3.4.6. []\OT1/cmr/m/it/12 Soit $\OML/cmm/m/it/12 F [] [] \OMS/cmsy/m/n/12 C ! D$ \OT1/cmr/m/it/12 un fonc-teur ex-act ^^Ra gauche en-tre cat^^Segories
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[39]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[40]
-\bbl@ensure@french {Chapitre} 4.
-
-Overfull \hbox (19.02965pt too wide) in paragraph at lines 2112--2114
-[]\OT1/cmr/m/n/12 Soit $\OML/cmm/m/it/12 F [] [] I \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 PSh\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 )$ un fonc-teur d'une pe-tite cat^^Segorie
- []
-
-
-Overfull \hbox (12.91109pt too wide) in paragraph at lines 2128--2130
-[][]\OT1/cmr/bx/n/12 Corollaire 4.1.2. []$\OML/cmm/m/it/12 PSh[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 )$ \OT1/cmr/m/it/12 est ab^^Selienne, et m^eme $\OML/cmm/m/it/12 PSh\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 )$ \OT1/cmr/m/it/12 sur une cat^^Segorie
- []
-
-[41
-
-]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[42]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[43]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[44]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[45]
-Overfull \hbox (25.84651pt too wide) in paragraph at lines 2351--2353
-[][]\OT1/cmr/bx/n/12 Remarque 44. []\OT1/cmr/m/it/12 La con-struc-tion $\OML/cmm/m/it/12 C[]\OT1/cmr/m/n/12 ([])$ \OT1/cmr/m/it/12 est fonc-to-rielle de $\OML/cmm/m/it/12 Sh\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 )$ \OT1/cmr/m/it/12 dans $\OML/cmm/m/it/12 Ch\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Sh\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 ))$\OT1/cmr/m/it/12 . 
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[46]
-\bbl@ensure@french {Chapitre} 5.
-[47
-
-]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[48]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[49]
-Overfull \hbox (0.382pt too wide) detected at line 2496
-\OML/cmm/m/it/12 R[]f[]\U/rsfs/m/n/12 F \OT1/cmr/m/n/12 = (\OML/cmm/m/it/12 V \OMS/cmsy/m/n/12 7! \OML/cmm/m/it/12 H[]\OT1/cmr/m/n/12 ([] \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 I[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 f[]V\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 I[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 f[]V\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 I[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 f[]V\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ! []\OT1/cmr/m/n/12 ))[]
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[50]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[51]
-Overfull \hbox (10.02303pt too wide) detected at line 2593
-\OT1/cmr/m/n/12 0 \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 H[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X; \U/rsfs/m/n/12 F\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 H[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Y; \U/rsfs/m/n/12 F\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^H \OML/cmm/m/it/12 H[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Z; \U/rsfs/m/n/12 F\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 H[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Y \OMS/cmsy/m/n/12 \ \OML/cmm/m/it/12 Z\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \U/rsfs/m/n/12 F\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 H[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X; \U/rsfs/m/n/12 F\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ! []
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[52]
-Overfull \hbox (54.1029pt too wide) detected at line 2616
-\OML/cmm/m/it/12 H[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X; g[]g[]\U/rsfs/m/n/12 F \OMS/cmsy/m/n/12 ^^H \OML/cmm/m/it/12 h[]h[]\U/rsfs/m/n/12 F\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 H[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X; g[]g[]\U/rsfs/m/n/12 F\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^H \OML/cmm/m/it/12 H[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X; h[]h[]\U/rsfs/m/n/12 F\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 H[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Y; g[]\U/rsfs/m/n/12 F\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^H \OML/cmm/m/it/12 H[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Z; h[]\U/rsfs/m/n/12 F\OT1/cmr/m/n/12 )
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[53]
-Overfull \hbox (39.48238pt too wide) detected at line 2666
-\OT1/cmr/m/n/12 0 \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 H[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 U \OMS/cmsy/m/n/12 [ \OML/cmm/m/it/12 V; \U/rsfs/m/n/12 F\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 H[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 U; \U/rsfs/m/n/12 F\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^H \OML/cmm/m/it/12 H[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 V; \U/rsfs/m/n/12 F\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 H[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 U \OMS/cmsy/m/n/12 \ \OML/cmm/m/it/12 V\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \U/rsfs/m/n/12 F\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 H[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 U \OMS/cmsy/m/n/12 [ \OML/cmm/m/it/12 V; \U/rsfs/m/n/12 F\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ! []
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[54]
-Overfull \hbox (1.57835pt too wide) in paragraph at lines 2708--2710
-[][]\OT1/cmr/bx/n/12 Th^^Seoreme 5.2.1 \OT1/cmr/m/n/12 (Th^^Seor^^Reme du point fixe de Brauer)\OT1/cmr/bx/n/12 . []\OT1/cmr/m/it/12 Soit $\OML/cmm/m/it/12 n \OMS/cmsy/m/n/12 ^^U \OT1/cmr/m/n/12 1$ \OT1/cmr/m/it/12 et $\OML/cmm/m/it/12 f [] [] B[] \OMS/cmsy/m/n/12 !
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[55]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[56] [57
-
-] (./homologie.aux)
+[4] (./nt.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-Package rerunfilecheck Info: File `homologie.out' has not changed.
-(rerunfilecheck)             Checksum: 948699224B9E0E679AF1301191B14B96;3558.
-Package logreq Info: Writing requests to 'homologie.run.xml'.
-\openout1 = `homologie.run.xml'.
+Package rerunfilecheck Info: File `nt.out' has not changed.
+(rerunfilecheck)             Checksum: 5A97535E68354DABC5F40887D80122BA;303.
+Package logreq Info: Writing requests to 'nt.run.xml'.
+\openout1 = `nt.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36985 strings out of 476076
- 741157 string characters out of 5793774
- 1975187 words of memory out of 5000000
- 58324 multiletter control sequences out of 15000+600000
- 570975 words of font info for 87 fonts, out of 8000000 for 9000
+ 31446 strings out of 476076
+ 604558 string characters out of 5793774
+ 1933187 words of memory out of 5000000
+ 53077 multiletter control sequences out of 15000+600000
+ 568161 words of font info for 77 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 131i,24n,135p,705b,1776s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on homologie.pdf (57 pages, 406103 bytes).
+ 131i,12n,135p,675b,1709s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on nt.pdf (4 pages, 116247 bytes).
 PDF statistics:
- 731 PDF objects out of 1000 (max. 8388607)
- 627 compressed objects within 7 object streams
- 287 named destinations out of 1000 (max. 500000)
- 189 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 98 PDF objects out of 1000 (max. 8388607)
+ 69 compressed objects within 1 object stream
+ 8 named destinations out of 1000 (max. 500000)
+ 37 words of extra memory for PDF output out of 10000 (max. 10000000)
 

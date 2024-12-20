@@ -1,0 +1,314 @@
+\documentclass[a4paper,12pt]{book}
+\usepackage{amsmath,  amsthm,enumerate}
+\usepackage{csquotes}
+\usepackage[provide=*,french]{babel}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{quiver, tikz}
+
+%symbole caligraphique
+\usepackage{mathrsfs}
+
+%hyperliens
+\usepackage{hyperref}
+
+%pseudo-code
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\makeatletter
+  \renewcommand{\ALG@name}{Algorithme}
+  \makeatother
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\addtolength{\headwidth}{\marginparsep}
+\addtolength{\headwidth}{\marginparwidth}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\fancyhead[LO]{\textit \leftmark}
+\fancyhead[RE]{\textit \rightmark}
+\renewcommand{\headrulewidth}{0pt} % and the line
+\fancypagestyle{plain}{%
+    \fancyhead{} % get rid of headers
+}
+
+%bibliographie
+\usepackage[
+backend=biber,
+style=alphabetic,
+sorting=ynt
+]{biblatex}
+
+\addbibresource{bib.bib}
+
+\usepackage{appendix}
+\renewcommand{\appendixpagename}{Annexe}
+
+\definecolor{wgrey}{RGB}{148, 38, 55}
+
+\setlength\parindent{24pt}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\rel}{\omathcal{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\Or}{\mathcal{O}}
+\newcommand{\F}{\mathbb F}
+\newcommand{\m}{\mathfrak m}
+\renewcommand{\b}{\mathfrak b}
+\renewcommand{\a}{\mathfrak a}
+\newcommand{\p}{\mathfrak p}
+\newcommand{\I}{\mathfrak I}
+\newcommand{\Hom}{\textrm{Hom}}
+\newcommand{\disc}{\textrm{disc}}
+\newcommand{\Pic}{\textrm{Pic}}
+\newcommand{\End}{\textrm{End}}
+\newcommand{\Spec}{\textrm{Spec}}
+
+\newcommand{\cL}{\mathscr{L}}
+\newcommand{\G}{\mathscr{G}}
+\newcommand{\D}{\mathscr{D}}
+\newcommand{\E}{\mathscr{E}}
+
+\theoremstyle{plain}
+\newtheorem{thm}{Théoreme}
+\newtheorem{lem}{Lemme}
+\newtheorem{prop}{Proposition}
+\newtheorem{cor}{Corollaire}
+\newtheorem{heur}{Heuristique}
+\newtheorem{rem}{Remarque}
+\newtheorem{rembis}{Remarque}
+\newtheorem{note}{Note}
+
+\theoremstyle{definition}
+\newtheorem{conj}{Conjecture}
+\newtheorem*{eq}{Équivalences}
+\newtheorem{prob}{Problème}
+\newtheorem{quest}{Question}
+\newtheorem{prot}{Protocole}
+\newtheorem{algo}{Algorithme}
+\newtheorem{defn}{Définition}
+\newtheorem{defnbis}{Définition}
+\newtheorem{ex}{Exemple}
+\newtheorem{exo}{Exercices}
+
+\theoremstyle{remark}
+
+\definecolor{wgrey}{RGB}{148, 38, 55}
+\definecolor{wgreen}{RGB}{100, 200,0} 
+\hypersetup{
+    colorlinks=true,
+    linkcolor=wgreen,
+    urlcolor=wgrey,
+    filecolor=wgrey
+}
+
+\title{Anneaux d'entiers monogènes et ramification}
+\date{}
+
+\begin{document}
+\maketitle
+
+
+Quelques prérequis nécessaire à l'étude : si $\Or_K$ est de Dedekind,
+quand est-ce que 
+\begin{enumerate}
+    \item $\tilde\Or_K$ est de Dedekind.
+    \item $\tilde\Or_K$ est fini sur $\Or_K$.
+\end{enumerate}
+Pour la première question :
+\begin{enumerate}
+    \item Si $\Or_K$ est semi-local ca se fait bien parce que 
+	$\tilde\Or_K$ est noethérien sur $\Or_K$ ssi
+	$\tilde\Or_K\otimes\Or_K (\Or_K)_{\m_i}$ est noethérien
+	pour tout les premiers (faut en avoir un nb fini).
+    \item Plus généralement si $L/K$ est finie par Krull-Akizuki.
+\end{enumerate}
+Pour la deuxième : dès que $\sum e_if_i=[L:K]$ d'où si
+\begin{enumerate}
+    \item $K$ est complet, par densité de $\sum_{i,j} e_j\pi_L^i\Or_K$
+	dans $\tilde\Or_K$.
+    \item $L/K$ est séparable via le disriminant non nul et la trace
+	non dégénérée.
+    \item Évidemment si $\tilde\Or_K=\Or_K[\alpha]$ est monogène.
+\end{enumerate}
+
+
+
+\chapter{Cadre}
+\section{Objets}
+On se place \textbf{toujours} dans le cadre où on a $\Or_K$ de valuation 
+\textbf{discrète}. Le cadre en gros c'est 
+% https://q.uiver.app/#q=WzAsNixbMCwwLCJcXE9yX0siXSxbMSwwLCJcXHRpbGRlXFxPcl9LIl0sWzIsMCwiKFxcdGlsZGVcXE9yX0spX3tcXG1faX0iXSxbMywwLCJcXGxlZnQoXFxPcl9MXFxyaWdodCkiXSxbMCwxLCJrX0siXSxbMiwxLCJrX0wiXSxbMCwxLCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEsMiwiXFxzdWJzZXRlcSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyLDMsIj8iLDEseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFswLDRdLFsyLDVdLFs0LDVdXQ==
+\[\begin{tikzcd}
+	{\Or_K} & {\tilde\Or_K} & {(\tilde\Or_K)_{\m_i}} & {\left(\Or_L\right)} \\
+	{k_K} && {k_L}
+	\arrow[no head, from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow["\subseteq"{description}, draw=none, from=1-2, to=1-3]
+	\arrow["{?}"{description}, Rightarrow, no head, from=1-3, to=1-4]
+	\arrow[from=1-3, to=2-3]
+	\arrow[from=2-1, to=2-3]
+\end{tikzcd}\]
+C'est à dire qu'on prends la clôture intégrale, on regarde ses idéaux
+maximaux et on obtient des extensions de d.v.r. Quand $K$ est complet 
+ou quand on fixe une valuation (un premier $\m_i$) sur $L$, $\Or_L$ fait
+sens.
+\section{Pourquoi on cherche des extensions monogènes}
+    Pour calculer en fait une marche à suivre c'est
+\begin{center}
+    \textit{On sait le faire dans $\Or_K[\alpha]$.}
+\end{center}
+Si c'est le cas alors :
+\begin{enumerate}
+    \item La factorisation de $P$ 
+	dans $k_K[X]$ donne la ramification
+	et les idéaux maximaux de $\tilde\Or_K$!
+    \item Plus précisément, si 
+\[\bar P=\prod_i p_i^{r_i}\in k_K[X]\]
+	alors $\m_i=(\m_K,p_i(\alpha))$.
+\end{enumerate}
+Le point \textbf{important} c'est la ramification, on relève
+\[P(\alpha)=\prod_iP_i^{r_i}(\alpha) + \epsilon(\alpha)\]
+ce qui donne par le deuxième point 
+\[\prod_i \m_i^{r_i}=\prod_i (\m_K, P_i(\alpha))^{r_i}\subset \m_K\tilde\Or_K=\prod_i \m_i^{e_i}\]
+On en déduit $r_i\geq e_i$ pour tout $i$ et on conclut directement
+avec \[\sum r_i f_i = \deg \bar P=\deg P= [L:K]=\sum e_if_i\]
+On a utilisé que $\tilde\Or_K$ est fini sur $\Or_K$ pour l'égalité
+$\deg \bar P=\deg P$ \textbf{et} la dimension $[L:K]=\sum e_i f_i$.
+
+\chapter{Des cas où on sait que c'est monogène}
+D'abord un cadre intéressant. 
+\section{Le cas canonique}
+Étant donné une extension $\Or_K-(\tilde\Or_K)_\m=\Or_L$, y'a une 
+inclusion à regarder, si $k_K-k_L$ contient une famille libre et
+génératrice $(e_i)_i$ :
+
+\[\Or_L\subset \sum e_i\Or_K + \pi_L\Or_L\]
+puis en itérant
+\[\Or_L\subset \sum e_i\pi_L^j\Or_K + \pi_K\Or_L\]
+et même pour tout $n\geq 1$ 
+\[\Or_L\subset \sum_i\sum_{j=0,\ldots, e-1} e_i\pi_L^j\Or_K +
+\pi_K^n\Or_L\]
+car $\pi_L^e\in\Or_K$. Donc une densité de $M$ dans $\Or_L$. Je note 
+\[M=\sum_{i=1,\ldots, f}\sum_{j=0,\ldots,e-1} e_i\pi_L^j\Or_K.\]
+
+En gros, dès que $L=K[\alpha]$, par exemple :
+Il suffit de l'extension résiduel soit séparable, i.e. 
+\[\textrm{$\bar P$ est séparable.}\]
+
+\begin{rem}
+    Là on a juste utilisé que $k_L$ est de dimension finie sur $k_K$.
+\end{rem}
+
+\section{Cas primitif, $L=K[\alpha]$}
+
+On suppose $L=K(\alpha)$. Un premier critère de monogénéité :
+\[\textrm{Si $\bar P$ est séparable, alors $\tilde\Or_K=\Or_K[\alpha]$}\]
+Une preuve rapide c'est que \[\Or_K[\alpha]_{\pi_K}=K[\alpha]=L\] est 
+intégralement
+clos et \[\Or_K[\alpha]/(\pi_K)=k[\alpha]\] est réduit. D'où
+\[\Or_K[\alpha]\]
+est intégralement clos et dans $\tilde\Or_K$. 
+\begin{rem}
+    On peut étudier les nilpotents du quotient quand c'est pas réduit.
+\end{rem}
+Ce cas arrive dans les cas où 
+\begin{itemize}
+    \item On est en caractéristique $0$, car séparable donc primitif.
+    \item Dans le cas non ramifié complet.
+    \item Dans le cas modérément ramifié complet.
+\end{itemize}
+Si on veut on peut aussi utiliser le cas canonique pour le prouver en
+montrant que $\pi_L=P(\alpha).u$ pour un $P$ bien choisi, je le montre
+en section sur la ramification modérée.
+
+\section{Cas non ramifié complet}
+On a une équivalence entre :
+\begin{enumerate}
+    \item L'extension $L/K$ est non ramifiée (par déf non ramifiée et 
+$k_{K(\alpha)}/k_K$ est séparable).
+    \item Il existe $\alpha$ : $L=K(\alpha)$ et $P$ le pol min 
+de $\alpha$ sur $K$ est séparable sur $k_K$.
+\end{enumerate}
+L'idée c'est juste que la formule $ef=[L:K]$ est vraie. Et on peut 
+relever une base de l'extension résiduelle !
+En gros ça donne une réciproque à la section d'avant. I.e. si 
+$L/K$ est non ramifiée alors 
+\[\textrm{$L=K[\alpha]$, $\bar P$ est séparable d'où $\Or_K[\alpha]=\tilde\Or_K$}\]
+
+En caractéristique $0$, $L/K$ finie implique séparable implique 
+$L$ est monogène sur $K$.
+
+\section{Cas $p$-adique}
+Dans le cas $p$-adique, les corps finis sont parfaits et on a toujours
+des extensions séparables (c'est immédiat de la déf)! En particulier,
+si $\bar P$ est inséparable c'est qu'il est scindé. Ça se voit bien
+par Hensel :
+\begin{enumerate}
+    \item On a toujours $\bar P=F^d$ et en réécrivant $d\deg F=
+	\deg P=e.f$ sachant que $\deg F\mid f$ (à vérifier mais ça se
+	voit) on obtient $e\mid d$. (l'égalité c'est qu'on suppose $P$ 
+	unitaire)
+\end{enumerate}
+
+En fait on a beaucoup mieux mais j'en parlerai dans une autre note.
+
+\section{Cas où $k_L$ séparable sur $k_K$}
+On regarde $L/K$ finie. Si
+\begin{enumerate}
+    \item les $\Or_L/\m_L=k_L/k_K$ est séparable
+\end{enumerate}
+alors \[(Or_L)_{\m_L}/\m_K\Or_L\] 
+est monogène sur $k_K$. On peut réécrire $M$, via $e_i\in \Or_K[\alpha]$,
+d'où \[M\subset\sum \Or_K[\alpha]\pi_L^j\]
+alors y suffit de montrer que $\pi_L\in \Or_K[\alpha]$. Si
+\[k_L=k_K(\bar\alpha)\]
+et $\bar P$ le pol min de $\bar\alpha$ alors $(P(\alpha))=\m_L$ ou 
+$(P(\alpha+\pi_L))=\m_L$. Via $\bar P$ est séparable d'où 
+$\bar P'\ne 0$ :
+\[P(\alpha+\pi_L)-P(\alpha)=\pi_L(P'(\alpha)+\pi_L\beta)\]
+d'où 
+\[k(\bar \alpha)=(\tilde\Or_K)_{\m_i}/\m_K(\tilde\Or_K)_{\m_i}.\] 
+\begin{rem}
+    On obtient un début preuve du cas primitif.
+\end{rem}
+\begin{rem}
+    On a pas supposé que c'est non ramifié ni que $\tilde\Or_K$ est fini
+    sur $\Or_K$.
+\end{rem}
+\section{Cas modérément ramifié}
+Dans le cas $\Or_K-\tilde\Or_K$, si on prends l'hypothèse
+\begin{enumerate}
+    \item $\prod k_i=\prod \tilde\Or_K/\m_i\tilde\Or_K$ est 
+	monogène sur $k$. (c'est immédiat dans plusieurs cas pour les
+	$k_i$, notamment si $k$ est infini)
+\end{enumerate}
+Alors on peut utiliser le fait que 
+\[\textrm{Un produit d'algèbres monogènes finies est monogène fini ssi
+sa version réduite l'est}\]
+d'où
+\[\tilde\Or_K/\m_K\tilde\Or_K\]
+est monogène sur $k$ (CRT). Maintenant si
+\begin{enumerate}
+    \item[3.] $\tilde\Or_K$ est fini sur $\Or_K$
+\end{enumerate}
+alors il est monogène via Nakayama et 
+$\tilde\Or_K\subset M +\m_K\tilde\Or_K$.
+
+Maintenant si on suppose que $L/K$ est modérément ramifiée, si 
+$K$ est complet alors $\tilde\Or_K=\Or_L$ est local et on a l'hypothèse,
+si $k_K$ est infini alors $\prod k_i$ est monogène et on a l'hypothèse.
+
+
+
+
+
+\end{document}
+
