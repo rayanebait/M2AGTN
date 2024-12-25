@@ -243,7 +243,7 @@ d'où ça stationne et c'est fini.
 Comme $I$ est de type fini on obtient direct que $V(I)$ est fini.
 \subsection{Valuations et décomposition}
 Étant donné $I\subset A$, on a $I_\p=\p^m$ et on peut définir
-$v_\p(I)=m$, on l'étend à $I\subset K$ par $(I:A)$.
+$v_\p(I)=m$, on l'étend à $I\subset K$ par $v_\p(I.(A_\p:I))=0$.
 
 \subsection{Relever l'inversibilité en général}
 
@@ -253,12 +253,16 @@ Concrètement :
 sauf que à gauche $\p.(A:\p)\subseteq A$ est un idéal et y'a
 que $A$ qui a pour image $A_\p$.
 \begin{rem}
-    On a utilisé que $\p \mapsto \p A_\p$ est injectif.
+    ATTENTION. On a utilisé que $\p \mapsto \p A_\p$ est injectif !
 \end{rem}
 \begin{rem}
-    Ca se généralise direct à $I$ un idéal fractionnaire car
-    $I\otimes_A A_\p=\p^n$ d'où $(I\p^{-n})_\p=A_\p$.
+    Ca se généralise à $I$ un idéal fractionnaire car
+    $I\otimes_A A_\p=\p^n$ d'où $(I\p^{-n})_\p=A_\p$. On peut 
+    pas conclure que $\p^{-n}=(A:I)$ parce que si $\p'\mid I$ 
+    alors $\p'\otimes_A A_\p=A_\p$. 
 \end{rem}
+Y faut maintenant remarquer que 
+$(A:\prod \p^{v_\p(I)})_\p=(A:I)_\p$ pour tout $\p$ et conclure.
 
 \begin{note}
     Le foncteur $\_\otimes_A A_\p$ de $Mod_A$ dans $Mod_{A_\p}$
@@ -266,104 +270,14 @@ que $A$ qui a pour image $A_\p$.
     de produits et sommes.
 \end{note}
 \subsection{Décomposition en idéaux}
+De la même manière que pour l'inversibilité on remarque que 
+$\prod \p^{v_\p(I)}$ coincide avec $I$ dans
+tout les $A_\p$. Faut montrer que donc il est égal à $I$.
+
 \begin{note}
     Faire une section sur la décomposition en idéaux primaires.
 \end{note}
 
-\chapter{Extensions d'anneaux de Dedekind}
-\section{Le cadre général}
-Comme on part d'un anneau de Dedekind $\Or_K$. La première question c'est
-Quand est-ce que 
-\[\Or_K - \tilde\Or_K\]
-est une extension d'anneaux de Dedekind. La question se réduit 
-systématiquement à 
-\[\textrm{Est-ce que $\tilde\Or_K$ est noethérien ?}\]
 
-\section{Ésthétique des anneaux de Dedekind}
-
-L'anneau de Dedekind est un anneau noethérien de dimension $1$. 
-Autrement dit, on est sur un schéma affine de dimension $1$ :
-\[\Spec(\Or_K)\to \Spec(\Z)\]
-Mais surtout, tout ses localisés à des premiers sont des anneaux 
-de valuation discrète ! Ça ça m'intéresse pour les raisons suivantes :
-\begin{enumerate}
-    \item On obtient un local-global en localisant.
-    \item On peut compléter et obtenir le cadre des corps locaux.
-\end{enumerate}
-en particulier on a le pont de, si 
-\[K-L\]
-est une extension de corps finis, on peut en faire une extension de corps
-valués via le processus suivant :
-\begin{enumerate}
-    \item D'un premier de $\Or_K$ on obtient $(\Or_K)_{\m_K}$.
-    \item On obtient aussi un corps valué $(K,|.|_{\m_K})$.
-    \item De $\m_K\tilde\Or_K=\prod \m_i^{e_i}$ on obtient des premiers 
-	$\m_i$.
-    \item D'un $\m_i|\m_K$ on obtient une extension de valeur absolue
-	$|.|_{\m_i}$ et une extension de DVR 
-	\[\Or_K-(\tilde \Or_K)_{\m_i}.\]
-\end{enumerate}
-Géometriquement c'est l'étude de la fibre en $\m_K\in \Spec(\Or_K)$.
-Maintenant, on cherche a obtenir le $e$ tel que $\m_K=\m_i^e$. On 
-obtient la cardinalité de la fibre et l'indice de ramification des
-uniformisantes.
-
-
-En fait maintenant le point puissant, c'est le point où on complète 
-$K$ en $\m_K$ et $L$ en $\m_i$. Alors
-\[\widehat K -\widehat L\]
-a dimension $f_ie_i$.
-\begin{rem}
-    Un point qui semble flou là c'est : mais si je complète $K$
-    en $\m_K$, $\widehat L=L.\widehat K$ donc il est où le choix
-    de compléter en $\m_i$ pour $L$ ? On dirait que le choix est
-    immédiat et les idéaux se contractent en un. En fait écrire
-    \[L.\widehat K\]
-    équivaut à faire vivre $L$ et $\widehat K$ au même endroit.
-    D'où à plonger $L$ dans une clôture de $K$, $K^c$ et la 
-    regarder dans $(\widehat K)^c$. Sinon on pourrait regarder
-    \[L\otimes_K \widehat K\]
-    et là son spectre est non trivial ! Choisir 
-    \[L\otimes_K \widehat K\to (\widehat K)^c\]
-    équivaut à choisir un idéal maximal.
-\end{rem}
-
-On peut maintenant utiliser la théorie des corps complets et
-Hensel !
-
-\section{Les points omis}
-J'ai direct dit que $\tilde\Or_K$ était de Dedekind. En fait si $L/K$ 
-est finie c'est toujours vrai.
-
-\section{Quand est-ce que $\tilde\Or_K$ est monogène sur $\Or_K$?}
-
-\section{L'étude du cas complet}
-
-
-\section{Quand est-ce que $\tilde\Or_K$ est noethérien ?}
-Comme d'hab on prends 
-\[\textrm{$L/K$ finie avec $K=Frac(\Or_K)$ un anneau de valuation
-discrète}\]
-Ensuite on regarde sa fermeture intégrale dans $L$, $\tilde\Or_K$. On
-veut une extension de DVR, pour ça y faut que $\tilde\Or_K$ soit
-de Dedekind. Le problème c'est toujours de montrer que c'est noethérien.
-
-\subsection{Cas séparable}
-Étant donnée $L/K$ finie séparable, on a tout ce qui nous faut. On
-a un discriminant non nul bien défini, d'où si $L=\oplus Ke_i$ alors
-\[(Tr(e_ie_j))_{i,j}\]
-est non dégénérée. Puis on a une base duale à $e_i$, i.e. $e_i^*$ telle
-que $Tr(e_i^*e_j)=\delta_{ij}$. Avec ça on peut
-\begin{enumerate}
-    \item à partir de $e_i$ une base de $L/K$ dans $\tilde\Or_K$,
-	obtenir sa base duale pour la trace $e_i^*$.
-    \item montrer que tout élément entier $b=\sum \lambda_i e_i^*$ 
-	vérifie $\lambda_i\in \Or_K$, via $Tr(be_i)=\lambda_i$!
-    \item D'où $\Or_K$ est un sous $\Or_K$-module d'un module de type
-	fini donc noethérien.
-\end{enumerate}
-
-
-\[\textrm{}\]
 \end{document}
 
