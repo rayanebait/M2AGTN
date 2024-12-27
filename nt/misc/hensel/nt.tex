@@ -70,7 +70,6 @@ sorting=ynt
 \newcommand{\Pic}{\textrm{Pic}}
 \newcommand{\End}{\textrm{End}}
 \newcommand{\Spec}{\textrm{Spec}}
-\newcommand{\Frac}{\textrm{Frac}}
 
 \newcommand{\cL}{\mathscr{L}}
 \newcommand{\G}{\mathscr{G}}
@@ -110,55 +109,24 @@ sorting=ynt
     filecolor=wgrey
 }
 
-\title{Complétions}
+\title{Approximation $p$-adiques(Hensel)}
 \date{}
 
 \begin{document}
 \maketitle
 
-\chapter{Topologie}
-\section{Complétions}
-\subsection{Corps ultramétriques}
-Étant donné un corps ultramétrique, montrer
-que $|K|=|\hat K|$ et les corps résiduels sont isomorphes.
 
-Si c'est une valuation discrète on peut montrer que $|x_n|$ 
-stationne toujours (loin de 0) en prenant une boule proche. Et en
-fait c'est toujours le cas via
-\[|a-x_n+x_n|=|x_n|\]
-quand $x_n$ est assez proche de $a$ et au dessus. 
-\begin{rem}
-    J'ai galéré ptdr, parce que j'osais pas considérer un élement
-    de $\hat K$ en dehors de la suite qui l'approche. (I.e. la 
-    suite mais pas sa limite)
-\end{rem}
-
-\section{Densité de $\Or_K$ dans $\Or_{\hat K}$ et corps résiduel.}
-Simplement parce que $(x_n)$ stationne toujours par
-l'inégalité ultramétrique. Ducoup on peut prendre les suites
-dans $\Or_K$. Ensuite réduire modulo $\m$ dans $\Or_{\hat K}$
-ça veut dire quoi ? L'idéal c'est $B(0,1)$ ouvert. On peut
-simplement prendre $x\in \Or_K$ tel que 
-\[|a-x|<1\]
-par densité. En particulier, $x=a\mod B(0,1)$ par définition.
-
-\subsection{$\Z_p[p^{-1}]=\Q_p$, $\Q_p/\Z_p=\Z[p^{-1}]/\Z$}
-On a $\Z_{(p)}\subseteq \Z_p$ et 
-\[\Z_{(p)}[p^{-1}]=\Q\subset \Z_p[p^{-1}]\]
-maintenant le truc de droite est complet donc fermé. Pour le voir
-on remarque que une suite $(x_n)$ de ce truc converge dans $\Q_p$
-et sa valuation se fixe. En particulier il existe $N$ tel que 
-$(p^Nx_n)\in \Z_p$ et le premier résultat.
-
-Pour le deuxième,
-\section{Locale compacité}
-Montrer maintenant que dans le cas d'avant, les corps résiduels 
-sont finis. En fait on fait descendre une topologie discrète
-\[\pi \colon \Or_K\to k_K\]
-d'où $k_K$ est fini.
+\section{Relever des facteurs}
+Y'a trois théorèmes, dans $K$ ultramétrique, si 
+\[P\in \Or_K[X]\]
+et
+\[\bar P= f.g\in k_K[X]\]
+avec $(f,g)=1$ alors il existe d'uniques (à unités près)
+$\bar F=f$, $\bar G=g$ 
+avec $\deg(f)=\deg(F)$ (on peut fixer un des deux degrés) et
+\[P=F.G\in \Or_K[X]\]
 
 
-\section{}
 
 
 \end{document}

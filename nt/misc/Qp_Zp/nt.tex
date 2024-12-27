@@ -118,7 +118,28 @@ sorting=ynt
 
 
 \section{Développement $p$-adique.}
+Pour rappel (fichier complétions), étant donné $x=(x_n)\in \Q_p$ : 
+\begin{enumerate}
+    \item Si $|x|\leq 1$, on peut supposer $x_n\in \Z$ pour tout
+        $n$.
+    \item La valuation se stabilise ($|K|=|\hat K|$ dans le cas
+        ultramétrique).
+    \item En écrivant $x_n=\sum a_{i,n}p^i$, le fait que
+        $|x_n-x_{n+k}|\to 0$ force les premiers termes à 
+        stabiliser.
+    \item On peut remplacer $x_n$ par $\sum_{i=0}^n a_i p^i$.
+\end{enumerate}
+On peut alors écrire $x=\sum_{i\geq0} a_ip^i$.
 \section{Topologie}
+\subsection{Densité de $\Z$ dans $\Z_p$}
+Par l'écriture en série entière. Mais on a contourné l'idée
+que si $u\in \Z$ et $v_p(u)=0$, $1/u$ a pas toujours de
+développement $p$-adique fini. 
+
+\subsection{$\Z_p$ est compact.}
+On peut remarquer que $\Z_p$ est séparé 
+(c'est pas totalement clair, prendre les $x+p\Z_p$). 
+
 \subsection{$\Z_p[p^{-1}]=\Q_p$}
 On a $\Z_{(p)}\subseteq \Z_p$ et 
 \[\Z_{(p)}[p^{-1}]=\Q\subset \Z_p[p^{-1}]\]
@@ -127,7 +148,9 @@ on remarque que une suite $(x_n)$ de ce truc converge dans $\Q_p$
 et sa valuation se fixe. En particulier il existe $N$ tel que 
 $(p^Nx_n)\in \Z_p$ et le résultat.
 
-
+Le deuxième on peut le voir comme juste qu'on coupe la partie 
+positive du développement, donc c'est assez clair qu'il reste que
+une somme finie dans $\Z[p^{-1}]$.
 
 \end{document}
 
