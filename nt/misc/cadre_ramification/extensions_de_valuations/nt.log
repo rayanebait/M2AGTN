@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.12.14)  28 DEC 2024 22:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.12.14)  29 DEC 2024 23:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -881,11 +881,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[2
+[2]
+\bbl@ensure@french {Chapitre} 1.
+[3
 
 ]
-\bbl@ensure@french {Chapitre} 1.
-[3]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -899,65 +899,70 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 \bbl@ensure@french {Chapitre} 2.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 136.
+(hyperref)                removing `math shift' on input line 138.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 136.
+(hyperref)                removing `superscript' on input line 138.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 136.
+(hyperref)                removing `math shift' on input line 138.
 
 [5]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 171.
+(hyperref)                removing `math shift' on input line 193.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\otimes' on input line 171.
+(hyperref)                removing `\otimes' on input line 193.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 171.
+(hyperref)                removing `subscript' on input line 193.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 171.
+(hyperref)                removing `math shift' on input line 193.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 186.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 186.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\to' on input line 186.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 186.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 186.
-
-LaTeX Font Info:    Trying to load font information for U+euf on input line 188.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 209.
 (/usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
+Overfull \hbox (0.99059pt too wide) in paragraph at lines 209--211
+\OT1/cmr/m/n/12 La m^eme chose que $[][] []\OML/cmm/m/it/12 =\U/euf/m/n/12 m[][] \OT1/cmr/m/n/12 = [\OML/cmm/m/it/12 L \OT1/cmr/m/n/12 : \OML/cmm/m/it/12 K\OT1/cmr/m/n/12 ]$ mais avec $[][](\OML/cmm/m/it/12 L \OMS/cmsy/m/n/12 
+ []\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 = [] \U/euf/m/n/12 m[]$\OT1/cmr/m/n/12 . 
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.71667pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.71667pt}.
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-3.71667pt}.
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [6]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 219.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 219.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\to' on input line 219.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 219.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 219.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -977,30 +982,42 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 \bbl@ensure@french {Chapitre} 3.
-[9] (./nt.aux)
+[9]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[10
+
+]
+\bbl@ensure@french {Chapitre} 4.
+[11] (./nt.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `nt.out' has not changed.
-(rerunfilecheck)             Checksum: 926D539D505592BCC707E1293FDF2E20;2713.
+(rerunfilecheck)             Checksum: 4BF9A922B12A209EBFBC16ED341B12C1;3714.
 Package logreq Info: Writing requests to 'nt.run.xml'.
 \openout1 = `nt.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31504 strings out of 476076
- 605393 string characters out of 5793774
+ 31519 strings out of 476076
+ 605563 string characters out of 5793774
  1936187 words of memory out of 5000000
- 53114 multiletter control sequences out of 15000+600000
- 570588 words of font info for 87 fonts, out of 8000000 for 9000
+ 53123 multiletter control sequences out of 15000+600000
+ 571296 words of font info for 90 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 131i,14n,135p,675b,1709s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on nt.pdf (9 pages, 141274 bytes).
+ 131i,12n,135p,675b,1709s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on nt.pdf (11 pages, 159135 bytes).
 PDF statistics:
- 177 PDF objects out of 1000 (max. 8388607)
- 138 compressed objects within 2 object streams
- 24 named destinations out of 1000 (max. 500000)
- 125 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 208 PDF objects out of 1000 (max. 8388607)
+ 165 compressed objects within 2 object streams
+ 30 named destinations out of 1000 (max. 500000)
+ 157 words of extra memory for PDF output out of 10000 (max. 10000000)
 
