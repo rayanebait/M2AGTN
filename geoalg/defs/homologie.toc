@@ -1,3 +1,0 @@
-\babel@toc {french}{}\relax 
-\contentsline {chapter}{\numberline {1}Espaces annelés et localement annelés}{5}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Variétés abstraites}{7}{chapter.2}%

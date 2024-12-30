@@ -1,5 +1,0 @@
-\babel@toc {french}{}\relax 
-\contentsline {chapter}{\numberline {1}Valuations discrètes}{5}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Caractéristion des anneaux de valuations discrètes}{5}{section.1.1}%
-\contentsline {chapter}{\numberline {2}Des exercices}{7}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Lemme de Krasner}{7}{section.2.1}%
