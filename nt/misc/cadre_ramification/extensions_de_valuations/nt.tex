@@ -246,6 +246,10 @@ et $\begin{pmatrix} 2\\ p\end{pmatrix}=1 $ si et
 seulement si $p^2\equiv 1\mod 8$. Donc $|.|$ a une
 ou deux extensions en fonction de $p$ via Hensel.
 
+\subsection{Lien avec la ramification}
+Je le mentionne ici, mais pour avoir une extension non ramifiée
+en $\p$, faut que $B_L$ soit un produit de corps ducoup! 
+
 \chapter{Extension par les anneaux de valuations discrètes}
 Étant donné un corps $(K,v)$ de valuation discrète. Une 
 extension $(L,w)$ finie de $v$. L'anneau $\tilde\Or_K=\tilde\Or_v$
@@ -272,19 +276,30 @@ Ensuite faut montrer que
 À faire c'est pas dur.
 
 
+\chapter{Remarques}
+\section{Cas primitif $L=K[\alpha]$, l'extension}
+J'écris $L=K[X]/(P(X))$. On regarde $B_L$
+\[L\otimes_K \hat K = \prod \hat K[X]/(P_i(X)^{b_i})\]
+où si y'a un $b_i>1$ c'est que l'extension est inséparable,
+parce que $P$ est irréductible donc séparable équivaut à
+racine simple. 
+
+\section{Cas primitif $L=K[\alpha]$ et monogène $\tilde \Or_K=\Or_K[\alpha]$, l'extension résiduelle}
+On regarde $\Or_{\hat K}\otimes_{\Or_K}\tilde\Or_K=\prod \Or_{\hat K}[X]/(P_i(X)^{b_i})$.
+On étend via $k_K\simeq \Or_{\hat K}/\m_{\hat K}$ pour obtenir
+la forme résiduelle avec la ramification.
+\[\prod \Or_{\hat K}[X]/(P_i(X)^{b_i})\otimes_{\Or_K}k_K=\prod k_K[X]/(P_i(X)^{e_i})\]
+
+\begin{rem}
+    Pour remarque ducoup, ce produit tensoriel y'a pas de pb
+    le calcul est identique à celui pour les corps. Ça utilise
+    toujours que la prop universelle des anneaux de polynômes
+    et l'exactitude à droite.
+\end{rem}
+Maintenant c'est bien clair que c'est non ramifié ssi la version
+résiduelle est un produit de corps.
 
 
-\chapter{À éclaircir}
-Bon bah simplement le calcul explicit de $B_L$ en
-général! I.e. si $L/K$ est monogène, $B_L$ est un
-produit de corps ou chaque corps 
 
-
-
-
-
-
-
-\[\textrm{}\]
 \end{document}
 
