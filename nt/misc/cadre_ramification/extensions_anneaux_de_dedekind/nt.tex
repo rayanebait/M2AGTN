@@ -117,6 +117,23 @@ sorting=ynt
 \maketitle
 
 
+\chapter{Manipuler}
+Donc là les outils comme d'hab c'est les extensions entières
+et les clôtures intégrales. La première on montre comme transmettre
+la dimension, la deuxième transmettre le fait d'être intégralement 
+clos. Pour la noethérianité, ici on manipule des localisations pour
+la cas semi-local (corollaire 2.26) et des DVRS. La preuve d'extensions
+de valuations par les idéaux (Prop 2.28). (Le cas séparable c'est
+(théorème 2.20)
+\subsection{Extension d'anneaux de Dedekind, cas semi-local}
+Il existe $k$ t.q. $L^{p^k}\subset K$ puis on déf
+\[v_L(\theta):=v_K(\theta^{p^k})/p^k\]
+tout marche bien.
+
+\subsection{Extensions de valuation par les idéaux}
+On regarde $\tilde \Or_K$ de Dedekind, et d'un idéal on obtient
+un DVR, d'une valuation un DVR. 
+
 \chapter{Extensions d'anneaux de Dedekind}
 \section{Annexe : Extensions entières où transmettre le
 spectre}
@@ -180,7 +197,7 @@ a dimension $f_ie_i$.
     \[L\otimes_K \widehat K\]
     et là son spectre est non trivial ! Choisir 
     \[L\otimes_K \widehat K\to (\widehat K)^c\]
-    équivaut à choisir un idéal maximal.
+    équivaut à choisir un idéal maximal. Voir notes.
 \end{rem}
 
 On peut maintenant utiliser la théorie des corps complets et
@@ -189,10 +206,6 @@ Hensel !
 \section{Les points omis}
 J'ai direct dit que $\tilde\Or_K$ était de Dedekind. En fait si $L/K$ 
 est finie c'est toujours vrai.
-
-\section{Quand est-ce que $\tilde\Or_K$ est monogène sur $\Or_K$?}
-
-\section{L'étude du cas complet}
 
 
 \section{Quand est-ce que $\tilde\Or_K$ est noethérien ?}
@@ -217,6 +230,11 @@ que $Tr(e_i^*e_j)=\delta_{ij}$. Avec ça on peut
     \item D'où $\Or_K$ est un sous $\Or_K$-module d'un module de type
 	fini donc noethérien.
 \end{enumerate}
+
+\subsection{Cas semi-local}
+On sépare en une extension séparable et une purement inséparable.
+Ensuite d'une extension purement inséparable d'une valuation discrète
+$v$, on obtient directement une valuation discrète $w$.
 
 
 \[\textrm{}\]

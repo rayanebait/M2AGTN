@@ -109,16 +109,36 @@ sorting=ynt
     filecolor=wgrey
 }
 
-\title{Anneaux d'entiers monogènes et ramification}
+\title{Quand est-ce que $\sum e_if_i=[L:K]$?}
 \date{}
 
 \begin{document}
 \maketitle
 
 
+\section{Manipuler}
+Le point c'est qu'on a toujours
+\[\sum e_if_i\leq [L:K]\]
+(voir lemme 3.6 vu que dans le cas des dvrs on sait pas si
+$f=\infty$)
+avec égalité ssi $\tilde\Or_K-\Or_K$ est finie ssi 
+$L\otimes_K \hat K$ est réduite. Un gros détail, les transitions
+de dimensions se font entre $k_K-k_L$ et $K-L$. Autrement dit
+on s'en fout de la finitude de $\tilde\Or_K$ sur $\Or_K$. Si
+$[L:K]$ est finie alors $f_i$ aussi pour tout $i$.
+\begin{rem}
+    Cette histoire de $B_L$ réduite vient du fait que
+    \[B_L\to \prod L_i\]
+    a un noyau nilpotent vu que c'est $\cap \m_i$ et qu'on
+    est sur une $\hat K$-algèbre de type fini à gauche (car
+    de dimension finie $\to$) et à gauche c'est de dim
+    $\dim_{\hat K}B_L=[L:K]$ alors qu'à droite c'est 
+    $\sum e_if_i$.
+\end{rem}
+
 \section{Prérequis}
-Quelques prérequis nécessaire à l'étude : si $\Or_K$ est de Dedekind,
-quand est-ce que 
+Quelques prérequis nécessaire à l'étude : si $\Or_K$ est de
+Dedekind, quand est-ce que 
 \begin{enumerate}
     \item $\tilde\Or_K$ est de Dedekind.
     \item $\tilde\Or_K$ est fini sur $\Or_K$.
@@ -196,8 +216,10 @@ L'autre est un peu technique mais pas dur, y s'agit de jouer
 sur la valuation. 
 
 \begin{rem}
-    Là on a juste utilisé que $k_L$ est de dimension finie sur $k_K$.
+    Là on a juste utilisé que $k_L$ est de dimension finie sur 
+    $k_K$. On peut écrire des doubles inégalités même en général.
 \end{rem}
+On a construit un $\Or_K$-module libre dense dans $\Or_L$.
 
 
 \section{Cas canonique}
@@ -209,6 +231,8 @@ On se retrouve dans le cas des dvrs. Et on a
 \[M\otimes_{\Or_K} K=L\]
 parce que de même dimension, dense via $K$ et complet. Donc on
 obtient le cas d'égalité.
+
+
 
 \section{Équivalences}
 Seulement de "égalité" équivaut à $\tilde\Or_K$ fini sur $\Or_K$.

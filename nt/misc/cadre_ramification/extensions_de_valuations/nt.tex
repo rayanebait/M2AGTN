@@ -120,18 +120,7 @@ sorting=ynt
 Ici, on s'en fout de savoir si $\tilde \Or_K$ est fini
 sur $\Or_K$.
 
-\chapter{Cas archimédien}
-On se place donc en caractéristique $0$ et sur $K=\Q$. Parce
-que un corps archimédien algébriquement clos complet est isométrique
-à $\C$.
 
-\section{Cas complet}
-On est soit $\C$ soit $\R$. 
-
-\section{En général}
-On a $r_1+r_2$ extensions de $|.|_\infty$ de $\Q$ à $L$.
-Avec $r_1+2r_2=[L:\Q]$ et les complétés pour $r_1$ c'est $\R$.
-Pour $r_2$ c'est $\C$.
 
 
 \chapter{Extension via les complétions : cas ultramétrique}
@@ -250,6 +239,26 @@ ou deux extensions en fonction de $p$ via Hensel.
 Je le mentionne ici, mais pour avoir une extension non ramifiée
 en $\p$, faut que $B_L$ soit un produit de corps ducoup! 
 
+
+
+\chapter{Cas archimédien}
+On se place donc en caractéristique $0$ et sur $K=\Q$. Parce
+que un corps archimédien algébriquement clos complet est isométrique
+à $\C$.
+
+\section{Cas complet}
+On est soit $\C$ soit $\R$. 
+
+\section{En général}
+On a $r_1+r_2$ extensions de $|.|_\infty$ de $\Q$ à $L$.
+Avec $r_1+2r_2=[L:\Q]$ et les complétés pour $r_1$ c'est $\R$.
+Pour $r_2$ c'est $\C$. Le point c'est que $|z|=|\bar z|$ pour
+un complexe. Aussi, faut juste montrer que chaque plongement
+différent donne une valeur absolue différente. On doit pouvoir
+le faire avec $B_L$. Parce que 
+\[\dim_{\R=\hat K} L\otimes_K \R=\prod \R[X]/(P_i(X))=\R^{r_1}\times \C^{r_2}\]
+Où $\C$ apparaît dès que $\deg P_i(X)=2$.
+
 \chapter{Extension par les anneaux de valuations discrètes}
 Étant donné un corps $(K,v)$ de valuation discrète. Une 
 extension $(L,w)$ finie de $v$. L'anneau $\tilde\Or_K=\tilde\Or_v$
@@ -277,14 +286,19 @@ Ensuite faut montrer que
 
 
 \chapter{Remarques}
+Le but c'est de voir les différentes extension $L_i$ 
+et $k_{L_i}$ associées aux valuations apparaître.
 \section{Cas primitif $L=K[\alpha]$, l'extension}
 J'écris $L=K[X]/(P(X))$. On regarde $B_L$
 \[L\otimes_K \hat K = \prod \hat K[X]/(P_i(X)^{b_i})\]
 où si y'a un $b_i>1$ c'est que l'extension est inséparable,
 parce que $P$ est irréductible donc séparable équivaut à
-racine simple. 
+racine simple. Maintenant chaque facteur engendre un corps
+qui est associé à une valuation.
 
 \section{Cas primitif $L=K[\alpha]$ et monogène $\tilde \Or_K=\Or_K[\alpha]$, l'extension résiduelle}
+Ça devrait plutôt être dans calculramification un truc comme
+ça mais bon.
 On regarde $\Or_{\hat K}\otimes_{\Or_K}\tilde\Or_K=\prod \Or_{\hat K}[X]/(P_i(X)^{b_i})$.
 On étend via $k_K\simeq \Or_{\hat K}/\m_{\hat K}$ pour obtenir
 la forme résiduelle avec la ramification.

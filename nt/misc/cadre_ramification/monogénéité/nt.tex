@@ -127,7 +127,7 @@ Pour la première question :
 \begin{enumerate}
     \item Si $\Or_K$ est semi-local ca se fait bien parce que 
 	$\tilde\Or_K$ est noethérien sur $\Or_K$ ssi
-	$\tilde\Or_K\otimes\Or_K (\Or_K)_{\m_i}$ est noethérien
+	$\tilde\Or_K\otimes\Or_K =(\Or_K)_{\m_i}$ est noethérien
 	pour tout les premiers (faut en avoir un nb fini).
     \item Plus généralement si $L/K$ est finie par Krull-Akizuki.
 \end{enumerate}
@@ -284,30 +284,65 @@ d'où
     On a pas supposé que c'est non ramifié ni que $\tilde\Or_K$ est fini
     sur $\Or_K$.
 \end{rem}
-\section{Cas modérément ramifié}
-Dans le cas $\Or_K-\tilde\Or_K$, si on prends l'hypothèse
+\section{Cas modérément ramifié général}
+Dans le cas $\Or_K-\tilde\Or_K$, si on part du principe que
 \begin{enumerate}
+    \item Les $k_K-k_i$ sont séparables.
     \item $\prod k_i=\prod \tilde\Or_K/\m_i\tilde\Or_K$ est 
-	monogène sur $k$. (c'est immédiat dans plusieurs cas pour les
-	$k_i$, notamment si $k$ est infini)
+	monogène sur $k$. (Ça se déduit du 1. dans plusieurs cas)
+    \item $\tilde\Or_K$ est fini sur $\Or_K$.
 \end{enumerate}
-Alors on peut utiliser le fait que 
-\[\textrm{Un produit d'algèbres monogènes finies est monogène fini ssi
-sa version réduite l'est}\]
+\begin{rem}
+    Pour $2.$ c'est $2.$ puis $3.$ ($k$ fini, $card(k)>max(n,3)$
+    avec $n$ le nombre d'idéaux) ou $1.$ ($k$ infini) du
+    lemme 3.18.
+\end{rem}
+Donc on utilise que un produit d'algèbres monogènes finies est 
+monogène fini ssi sa version réduite l'est (2. du lemme 3.18)
 d'où
 \[\tilde\Or_K/\m_K\tilde\Or_K\]
-est monogène sur $k$ (CRT). Maintenant si
+est monogène sur $k$ (CRT) si le produit de corps l'est disons
+\[\tilde\Or_K/\m_K\tilde\Or_K=k_K(\theta)\]
+Maintenant si
 \begin{enumerate}
-    \item[3.] $\tilde\Or_K$ est fini sur $\Or_K$
+    \item[2.] $\tilde\Or_K$ est fini sur $\Or_K$
 \end{enumerate}
-alors il est monogène via Nakayama et 
-$\tilde\Or_K\subset M +\m_K\tilde\Or_K$.
+alors il est monogène via Nakayama parce que
+$\tilde\Or_K\subset \Or_K[\theta] +\m_K\tilde\Or_K$.
+\begin{defn}
+    Petit rappel de définition, $L/K$ est non ramifiée si toutes
+    les extensions de DVRS ont $e\wedge char(k_K)=1$ et 
+    $k_K-k_{L_i}$ est séparable.
+\end{defn}
+\begin{rem}
+    Donc ca a pas exactement attrait à la ramification? Je vois
+    pas où on utilise tame et pas juste que les extensions 
+    résiduelles sont séparables. Après relecture j'ai vraiment
+    l'impression que ça se précise.
+\end{rem}
+Donc maintenant si $L/K$ est modérément ramifiée, d'où les
+extensions résiduelles sont séparables (ça c'est vraiment
+nécessaire pour $(P(\alpha))=\m_L$) d'où $\prod k_{L_i}$ est
+monogène dans les cas adéquats, par exemple
+\begin{enumerate}
+    \item $\tilde \Or_K$ local, par exemple cas totalement ramifié.
+	($\tilde\Or_K$ local par déf et $e=[L:K]$)
+    \item Cas où $k_K$ est infini.
+\end{enumerate}
+\begin{rem}
+    Quasi-sur que les conditions sont loin d'être optimales.
+\end{rme}
 
-Maintenant si on suppose que $L/K$ est modérément ramifiée, si 
-$K$ est complet alors $\tilde\Or_K=\Or_L$ est local et on a l'hypothèse,
-si $k_K$ est infini alors $\prod k_i$ est monogène et on a l'hypothèse.
+\section{Cas modérément ramifié complet}
+Dans le cas $L/K$ est modérément ramifiée, si 
+$K$ est complet alors $\tilde\Or_K=\Or_L$ est local et on a 
+l'hypothèse, si $k_K$ est infini alors $\prod k_i$ est monogène
+et on a l'hypothèse.
 
+\section{Cas totalement ramifié}
+\section{Cas totalement ramifié complet}
 
+\section{Corps de fonctions}
 
 
 
