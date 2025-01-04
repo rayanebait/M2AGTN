@@ -155,6 +155,36 @@ et je pense que maintenant faut tensoriser
 par $K(X)$ et comparer avec
 \[0\to \m_{K(X)}\Or_{K(X)}\to k_{K(X)}\to 0\]
 sachant que les deux premiers termes deviennent égaux ?Non y'a
-un problème. Plutôt par $S^{-1}
+un problème.
+
+SOLUTION : Plutôt que ces trucs compliqués : on écrit 
+$P/Q=(P/||P||)/(Q/||P||)$ (ca fait pass sens tel que mais on 
+s'arrange) ensuite $P/||P||\ne 0\in k_{K(X)}$ et est dans
+$k_K[X]$ d'où $k_{K(X)}$ est le corps de fraction. On a aussi
+$||Q||/||P||=1$ d'où $Q/||P||\in k_K[X]$.
+
+\section{$\Q_p-\Q_p(\Zeta_{p^r})$}
+Cette extension est totalement ramifiée de degré $(p-1)p^{r-1}$.
+\begin{enumerate}
+  \item $\lambda_{p^r,i}=\zeta_{p^r}^i-1$, on a 
+    $\prod_{i=0}^{p-1} \lambda_{p,i}=p$, $\lambda_p/\lambda_{p,i}
+    \in \Or_{\Q_p(\zeta_p)}^\times$ car $\sum_{j=0}^{i-1} \zeta_p^j\ne 0\mod \m_{\Q_p(\zeta_p)}$.
+  \item D'où $p\in \lambda_p^{p-1}\Or_{\Q_p(\zeta_p)}^\times$
+    et $e_{K/\Q_p}=p-1=[\Q_p(\zeta_p):\Q_p]$.
+  \item 
+    $\prod(\lambda_{p^r}-\lambda_{p^{r-1},i})=\lambda_{p^{r-1}}$.
+  \item Comme 
+    $v_p(\lambda_{p^r}-\lambda_{p^{r-1},i})\geq 1/p^{r-1}(p-1)$
+    où l'inégalité est par dimension de l'extension! Et qu'on a
+    $p^{r-1}$ termes $>0$ on peut conclure.
+  \item Dans le cas $r=2$ on peut utiliser l'inversibilité de 
+    $\lambda_{p}/\lambda_{p,i}$. Ça doit se prouver pareil avec
+    $\lambda_{p^r,i}/\lambda_{p^r}=\sum_{j=0}^{i-1} \zeta_{p^r}^i$.
+    et si $p\mid i-1$ ? Ces termes apparaissent pas dans la somme
+    vue que le pol min de $\zeta_{p^r}$ divisent $\phi_p(X^r)$?
+    Un truc comme ça.
+\end{enumerate}
+
+
 \end{document}
 
