@@ -53,6 +53,7 @@ sorting=ynt
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\Cat}{\mathcal{C}}
+\newcommand{\Dat}{\mathcal{D}}
 \newcommand{\Aat}{\mathcal{A}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\K}{\mathbb{K}}
@@ -67,7 +68,9 @@ sorting=ynt
 \newcommand{\Spec}{\textrm{Spec}}
 \newcommand{\Supp}{\textrm{Supp}}
 \newcommand{\Ouv}{\textrm{Ouv}}
-\renewcommand{\Im}{\textrm{Im}}
+\newcommand{\im}{\textrm{im}}
+\newcommand{\coker}{\textrm{coker}}
+\newcommand{\coim}{\textrm{coim}}
 
 
 \newcommand{\cL}{\mathscr{L}}
@@ -141,7 +144,253 @@ sorting=ynt
 
 \section{Foncteurs représentables}
 
-%\printbibliography
+\chapter{Objets universels dans les catégories abéliennes}
 
+\section{Remarques sur la variance}
+Le bi-foncteur $h_{\_}(\_)$ est celui qu'on a besoin pour
+la cohomologie. Et on a $h_M(A)=h^A(M)$.
+\subsection{Le plongement de Yoneda}
+Le foncteur $I\mapsto h_I$ est covariant et pleinement fidèle,
+via $I\to I'$ et $M\to I$ fournit $M\to I\to I'$. Mais ca c'est Yoneda.
+À l'inverse $P\mapsto h^P$ est contravariant vu que étendre 
+naturellement $P'\to M$ c'est par pullback. 
+
+\subsection{Spécialisation, foncteur représentable}
+Donc une fois $I$ fixé, $h_I$ est contravariant, vu que
+$M\to I$ s'étend par pullback. Et $h^P$ est covariant
+vu que $P\to A$ s'étend par pushforward. Et surtout que 
+$h_I(M)\to h_I(M')=h^M(I)\to h^{M'}(I)$ donc on a la variance
+de $h^{\_}$.
+
+\section{Exactitude du foncteur Hom}
+Ducoup, l'exactitude de $A\to B\to C\to 0$
+via $h_M$ est toujours vraie. On obtient
+\[0\to h_M(C)\to h_M(B)\to h_M(A)\]
+et pour obtenir l'exactitude à droite, il
+faut que $M=I$ soit un injectif.
+
+On a deux suites exactes à traiter
+\[0\to A\to B\to C\]
+et 
+\[A\to B\to C\to 0\]
+c'est la deuxième qui m'interesse pour
+la cohomologie via $h_I$. Je regarde que
+\[A\to B\to C\to 0\]
+On en déduit deux
+suites exactes
+\[0\to h_I(C)\to h_I(B)\to h_I(A)\]
+et
+\[0\to h^C\to h^B\to h^A\]
+la deuxième donne pas la propriété des injectifs.
+L'exactitude de la deuxième se vérifie terme à terme
+donc c'est équivalent l'autre.
+
+\subsection{Preuves du deuxième cas}
+
+\subsubsection{Injectivité et surjectivité sur les
+côtés}
+
+Le cas $0\to h^C\to h^B$ est clair l'injectivité c'est le fait que
+un épi $B\to C\to 0$ vient de $(C\to M)\mapsto (B\to C\to M)$
+est injectif.
+Et ça se traduit en mono dans la catégorie opposée où
+cette fois un mono $0\to A\to B$ fournit un mono
+\[0\to h_A\to h_B\]
+par la variance et $M\to A\mapsto M\to A\to B$ uniquement.
+\begin{rem}
+  Marrant y'a ptet un truc philosophique sur cette
+  asymétrie ?
+\end{rem}
+\subsubsection{Exactitude au milieu où $\ker$ et $\coker$}
+
+\begin{rem}
+Pour rappel un noyau $K$ est donné par une
+injection exacte :
+\[0\to h_K\to h_B\to h_C\]
+et un conoyau par
+\[0\to h^{coK}\to (h^B\to h^A)=\ker(h^B\to h^A)\]
+l'image elle c'est
+\[0\to h_{Im}\to h_{B}\to h_{coK(A\to B)}=\ker(h_B\to h_{coK(A\to B)})\]
+\end{rem}
+Maintenant on veut pas exactement montrer que $h_K=h_{\im}$
+sachant $K=\im$ vu que c'est immédiat. On veut montrer
+que $\ker(h_I(B)\to h_I(A))=\im(h_I(C)\to h_I(B))$ pour tout $I$
+mais le problème c'est que ça se traduit en
+\[\ker(h^B\to h^A)=\im(h^C\to h^B)\]
+et donc on a pas a priori la propriété universelle direct. Le fait
+que ce soit pas intuitif c'est que on demande que de $B\to M$
+on ait 
+$A\to B\to M=0$ ssi $A\to B\to M$ se factorise par $A\to B\to C\to
+M$ i.e.
+% https://q.uiver.app/#q=WzAsNCxbMSwxLCJNIl0sWzEsMCwiQiJdLFswLDAsIkEiXSxbMiwwLCJDIl0sWzEsMF0sWzIsMV0sWzEsM10sWzMsMCwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV1d
+\[\begin{tikzcd}
+  A & B & C \\
+	& M
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-2, to=2-2]
+	\arrow[dashed, from=1-3, to=2-2]
+\end{tikzcd}\]
+On dirait que $M$ est un projectif. Ça s'éclaircit en rappelant que
+% https://q.uiver.app/#q=WzAsNCxbMSwxLCJNIl0sWzEsMCwiQiJdLFswLDAsIkEiXSxbMiwwLCJDIl0sWzEsMF0sWzIsMV0sWzEsM10sWzMsMCwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV1d
+\[\begin{tikzcd}
+  A & B & C &0\\
+   & M & 
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-3, to=1-4]
+	\arrow[from=1-2, to=2-2]
+	\arrow[dashed, from=1-3, to=2-2]
+\end{tikzcd}\]
+et là on peut définir $C\to M$ parce que $B\to C$ est un épi 
+intuitivement. Plus concrètement l'idée c'est une extension de
+celle du théorème d'iso.
+Étant donné $coim$ comment je déf $coim\to im$! Là c'est l'inverse!
+En fait on prouve que \[C=\coker(A\to B)\] via
+$coim(B\to C)\simeq C$ dans la catégorie abélienne et
+\[\coker(A\to B)=\coker(\im(A\to B)\to B)=\coker(\ker(B\to C)\to B)=\coim(B\to C)\] par exactitude au milieu. 
+
+
+\subsubsection{Exactitude au milieu en bref}
+On veut que $\ker(h^B\to h^A)=\im(h^C\to h^B)$, ça revient à dire
+que $C=\coker(A\to B)$. Et on utilise l'exactitude pour voir que
+$\coker(A\to B)=\coim(B\to C)=\im(B\to C)=C$. En termes de 
+foncteurs. La coimage vérifie 
+\[0\to h^{\coim(B\to C)}\to h^B\to h^{\ker(B\to C)}\]
+\[h^{\coim(B\to C)}\]
+et on a un pont $h^{\coim(B\to C)}=h_{\im(B\to C)}$.
+
+\subsubsection{Le théorème d'iso est un pont entre $h^{\_}$ et $h_{\_}$}
+
+
+\subsection{Preuves du premier cas}
+Pour l'exactitude au milieu, on utilise seulement que 
+\[0\to A \to B\]
+exact implique $A\simeq \im(A\to B)$ en particulier, $M\to B$
+tel que $M\to B\to C = 0_{M,C}$ implique 
+$M\to B=M\to \im(A\to B)\to B$ et via l'isomorphisme on obtient
+naturellement $M\to A$ tel que $M\to B$ et $M\to A\to B$.
+
+\section{Injectifs et projectifs}
+Pour rappel $h_I(\_):=\Hom(\_,I)$ et 
+$h^{P}(\_):=\Hom(P,\_)$. Être injectif $I$ ça
+revient à ce que l'exactitude de 
+\[0\to M'\to M\]
+devienne l'exactitude de $h_I(M)\to h_I(M')\to 0$.
+C'est un peu bizarre à intuiter au sens où le
+diagramme est
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJNJyJdLFsxLDAsIk0iXSxbMCwxLCJJIl0sWzAsMSwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMCwyXSxbMSwyLCIiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0=
+\[\begin{tikzcd}
+	{M'} & M \\
+	I
+	\arrow[hook, from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow[dashed, from=1-2, to=2-1]
+\end{tikzcd}\]
+et que de $M'\to I$ on a une flèche qui induit l'existence
+de $M\to M$. C'est une condition de surjectivité! I.e.
+$h_I$ est exacte à droite (en passant à la catégorie opposée). 
+À l'inverse pour les projectifs
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJNJyJdLFsxLDAsIk0iXSxbMCwxLCJQIl0sWzEsMCwiIiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzIsMF0sWzIsMSwiIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV1d
+\[\begin{tikzcd}
+	{M'} & M \\
+	P
+	\arrow[two heads, from=1-2, to=1-1]
+	\arrow[from=2-1, to=1-1]
+	\arrow[dashed, from=2-1, to=1-2]
+\end{tikzcd}\]
+
+\section{Monomorphismes et épimorphismes}
+
+En résumé $A\to B$ est un mono veut
+dire que 
+\[h_A\to h_B\]
+est injectif via $i_*=h_i:=(M\to A)\mapsto (M\to A\to B)$.
+(ca se vérif bien terme à terme) et pour la remarque, 
+$h_A$ est un foncteur de $\Aat$ dans $Ab$
+dans le cadre des catégories abéliennes donc
+c'est une catégorie abélienne et l'injectivité 
+se traduit en $0\to h_A\to h_B$.
+\subsection{Détail}
+On a $0\to A\to B$ est exacte c'est pareil que
+\[0\to \Hom_{\Cat}(M,A)\to \Hom_{\Cat}(M,B)\]
+est injective via le pushforward : 
+$i\circ f =i\circ g\implies f=g$. En passant à
+la catégorie opposée dans $\Cat$, on obtient les
+épis par $B\to A\to 0$ et les flèches c'est :
+\[\Hom_{\Cat^op}(B,M)\to \Hom_{\Cat^op}(A,M)\to 0\]
+est surjective via $i_*^{op}$. D'où
+\[\Hom_{\Cat}(M,B)\to \Hom_{\Cat}(M,A)\to 0\]
+est surjective.
+\begin{rem}
+  C'est comme ça que les flèches s'inversent!
+  La condition
+\[\Hom_{\Cat}(B,M)\to \Hom_{\Cat}(A,M)\to 0\]
+  via le pullback est bizarre. Ça veut dire que
+  toutes les flèches $A\to M$ proviennent de 
+  $B\to M$ sachant que $A\hookrightarrow B$ 
+  s'injecte dans $B$. C'est pas exactement tout
+  de suite en lien avec les injectifs.
+\end{rem}
+En résumé, 
+\section{Ker et coker}
+Un $\ker$ c'est ça :
+% https://q.uiver.app/#q=WzAsNCxbMCwwLCJLIl0sWzEsMCwiQSJdLFsyLDAsIkIiXSxbMCwxLCJNIl0sWzAsMV0sWzEsMl0sWzMsMV0sWzMsMCwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzMsMiwiT197TSxCfSIsMSx7ImN1cnZlIjoxfV1d
+\[\begin{tikzcd}
+	K & A & B \\
+	M
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[dashed, from=2-1, to=1-1]
+	\arrow[from=2-1, to=1-2]
+	\arrow["{O_{M,B}}"{description}, curve={height=6pt}, from=2-1, to=1-3]
+\end{tikzcd}\]
+Maintenant, on peut le traduire en 
+\[h_{K}\to h_A\to h_B\]
+est exacte. En plus, $K\to A$ est un mono par
+le propriété universelle. D'où
+\[0\to h_K\to h_A\to h_B\]
+est exacte. 
+
+
+
+\section{Snake Lemma}
+Avec élément c'est assez clair comment on construit $\delta$ la
+flèche de connexion. Sans élément ça l'es moins. J'ai eu une
+idée et je me suis spoil la suite. On peut faire comme ça, donc
+on regarde $\ker(w)\to C\to B\to B'\to A\to \coker(u)$. Et l'idée
+c'est que on regarde des éléments dans $B$ tels que $B\to C\to C'$
+est nulle, et pour qu'y soient bien définis, on les regarde modulo
+$A$. En résumé, on regarde \[\ker(B\to C\to C')=B''\] on sait que
+$(B''\to B\to B')\to C'=0$ donc on obtient $B''\to A'$. Pour 
+conclure on a clairement $A\to B''$ et ça fournit
+\[B''/A\to A'/A=\coker(u)\] en plus comme
+$B\to C$ est un épi, $B''\to B$ est un mono, et $A\to B\to C$ est
+exacte, on obtient que 
+\[B''/A=B''/\ker(B\to C)\simeq\im( B''\to B\to C)=\ker(w)\] d'où
+\[\ker(w)\to \coker(u)\]
+
+\section{Obtenir des flèches}
+Quelques tricks pour obtenir des flèches. Étant donné
+$A\to B\to C$, on a $\ker(A\to B)\to \ker(A\to B\to C)$.
+Parce que \[\ker( A\to B)\to A\to B\to C=(\ker(A\to B)\to A\to B)\to C\]
+est nulle d'où la flèche. À l'inverse on a 
+\[\coker(A\to B\to C)\to \coker(B\to C)\]
+via 
+\[A\to B\to C\to \coker(B\to C)=A\to (B\to C\to \coker(B\to C))=0\]
+d'où la flèche. Aussi, on a 
+\[\coker(A\to B)\to \coker(A\to B\to C)\]
+via \[A\to B\to (C\to \coker(A\to B\to C))=(A\to B \to C\to \coker(A\to B\to C))=0\]
+d'où la flèche. En particulier on obtient la flèche du théorème
+d'isomorphisme.
+
+\section{Théorème d'isomorphisme}
+On regarde $\ker(A\to B)\to A\to B$, alors
+\[\coim(A\to B)=\coker(\ker(A\to B)\to A)\to \coker((\ker(A\to B)\to A)\to B)=\coker(0\to B)=B\]
+et la flèche est bien induite pas $A\to B$.
+
+
+
+%\printbibliography
 \end{document}
 
